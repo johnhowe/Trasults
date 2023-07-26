@@ -1,0 +1,561 @@
+#,Event UUID,Title,Subtitle,Discipline,Competition,Stage,Group #,Time,Performance #,Ranked,Rank,Mark Total,Team,Team Rank,Team Mark,Code,Athlete #,External ID,Surname,Given Name,Representing,Date of Birth,Sex,Routine #,Mark,# Elements,Bonus,Penalty,Judge,∑,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,L,A
+1,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,E1,6,,,,,,,,,,,,4
+2,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,E2,7,,,,,,,,,,,,3
+3,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,E3,7,,,,,,,,,,,,3
+4,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,E4,6,,,,,,,,,,,,4
+5,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,E5,10,,,,,,,,,,,,0
+6,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,E8,0,,,,,,,,,,,,10
+7,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,E∑,13,0,0,0,0,0,0,0,0,0,0,0,7
+8,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,T,0,,,,,,,,,,,,
+9,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,D,0,0,,,,,,,,,,,
+10,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,2100,1,0,0,H,80,80,80,,,,,,,,,,
+11,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,E1,76,,,,,,,,,,,,24
+12,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,E2,82,,,,,,,,,,,,18
+13,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,E3,70,,,,,,,,,,,,30
+14,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,E4,82,,,,,,,,,,,,18
+15,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,E5,100,,,,,,,,,,,,0
+16,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,E8,0,,,,,,,,,,,,100
+17,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,E∑,158,0,0,0,0,0,0,0,0,0,0,0,42
+18,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,T,0,,,,,,,,,,,,
+19,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,D,83,0,,,,,,,,,,,
+20,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 YTH TRP Male,Qualification,1,,1,TRUE,1,35200,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,33100,10,0,0,H,900,900,900,,,,,,,,,,
+21,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,E1,84,,,,,,,,,,,,16
+22,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,E2,80,,,,,,,,,,,,20
+23,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,E3,77,,,,,,,,,,,,23
+24,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,E4,80,,,,,,,,,,,,20
+25,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,E5,100,,,,,,,,,,,,0
+26,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,E8,0,,,,,,,,,,,,100
+27,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,E∑,160,0,0,0,0,0,0,0,0,0,0,0,40
+28,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,T,0,,,,,,,,,,,,
+29,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,D,16,0,,,,,,,,,,,
+30,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,26300,10,0,0,H,870,870,870,,,,,,,,,,
+31,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,E1,82,,,,,,,,,,,,18
+32,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,E2,85,,,,,,,,,,,,15
+33,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,E3,78,,,,,,,,,,,,22
+34,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,E4,80,,,,,,,,,,,,20
+35,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,E5,100,,,,,,,,,,,,0
+36,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,E8,0,,,,,,,,,,,,100
+37,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,E∑,162,0,0,0,0,0,0,0,0,0,0,0,38
+38,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,T,0,,,,,,,,,,,,
+39,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,D,16,0,,,,,,,,,,,
+40,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,1,TRUE,2,53300,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,27000,10,0,0,H,920,920,920,,,,,,,,,,
+41,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,E1,85,,,,,,,,,,,,15
+42,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,E2,82,,,,,,,,,,,,18
+43,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,E3,83,,,,,,,,,,,,17
+44,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,E4,79,,,,,,,,,,,,21
+45,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,E5,100,,,,,,,,,,,,0
+46,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,E8,0,,,,,,,,,,,,100
+47,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,E∑,165,0,0,0,0,0,0,0,0,0,0,0,35
+48,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,T,0,,,,,,,,,,,,
+49,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,D,0,0,,,,,,,,,,,
+50,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,25900,10,0,0,H,940,940,940,,,,,,,,,,
+51,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,E1,78,,,,,,,,,,,,22
+52,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,E2,81,,,,,,,,,,,,19
+53,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,E3,81,,,,,,,,,,,,19
+54,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,E4,79,,,,,,,,,,,,21
+55,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,E5,100,,,,,,,,,,,,0
+56,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,E8,0,,,,,,,,,,,,100
+57,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,E∑,160,0,0,0,0,0,0,0,0,0,0,0,40
+58,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,T,0,,,,,,,,,,,,
+59,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,D,30,0,,,,,,,,,,,
+60,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,2,TRUE,1,54700,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28800,10,0,0,H,980,980,980,,,,,,,,,,
+61,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,E1,83,,,,,,,,,,,,17
+62,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,E2,86,,,,,,,,,,,,14
+63,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,E3,76,,,,,,,,,,,,24
+64,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,E4,77,,,,,,,,,,,,23
+65,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,E5,100,,,,,,,,,,,,0
+66,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,E8,0,,,,,,,,,,,,100
+67,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,E∑,160,0,0,0,0,0,0,0,0,0,0,0,40
+68,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,T,0,,,,,,,,,,,,
+69,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,D,0,0,,,,,,,,,,,
+70,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,25200,10,0,0,H,920,920,920,,,,,,,,,,
+71,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,E1,70,,,,,,,,,,,,30
+72,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,E2,76,,,,,,,,,,,,24
+73,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,E3,72,,,,,,,,,,,,28
+74,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,E4,77,,,,,,,,,,,,23
+75,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,E5,100,,,,,,,,,,,,0
+76,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,E8,0,,,,,,,,,,,,100
+77,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,E∑,148,0,0,0,0,0,0,0,0,0,0,0,52
+78,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,T,900,,,,,,,,,,,,
+79,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,D,23,0,,,,,,,,,,,
+80,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11 TRP Female,Qualification,1,,3,TRUE,3,52200,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,27000,10,0,0,H,900,900,900,,,,,,,,,,
+81,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,E1,86,,,,,,,,,,,,14
+82,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,E2,82,,,,,,,,,,,,18
+83,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,E3,81,,,,,,,,,,,,19
+84,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,E4,78,,,,,,,,,,,,22
+85,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,E5,100,,,,,,,,,,,,0
+86,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,E8,0,,,,,,,,,,,,100
+87,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,E∑,163,0,0,0,0,0,0,0,0,0,0,0,37
+88,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,T,0,,,,,,,,,,,,
+89,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,D,0,0,,,,,,,,,,,
+90,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,25500,10,0,0,H,920,920,920,,,,,,,,,,
+91,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,E1,80,,,,,,,,,,,,20
+92,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,E2,81,,,,,,,,,,,,19
+93,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,E3,80,,,,,,,,,,,,20
+94,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,E4,81,,,,,,,,,,,,19
+95,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,E5,100,,,,,,,,,,,,0
+96,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,E8,0,,,,,,,,,,,,100
+97,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,E∑,161,0,0,0,0,0,0,0,0,0,0,0,39
+98,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,T,0,,,,,,,,,,,,
+99,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,D,25,0,,,,,,,,,,,
+100,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U11TRP Male,Qualification,1,,1,TRUE,1,53100,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27600,10,0,0,H,900,900,900,,,,,,,,,,
+101,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,E1,91,,,,,,,,,,,,9
+102,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,E2,93,,,,,,,,,,,,7
+103,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,E3,85,,,,,,,,,,,,15
+104,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,E4,85,,,,,,,,,,,,15
+105,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,E5,100,,,,,,,,,,,,0
+106,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,E8,0,,,,,,,,,,,,100
+107,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,E∑,176,0,0,0,0,0,0,0,0,0,0,0,24
+108,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,T,0,,,,,,,,,,,,
+109,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,D,0,0,,,,,,,,,,,
+110,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,27300,10,0,0,H,970,970,970,,,,,,,,,,
+111,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,E1,74,,,,,,,,,,,,26
+112,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,E2,83,,,,,,,,,,,,17
+113,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,E3,73,,,,,,,,,,,,27
+114,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,E4,77,,,,,,,,,,,,23
+115,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,E5,100,,,,,,,,,,,,0
+116,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,E8,0,,,,,,,,,,,,100
+117,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,E∑,151,0,0,0,0,0,0,0,0,0,0,0,49
+118,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,T,0,,,,,,,,,,,,
+119,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,D,46,0,,,,,,,,,,,
+120,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Female,Qualification,1,,1,TRUE,1,56500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29200,10,0,0,H,950,950,950,,,,,,,,,,
+121,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,E1,79,,,,,,,,,,,,21
+122,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,E2,77,,,,,,,,,,,,23
+123,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,E3,79,,,,,,,,,,,,21
+124,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,E4,74,,,,,,,,,,,,26
+125,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,E5,100,,,,,,,,,,,,0
+126,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,E8,0,,,,,,,,,,,,100
+127,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,E∑,156,0,0,0,0,0,0,0,0,0,0,0,44
+128,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,T,0,,,,,,,,,,,,
+129,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,D,0,0,,,,,,,,,,,
+130,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,24200,10,0,0,H,860,860,860,,,,,,,,,,
+131,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,E1,80,,,,,,,,,,,,20
+132,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,E2,83,,,,,,,,,,,,17
+133,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,E3,81,,,,,,,,,,,,19
+134,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,E4,81,,,,,,,,,,,,19
+135,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,E5,100,,,,,,,,,,,,0
+136,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,E8,0,,,,,,,,,,,,100
+137,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,E∑,162,0,0,0,0,0,0,0,0,0,0,0,38
+138,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,T,0,,,,,,,,,,,,
+139,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,D,45,0,,,,,,,,,,,
+140,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,1,TRUE,1,54000,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29800,10,0,0,H,910,910,910,,,,,,,,,,
+141,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,E1,74,,,,,,,,,,,,26
+142,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,E2,76,,,,,,,,,,,,24
+143,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,E3,77,,,,,,,,,,,,23
+144,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,E4,77,,,,,,,,,,,,23
+145,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,E5,100,,,,,,,,,,,,0
+146,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,E8,0,,,,,,,,,,,,100
+147,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,E∑,153,0,0,0,0,0,0,0,0,0,0,0,47
+148,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,T,0,,,,,,,,,,,,
+149,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,D,0,0,,,,,,,,,,,
+150,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,23900,10,0,0,H,860,860,860,,,,,,,,,,
+151,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,E1,56,,,,,,,,,,,,24
+152,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,E2,59,,,,,,,,,,,,21
+153,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,E3,63,,,,,,,,,,,,17
+154,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,E4,63,,,,,,,,,,,,17
+155,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,E5,80,,,,,,,,,,,,0
+156,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,E8,0,,,,,,,,,,,,100
+157,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,E∑,122,0,0,0,0,0,0,0,0,0,0,0,38
+158,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,T,0,,,,,,,,,,,,
+159,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,D,25,0,,,,,,,,,,,
+160,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U13 TRP Male,Qualification,1,,2,TRUE,2,45100,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,21200,8,0,0,H,650,650,650,,,,,,,,,,
+161,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,E1,84,,,,,,,,,,,,16
+162,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,E2,82,,,,,,,,,,,,18
+163,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,E3,79,,,,,,,,,,,,21
+164,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,E4,80,,,,,,,,,,,,20
+165,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,E5,100,,,,,,,,,,,,0
+166,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,E8,0,,,,,,,,,,,,100
+167,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,E∑,162,0,0,0,0,0,0,0,0,0,0,0,38
+168,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,T,0,,,,,,,,,,,,
+169,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,D,0,0,,,,,,,,,,,
+170,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,24900,10,0,0,H,870,870,870,,,,,,,,,,
+171,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,E1,71,,,,,,,,,,,,29
+172,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,E2,81,,,,,,,,,,,,19
+173,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,E3,84,,,,,,,,,,,,16
+174,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,E4,81,,,,,,,,,,,,19
+175,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,E5,100,,,,,,,,,,,,0
+176,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,E8,0,,,,,,,,,,,,100
+177,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,E∑,162,0,0,0,0,0,0,0,0,0,0,0,38
+178,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,T,0,,,,,,,,,,,,
+179,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,D,50,0,,,,,,,,,,,
+180,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,1,TRUE,2,54800,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29900,10,0,0,H,870,870,870,,,,,,,,,,
+181,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,E1,85,,,,,,,,,,,,15
+182,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,E2,85,,,,,,,,,,,,15
+183,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,E3,81,,,,,,,,,,,,19
+184,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,E4,85,,,,,,,,,,,,15
+185,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,E5,100,,,,,,,,,,,,0
+186,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,E8,0,,,,,,,,,,,,100
+187,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,E∑,170,0,0,0,0,0,0,0,0,0,0,0,30
+188,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,T,0,,,,,,,,,,,,
+189,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,D,0,0,,,,,,,,,,,
+190,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,25900,10,0,0,H,890,890,890,,,,,,,,,,
+191,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,E1,81,,,,,,,,,,,,19
+192,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,E2,85,,,,,,,,,,,,15
+193,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,E3,81,,,,,,,,,,,,19
+194,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,E4,81,,,,,,,,,,,,19
+195,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,E5,100,,,,,,,,,,,,0
+196,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,E8,0,,,,,,,,,,,,100
+197,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,E∑,162,0,0,0,0,0,0,0,0,0,0,0,38
+198,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,T,0,,,,,,,,,,,,
+199,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,D,45,0,,,,,,,,,,,
+200,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Female,Qualification,1,,2,TRUE,1,55500,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,29600,10,0,0,H,890,890,890,,,,,,,,,,
+201,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,E1,80,,,,,,,,,,,,20
+202,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,E2,82,,,,,,,,,,,,18
+203,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,E3,80,,,,,,,,,,,,20
+204,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,E4,79,,,,,,,,,,,,21
+205,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,E5,100,,,,,,,,,,,,0
+206,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,E8,0,,,,,,,,,,,,100
+207,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,E∑,160,0,0,0,0,0,0,0,0,0,0,0,40
+208,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,T,0,,,,,,,,,,,,
+209,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,D,0,10,,,,,,,,,,,
+210,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,23900,10,0,0,H,890,890,890,,,,,,,,,,
+211,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,E1,78,,,,,,,,,,,,22
+212,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,E2,87,,,,,,,,,,,,13
+213,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,E3,81,,,,,,,,,,,,19
+214,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,E4,82,,,,,,,,,,,,18
+215,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,E5,100,,,,,,,,,,,,0
+216,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,E8,0,,,,,,,,,,,,100
+217,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,E∑,163,0,0,0,0,0,0,0,0,0,0,0,37
+218,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,T,0,,,,,,,,,,,,
+219,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,D,63,0,,,,,,,,,,,
+220,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U15 TRP Male,Qualification,1,,1,TRUE,1,55300,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,31400,10,0,0,H,880,880,880,,,,,,,,,,
+221,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,E1,82,,,,,,,,,,,,18
+222,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,E2,76,,,,,,,,,,,,24
+223,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,E3,81,,,,,,,,,,,,19
+224,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,E4,79,,,,,,,,,,,,21
+225,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,E5,100,,,,,,,,,,,,0
+226,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,E8,0,,,,,,,,,,,,100
+227,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,E∑,160,0,0,0,0,0,0,0,0,0,0,0,40
+228,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,T,0,,,,,,,,,,,,
+229,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,D,0,0,,,,,,,,,,,
+230,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,25000,10,0,0,H,900,900,900,,,,,,,,,,
+231,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,E1,80,,,,,,,,,,,,20
+232,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,E2,78,,,,,,,,,,,,22
+233,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,E3,74,,,,,,,,,,,,26
+234,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,E4,78,,,,,,,,,,,,22
+235,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,E5,100,,,,,,,,,,,,0
+236,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,E8,0,,,,,,,,,,,,100
+237,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,E∑,156,0,0,0,0,0,0,0,0,0,0,0,44
+238,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,T,0,,,,,,,,,,,,
+239,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,D,63,0,,,,,,,,,,,
+240,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,U17 TRP Male,Qualification,1,,1,TRUE,1,56100,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,31100,10,0,0,H,920,920,920,,,,,,,,,,
+241,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,E1,94,,,,,,,,,,,,6
+242,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,E2,95,,,,,,,,,,,,5
+243,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,E3,92,,,,,,,,,,,,8
+244,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,E4,94,,,,,,,,,,,,6
+245,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,E5,94,,,,,,,,,,,,6
+246,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,E8,100,,,,,,,,,,,,
+247,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,E∑,282,0,0,0,0,0,0,0,0,0,0,0,18
+248,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,T,0,,,,,,,,,,,,
+249,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,D,7,0,,,,,,,,,,,
+250,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,1,28900,2,0,0,H,0,0,0,,,,,,,,,,
+251,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,E1,92,,,,,,,,,,,,8
+252,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,E2,92,,,,,,,,,,,,8
+253,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,E3,93,,,,,,,,,,,,7
+254,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,E4,92,,,,,,,,,,,,8
+255,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,E5,93,,,,,,,,,,,,7
+256,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,E8,100,,,,,,,,,,,,
+257,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,E∑,277,0,0,0,0,0,0,0,0,0,0,0,23
+258,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,T,0,,,,,,,,,,,,
+259,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,D,7,0,,,,,,,,,,,
+260,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,1,TRUE,1,57300,0,99,0,,1,0,Donavan,Sophie,WVGC,01/01/0001,,2,28400,2,0,0,H,0,0,0,,,,,,,,,,
+261,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,E1,94,,,,,,,,,,,,6
+262,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,E2,92,,,,,,,,,,,,8
+263,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,E3,92,,,,,,,,,,,,8
+264,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,E4,91,,,,,,,,,,,,9
+265,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,E5,94,,,,,,,,,,,,6
+266,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,E8,100,,,,,,,,,,,,
+267,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,E∑,278,0,0,0,0,0,0,0,0,0,0,0,22
+268,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,T,0,,,,,,,,,,,,
+269,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,D,7,0,,,,,,,,,,,
+270,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,1,28500,2,0,0,H,0,0,0,,,,,,,,,,
+271,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,E1,93,,,,,,,,,,,,7
+272,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,E2,91,,,,,,,,,,,,9
+273,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,E3,93,,,,,,,,,,,,7
+274,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,E4,94,,,,,,,,,,,,6
+275,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,E5,93,,,,,,,,,,,,7
+276,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,E8,100,,,,,,,,,,,,
+277,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,E∑,279,0,0,0,0,0,0,0,0,0,0,0,21
+278,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,T,0,,,,,,,,,,,,
+279,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,D,7,0,,,,,,,,,,,
+280,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,2,TRUE,2,57100,0,99,0,,1,0,Mather,Georgia,WVGC,01/01/0001,,2,28600,2,0,0,H,0,0,0,,,,,,,,,,
+281,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,E1,93,,,,,,,,,,,,7
+282,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,E2,94,,,,,,,,,,,,6
+283,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,E3,94,,,,,,,,,,,,6
+284,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,E4,92,,,,,,,,,,,,8
+285,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,E5,94,,,,,,,,,,,,6
+286,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,E8,100,,,,,,,,,,,,
+287,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,E∑,281,0,0,0,0,0,0,0,0,0,0,0,19
+288,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,T,0,,,,,,,,,,,,
+289,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,D,5,0,,,,,,,,,,,
+290,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,1,28600,2,0,0,H,0,0,0,,,,,,,,,,
+291,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,E1,93,,,,,,,,,,,,7
+292,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,E2,91,,,,,,,,,,,,9
+293,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,E3,92,,,,,,,,,,,,8
+294,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,E4,92,,,,,,,,,,,,8
+295,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,E5,93,,,,,,,,,,,,7
+296,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,E8,100,,,,,,,,,,,,
+297,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,E∑,277,0,0,0,0,0,0,0,0,0,0,0,23
+298,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,T,0,,,,,,,,,,,,
+299,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,D,7,0,,,,,,,,,,,
+300,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Female,Qualification,1,,3,TRUE,3,57000,0,99,0,,1,0,Peake,Eliza,WVGC,01/01/0001,,2,28400,2,0,0,H,0,0,0,,,,,,,,,,
+301,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,E1,95,,,,,,,,,,,,5
+302,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,E2,95,,,,,,,,,,,,5
+303,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,E3,94,,,,,,,,,,,,6
+304,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,E4,94,,,,,,,,,,,,6
+305,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,E5,95,,,,,,,,,,,,5
+306,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,E8,100,,,,,,,,,,,,
+307,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,E∑,284,0,0,0,0,0,0,0,0,0,0,0,16
+308,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,T,0,,,,,,,,,,,,
+309,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,D,7,0,,,,,,,,,,,
+310,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,1,29100,2,0,0,H,0,0,0,,,,,,,,,,
+311,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,E1,92,,,,,,,,,,,,8
+312,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,E2,91,,,,,,,,,,,,9
+313,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,E3,92,,,,,,,,,,,,8
+314,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,E4,88,,,,,,,,,,,,12
+315,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,E5,91,,,,,,,,,,,,9
+316,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,E8,100,,,,,,,,,,,,
+317,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,E∑,274,0,0,0,0,0,0,0,0,0,0,0,26
+318,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,T,0,,,,,,,,,,,,
+319,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,D,12,11,,,,,,,,,,,
+320,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U11 DMT Male,Qualification,1,,1,TRUE,1,56600,0,99,0,,1,0,Bell,Finley,WVGC,01/01/0001,,2,27500,2,0,0,H,0,0,0,,,,,,,,,,
+321,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,E1,94,,,,,,,,,,,,6
+322,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,E2,95,,,,,,,,,,,,5
+323,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,E3,93,,,,,,,,,,,,7
+324,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,E4,94,,,,,,,,,,,,6
+325,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,E5,93,,,,,,,,,,,,7
+326,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,E8,100,,,,,,,,,,,,
+327,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,E∑,281,0,0,0,0,0,0,0,0,0,0,0,19
+328,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,T,0,,,,,,,,,,,,
+329,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,D,7,0,,,,,,,,,,,
+330,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,1,28800,2,0,0,H,0,0,0,,,,,,,,,,
+331,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,E1,93,,,,,,,,,,,,7
+332,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,E2,94,,,,,,,,,,,,6
+333,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,E3,92,,,,,,,,,,,,8
+334,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,E4,92,,,,,,,,,,,,8
+335,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,E5,95,,,,,,,,,,,,5
+336,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,E8,100,,,,,,,,,,,,
+337,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,E∑,279,0,0,0,0,0,0,0,0,0,0,0,21
+338,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,T,0,,,,,,,,,,,,
+339,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,D,12,0,,,,,,,,,,,
+340,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,1,TRUE,1,57900,0,99,0,,1,0,Peake,James,WVGC,01/01/0001,,2,29100,2,0,0,H,0,0,0,,,,,,,,,,
+341,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,E1,92,,,,,,,,,,,,8
+342,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,E2,93,,,,,,,,,,,,7
+343,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,E3,90,,,,,,,,,,,,10
+344,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,E4,92,,,,,,,,,,,,8
+345,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,E5,92,,,,,,,,,,,,8
+346,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,E8,100,,,,,,,,,,,,
+347,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,E∑,276,0,0,0,0,0,0,0,0,0,0,0,24
+348,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,T,0,,,,,,,,,,,,
+349,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,D,7,0,,,,,,,,,,,
+350,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,1,28300,2,0,0,H,0,0,0,,,,,,,,,,
+351,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,E1,92,,,,,,,,,,,,8
+352,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,E2,91,,,,,,,,,,,,9
+353,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,E3,91,,,,,,,,,,,,9
+354,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,E4,93,,,,,,,,,,,,7
+355,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,E5,94,,,,,,,,,,,,6
+356,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,E8,100,,,,,,,,,,,,
+357,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,E∑,276,0,0,0,0,0,0,0,0,0,0,0,24
+358,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,T,0,,,,,,,,,,,,
+359,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,D,7,0,,,,,,,,,,,
+360,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Male,Qualification,1,,2,TRUE,2,56600,0,99,0,,1,0,Katsoolis,Flynn,WVGC,01/01/0001,,2,28300,2,0,0,H,0,0,0,,,,,,,,,,
+361,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,E1,97,,,,,,,,,,,,3
+362,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,E2,98,,,,,,,,,,,,2
+363,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,E3,95,,,,,,,,,,,,5
+364,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,E4,96,,,,,,,,,,,,4
+365,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,E5,97,,,,,,,,,,,,3
+366,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,E8,100,,,,,,,,,,,,
+367,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,E∑,290,0,0,0,0,0,0,0,0,0,0,0,10
+368,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,T,0,,,,,,,,,,,,
+369,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,D,7,0,,,,,,,,,,,
+370,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,1,29700,2,0,0,H,0,0,0,,,,,,,,,,
+371,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,E1,92,,,,,,,,,,,,8
+372,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,E2,96,,,,,,,,,,,,4
+373,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,E3,97,,,,,,,,,,,,3
+374,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,E4,93,,,,,,,,,,,,7
+375,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,E5,97,,,,,,,,,,,,3
+376,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,E8,100,,,,,,,,,,,,
+377,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,E∑,286,0,0,0,0,0,0,0,0,0,0,0,14
+378,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,T,0,,,,,,,,,,,,
+379,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,D,12,0,,,,,,,,,,,
+380,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U13 DMT Female,Qualification,1,,1,TRUE,1,59500,0,99,0,,1,0,Gardiner,Eloise,WVGC,01/01/0001,,2,29800,2,0,0,H,0,0,0,,,,,,,,,,
+381,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,E1,93,,,,,,,,,,,,7
+382,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,E2,96,,,,,,,,,,,,4
+383,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,E3,94,,,,,,,,,,,,6
+384,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,E4,95,,,,,,,,,,,,5
+385,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,E5,96,,,,,,,,,,,,4
+386,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,E8,100,,,,,,,,,,,,
+387,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,E∑,285,0,0,0,0,0,0,0,0,0,0,0,15
+388,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,T,0,,,,,,,,,,,,
+389,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,D,12,0,,,,,,,,,,,
+390,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,1,29700,2,0,0,H,0,0,0,,,,,,,,,,
+391,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,E1,90,,,,,,,,,,,,10
+392,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,E2,92,,,,,,,,,,,,8
+393,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,E3,92,,,,,,,,,,,,8
+394,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,E4,90,,,,,,,,,,,,10
+395,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,E5,92,,,,,,,,,,,,8
+396,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,E8,100,,,,,,,,,,,,
+397,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,E∑,274,0,0,0,0,0,0,0,0,0,0,0,26
+398,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,T,0,,,,,,,,,,,,
+399,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,D,7,0,,,,,,,,,,,
+400,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,1,TRUE,2,57800,0,99,0,,1,0,Hetherington,Amelie,WVGC,01/01/0001,,2,28100,2,0,0,H,0,0,0,,,,,,,,,,
+401,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,E1,92,,,,,,,,,,,,8
+402,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,E2,94,,,,,,,,,,,,6
+403,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,E3,92,,,,,,,,,,,,8
+404,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,E4,93,,,,,,,,,,,,7
+405,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,E5,94,,,,,,,,,,,,6
+406,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,E8,100,,,,,,,,,,,,
+407,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,E∑,279,0,0,0,0,0,0,0,0,0,0,0,21
+408,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,T,0,,,,,,,,,,,,
+409,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,D,12,0,,,,,,,,,,,
+410,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,1,29100,2,0,0,H,0,0,0,,,,,,,,,,
+411,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,E1,93,,,,,,,,,,,,7
+412,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,E2,96,,,,,,,,,,,,4
+413,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,E3,94,,,,,,,,,,,,6
+414,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,E4,94,,,,,,,,,,,,6
+415,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,E5,97,,,,,,,,,,,,3
+416,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,E8,100,,,,,,,,,,,,
+417,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,E∑,284,0,0,0,0,0,0,0,0,0,0,0,16
+418,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,T,0,,,,,,,,,,,,
+419,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,D,7,0,,,,,,,,,,,
+420,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Female,Qualification,1,,2,TRUE,1,58200,0,99,0,,1,0,Bowden,Ashley,WVGC,01/01/0001,,2,29100,2,0,0,H,0,0,0,,,,,,,,,,
+421,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,E1,98,,,,,,,,,,,,2
+422,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,E2,97,,,,,,,,,,,,3
+423,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,E3,97,,,,,,,,,,,,3
+424,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,E4,96,,,,,,,,,,,,4
+425,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,E5,97,,,,,,,,,,,,3
+426,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,E8,100,,,,,,,,,,,,
+427,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,E∑,291,0,0,0,0,0,0,0,0,0,0,0,9
+428,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,T,0,,,,,,,,,,,,
+429,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,D,22,9,,,,,,,,,,,
+430,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,1,30400,2,0,0,H,0,0,0,,,,,,,,,,
+431,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,E1,100,,,,,,,,,,,,
+432,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,E2,100,,,,,,,,,,,,
+433,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,E3,100,,,,,,,,,,,,
+434,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,E4,100,,,,,,,,,,,,
+435,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,E5,100,,,,,,,,,,,,
+436,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,E8,100,,,,,,,,,,,,
+437,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,E∑,300,0,0,0,0,0,0,0,0,0,0,0,0
+438,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,T,0,,,,,,,,,,,,
+439,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,D,0,0,,,,,,,,,,,
+440,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 DMT Male,Qualification,1,,1,TRUE,1,30400,0,99,0,,1,0,Hall,Oliver,WVGC,01/01/0001,,2,0,2,0,0,H,0,0,0,,,,,,,,,,
+441,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,E1,93,,,,,,,,,,,,7
+442,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,E2,96,,,,,,,,,,,,4
+443,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,E3,95,,,,,,,,,,,,5
+444,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,E4,94,,,,,,,,,,,,6
+445,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,E5,96,,,,,,,,,,,,4
+446,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,E8,100,,,,,,,,,,,,
+447,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,E∑,285,0,0,0,0,0,0,0,0,0,0,0,15
+448,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,T,0,,,,,,,,,,,,
+449,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,D,27,15,,,,,,,,,,,
+450,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,1,28200,2,0,15,H,0,0,0,,,,,,,,,,
+451,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,E1,67,,,,,,,,,,,,3
+452,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,E2,68,,,,,,,,,,,,2
+453,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,E3,67,,,,,,,,,,,,3
+454,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,E4,67,,,,,,,,,,,,3
+455,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,E5,68,,,,,,,,,,,,2
+456,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,E8,70,,,,,,,,,,,,
+457,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,E∑,202,0,0,0,0,0,0,0,0,0,0,0,8
+458,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,T,0,,,,,,,,,,,,
+459,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,D,6,0,,,,,,,,,,,
+460,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U15 YTH DMT Male,Qualification,1,,1,TRUE,1,49000,0,99,0,,1,0,Butler,Sam,WVGC,01/01/0001,,2,20800,1,0,0,H,0,0,0,,,,,,,,,,
+461,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,E1,95,,,,,,,,,,,,5
+462,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,E2,95,,,,,,,,,,,,5
+463,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,E3,95,,,,,,,,,,,,5
+464,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,E4,95,,,,,,,,,,,,5
+465,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,E5,96,,,,,,,,,,,,4
+466,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,E8,100,,,,,,,,,,,,
+467,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,E∑,285,0,0,0,0,0,0,0,0,0,0,0,15
+468,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,T,0,,,,,,,,,,,,
+469,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,D,17,9,,,,,,,,,,,
+470,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,1,29300,2,0,0,H,0,0,0,,,,,,,,,,
+471,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,E1,92,,,,,,,,,,,,8
+472,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,E2,93,,,,,,,,,,,,7
+473,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,E3,93,,,,,,,,,,,,7
+474,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,E4,92,,,,,,,,,,,,8
+475,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,E5,94,,,,,,,,,,,,6
+476,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,E8,100,,,,,,,,,,,,
+477,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,E∑,278,0,0,0,0,0,0,0,0,0,0,0,22
+478,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,T,0,,,,,,,,,,,,
+479,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,D,16,0,,,,,,,,,,,
+480,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,U17 DMT Male,Qualification,1,,1,TRUE,1,58700,0,99,0,,1,0,Skidmore,Jayden,WVGC,01/01/0001,,2,29400,2,0,0,H,0,0,0,,,,,,,,,,
+481,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,E1,97,,,,,,,,,,,,3
+482,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,E2,95,,,,,,,,,,,,5
+483,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,E3,95,,,,,,,,,,,,5
+484,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,E4,95,,,,,,,,,,,,5
+485,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,E5,95,,,,,,,,,,,,5
+486,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,E8,100,,,,,,,,,,,,
+487,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,E∑,285,0,0,0,0,0,0,0,0,0,0,0,15
+488,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,T,0,,,,,,,,,,,,
+489,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,D,2,0,,,,,,,,,,,
+490,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,28700,2,0,0,H,0,0,0,,,,,,,,,,
+491,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,E1,92,,,,,,,,,,,,8
+492,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,E2,91,,,,,,,,,,,,9
+493,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,E3,91,,,,,,,,,,,,9
+494,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,E4,90,,,,,,,,,,,,10
+495,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,E5,88,,,,,,,,,,,,12
+496,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,E8,100,,,,,,,,,,,,
+497,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,E∑,272,0,0,0,0,0,0,0,0,0,0,0,28
+498,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,T,0,,,,,,,,,,,,
+499,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,D,2,3,,,,,,,,,,,
+500,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT women,Qualification,1,,1,TRUE,1,55800,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,27100,2,0,0,H,0,0,0,,,,,,,,,,
+501,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,E1,81,,,,,,,,,,,,19
+502,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,E2,76,,,,,,,,,,,,24
+503,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,E3,81,,,,,,,,,,,,19
+504,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,E4,75,,,,,,,,,,,,25
+505,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,E5,100,,,,,,,,,,,,0
+506,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,E8,0,,,,,,,,,,,,100
+507,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,E∑,157,0,0,0,0,0,0,0,0,0,0,0,43
+508,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,T,0,,,,,,,,,,,,
+509,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,D,0,0,,,,,,,,,,,
+510,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,1,24900,10,0,0,H,920,920,920,,,,,,,,,,
+511,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,E1,80,,,,,,,,,,,,20
+512,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,E2,87,,,,,,,,,,,,13
+513,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,E3,77,,,,,,,,,,,,23
+514,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,E4,78,,,,,,,,,,,,22
+515,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,E5,100,,,,,,,,,,,,0
+516,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,E8,0,,,,,,,,,,,,100
+517,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,E∑,158,0,0,0,0,0,0,0,0,0,0,0,42
+518,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,T,0,,,,,,,,,,,,
+519,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,D,11,0,,,,,,,,,,,
+520,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP women,Qualification,1,,1,TRUE,1,51100,0,99,0,,1,0,Dolman,Abigail,WVGC,01/01/0001,,2,26200,10,0,0,H,930,930,930,,,,,,,,,,
+521,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,E1,75,,,,,,,,,,,,25
+522,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,E2,84,,,,,,,,,,,,16
+523,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,E3,75,,,,,,,,,,,,25
+524,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,E4,79,,,,,,,,,,,,21
+525,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,E5,100,,,,,,,,,,,,0
+526,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,E8,0,,,,,,,,,,,,100
+527,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,E∑,154,0,0,0,0,0,0,0,0,0,0,0,46
+528,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,T,0,,,,,,,,,,,,
+529,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,D,0,0,,,,,,,,,,,
+530,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,24500,10,0,0,H,910,910,910,,,,,,,,,,
+531,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,E1,100,,,,,,,,,,,,
+532,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,E2,100,,,,,,,,,,,,
+533,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,E3,100,,,,,,,,,,,,
+534,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,E4,100,,,,,,,,,,,,
+535,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,E5,100,,,,,,,,,,,,
+536,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,E8,100,,,,,,,,,,,,
+537,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,E∑,200,0,0,0,0,0,0,0,0,0,0,0,0
+538,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,T,0,,,,,,,,,,,,
+539,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,D,0,0,,,,,,,,,,,
+540,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,TRA,Level 3 TRP Men,Qualification,1,,1,TRUE,1,44500,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,20000,10,0,0,H,0,0,0,,,,,,,,,,
+541,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,E1,0,,,,,,,,,,,,
+542,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,E2,0,,,,,,,,,,,,
+543,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,E3,0,,,,,,,,,,,,
+544,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,E4,0,,,,,,,,,,,,
+545,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,E5,0,,,,,,,,,,,,
+546,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,E8,0,,,,,,,,,,,,
+547,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,E∑,0,0,0,0,0,0,0,0,0,0,0,0,0
+548,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,T,0,,,,,,,,,,,,
+549,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,D,0,0,,,,,,,,,,,
+550,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,1,0,0,0,0,H,0,0,0,,,,,,,,,,
+551,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,E1,0,,,,,,,,,,,,
+552,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,E2,0,,,,,,,,,,,,
+553,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,E3,0,,,,,,,,,,,,
+554,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,E4,0,,,,,,,,,,,,
+555,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,E5,0,,,,,,,,,,,,
+556,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,E8,0,,,,,,,,,,,,
+557,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,E∑,0,0,0,0,0,0,0,0,0,0,0,0,0
+558,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,T,0,,,,,,,,,,,,
+559,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,D,0,0,,,,,,,,,,,
+560,386ef8f7-773e-41a9-5529-b2b9934f5066,ACT Qualifier 2 2018,,DMT,Level 3 DMT men,Qualification,1,,1,TRUE,1,0,0,99,0,,1,0,Donavan,Ben,WVGC,01/01/0001,,2,0,0,0,0,H,0,0,0,,,,,,,,,,

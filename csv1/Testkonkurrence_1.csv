@@ -1,0 +1,941 @@
+#,Event UUID,Title,Subtitle,Discipline,Competition,Stage,Group #,Time,Performance #,Ranked,Rank,Mark Total,Team,Team Rank,Team Mark,Code,Athlete #,External ID,Surname,Given Name,Representing,Date of Birth,Sex,Routine #,Mark,# Elements,Bonus,Penalty,Judge,∑,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,L,A
+1,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,E1,85,1,1,1,2,1,1,1,5,,,2,
+2,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,E2,82,2,1,2,2,1,2,2,5,,,1,
+3,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,E3,87,1,1,1,1,1,1,1,5,,,1,
+4,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,E4,85,1,1,1,2,2,2,1,4,,,1,
+5,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,E5,81,1,2,3,2,2,1,1,5,,,2,
+6,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,E8,100,,,,,,,,,,,,
+7,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,E∑,86,1,1,1,2,1,1,1,5,0,0,1,0
+8,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,T,0,,,,,,,,,,,,
+9,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,D,62,0,,,,,,,,,,,
+10,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,32000,8,0,0,H,0,0,0,,,,,,,,,,
+11,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,E1,84,1,1,1,2,2,1,1,3,,,3,1
+12,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,E2,85,1,1,1,2,1,1,1,3,,,3,1
+13,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,E3,85,1,1,2,2,1,1,0,4,,,2,1
+14,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,E4,80,1,1,2,3,3,2,1,3,,,3,1
+15,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,E5,80,1,2,1,4,3,2,1,3,,,2,1
+16,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,E8,100,,,,,,,,,,,,
+17,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,E∑,84,1,1,1,2,2,1,1,3,0,0,3,1
+18,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,T,0,,,,,,,,,,,,
+19,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,D,65,0,,,,,,,,,,,
+20,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,1,TRUE,7,63700,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,31700,8,0,0,H,0,0,0,,,,,,,,,,
+21,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,E1,92,1,1,0,0,1,1,0,3,,,1,
+22,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,E2,92,1,1,1,0,1,0,1,2,,,1,
+23,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,E3,93,1,0,1,0,0,1,0,3,,,1,
+24,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,E4,93,0,2,1,0,1,0,0,2,,,1,
+25,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,E5,86,1,2,1,1,2,1,2,3,,,1,
+26,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,E8,100,,,,,,,,,,,,
+27,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,E∑,91,1,1,1,0,1,1,0,3,0,0,1,0
+28,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,T,0,,,,,,,,,,,,
+29,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,D,105,0,,,,,,,,,,,
+30,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,37800,8,0,0,H,0,0,0,,,,,,,,,,
+31,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,E1,90,1,1,2,2,0,0,0,2,,,1,1
+32,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,E2,87,1,1,2,1,1,1,1,3,,,1,1
+33,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,E3,88,1,0,2,2,1,1,0,3,,,1,1
+34,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,E4,89,0,0,2,2,1,0,0,3,,,2,1
+35,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,E5,83,0,2,3,3,2,1,1,2,,,2,1
+36,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,E8,100,,,,,,,,,,,,
+37,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,E∑,87,1,1,2,2,1,1,0,3,0,0,1,1
+38,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,T,0,,,,,,,,,,,,
+39,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,D,95,0,,,,,,,,,,,
+40,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,2,TRUE,1,73400,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,35600,8,0,0,H,0,0,0,,,,,,,,,,
+41,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,E1,0,,,,,,,,,,,,
+42,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,E2,0,,,,,,,,,,,,
+43,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,E3,0,,,,,,,,,,,,
+44,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,E4,0,,,,,,,,,,,,
+45,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,E5,0,,,,,,,,,,,,
+46,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,E8,0,,,,,,,,,,,,
+47,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,E∑,0,0,0,0,0,0,0,0,0,0,0,0,0
+48,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,T,0,,,,,,,,,,,,
+49,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,D,0,0,,,,,,,,,,,
+50,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,1,0,0,0,0,H,0,0,0,,,,,,,,,,
+51,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,E1,0,,,,,,,,,,,,
+52,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,E2,0,,,,,,,,,,,,
+53,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,E3,0,,,,,,,,,,,,
+54,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,E4,0,,,,,,,,,,,,
+55,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,E5,0,,,,,,,,,,,,
+56,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,E8,0,,,,,,,,,,,,
+57,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,E∑,0,0,0,0,0,0,0,0,0,0,0,0,0
+58,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,T,0,,,,,,,,,,,,
+59,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,D,0,0,,,,,,,,,,,
+60,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,3,TRUE,9,0,0,99,0,,1,0,Sørensen,Lasse,OGF,01/01/0001,,2,0,0,0,0,H,0,0,0,,,,,,,,,,
+61,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,E1,88,1,1,2,1,1,1,0,4,,,1,
+62,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,E2,89,0,1,1,1,1,1,0,4,,,2,
+63,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,E3,91,1,0,1,1,1,0,0,4,,,1,
+64,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,E4,91,0,0,2,1,0,1,1,3,,,1,
+65,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,E5,83,2,1,2,3,2,1,1,3,,,2,
+66,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,E8,100,,,,,,,,,,,,
+67,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,E∑,88,1,1,2,1,1,1,0,4,0,0,1,0
+68,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,T,0,,,,,,,,,,,,
+69,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,D,84,0,,,,,,,,,,,
+70,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,34800,8,0,0,H,0,0,0,,,,,,,,,,
+71,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,E1,82,1,0,1,1,1,1,0,3,,,10,0
+72,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,E2,81,1,0,1,1,1,1,1,3,,,10,
+73,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,E3,82,1,0,1,1,0,0,0,5,,,10,
+74,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,E4,77,1,1,1,2,1,1,1,5,,,10,0
+75,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,E5,74,1,1,3,3,1,2,1,4,,,10,
+76,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,E8,100,,,,,,,,,,,,
+77,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,E∑,80,1,0,1,1,1,1,1,4,0,0,10,0
+78,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,T,0,,,,,,,,,,,,
+79,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,D,79,0,,,,,,,,,,,
+80,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,4,TRUE,4,66700,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,31900,8,0,0,H,0,0,0,,,,,,,,,,
+81,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,E1,88,1,0,2,1,1,0,0,4,,,3,
+82,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,E2,84,1,1,1,2,2,1,1,4,,,3,0
+83,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,E3,92,1,0,1,1,0,0,0,3,,,2,
+84,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,E4,86,1,1,2,2,1,1,1,3,,,2,
+85,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,E5,83,1,0,2,3,2,2,0,4,,,3,
+86,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,E8,100,,,,,,,,,,,,
+87,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,E∑,86,1,0,2,2,1,1,0,4,0,0,3,0
+88,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,T,0,,,,,,,,,,,,
+89,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,D,64,0,,,,,,,,,,,
+90,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,32200,8,0,0,H,0,0,0,,,,,,,,,,
+91,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,E1,81,2,1,1,2,1,0,0,2,,,10,
+92,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,E2,80,1,1,1,2,1,1,1,2,,,10,
+93,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,E3,78,2,1,0,2,2,1,0,4,,,10,
+94,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,E4,77,1,1,1,2,2,1,1,4,,,10,
+95,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,E5,74,2,2,1,3,2,2,1,3,,,10,
+96,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,E8,100,,,,,,,,,,,,
+97,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,E∑,77,2,1,1,2,2,1,1,3,0,0,10,0
+98,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,T,0,,,,,,,,,,,,
+99,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,D,80,0,,,,,,,,,,,
+100,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,5,TRUE,8,63300,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,31100,8,0,0,H,0,0,0,,,,,,,,,,
+101,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,E1,90,1,1,1,1,2,0,0,3,,,1,
+102,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,E2,89,1,0,1,1,1,2,1,3,,,1,
+103,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,E3,89,1,0,1,2,2,1,0,3,,,1,
+104,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,E4,81,1,0,1,3,3,4,3,3,,,1,
+105,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,E5,77,1,2,3,3,3,4,2,3,,,2,
+106,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,E8,100,,,,,,,,,,,,
+107,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,E∑,87,1,0,1,2,2,2,1,3,0,0,1,0
+108,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,T,0,,,,,,,,,,,,
+109,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,D,62,0,,,,,,,,,,,
+110,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,32300,8,0,0,H,0,0,0,,,,,,,,,,
+111,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,E1,90,1,1,2,2,0,0,0,2,,,2,
+112,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,E2,86,1,1,2,2,2,1,1,2,,,2,
+113,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,E3,89,1,0,2,3,1,0,0,2,,,2,
+114,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,E4,84,1,1,3,3,2,2,1,2,,,1,
+115,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,E5,85,1,1,2,3,2,1,1,2,,,2,
+116,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,E8,100,,,,,,,,,,,,
+117,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,E∑,85,1,1,2,3,2,1,1,2,0,0,2,0
+118,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,T,0,,,,,,,,,,,,
+119,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,D,83,0,,,,,,,,,,,
+120,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,6,TRUE,5,66100,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,33800,8,0,0,H,0,0,0,,,,,,,,,,
+121,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,E1,87,0,2,1,0,2,2,1,4,,,1,
+122,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,E2,88,1,2,1,0,1,1,1,4,,,1,
+123,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,E3,88,0,1,2,1,1,3,0,3,,,1,
+124,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,E4,84,0,2,2,1,3,2,1,4,,,1,
+125,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,E5,83,0,3,2,1,3,2,1,3,,,2,
+126,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,E8,100,,,,,,,,,,,,
+127,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,E∑,85,0,2,2,1,2,2,1,4,0,0,1,0
+128,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,T,0,,,,,,,,,,,,
+129,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,D,83,0,,,,,,,,,,,
+130,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,33800,8,0,0,H,0,0,0,,,,,,,,,,
+131,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,E1,89,0,1,2,2,1,1,1,2,,,1,
+132,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,E2,90,0,0,1,2,1,1,1,2,,,1,1
+133,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,E3,92,0,0,1,2,1,0,0,3,,,1,
+134,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,E4,87,1,0,2,3,2,1,1,2,,,1,
+135,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,E5,86,0,1,3,3,2,1,0,2,,,2,
+136,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,E8,100,,,,,,,,,,,,
+137,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,E∑,90,0,0,2,2,1,1,1,2,0,0,1,0
+138,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,T,0,,,,,,,,,,,,
+139,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,D,83,0,,,,,,,,,,,
+140,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,7,TRUE,3,69100,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,35300,8,0,0,H,0,0,0,,,,,,,,,,
+141,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,E1,86,1,1,1,2,1,0,0,4,,,3,1
+142,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,E2,86,0,1,1,1,1,1,1,4,,,3,1
+143,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,E3,90,1,0,1,0,0,1,0,3,,,3,1
+144,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,E4,85,1,0,2,2,1,1,1,3,,,3,1
+145,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,E5,77,1,1,2,5,5,1,1,3,,,3,1
+146,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,E8,100,,,,,,,,,,,,
+147,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,E∑,85,1,1,1,2,1,1,1,3,0,0,3,1
+148,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,T,0,,,,,,,,,,,,
+149,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,D,84,0,,,,,,,,,,,
+150,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,33900,8,0,0,H,0,0,0,,,,,,,,,,
+151,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,E1,84,1,0,0,1,1,0,1,2,,,10,
+152,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,E2,83,1,0,1,1,0,1,1,2,,,10,
+153,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,E3,83,1,0,1,0,0,0,0,5,,,10,
+154,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,E4,80,0,0,2,1,1,0,1,5,,,10,
+155,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,E5,81,1,1,0,0,2,2,0,3,,,10,
+156,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,E8,100,,,,,,,,,,,,
+157,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,E∑,82,1,0,1,1,1,0,1,3,0,0,10,0
+158,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,T,0,,,,,,,,,,,,
+159,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,D,67,0,,,,,,,,,,,
+160,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,8,TRUE,6,65200,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,31300,8,0,0,H,0,0,0,,,,,,,,,,
+161,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,E1,89,1,1,1,0,0,1,0,3,,,3,1
+162,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,E2,89,0,0,1,1,0,1,1,3,,,3,1
+163,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,E3,89,1,0,0,1,1,0,0,4,,,3,1
+164,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,E4,88,1,1,2,1,0,0,0,3,,,3,1
+165,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,E5,89,0,1,2,2,0,0,0,2,,,3,1
+166,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,E8,100,,,,,,,,,,,,
+167,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,E∑,89,1,1,1,1,0,0,0,3,0,0,3,1
+168,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,T,0,,,,,,,,,,,,
+169,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,D,84,0,,,,,,,,,,,
+170,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,35100,8,0,0,H,0,0,0,,,,,,,,,,
+171,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,E1,92,1,1,1,1,0,0,0,1,,,2,1
+172,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,E2,91,1,1,1,1,1,0,0,1,,,2,1
+173,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,E3,93,1,0,1,1,0,0,0,1,,,2,1
+174,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,E4,93,0,0,2,1,0,0,0,1,,,2,1
+175,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,E5,92,0,1,2,1,0,0,0,1,,,2,1
+176,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,E8,100,,,,,,,,,,,,
+177,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,E∑,92,1,1,1,1,0,0,0,1,0,0,2,1
+178,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,T,0,,,,,,,,,,,,
+179,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,D,79,0,,,,,,,,,,,
+180,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Qualification,1,,9,TRUE,2,70600,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,35500,8,0,0,H,0,0,0,,,,,,,,,,
+181,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,E1,86,1,1,2,2,1,1,1,4,,,1,
+182,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,E2,87,1,1,1,2,1,1,1,4,,,1,
+183,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,E3,89,1,0,1,2,1,0,0,5,,,1,
+184,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,E4,84,1,1,2,2,2,1,1,5,,,1,
+185,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,E5,77,1,1,3,3,3,3,2,5,,,2,
+186,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,E8,100,,,,,,,,,,,,
+187,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,E∑,85,1,1,2,2,1,1,1,5,0,0,1,0
+188,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,T,0,,,,,,,,,,,,
+189,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,D,60,0,,,,,,,,,,,
+190,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,1,31500,8,0,0,H,0,0,0,,,,,,,,,,
+191,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,E1,80,2,1,1,3,1,1,1,,,,,
+192,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,E2,82,1,1,1,1,2,1,1,,,,,
+193,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,E3,75,2,2,1,3,3,2,2,,,,,
+194,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,E4,79,1,0,1,1,3,3,2,,,,,
+195,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,E5,74,1,2,1,3,4,3,2,,,,0,0
+196,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,E8,90,,,,,,,,,,,,
+197,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,E∑,77,1,1,1,3,3,2,2,0,0,0,0,0
+198,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,T,0,,,,,,,,,,,,
+199,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,D,49,0,,,,,,,,,,,
+200,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,1,TRUE,8,122800,0,99,0,,1,0,Beck,Rasmus,OGF,01/01/0001,,2,28000,7,0,0,H,0,0,0,,,,,,,,,,
+201,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,E1,86,1,1,1,1,2,1,1,4,,,2,
+202,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,E2,85,1,1,1,2,1,1,1,4,,,3,
+203,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,E3,87,1,2,1,2,1,0,0,4,,,2,
+204,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,E4,84,1,1,1,2,2,2,2,3,,,2,
+205,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,E5,80,0,1,1,2,3,3,3,4,,,3,
+206,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,E8,100,,,,,,,,,,,,
+207,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,E∑,85,1,1,1,2,2,1,1,4,0,0,2,0
+208,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,T,0,,,,,,,,,,,,
+209,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,D,61,0,,,,,,,,,,,
+210,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,1,31600,8,0,0,H,0,0,0,,,,,,,,,,
+211,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,E1,82,2,0,1,1,3,2,2,2,,,3,2
+212,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,E2,79,2,1,1,2,2,3,3,2,,,3,2
+213,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,E3,77,1,1,3,3,3,3,2,2,,,3,2
+214,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,E4,76,1,1,1,2,3,4,4,4,,,2,2
+215,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,E5,77,1,1,1,3,5,4,3,2,,,1,2
+216,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,E8,100,,,,,,,,,,,,
+217,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,E∑,79,1,1,1,2,3,3,3,2,0,0,3,2
+218,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,T,0,,,,,,,,,,,,
+219,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,D,50,0,,,,,,,,,,,
+220,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,2,TRUE,7,124000,0,99,0,,1,0,Sømod,Johannes,OGF,01/01/0001,,2,28700,8,0,0,H,0,0,0,,,,,,,,,,
+221,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,E1,89,1,1,2,1,1,1,0,2,,,2,
+222,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,E2,91,1,0,1,1,1,1,0,2,,,2,
+223,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,E3,92,1,0,1,1,0,0,0,3,,,2,
+224,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,E4,93,0,0,2,1,1,0,0,2,,,1,
+225,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,E5,90,1,1,2,2,1,0,0,2,,,1,
+226,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,E8,100,,,,,,,,,,,,
+227,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,E∑,91,1,0,2,1,1,0,0,2,0,0,2,0
+228,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,T,0,,,,,,,,,,,,
+229,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,D,84,0,,,,,,,,,,,
+230,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,1,35700,8,0,0,H,0,0,0,,,,,,,,,,
+231,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,E1,90,1,1,0,2,1,0,0,2,,,3,
+232,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,E2,86,1,1,1,4,0,0,1,3,,,3,
+233,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,E3,90,1,0,2,1,1,0,0,2,,,3,
+234,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,E4,92,0,0,0,2,2,0,0,3,,,1,
+235,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,E5,85,1,0,1,3,3,2,1,2,,,2,
+236,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,E8,100,,,,,,,,,,,,
+237,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,E∑,90,1,0,1,2,1,0,0,2,0,0,3,0
+238,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,T,0,,,,,,,,,,,,
+239,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,D,75,0,,,,,,,,,,,
+240,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,3,TRUE,3,135400,0,99,0,,1,0,Green,Elias,VGF89,01/01/0001,,2,34500,8,0,0,H,0,0,0,,,,,,,,,,
+241,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,E1,92,1,1,1,0,1,1,0,2,,,1,
+242,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,E2,92,1,1,1,1,0,0,1,2,,,1,
+243,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,E3,94,1,0,1,1,0,0,0,2,,,1,
+244,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,E4,93,0,0,2,1,0,1,0,2,,,1,
+245,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,E5,83,2,1,2,2,3,3,1,2,,,1,
+246,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,E8,100,,,,,,,,,,,,
+247,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,E∑,92,1,1,1,1,0,1,0,2,0,0,1,0
+248,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,T,0,,,,,,,,,,,,
+249,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,D,84,0,,,,,,,,,,,
+250,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,1,36000,8,0,0,H,0,0,0,,,,,,,,,,
+251,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,E1,84,1,1,1,2,2,2,1,4,,,2,
+252,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,E2,86,1,1,2,1,1,1,1,4,,,2,
+253,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,E3,83,1,0,2,3,2,1,1,5,,,2,
+254,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,E4,83,1,0,2,3,2,3,1,4,,,1,
+255,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,E5,78,1,0,3,4,3,4,2,3,,,2,
+256,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,E8,100,,,,,,,,,,,,
+257,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,E∑,83,1,0,2,3,2,2,1,4,0,0,2,0
+258,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,T,0,,,,,,,,,,,,
+259,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,D,74,0,,,,,,,,,,,
+260,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,4,TRUE,6,134400,0,99,0,,1,0,Eskesen,Magnus,OGF,01/01/0001,,2,32300,8,0,0,H,0,0,0,,,,,,,,,,
+261,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,E1,88,1,1,1,1,1,1,1,3,,,2,
+262,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,E2,89,1,1,1,1,1,1,0,3,,,2,
+263,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,E3,92,1,0,1,1,0,0,0,3,,,2,
+264,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,E4,91,0,0,2,2,1,1,0,2,,,1,
+265,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,E5,83,1,1,3,2,1,1,2,4,,,2,
+266,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,E8,100,,,,,,,,,,,,
+267,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,E∑,89,1,1,1,1,1,1,0,3,0,0,2,0
+268,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,T,0,,,,,,,,,,,,
+269,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,D,84,0,,,,,,,,,,,
+270,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,1,35100,8,0,0,H,0,0,0,,,,,,,,,,
+271,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,E1,87,1,1,2,2,1,1,1,2,,,1,1
+272,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,E2,89,1,1,2,1,1,1,0,2,,,1,1
+273,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,E3,85,1,0,2,3,2,1,1,3,,,1,1
+274,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,E4,89,0,0,2,2,1,1,0,2,,,2,1
+275,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,E5,81,1,1,3,4,3,1,1,2,,,2,1
+276,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,E8,100,,,,,,,,,,,,
+277,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,E∑,87,1,1,2,2,1,1,1,2,0,0,1,1
+278,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,T,0,,,,,,,,,,,,
+279,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,D,79,0,,,,,,,,,,,
+280,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,5,TRUE,2,135800,0,99,0,,1,0,Hayes,Kristoffer,SPD,01/01/0001,,2,34000,8,0,0,H,0,0,0,,,,,,,,,,
+281,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,E1,81,1,2,2,1,2,2,4,4,,,1,
+282,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,E2,85,1,2,1,1,1,1,3,4,,,1,
+283,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,E3,90,0,0,1,0,1,1,2,4,,,1,
+284,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,E4,83,0,2,2,2,2,1,3,2,,,2,1
+285,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,E5,83,0,3,2,2,1,3,1,4,,,1,
+286,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,E8,100,,,,,,,,,,,,
+287,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,E∑,85,0,2,2,1,1,1,3,4,0,0,1,0
+288,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,T,0,,,,,,,,,,,,
+289,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,D,66,0,,,,,,,,,,,
+290,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,1,32100,8,0,0,H,0,0,0,,,,,,,,,,
+291,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,E1,87,0,1,2,3,1,1,1,3,,,1,
+292,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,E2,87,1,1,1,2,2,1,1,3,,,1,
+293,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,E3,87,0,1,2,3,2,1,0,3,,,1,
+294,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,E4,85,0,0,2,3,2,2,1,3,,,2,
+295,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,E5,84,0,1,3,4,2,1,1,2,,,2,
+296,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,E8,100,,,,,,,,,,,,
+297,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,E∑,86,0,1,2,3,2,1,1,3,0,0,1,0
+298,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,T,0,,,,,,,,,,,,
+299,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,D,83,0,,,,,,,,,,,
+300,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,6,TRUE,4,135300,0,99,0,,1,0,Hvidemose,Johan,OGF,01/01/0001,,2,34100,8,0,0,H,0,0,0,,,,,,,,,,
+301,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,E1,85,1,1,0,0,0,1,0,2,,,10,
+302,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,E2,83,1,0,1,1,1,1,0,2,,,10,
+303,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,E3,85,1,0,0,1,0,0,0,3,,,10,
+304,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,E4,84,0,0,1,2,1,0,0,2,,,10,
+305,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,E5,85,1,1,1,1,0,0,0,1,,,10,
+306,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,E8,100,,,,,,,,,,,,
+307,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,E∑,85,1,0,1,1,0,0,0,2,0,0,10,0
+308,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,T,0,,,,,,,,,,,,
+309,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,D,84,0,,,,,,,,,,,
+310,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,1,33900,8,0,0,H,0,0,0,,,,,,,,,,
+311,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,E1,92,1,0,1,2,0,1,0,2,,,1,
+312,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,E2,93,1,0,1,1,0,0,1,2,,,1,
+313,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,E3,90,1,0,2,2,1,1,0,2,,,1,
+314,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,E4,91,0,0,2,2,1,1,0,2,,,1,
+315,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,E5,87,0,1,3,3,2,1,0,2,,,1,
+316,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,E8,100,,,,,,,,,,,,
+317,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,E∑,90,1,0,2,2,1,1,0,2,0,0,1,0
+318,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,T,0,,,,,,,,,,,,
+319,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,D,79,0,,,,,,,,,,,
+320,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,7,TRUE,1,139400,0,99,0,,1,0,Termansen,Oliver,Outrup,01/01/0001,,2,34900,8,0,0,H,0,0,0,,,,,,,,,,
+321,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,E1,66,1,1,1,0,1,1,,,,,,
+322,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,E2,69,1,0,,,,,,,,,,
+323,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,E3,70,,,,,,,,,,,,
+324,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,E4,65,0,2,1,0,2,,,,,,,
+325,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,E5,63,0,2,2,1,2,,,,,,0,0
+326,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,E8,70,,,,,,,,,,,,
+327,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,E∑,67,0,1,1,0,1,0,0,0,0,0,0,0
+328,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,T,0,,,,,,,,,,,,
+329,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,D,55,0,,,,,,,,,,,
+330,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,1,25600,5,0,0,H,0,0,0,,,,,,,,,,
+331,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,E1,86,1,1,2,2,1,1,0,2,,,3,1
+332,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,E2,89,1,1,2,1,1,0,0,2,,,2,1
+333,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,E3,88,1,0,3,2,1,0,0,2,,,2,1
+334,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,E4,91,0,0,2,2,1,0,0,1,,,2,1
+335,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,E5,85,1,1,3,2,2,0,1,1,,,3,1
+336,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,E8,100,,,,,,,,,,,,
+337,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,E∑,88,1,1,2,2,1,0,0,2,0,0,2,1
+338,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,T,0,,,,,,,,,,,,
+339,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,D,99,0,,,,,,,,,,,
+340,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Senior mænd,Final,1,,8,TRUE,5,135300,0,99,0,,1,0,Wesch,Anders,OGF,01/01/0001,,2,36300,8,0,0,H,0,0,0,,,,,,,,,,
+341,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,E1,84,2,1,1,2,1,1,1,5,,,2,
+342,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,E2,80,2,2,2,2,2,2,2,4,,,2,
+343,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,E3,81,2,2,2,2,2,2,2,4,,,1,
+344,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,E4,82,2,2,2,2,2,1,1,4,,,2,
+345,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,E5,77,2,2,3,3,2,2,2,5,,,2,
+346,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,E8,100,,,,,,,,,,,,
+347,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,E∑,80,2,2,2,2,2,2,2,4,0,0,2,0
+348,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,T,0,,,,,,,,,,,,
+349,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,D,41,0,,,,,,,,,,,
+350,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,28100,8,0,0,H,0,0,0,,,,,,,,,,
+351,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,E1,86,2,3,2,1,1,1,1,2,,,1,
+352,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,E2,83,2,2,2,2,2,2,1,3,,,1,
+353,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,E3,85,2,2,2,1,1,1,1,4,,,1,
+354,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,E4,83,2,3,3,2,1,1,1,3,,,1,
+355,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,E5,80,2,3,3,2,3,2,1,3,,,1,
+356,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,E8,100,,,,,,,,,,,,
+357,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,E∑,84,2,3,2,2,1,1,1,3,0,0,1,0
+358,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,T,0,,,,,,,,,,,,
+359,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,D,47,0,,,,,,,,,,,
+360,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,1,TRUE,5,58000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,29900,8,0,0,H,0,0,0,,,,,,,,,,
+361,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E1,90,2,1,1,0,1,0,0,4,,,1,
+362,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E2,86,2,2,1,1,1,1,1,4,,,1,
+363,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E3,93,1,1,1,0,0,0,0,3,,,1,
+364,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E4,84,2,3,2,2,1,1,1,3,,,1,
+365,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E5,89,2,2,1,1,0,0,1,3,,,1,
+366,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E8,100,,,,,,,,,,,,
+367,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E∑,88,2,2,1,1,1,0,1,3,0,0,1,0
+368,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,T,0,,,,,,,,,,,,
+369,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,D,42,0,,,,,,,,,,,
+370,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,H,0,0,0,,,,,,,,,,
+371,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,E1,90,2,2,1,1,1,1,0,1,,,1,
+372,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,E2,88,1,2,2,0,1,1,1,3,,,1,
+373,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,E3,91,2,2,1,1,0,0,0,2,,,1,
+374,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,E4,87,2,3,2,1,1,1,0,2,,,1,
+375,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,E5,92,2,2,0,0,0,1,0,2,,,1,
+376,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,E8,100,,,,,,,,,,,,
+377,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,E∑,89,2,2,1,1,1,1,0,2,0,0,1,0
+378,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,T,0,,,,,,,,,,,,
+379,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,D,56,0,,,,,,,,,,,
+380,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,2,TRUE,3,62900,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,32300,8,0,0,H,0,0,0,,,,,,,,,,
+381,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,E1,85,1,1,1,1,1,1,1,4,,,3,1
+382,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,E2,80,2,2,2,2,2,1,1,4,,,3,1
+383,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,E3,82,1,1,2,2,2,2,1,4,,,2,1
+384,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,E4,85,1,2,2,1,1,1,0,3,,,3,1
+385,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,E5,80,1,2,2,2,1,2,2,5,,,2,1
+386,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,E8,100,,,,,,,,,,,,
+387,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,E∑,82,1,2,2,2,1,1,1,4,0,0,3,1
+388,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,T,0,,,,,,,,,,,,
+389,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,D,41,0,,,,,,,,,,,
+390,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28700,8,0,0,H,0,0,0,,,,,,,,,,
+391,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,E1,80,1,2,1,1,0,1,0,2,,,2,10
+392,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,E2,72,1,1,2,2,2,3,2,3,,,2,10
+393,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,E3,76,1,2,1,1,1,1,1,4,,,2,10
+394,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,E4,73,1,2,2,2,1,1,2,3,,,3,10
+395,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,E5,74,1,2,1,0,2,2,2,3,,,3,10
+396,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,E8,100,,,,,,,,,,,,
+397,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,E∑,76,1,2,1,1,1,1,2,3,0,0,2,10
+398,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,T,0,,,,,,,,,,,,
+399,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,D,43,0,,,,,,,,,,,
+400,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,3,TRUE,7,55800,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27100,8,0,0,H,0,0,0,,,,,,,,,,
+401,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,E1,90,0,0,1,2,1,1,0,4,,,1,
+402,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,E2,89,1,1,0,2,1,1,1,3,,,1,
+403,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,E3,89,1,0,2,1,2,1,0,3,,,1,
+404,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,E4,92,0,0,2,1,0,0,1,3,,,1,
+405,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,E5,89,0,0,0,2,2,2,0,4,,,1,
+406,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,E8,100,,,,,,,,,,,,
+407,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,E∑,91,0,0,1,2,1,1,0,3,0,0,1,0
+408,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,T,0,,,,,,,,,,,,
+409,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,D,60,0,,,,,,,,,,,
+410,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33300,8,0,0,H,0,0,0,,,,,,,,,,
+411,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,E1,78,1,0,1,2,3,5,2,4,,,2,2
+412,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,E2,80,1,1,1,2,2,3,2,4,,,2,2
+413,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,E3,84,0,0,0,2,3,3,2,3,,,1,2
+414,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,E4,74,1,1,2,3,4,4,4,4,,,1,2
+415,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,E5,79,0,0,0,3,5,5,3,2,,,1,2
+416,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,E8,100,,,,,,,,,,,,
+417,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,E∑,80,1,0,1,2,3,4,2,4,0,0,1,2
+418,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,T,0,,,,,,,,,,,,
+419,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,D,51,0,,,,,,,,,,,
+420,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,4,TRUE,4,62400,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29100,8,0,0,H,0,0,0,,,,,,,,,,
+421,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,E1,72,2,2,2,2,2,2,1,5,,,10,
+422,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,E2,74,3,2,1,1,1,2,2,4,,,10,0
+423,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,E3,75,2,2,2,1,1,2,1,4,,,10,0
+424,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,E4,80,1,2,2,1,0,0,0,4,,,10,
+425,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,E5,70,3,3,2,3,2,1,1,5,,,10,0
+426,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,E8,100,,,,,,,,,,,,
+427,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,E∑,75,2,2,2,1,1,2,1,4,0,0,10,0
+428,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,T,0,,,,,,,,,,,,
+429,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,D,39,0,,,,,,,,,,,
+430,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,26400,8,0,0,H,0,0,0,,,,,,,,,,
+431,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,E1,75,2,1,1,2,2,2,1,3,,,1,10
+432,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,E2,74,3,2,1,1,2,2,2,2,,,1,10
+433,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,E3,76,3,2,2,1,1,1,1,2,,,1,10
+434,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,E4,74,2,2,1,1,2,2,0,4,,,2,10
+435,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,E5,70,2,2,3,3,2,3,2,2,,,1,10
+436,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,E8,100,,,,,,,,,,,,
+437,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,E∑,76,2,2,1,1,2,2,1,2,0,0,1,10
+438,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,T,0,,,,,,,,,,,,
+439,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,D,26,0,,,,,,,,,,,
+440,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,5,TRUE,8,51800,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,25400,8,0,0,H,0,0,0,,,,,,,,,,
+441,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,E1,88,1,1,1,1,1,0,1,2,,,3,1
+442,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,E2,86,1,1,1,2,1,1,1,2,,,3,1
+443,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,E3,92,1,1,1,0,0,0,0,1,,,3,1
+444,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,E4,89,1,1,1,1,1,0,0,2,,,3,1
+445,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,E5,85,1,2,2,2,1,0,0,3,,,3,1
+446,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,E8,100,,,,,,,,,,,,
+447,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,E∑,89,1,1,1,1,1,0,0,2,0,0,3,1
+448,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,T,0,,,,,,,,,,,,
+449,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,D,43,0,,,,,,,,,,,
+450,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,31000,8,0,0,H,0,0,0,,,,,,,,,,
+451,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,E1,72,2,1,2,1,1,0,0,1,,,10,10
+452,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,E2,70,2,1,1,2,1,1,1,1,,,10,10
+453,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,E3,71,2,2,1,1,1,0,0,2,,,10,10
+454,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,E4,67,2,2,2,1,1,1,0,4,,,10,10
+455,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,E5,68,2,2,3,2,1,0,0,2,,,10,10
+456,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,E8,100,,,,,,,,,,,,
+457,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,E∑,70,2,2,2,1,1,0,0,2,0,0,10,10
+458,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,T,0,,,,,,,,,,,,
+459,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,D,51,0,,,,,,,,,,,
+460,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,6,TRUE,6,57100,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,26100,8,0,0,H,0,0,0,,,,,,,,,,
+461,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,E1,85,0,2,2,0,2,1,1,3,,,3,1
+462,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,E2,83,1,2,1,2,2,1,1,3,,,3,1
+463,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,E3,88,0,1,1,2,1,1,0,2,,,3,1
+464,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,E4,84,1,2,2,1,2,1,1,2,,,3,1
+465,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,E5,80,0,2,3,1,1,2,3,4,,,3,1
+466,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,E8,100,,,,,,,,,,,,
+467,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,E∑,84,0,2,2,1,2,1,1,3,0,0,3,1
+468,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,T,0,,,,,,,,,,,,
+469,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,D,66,0,,,,,,,,,,,
+470,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31800,8,0,0,H,0,0,0,,,,,,,,,,
+471,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,E1,93,0,0,1,1,0,1,1,1,,,2,
+472,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,E2,92,0,1,1,1,1,1,0,1,,,2,
+473,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,E3,94,0,0,1,1,1,0,0,1,,,2,
+474,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,E4,95,0,0,2,1,0,0,0,1,,,1,
+475,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,E5,90,0,0,2,3,2,0,0,2,,,1,
+476,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,E8,100,,,,,,,,,,,,
+477,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,E∑,94,0,0,1,1,1,0,0,1,0,0,2,0
+478,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,T,0,,,,,,,,,,,,
+479,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,D,91,0,,,,,,,,,,,
+480,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,7,TRUE,1,69100,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,37300,8,0,0,H,0,0,0,,,,,,,,,,
+481,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E1,91,1,1,1,1,1,1,0,2,,,1,
+482,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E2,92,1,1,1,0,0,1,1,2,,,1,
+483,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E3,95,1,1,0,0,0,0,0,2,,,1,
+484,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E4,94,1,1,0,0,0,0,0,2,,,2,
+485,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E5,92,2,2,0,0,1,1,0,1,,,1,
+486,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E8,100,,,,,,,,,,,,
+487,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E∑,94,1,1,0,0,0,1,0,2,0,0,1,0
+488,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,T,0,,,,,,,,,,,,
+489,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,D,43,0,,,,,,,,,,,
+490,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,H,0,0,0,,,,,,,,,,
+491,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,E1,91,1,2,1,1,0,1,0,2,,,1,
+492,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,E2,92,1,1,1,1,1,0,0,2,,,1,
+493,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,E3,92,1,2,1,0,0,0,0,3,,,1,
+494,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,E4,84,2,2,1,2,1,1,1,3,,,3,
+495,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,E5,93,1,2,0,1,0,0,0,2,,,1,
+496,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,E8,100,,,,,,,,,,,,
+497,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,E∑,92,1,2,1,1,0,0,0,2,0,0,1,0
+498,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,T,0,,,,,,,,,,,,
+499,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,D,47,0,,,,,,,,,,,
+500,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Qualification,1,,8,TRUE,2,64800,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,32300,8,0,0,H,0,0,0,,,,,,,,,,
+501,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,E1,81,2,2,2,3,2,2,1,4,,,1,
+502,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,E2,81,3,2,2,1,2,2,2,4,,,1,
+503,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,E3,85,2,2,2,1,1,1,1,4,,,1,
+504,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,E4,85,2,2,2,2,1,1,1,3,,,1,
+505,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,E5,77,2,3,2,3,3,3,2,4,,,1,
+506,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,E8,100,,,,,,,,,,,,
+507,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,E∑,82,2,2,2,2,2,2,1,4,0,0,1,0
+508,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,T,0,,,,,,,,,,,,
+509,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,D,41,0,,,,,,,,,,,
+510,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,1,28700,8,0,0,H,0,0,0,,,,,,,,,,
+511,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,E1,71,2,2,2,2,3,2,2,2,,,2,10
+512,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,E2,72,3,2,2,2,2,2,1,2,,,2,10
+513,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,E3,77,2,2,2,1,1,1,1,2,,,1,10
+514,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,E4,77,2,2,2,2,1,1,0,2,,,1,10
+515,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,E5,69,3,3,2,3,2,2,3,2,,,1,10
+516,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,E8,100,,,,,,,,,,,,
+517,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,E∑,74,2,2,2,2,2,2,1,2,0,0,1,10
+518,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,T,0,,,,,,,,,,,,
+519,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,D,26,0,,,,,,,,,,,
+520,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,1,TRUE,8,105300,0,99,0,,1,0,Skriver,Jonas,Outrup,01/01/0001,,2,24800,8,0,0,H,0,0,0,,,,,,,,,,
+521,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,E1,81,2,1,2,2,1,1,1,5,,,3,1
+522,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,E2,79,2,3,2,2,2,1,1,4,,,3,1
+523,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,E3,83,1,2,2,1,1,1,1,4,,,3,1
+524,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,E4,82,1,2,2,2,1,1,1,4,,,3,1
+525,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,E5,74,1,2,2,3,3,3,3,5,,,3,1
+526,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,E8,100,,,,,,,,,,,,
+527,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,E∑,82,1,2,2,2,1,1,1,4,0,0,3,1
+528,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,T,0,,,,,,,,,,,,
+529,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,D,40,0,,,,,,,,,,,
+530,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,1,28600,8,0,0,H,0,0,0,,,,,,,,,,
+531,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,E1,77,1,2,1,1,1,1,1,2,,,3,10
+532,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,E2,72,2,2,2,2,2,2,2,3,,,1,10
+533,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,E3,76,2,2,2,1,1,1,1,3,,,1,10
+534,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,E4,79,1,2,2,1,1,1,0,3,,,0,10
+535,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,E5,74,2,2,2,2,2,1,1,2,,,2,10
+536,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,E8,100,,,,,,,,,,,,
+537,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,E∑,76,2,2,2,1,1,1,1,3,0,0,1,10
+538,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,T,0,,,,,,,,,,,,
+539,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,D,47,0,,,,,,,,,,,
+540,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,2,TRUE,6,111900,0,99,0,,1,0,Lucassen,Andreas,VGF89,01/01/0001,,2,27500,8,0,0,H,0,0,0,,,,,,,,,,
+541,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,E1,92,1,1,1,1,0,1,0,3,,,0,
+542,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,E2,84,1,2,2,2,1,2,2,4,,,0,
+543,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,E3,88,2,1,1,2,1,1,1,3,,,0,
+544,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,E4,85,2,1,1,2,1,2,1,4,,,1,
+545,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,E5,90,1,1,0,1,1,2,1,3,,,0,
+546,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,E8,100,,,,,,,,,,,,
+547,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,E∑,88,1,1,1,2,1,2,1,3,0,0,0,0
+548,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,T,0,,,,,,,,,,,,
+549,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,D,39,0,,,,,,,,,,,
+550,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,1,30300,8,0,0,H,0,0,0,,,,,,,,,,
+551,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,E1,65,1,1,1,1,2,1,1,4,,,2,21
+552,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,E2,60,2,2,2,2,2,1,2,4,,,2,21
+553,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,E3,63,2,2,1,1,2,2,1,4,,,1,21
+554,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,E4,67,1,1,1,1,1,1,1,4,,,1,21
+555,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,E5,56,2,2,2,3,2,3,2,5,,,2,21
+556,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,E8,100,,,,,,,,,,,,
+557,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,E∑,63,2,2,1,1,2,1,1,4,0,0,2,21
+558,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,T,0,,,,,,,,,,,,
+559,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,D,19,0,,,,,,,,,,,
+560,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,3,TRUE,7,108200,0,99,0,,1,0,Winther,Adam,VGF89,01/01/0001,,2,20800,8,0,0,H,0,0,0,,,,,,,,,,
+561,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,E1,84,1,2,1,2,2,1,1,5,,,1,
+562,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,E2,80,2,2,2,2,2,2,2,5,,,1,
+563,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,E3,87,1,1,1,1,1,1,1,5,,,1,
+564,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,E4,82,2,2,3,2,1,1,1,4,,,2,
+565,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,E5,80,2,2,3,1,1,2,2,4,,,3,
+566,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,E8,100,,,,,,,,,,,,
+567,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,E∑,83,2,2,2,2,1,1,1,5,0,0,1,0
+568,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,T,0,,,,,,,,,,,,
+569,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,D,41,0,,,,,,,,,,,
+570,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,1,29000,8,0,0,H,0,0,0,,,,,,,,,,
+571,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,E1,82,2,3,2,2,2,2,1,2,,,2,
+572,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,E2,81,2,3,2,2,2,2,2,2,,,2,
+573,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,E3,82,2,3,3,2,1,1,1,3,,,2,
+574,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,E4,81,2,3,3,2,2,2,1,3,,,1,
+575,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,E5,76,2,3,4,3,2,3,2,3,,,2,
+576,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,E8,100,,,,,,,,,,,,
+577,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,E∑,80,2,3,3,2,2,2,1,3,0,0,2,0
+578,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,T,0,,,,,,,,,,,,
+579,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,D,30,0,,,,,,,,,,,
+580,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,4,TRUE,5,114000,0,99,0,,1,0,Sømod,Gustav,Gudme,01/01/0001,,2,27000,8,0,0,H,0,0,0,,,,,,,,,,
+581,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,E1,91,1,0,0,1,2,1,0,3,,,1,
+582,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,E2,89,1,0,0,1,1,2,2,3,,,1,
+583,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,E3,94,0,0,1,1,1,0,0,2,,,1,
+584,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,E4,90,1,1,1,2,1,0,0,3,,,1,
+585,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,E5,94,1,0,0,1,1,0,0,3,,,0,
+586,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,E8,100,,,,,,,,,,,,
+587,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,E∑,93,1,0,0,1,1,0,0,3,0,0,1,0
+588,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,T,0,,,,,,,,,,,,
+589,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,D,60,0,,,,,,,,,,,
+590,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,1,33900,8,0,0,H,0,0,0,,,,,,,,,,
+591,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,E1,81,1,0,0,1,3,3,4,3,,,2,2
+592,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,E2,83,0,1,1,2,2,3,3,2,,,1,2
+593,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,E3,88,0,0,1,3,2,1,0,1,,,2,2
+594,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,E4,79,0,0,3,4,3,2,3,2,,,2,2
+595,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,E5,80,1,0,0,2,3,4,4,2,,,2,2
+596,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,E8,100,,,,,,,,,,,,
+597,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,E∑,82,0,0,1,2,3,3,3,2,0,0,2,2
+598,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,T,0,,,,,,,,,,,,
+599,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,D,51,0,,,,,,,,,,,
+600,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,5,TRUE,3,126000,0,99,0,,1,0,Erbs,David,OGF,01/01/0001,,2,29700,8,0,0,H,0,0,0,,,,,,,,,,
+601,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E1,90,2,1,1,0,0,1,1,3,,,1,
+602,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E2,86,2,2,1,1,1,1,1,4,,,1,
+603,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E3,90,2,2,1,1,0,0,0,3,,,1,
+604,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E4,86,3,2,1,1,1,1,1,3,,,1,
+605,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E5,91,2,2,0,1,0,0,0,3,,,1,
+606,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E8,100,,,,,,,,,,,,
+607,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,E∑,88,2,2,1,1,0,1,1,3,0,0,1,0
+608,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,T,0,,,,,,,,,,,,
+609,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,D,42,0,,,,,,,,,,,
+610,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,1,30600,8,0,0,H,0,0,0,,,,,,,,,,
+611,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,E1,89,2,2,1,1,1,1,0,2,,,1,
+612,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,E2,86,2,2,2,1,1,1,1,3,,,1,
+613,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,E3,86,2,2,2,1,1,1,1,3,,,1,
+614,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,E4,88,1,2,2,1,1,1,1,2,,,1,
+615,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,E5,88,2,2,0,1,0,2,0,3,,,2,
+616,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,E8,100,,,,,,,,,,,,
+617,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,E∑,86,2,2,2,1,1,1,1,3,0,0,1,0
+618,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,T,0,,,,,,,,,,,,
+619,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,D,55,0,,,,,,,,,,,
+620,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,6,TRUE,4,124800,0,99,0,,1,0,Vibæk,Emil,OGF,01/01/0001,,2,31300,8,0,0,H,0,0,0,,,,,,,,,,
+621,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E1,92,1,1,1,1,0,1,0,2,,,1,
+622,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E2,95,1,1,1,0,0,0,0,1,,,1,
+623,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E3,96,1,1,0,0,0,0,0,1,,,1,
+624,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E4,93,1,1,1,1,0,0,0,2,,,1,
+625,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E5,93,1,2,1,1,0,0,0,1,,,1,
+626,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E8,100,,,,,,,,,,,,
+627,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,E∑,94,1,1,1,1,0,0,0,1,0,0,1,0
+628,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,T,0,,,,,,,,,,,,
+629,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,D,43,0,,,,,,,,,,,
+630,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,1,32500,8,0,0,H,0,0,0,,,,,,,,,,
+631,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,E1,88,1,2,1,2,1,1,1,2,,,1,
+632,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,E2,89,1,2,1,1,1,1,1,2,,,1,
+633,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,E3,87,1,2,2,1,1,1,0,4,,,1,
+634,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,E4,85,1,1,2,2,1,1,1,4,,,1,1
+635,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,E5,88,1,2,2,3,1,0,0,2,,,1,0
+636,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,E8,100,,,,,,,,,,,,
+637,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,E∑,87,1,2,2,2,1,1,1,2,0,0,1,0
+638,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,T,0,,,,,,,,,,,,
+639,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,D,47,0,,,,,,,,,,,
+640,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,7,TRUE,2,128100,0,99,0,,1,0,Bredvig,Alexander,Outrup,01/01/0001,,2,30800,8,0,0,H,0,0,0,,,,,,,,,,
+641,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,E1,84,0,1,1,0,2,1,1,,,,,
+642,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,E2,85,0,1,1,0,1,1,1,,,,,
+643,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,E3,89,0,1,0,0,0,0,0,,,,,
+644,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,E4,85,0,2,1,0,1,1,0,,,,,
+645,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,E5,79,0,1,2,0,3,2,3,,,,,
+646,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,E8,90,,,,,,,,,,,,
+647,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,E∑,85,0,1,1,0,1,1,1,0,0,0,0,0
+648,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,T,0,,,,,,,,,,,,
+649,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,D,60,0,,,,,,,,,,,
+650,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,1,31500,7,0,0,H,0,0,0,,,,,,,,,,
+651,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,E1,91,0,1,2,1,0,0,0,3,,,2,
+652,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,E2,89,1,0,2,1,0,1,1,3,,,2,
+653,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,E3,94,0,0,1,1,0,0,0,3,,,1,
+654,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,E4,94,0,0,2,1,0,0,0,2,,,1,
+655,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,E5,91,0,0,3,2,0,0,0,2,,,2,
+656,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,E8,100,,,,,,,,,,,,
+657,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,E∑,92,0,0,2,1,0,0,0,3,0,0,2,0
+658,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,T,0,,,,,,,,,,,,
+659,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,D,91,0,,,,,,,,,,,
+660,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Junior drenge,Final,1,,8,TRUE,1,137300,0,99,0,,1,0,Steffensen,Rasmus,SPD,01/01/0001,,2,36700,8,0,0,H,0,0,0,,,,,,,,,,
+661,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,E1,93,1,1,1,0,0,1,0,2,,,1,
+662,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,E2,89,1,1,1,1,1,1,1,3,,,1,
+663,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,E3,93,1,1,0,0,0,1,1,2,,,1,
+664,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,E4,90,1,1,1,1,1,1,1,2,,,1,
+665,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,E5,96,1,0,0,1,0,0,0,1,,,1,
+666,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,E8,100,,,,,,,,,,,,
+667,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,E∑,91,1,1,1,1,0,1,1,2,0,0,1,0
+668,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,T,0,,,,,,,,,,,,
+669,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,D,43,0,,,,,,,,,,,
+670,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31600,8,0,0,H,0,0,0,,,,,,,,,,
+671,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,E1,80,1,1,1,1,1,0,1,2,,,2,10
+672,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,E2,81,1,2,1,1,0,0,1,1,,,2,10
+673,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,E3,81,1,2,1,1,0,0,1,1,,,2,10
+674,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,E4,80,0,2,2,1,1,1,0,1,,,2,10
+675,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,E5,74,1,2,3,1,1,2,1,3,,,2,10
+676,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,E8,100,,,,,,,,,,,,
+677,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,E∑,80,1,2,1,1,1,0,1,1,0,0,2,10
+678,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,T,0,,,,,,,,,,,,
+679,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,D,23,0,,,,,,,,,,,
+680,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,1,TRUE,5,57900,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,26300,8,0,0,H,0,0,0,,,,,,,,,,
+681,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,E1,85,1,1,0,4,0,0,1,4,,,3,1
+682,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,E2,84,1,1,1,3,1,1,1,3,,,3,1
+683,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,E3,83,1,1,0,4,1,1,1,4,,,3,1
+684,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,E4,81,1,1,1,3,2,2,1,4,,,3,1
+685,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,E5,82,1,0,4,2,2,1,1,3,,,3,1
+686,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,E8,100,,,,,,,,,,,,
+687,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,E∑,83,1,1,1,3,1,1,1,4,0,0,3,1
+688,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,T,0,,,,,,,,,,,,
+689,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,D,57,0,,,,,,,,,,,
+690,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,30600,8,0,0,H,0,0,0,,,,,,,,,,
+691,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E1,89,0,2,1,2,1,0,0,2,,,3,
+692,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E2,90,1,2,1,1,0,0,0,2,,,3,
+693,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E3,84,1,2,2,2,1,1,1,3,,,3,
+694,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E4,83,1,2,3,3,2,2,1,2,,,1,
+695,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E5,81,1,3,2,3,1,2,1,3,,,3,
+696,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E8,100,,,,,,,,,,,,
+697,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E∑,85,1,2,2,2,1,1,1,2,0,0,3,0
+698,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,T,0,,,,,,,,,,,,
+699,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,D,47,0,,,,,,,,,,,
+700,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,2,TRUE,2,60800,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,H,0,0,0,,,,,,,,,,
+701,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,E1,86,1,1,1,1,1,1,0,4,,,3,1
+702,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,E2,86,1,2,1,1,1,1,0,3,,,3,1
+703,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,E3,86,1,1,1,1,1,1,1,3,,,3,1
+704,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,E4,84,1,0,1,1,2,2,1,4,,,3,1
+705,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,E5,84,1,1,0,2,2,1,1,4,,,3,1
+706,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,E8,100,,,,,,,,,,,,
+707,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,E∑,85,1,1,1,1,1,1,1,4,0,0,3,1
+708,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,T,0,,,,,,,,,,,,
+709,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,D,41,0,,,,,,,,,,,
+710,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,29600,8,0,0,H,0,0,0,,,,,,,,,,
+711,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,E1,84,1,3,2,2,2,1,1,2,,,2,
+712,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,E2,88,1,2,2,1,1,1,1,2,,,1,
+713,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,E3,86,1,2,3,2,1,1,1,2,,,1,
+714,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,E4,84,1,2,3,3,2,1,1,2,,,1,
+715,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,E5,83,1,2,3,2,2,2,1,2,,,2,
+716,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,E8,100,,,,,,,,,,,,
+717,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,E∑,85,1,2,3,2,2,1,1,2,0,0,1,0
+718,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,T,0,,,,,,,,,,,,
+719,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,D,30,0,,,,,,,,,,,
+720,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,3,TRUE,4,58100,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28500,8,0,0,H,0,0,0,,,,,,,,,,
+721,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,E1,94,1,1,1,0,0,1,0,1,,,1,
+722,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,E2,90,1,1,1,1,1,1,1,2,,,1,
+723,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,E3,91,1,1,1,1,1,1,0,2,,,1,
+724,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,E4,91,1,1,1,1,1,1,0,2,,,1,
+725,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,E5,95,1,1,0,0,0,1,0,1,,,1,
+726,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,E8,100,,,,,,,,,,,,
+727,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,E∑,91,1,1,1,1,1,1,0,2,0,0,1,0
+728,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,T,0,,,,,,,,,,,,
+729,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,D,43,0,,,,,,,,,,,
+730,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,31600,8,0,0,H,0,0,0,,,,,,,,,,
+731,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,E1,89,0,2,2,1,1,1,0,3,,,1,
+732,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,E2,90,1,2,1,1,1,0,0,3,,,1,
+733,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,E3,90,1,2,1,1,0,0,1,3,,,1,
+734,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,E4,88,1,2,2,1,1,1,0,3,,,1,
+735,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,E5,85,1,3,3,2,1,0,0,4,,,1,
+736,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,E8,100,,,,,,,,,,,,
+737,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,E∑,89,1,2,2,1,1,0,0,3,0,0,1,0
+738,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,T,0,,,,,,,,,,,,
+739,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,D,47,0,,,,,,,,,,,
+740,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,4,TRUE,1,63000,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,31400,8,0,0,H,0,0,0,,,,,,,,,,
+741,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,E1,89,1,2,1,1,1,1,0,3,,,1,
+742,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,E2,89,1,1,1,1,1,1,1,3,,,1,
+743,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,E3,91,1,1,1,1,0,1,0,3,,,1,
+744,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,E4,91,0,1,1,1,1,1,0,3,,,1,
+745,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,E5,86,1,2,2,2,2,0,0,4,,,1,
+746,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,E8,100,,,,,,,,,,,,
+747,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,E∑,90,1,1,1,1,1,1,0,3,0,0,1,0
+748,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,T,0,,,,,,,,,,,,
+749,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,D,41,0,,,,,,,,,,,
+750,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,31100,8,0,0,H,0,0,0,,,,,,,,,,
+751,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E1,89,1,2,1,1,1,1,0,2,,,2,
+752,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E2,89,1,1,2,1,1,1,0,2,,,2,
+753,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E3,87,1,2,2,1,1,1,1,2,,,2,
+754,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E4,88,1,2,2,1,1,1,0,3,,,1,
+755,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E5,81,1,3,2,2,2,3,1,3,,,2,
+756,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E8,100,,,,,,,,,,,,
+757,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E∑,88,1,2,2,1,1,1,0,2,0,0,2,0
+758,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,T,0,,,,,,,,,,,,
+759,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,D,30,0,,,,,,,,,,,
+760,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,5,TRUE,3,60500,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,H,0,0,0,,,,,,,,,,
+761,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,E1,80,1,2,1,2,2,2,4,5,,,1,
+762,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,E2,77,1,2,2,3,3,3,3,5,,,1,
+763,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,E3,81,1,1,2,2,2,2,3,5,,,1,
+764,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,E4,83,1,1,1,2,2,2,2,4,,,2,
+765,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,E5,74,0,2,2,3,4,4,4,5,,,2,
+766,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,E8,100,,,,,,,,,,,,
+767,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,E∑,80,1,2,2,2,2,2,3,5,0,0,1,0
+768,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,T,0,,,,,,,,,,,,
+769,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,D,24,0,,,,,,,,,,,
+770,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,26400,8,0,0,H,0,0,0,,,,,,,,,,
+771,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,E1,75,1,2,2,2,2,2,0,3,,,1,10
+772,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,E2,75,1,2,1,2,2,2,2,2,,,1,10
+773,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,E3,75,1,2,1,2,2,2,1,3,,,1,10
+774,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,E4,78,1,2,2,1,1,1,0,2,,,2,10
+775,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,E5,77,1,2,2,1,2,1,1,2,,,1,10
+776,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,E8,100,,,,,,,,,,,,
+777,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,E∑,75,1,2,2,2,2,2,1,2,0,0,1,10
+778,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,T,0,,,,,,,,,,,,
+779,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,D,26,0,,,,,,,,,,,
+780,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,6,TRUE,7,51500,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,25100,8,0,0,H,0,0,0,,,,,,,,,,
+781,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,E1,85,1,1,1,1,0,1,0,5,,,5,
+782,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,E2,78,2,2,2,2,2,1,1,5,,,5,
+783,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,E3,82,1,1,1,1,1,2,1,5,,,5,
+784,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,E4,80,2,2,2,1,1,1,1,5,,,5,
+785,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,E5,81,1,1,2,2,1,1,1,5,,,5,
+786,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,E8,100,,,,,,,,,,,,
+787,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,E∑,82,1,1,2,1,1,1,1,5,0,0,5,0
+788,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,T,0,,,,,,,,,,,,
+789,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,D,39,0,,,,,,,,,,,
+790,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,28500,8,0,0,H,0,0,0,,,,,,,,,,
+791,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,E1,88,1,2,2,1,1,1,0,2,,,2,
+792,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,E2,85,1,2,2,2,1,1,1,2,,,3,
+793,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,E3,86,1,2,2,2,1,1,1,2,,,2,
+794,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,E4,84,2,3,2,2,1,1,1,3,,,1,
+795,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,E5,81,1,3,3,2,3,2,1,2,,,2,
+796,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,E8,100,,,,,,,,,,,,
+797,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,E∑,86,1,2,2,2,1,1,1,2,0,0,2,0
+798,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,T,0,,,,,,,,,,,,
+799,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,D,30,0,,,,,,,,,,,
+800,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Qualification,1,,7,TRUE,6,57300,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,28800,8,0,0,H,0,0,0,,,,,,,,,,
+801,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,E1,71,1,3,3,3,4,3,2,5,,,3,2
+802,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,E2,72,1,2,3,3,3,3,3,5,,,3,2
+803,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,E3,73,1,2,3,3,4,4,2,4,,,2,2
+804,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,E4,72,1,3,3,3,3,3,3,4,,,3,2
+805,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,E5,71,1,3,3,3,4,3,3,4,,,3,2
+806,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,E8,100,,,,,,,,,,,,
+807,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,E∑,71,1,3,3,3,4,3,3,4,0,0,3,2
+808,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,T,0,,,,,,,,,,,,
+809,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,D,0,0,,,,,,,,,,,
+810,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,1,21300,8,0,0,H,0,0,0,,,,,,,,,,
+811,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,E1,0,,,,,,,,,,,,
+812,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,E2,0,,,,,,,,,,,,
+813,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,E3,0,,,,,,,,,,,,
+814,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,E4,0,,,,,,,,,,,,
+815,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,E5,0,,,,,,,,,,,,
+816,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,E8,0,,,,,,,,,,,,
+817,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,E∑,0,0,0,0,0,0,0,0,0,0,0,0,0
+818,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,T,0,,,,,,,,,,,,
+819,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,D,0,0,,,,,,,,,,,
+820,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,1,TRUE,7,72800,0,99,0,,1,0,Krejberg,Cecilie,SPD,01/01/0001,,2,0,0,0,0,H,0,0,0,,,,,,,,,,
+821,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,E1,90,1,0,1,1,0,1,0,2,,,3,1
+822,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,E2,77,2,2,2,2,2,2,2,5,,,3,1
+823,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,E3,84,1,1,1,2,2,1,1,3,,,3,1
+824,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,E4,85,1,1,1,1,1,1,1,4,,,3,1
+825,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,E5,80,2,0,3,3,2,2,1,3,,,3,1
+826,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,E8,100,,,,,,,,,,,,
+827,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,E∑,84,1,1,1,2,2,1,1,3,0,0,3,1
+828,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,T,0,,,,,,,,,,,,
+829,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,D,19,0,,,,,,,,,,,
+830,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,1,27100,8,0,0,H,0,0,0,,,,,,,,,,
+831,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,E1,82,1,3,2,1,1,1,1,3,,,3,2
+832,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,E2,82,1,1,2,2,1,1,1,4,,,3,2
+833,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,E3,81,1,3,2,2,1,1,1,3,,,3,2
+834,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,E4,80,1,3,3,3,1,1,1,3,,,2,2
+835,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,E5,79,1,3,2,2,2,2,2,2,,,3,2
+836,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,E8,100,,,,,,,,,,,,
+837,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,E∑,81,1,3,2,2,1,1,1,3,0,0,3,2
+838,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,T,0,,,,,,,,,,,,
+839,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,D,31,0,,,,,,,,,,,
+840,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,2,TRUE,6,111800,0,99,0,,1,0,Mølgaard,Christine,SPD,01/01/0001,,2,27400,8,0,0,H,0,0,0,,,,,,,,,,
+841,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,E1,89,1,1,1,1,1,1,0,2,,,2,1
+842,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,E2,91,1,1,1,1,0,0,0,2,,,2,1
+843,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,E3,92,1,0,0,0,1,1,0,3,,,1,1
+844,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,E4,91,0,1,0,1,1,1,1,2,,,1,1
+845,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,E5,93,0,2,1,1,0,0,0,1,,,1,1
+846,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,E8,100,,,,,,,,,,,,
+847,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,E∑,90,1,1,1,1,1,1,0,2,0,0,1,1
+848,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,T,0,,,,,,,,,,,,
+849,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,D,43,0,,,,,,,,,,,
+850,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,1,31300,8,0,0,H,0,0,0,,,,,,,,,,
+851,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,E1,91,1,1,2,1,1,1,0,1,,,1,
+852,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,E2,91,1,2,2,1,1,0,0,1,,,1,
+853,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,E3,93,1,2,1,0,0,0,0,2,,,1,
+854,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,E4,88,1,2,2,1,1,1,1,2,,,1,
+855,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,E5,90,1,2,2,1,0,0,0,2,,,2,
+856,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,E8,100,,,,,,,,,,,,
+857,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,E∑,90,1,2,2,1,1,0,0,2,0,0,1,0
+858,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,T,0,,,,,,,,,,,,
+859,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,D,30,0,,,,,,,,,,,
+860,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,3,TRUE,3,119200,0,99,0,,1,0,Juhl,Anne-Sofie,VGF89,01/01/0001,,2,30000,8,0,0,H,0,0,0,,,,,,,,,,
+861,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,E1,89,1,1,1,1,1,1,0,4,,,1,
+862,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,E2,92,1,1,1,0,0,1,0,2,,,2,
+863,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,E3,90,1,1,1,1,1,1,1,2,,,1,
+864,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,E4,90,0,2,2,1,0,0,0,3,,,2,
+865,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,E5,90,0,2,2,1,0,0,1,3,,,1,
+866,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,E8,100,,,,,,,,,,,,
+867,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,E∑,91,1,1,1,1,0,1,0,3,0,0,1,0
+868,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,T,0,,,,,,,,,,,,
+869,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,D,41,0,,,,,,,,,,,
+870,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,1,31400,8,0,0,H,0,0,0,,,,,,,,,,
+871,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,E1,84,1,3,2,2,2,2,1,2,,,1,
+872,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,E2,88,1,3,2,1,1,1,0,2,,,1,
+873,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,E3,88,1,2,1,2,2,1,0,2,,,1,
+874,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,E4,86,0,2,2,2,2,1,1,3,,,1,
+875,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,E5,80,1,2,3,3,2,3,2,2,,,2,
+876,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,E8,100,,,,,,,,,,,,
+877,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,E∑,86,1,2,2,2,2,1,1,2,0,0,1,0
+878,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,T,0,,,,,,,,,,,,
+879,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,D,30,0,,,,,,,,,,,
+880,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,4,TRUE,4,118300,0,99,0,,1,0,La Cour,Sara,OGF,01/01/0001,,2,28800,8,0,0,H,0,0,0,,,,,,,,,,
+881,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,E1,90,1,1,1,0,1,1,0,3,,,2,
+882,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,E2,89,1,1,1,0,1,0,1,3,,,3,
+883,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,E3,87,1,1,1,1,1,1,1,3,,,3,
+884,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,E4,90,0,1,1,1,1,1,0,3,,,2,
+885,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,E5,86,1,2,2,0,1,1,1,3,,,3,
+886,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,E8,100,,,,,,,,,,,,
+887,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,E∑,88,1,1,1,0,1,1,1,3,0,0,3,0
+888,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,T,0,,,,,,,,,,,,
+889,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,D,41,0,,,,,,,,,,,
+890,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,1,30500,8,0,0,H,0,0,0,,,,,,,,,,
+891,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E1,89,1,2,1,1,1,1,0,2,,,2,
+892,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E2,90,1,2,1,1,1,0,0,2,,,2,
+893,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E3,88,1,2,1,2,1,1,0,2,,,2,
+894,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E4,87,2,2,2,2,1,1,0,2,,,1,
+895,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E5,80,1,2,2,3,2,3,2,3,,,2,
+896,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E8,100,,,,,,,,,,,,
+897,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,E∑,88,1,2,1,2,1,1,0,2,0,0,2,0
+898,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,T,0,,,,,,,,,,,,
+899,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,D,30,0,,,,,,,,,,,
+900,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,5,TRUE,2,120400,0,99,0,,1,0,Sørensen,Freja,Gudme,01/01/0001,,2,29400,8,0,0,H,0,0,0,,,,,,,,,,
+901,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,E1,79,1,1,0,3,3,2,1,,,,,
+902,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,E2,79,1,1,0,2,2,2,3,,,,,
+903,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,E3,79,1,0,1,3,3,2,1,,,,0,
+904,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,E4,78,0,0,3,2,3,2,2,,,,,
+905,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,E5,77,1,1,0,4,2,3,2,,,,,
+906,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,E8,90,,,,,,,,,,,,
+907,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,E∑,78,1,1,0,3,3,2,2,0,0,0,0,0
+908,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,T,0,,,,,,,,,,,,
+909,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,D,35,0,,,,,,,,,,,
+910,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,1,26900,7,0,0,H,0,0,0,,,,,,,,,,
+911,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E1,85,1,3,1,1,1,1,0,4,,,3,
+912,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E2,89,1,2,1,1,1,0,0,0,,,3,2
+913,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E3,86,1,3,2,1,1,0,0,4,,,2,
+914,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E4,86,1,2,2,2,1,1,0,3,,,2,
+915,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E5,81,0,3,2,2,3,2,1,3,,,3,
+916,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E8,100,,,,,,,,,,,,
+917,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,E∑,85,1,3,2,1,1,1,0,3,0,0,3,0
+918,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,T,0,,,,,,,,,,,,
+919,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,D,47,0,,,,,,,,,,,
+920,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,6,TRUE,5,117900,0,99,0,,1,0,Ørskov,Sara,Outrup,01/01/0001,,2,30200,8,0,0,H,0,0,0,,,,,,,,,,
+921,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,E1,93,1,1,0,1,1,1,1,0,,,1,
+922,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,E2,92,1,1,0,1,1,1,1,1,,,1,
+923,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,E3,94,1,0,0,1,1,1,0,1,,,1,
+924,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,E4,95,0,0,0,1,1,1,0,1,,,1,
+925,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,E5,93,1,0,0,0,1,1,1,2,,,1,
+926,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,E8,100,,,,,,,,,,,,
+927,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,E∑,93,1,0,0,1,1,1,1,1,0,0,1,0
+928,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,T,0,,,,,,,,,,,,
+929,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,D,43,0,,,,,,,,,,,
+930,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,1,32200,8,0,0,H,0,0,0,,,,,,,,,,
+931,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,E1,89,1,2,1,1,1,1,0,2,,,2,
+932,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,E2,87,1,2,2,1,1,1,1,2,,,2,
+933,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,E3,92,0,2,1,0,0,0,1,2,,,2,
+934,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,E4,85,1,2,2,2,2,2,0,3,,,1,
+935,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,E5,83,1,0,3,2,2,3,2,2,,,2,
+936,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,E8,100,,,,,,,,,,,,
+937,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,E∑,87,1,2,2,1,1,1,1,2,0,0,2,0
+938,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,T,0,,,,,,,,,,,,
+939,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,D,30,0,,,,,,,,,,,
+940,96d43097-ae49-444a-583c-619a5d0f7e00,Testkonkurrence 1,,TUM,Damer og piger,Final,1,,7,TRUE,1,124300,0,99,0,,1,0,Nørby,Johanne,OGF,01/01/0001,,2,29100,8,0,0,H,0,0,0,,,,,,,,,,

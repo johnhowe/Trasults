@@ -1,0 +1,421 @@
+#,Event UUID,Title,Subtitle,Discipline,Competition,Stage,Group #,Time,Performance #,Ranked,Rank,Mark Total,Team,Team Rank,Team Mark,Code,Athlete #,External ID,Surname,Given Name,Representing,Date of Birth,Sex,Routine #,Mark,# Elements,Bonus,Penalty,Judge,∑,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,L,A
+1,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,E1,67,4,3,2,3,4,3,2,4,3,2,,3
+2,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,E2,68,4,2,1,4,4,4,3,1,2,5,,2
+3,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,E3,74,3,1,3,3,3,3,2,1,2,4,,1
+4,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,E4,71,4,1,1,3,3,3,3,3,4,3,0,1
+5,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,E5,100,,,,,,,,,,,,
+6,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,E8,100,,,,,,,,,,,,
+7,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,E∑,143,8,3,3,6,7,6,5,4,5,7,0,3
+8,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,T,0,,,,,,,,,,,,
+9,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,D,0,0,,,,,,,,,,,
+10,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,23700,10,0,0,H,940,940,0,,,,,,,,,,
+11,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,E1,68,3,3,2,4,4,2,3,2,3,4,0,2
+12,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,E2,78,4,2,1,4,3,1,2,1,1,2,0,1
+13,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,E3,75,3,2,2,3,3,3,3,2,2,2,0,0
+14,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,E4,73,4,1,2,3,4,2,3,2,2,3,0,1
+15,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,E5,100,,,,,,,,,,,,
+16,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,E8,100,,,,,,,,,,,,
+17,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,E∑,146,7,4,4,7,7,4,6,4,4,5,0,2
+18,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,T,0,,,,,,,,,,,,
+19,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,D,29,28,,,,,,,,,,,
+20,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 5 TRP Female,Qualification,1,,1,TRUE,1,24300,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,24300,10,0,0,H,960,960,0,,,,,,,,,,
+21,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,E1,65,3,3,3,3,2,2,4,2,3,,,0
+22,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,E2,76,1,2,2,2,1,1,3,1,1,,,0
+23,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,E3,72,1,3,2,3,2,2,2,1,2,,,0
+24,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,E4,61,3,4,3,4,3,3,4,2,3,,,0
+25,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,E5,90,,,,,,,,,,,,
+26,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,E8,90,,,,,,,,,,,,
+27,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,E∑,136,4,6,5,6,4,4,7,3,5,0,0,0
+28,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,T,0,,,,,,,,,,,,
+29,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,D,0,0,,,,,,,,,,,
+30,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21900,9,0,0,H,830,830,0,,,,,,,,,,
+31,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,E1,65,3,3,1,2,1,2,2,1,,,,0
+32,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,E2,64,1,3,2,3,2,2,1,2,,,,
+33,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,E3,64,2,3,2,3,1,2,2,1,,0,0,
+34,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,E4,58,3,4,3,3,2,3,2,2,,,,0
+35,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,E5,80,,,,,,,,,,,,
+36,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,E8,80,,,,,,,,,,,,
+37,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,E∑,125,5,6,4,6,3,4,4,3,0,0,0,0
+38,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,T,0,,,,,,,,,,,,
+39,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,D,44,0,,,,,,,,,,,
+40,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,1,TRUE,3,24200,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,24200,8,0,0,H,730,730,0,,,,,,,,,,
+41,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,E1,75,2,3,1,2,3,3,2,1,3,4,,1
+42,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,E2,82,1,2,0,2,2,2,2,1,2,4,0,0
+43,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,E3,82,0,2,1,3,3,2,2,0,2,3,0,0
+44,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,E4,77,2,3,2,3,3,2,2,0,3,3,0,0
+45,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,E5,100,,,,,,,,,,,,
+46,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,E8,100,,,,,,,,,,,,
+47,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,E∑,158,3,5,2,5,6,4,4,1,5,7,0,0
+48,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,T,0,,,,,,,,,,,,
+49,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,D,0,0,,,,,,,,,,,
+50,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,24800,10,0,0,H,900,900,0,,,,,,,,,,
+51,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,E1,77,1,2,1,2,3,2,2,2,3,3,0,2
+52,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,E2,84,1,1,1,1,2,2,1,1,2,2,0,2
+53,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,E3,83,0,2,1,1,2,1,0,2,3,3,0,2
+54,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,E4,84,2,2,1,1,2,1,0,1,2,3,0,1
+55,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,E5,100,,,,,,,,,,,,
+56,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,E8,100,,,,,,,,,,,,
+57,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,E∑,164,2,4,2,2,4,3,1,3,5,6,0,4
+58,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,T,0,,,,,,,,,,,,
+59,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,D,58,0,,,,,,,,,,,
+60,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,2,TRUE,1,31400,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,31400,10,0,0,H,920,920,0,,,,,,,,,,
+61,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,E1,70,3,3,3,3,3,3,2,3,3,3,0,1
+62,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,E2,69,2,3,4,3,3,3,4,3,2,4,0,0
+63,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,E3,71,1,2,3,3,4,3,4,3,3,3,0,0
+64,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,E4,63,3,3,4,4,4,5,4,3,4,3,0,0
+65,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,E5,100,,,,,,,,,,,,
+66,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,E8,100,,,,,,,,,,,,
+67,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,E∑,137,5,6,7,6,7,6,8,6,6,6,0,0
+68,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,T,0,,,,,,,,,,,,
+69,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,D,0,10,,,,,,,,,,,
+70,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,21800,10,0,0,H,910,910,0,,,,,,,,,,
+71,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,E1,73,1,2,3,2,3,3,3,3,3,3,,1
+72,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,E2,72,2,3,3,3,3,4,2,2,2,3,0,1
+73,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,E3,73,1,2,3,3,3,4,2,2,3,3,0,1
+74,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,E4,67,3,2,3,4,4,4,3,3,4,3,0,0
+75,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,E5,100,,,,,,,,,,,,
+76,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,E8,100,,,,,,,,,,,,
+77,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,E∑,143,3,4,6,6,6,8,5,5,6,6,0,2
+78,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,T,0,,,,,,,,,,,,
+79,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,D,54,8,,,,,,,,,,,
+80,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Female,Qualification,1,,3,TRUE,2,28100,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,28100,10,0,0,H,920,920,0,,,,,,,,,,
+81,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,E1,74,3,2,2,2,3,3,3,1,3,3,0,1
+82,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,E2,82,1,1,1,1,2,3,2,1,3,3,0,0
+83,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,E3,80,1,2,0,1,2,3,3,1,4,3,0,0
+84,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,E4,75,3,2,1,2,3,3,3,1,4,3,0,0
+85,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,E5,100,,,,,,,,,,,,
+86,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,E8,100,,,,,,,,,,,,
+87,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,E∑,155,4,4,2,3,5,6,6,2,7,6,0,0
+88,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,T,0,,,,,,,,,,,,
+89,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,D,0,0,,,,,,,,,,,
+90,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,24900,10,0,0,H,940,940,0,,,,,,,,,,
+91,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,E1,71,3,2,2,2,3,3,3,3,3,3,0,2
+92,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,E2,71,2,2,3,2,3,2,3,3,4,3,0,2
+93,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,E3,74,2,1,3,2,3,2,3,4,3,2,0,1
+94,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,E4,74,2,1,2,3,3,2,3,2,2,4,0,2
+95,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,E5,100,,,,,,,,,,,,
+96,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,E8,100,,,,,,,,,,,,
+97,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,E∑,146,4,3,5,4,6,4,6,6,6,6,0,4
+98,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,T,0,,,,,,,,,,,,
+99,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,D,71,0,,,,,,,,,,,
+100,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,1,TRUE,1,30800,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,30800,10,0,0,H,910,910,0,,,,,,,,,,
+101,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,E1,56,3,4,3,3,2,3,3,3,,,,0
+102,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,E2,59,3,4,2,2,3,2,2,3,,,,0
+103,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,E3,62,2,3,2,2,2,2,2,3,,,,0
+104,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,E4,51,3,4,4,3,4,4,4,3,,,,0
+105,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,E5,80,,,,,,,,,,,,
+106,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,E8,80,,,,,,,,,,,,
+107,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,E∑,115,6,8,5,5,5,5,5,6,0,0,0,0
+108,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,T,0,,,,,,,,,,,,
+109,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,D,0,0,,,,,,,,,,,
+110,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,19100,8,0,0,H,760,760,0,,,,,,,,,,
+111,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,E1,65,3,3,3,3,4,3,3,2,3,3,0,5
+112,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,E2,73,1,3,3,3,2,2,1,2,2,3,0,5
+113,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,E3,67,2,3,4,3,3,2,2,2,3,4,,5
+114,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,E4,56,4,5,3,3,4,4,4,3,4,5,0,5
+115,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,E5,100,,,,,,,,,,,,
+116,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,E8,100,,,,,,,,,,,,
+117,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,E∑,133,5,6,6,6,7,5,5,4,6,7,0,10
+118,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,T,0,,,,,,,,,,,,
+119,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,D,58,0,,,,,,,,,,,
+120,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 6 TRP Male,Qualification,1,,2,TRUE,2,28300,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,28300,10,0,0,H,920,920,0,,,,,,,,,,
+121,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,E1,67,2,4,3,2,3,3,4,4,4,3,,1
+122,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,E2,66,2,4,4,1,2,3,4,3,5,4,0,2
+123,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,E3,68,3,4,3,1,3,3,4,3,4,3,0,1
+124,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,E4,62,3,5,4,2,4,2,4,4,5,4,0,1
+125,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,E5,100,,,,,,,,,,,,
+126,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,E8,100,,,,,,,,,,,,
+127,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,E∑,132,5,8,7,3,6,6,8,7,9,7,0,2
+128,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,T,0,,,,,,,,,,,,
+129,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,D,0,0,,,,,,,,,,,
+130,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,1,22300,10,0,0,H,910,910,0,,,,,,,,,,
+131,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,E1,75,1,4,3,1,2,1,2,3,4,3,0,1
+132,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,E2,68,1,4,3,1,2,3,4,4,5,3,0,2
+133,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,E3,73,1,4,3,1,3,2,3,3,4,2,0,1
+134,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,E4,66,2,4,3,2,4,4,3,3,4,4,0,1
+135,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,E5,100,,,,,,,,,,,,
+136,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,E8,100,,,,,,,,,,,,
+137,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,E∑,144,2,8,6,2,5,5,6,6,8,6,0,2
+138,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,T,0,,,,,,,,,,,,
+139,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,D,62,18,,,,,,,,,,,
+140,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,1,TRUE,2,28000,0,99,0,,1,0,Burrows,Charlotte,CTGC,02/02/2005,,2,28000,10,0,0,H,920,920,0,,,,,,,,,,
+141,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,E1,86,1,1,0,2,1,0,2,1,1,3,,2
+142,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,E2,90,0,1,1,1,2,0,1,1,1,2,,0
+143,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,E3,84,2,2,1,2,1,2,1,1,0,3,,1
+144,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,E4,90,2,1,0,1,2,1,1,0,0,1,0,1
+145,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,E5,100,,,,,,,,,,,,
+146,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,E8,100,,,,,,,,,,,,
+147,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,E∑,175,3,2,1,3,3,1,2,2,1,5,0,2
+148,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,T,0,,,,,,,,,,,,
+149,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,D,0,10,,,,,,,,,,,
+150,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,26100,10,0,0,H,960,960,0,,,,,,,,,,
+151,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,E1,80,0,2,1,1,1,2,1,0,2,,,0
+152,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,E2,83,1,1,1,0,1,0,1,0,2,,,0
+153,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,E3,83,0,2,1,1,0,1,0,1,1,,,0
+154,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,E4,81,2,2,1,1,0,1,0,1,1,,,0
+155,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,E5,90,,,,,,,,,,,,
+156,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,E8,90,,,,,,,,,,,,
+157,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,E∑,163,1,4,2,2,1,2,1,1,3,0,0,0
+158,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,T,0,,,,,,,,,,,,
+159,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,D,38,0,,,,,,,,,,,
+160,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Female,Qualification,1,,2,TRUE,1,28700,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,28700,9,0,0,H,860,860,0,,,,,,,,,,
+161,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,E1,67,4,2,3,3,4,3,2,2,3,4,0,3
+162,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,E2,72,2,1,2,4,4,3,2,2,3,4,0,1
+163,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,E3,75,2,1,2,3,4,2,3,2,2,3,0,1
+164,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,E4,62,4,2,4,5,4,3,4,4,3,4,0,1
+165,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,E5,100,,,,,,,,,,,,
+166,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,E8,100,,,,,,,,,,,,
+167,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,E∑,140,6,3,5,7,8,6,5,4,6,8,0,2
+168,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,T,0,,,,,,,,,,,,
+169,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,D,0,0,,,,,,,,,,,
+170,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,23200,10,0,0,H,920,920,0,,,,,,,,,,
+171,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,E1,50,4,2,2,3,3,3,3,,,,,0
+172,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,E2,54,3,1,2,2,2,3,3,,,,,
+173,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,E3,49,3,0,2,3,4,4,5,,,,,
+174,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,E4,50,3,2,2,3,3,4,3,,,,,0
+175,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,E5,70,,,,,,,,,,,,
+176,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,E8,70,,,,,,,,,,,,
+177,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,E∑,102,6,3,4,6,6,7,6,0,0,0,0,0
+178,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,T,0,,,,,,,,,,,,
+179,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,D,54,0,,,,,,,,,,,
+180,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Level 7 TRP Male,Qualification,1,,1,TRUE,1,23200,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,21600,7,0,0,H,600,600,0,,,,,,,,,,
+181,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,E1,70,3,2,3,3,1,2,2,1,3,,,0
+182,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,E2,71,3,3,2,3,1,2,1,3,1,,,0
+183,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,E3,72,3,3,3,2,2,1,1,1,2,,,0
+184,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,E4,71,3,3,2,2,1,3,2,2,1,,,0
+185,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,E5,90,,,,,,,,,,,,
+186,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,E8,90,,,,,,,,,,,,
+187,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,E∑,143,6,6,5,5,2,4,3,3,3,0,0,0
+188,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,T,13070,,,,,,,,,,,,
+189,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,D,68,0,,,,,,,,,,,
+190,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,42070,9,0,0,H,790,790,0,,,,,,,,,,
+191,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,E1,22,2,3,3,,,,,,,,,0
+192,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,E2,23,2,2,3,,,,,,,,,0
+193,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,E3,21,3,2,4,,,,,,,,,0
+194,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,E4,22,3,2,3,,,,,,,,,0
+195,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,E5,30,,,,,,,,,,,,
+196,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,E8,30,,,,,,,,,,,,
+197,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,E∑,45,5,4,6,0,0,0,0,0,0,0,0,0
+198,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,T,4637,,,,,,,,,,,,
+199,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,D,38,0,,,,,,,,,,,
+200,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Junior U22 TRP Male,Qualification,1,,1,TRUE,1,42070,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,15537,3,0,0,H,260,260,0,,,,,,,,,,
+201,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,E1,73,2,2,3,2,3,4,2,3,2,2,0,2
+202,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,E2,76,2,1,2,3,2,4,3,3,2,1,0,1
+203,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,E3,82,1,1,2,2,3,2,2,2,1,2,0,0
+204,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,E4,79,2,1,2,2,3,3,2,2,1,2,0,1
+205,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,E5,100,,,,,,,,,,,,
+206,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,E8,100,,,,,,,,,,,,
+207,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,E∑,155,4,2,4,4,6,7,4,5,3,4,0,2
+208,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,T,14486,,,,,,,,,,,,
+209,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,D,134,0,,,,,,,,,,,
+210,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,52586,10,0,0,H,920,920,0,,,,,,,,,,
+211,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,E1,83,2,1,2,1,3,1,1,1,2,2,0,1
+212,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,E2,83,2,1,1,2,3,1,1,1,2,1,0,2
+213,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,E3,83,1,2,1,2,2,2,1,2,1,1,0,2
+214,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,E4,74,3,2,2,3,3,3,2,2,2,3,0,1
+215,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,E5,100,,,,,,,,,,,,
+216,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,E8,100,,,,,,,,,,,,
+217,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,E∑,162,4,3,3,4,6,3,2,3,4,3,0,3
+218,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,T,14561,,,,,,,,,,,,
+219,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,D,126,0,,,,,,,,,,,
+220,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,TRA,Senior TRP Male,Qualification,1,,1,TRUE,1,52586,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,52361,10,0,0,H,900,900,0,,,,,,,,,,
+221,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,E1,93,2,3,,,,,,,,,0,2
+222,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,E2,94,2,3,,,,,,,,,0,1
+223,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,E3,96,1,1,,,,,,,,,0,2
+224,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,E4,96,1,2,,,,,,,,,0,1
+225,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,E5,100,,,,,,,,,,,,
+226,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,E8,100,,,,,,,,,,,,
+227,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,E∑,189,3,5,0,0,0,0,0,0,0,0,0,3
+228,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,T,0,,,,,,,,,,,,
+229,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,D,7,0,,,,,,,,,,,
+230,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,1,19600,2,0,0,H,0,0,0,,,,,,,,,,
+231,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,E1,97,1,2,,,,,,,,,0,0
+232,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,E2,97,1,1,,,,,,,,,0,1
+233,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,E3,97,1,1,,,,,,,,,0,1
+234,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,E4,96,1,2,,,,,,,,,0,1
+235,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,E5,100,,,,,,,,,,,,
+236,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,E8,100,,,,,,,,,,,,
+237,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,E∑,193,2,3,0,0,0,0,0,0,0,0,0,2
+238,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,T,0,,,,,,,,,,,,
+239,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,D,7,30,,,,,,,,,,,
+240,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 5 DMT Female,Qualification,1,,1,TRUE,1,36600,0,99,0,,1,0,Upton,Lucy,CTGC,21/12/2013,,2,17000,2,0,0,H,0,0,0,,,,,,,,,,
+241,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,E1,0,,,,,,,,,,,,
+242,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,E2,0,,,,,,,,,,,,
+243,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,E3,0,,,,,,,,,,,,
+244,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,E4,0,,,,,,,,,,,,
+245,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,E5,0,,,,,,,,,,,,
+246,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,E8,0,,,,,,,,,,,,
+247,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,E∑,0,0,0,0,0,0,0,0,0,0,0,0,0
+248,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,T,0,,,,,,,,,,,,
+249,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,D,0,0,,,,,,,,,,,
+250,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,1,0,0,0,0,H,0,0,0,,,,,,,,,,
+251,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,E1,0,,,,,,,,,,,,
+252,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,E2,0,,,,,,,,,,,,
+253,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,E3,0,,,,,,,,,,,,
+254,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,E4,0,,,,,,,,,,,,
+255,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,E5,0,,,,,,,,,,,,
+256,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,E8,0,,,,,,,,,,,,
+257,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,E∑,0,0,0,0,0,0,0,0,0,0,0,0,0
+258,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,T,0,,,,,,,,,,,,
+259,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,D,0,0,,,,,,,,,,,
+260,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,1,TRUE,2,0,0,99,0,,1,0,Edwards,Connor,CTGC,20/04/2010,,2,0,0,0,0,H,0,0,0,,,,,,,,,,
+261,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,E1,92,3,4,,,,,,,,,0,1
+262,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,E2,93,3,3,,,,,,,,,0,1
+263,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,E3,94,3,2,,,,,,,,,0,1
+264,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,E4,94,3,2,,,,,,,,,0,1
+265,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,E5,100,,,,,,,,,,,,
+266,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,E8,100,,,,,,,,,,,,
+267,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,E∑,187,6,5,0,0,0,0,0,0,0,0,0,2
+268,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,T,0,,,,,,,,,,,,
+269,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,D,30,-1,,,,,,,,,,,
+270,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,1,21100,2,0,6,H,0,0,0,,,,,,,,,,
+271,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,E1,95,1,3,,,,,,,,,0,1
+272,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,E2,95,2,2,,,,,,,,,0,1
+273,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,E3,95,2,2,,,,,,,,,0,1
+274,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,E4,94,2,3,,,,,,,,,0,1
+275,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,E5,100,,,,,,,,,,,,
+276,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,E8,100,,,,,,,,,,,,
+277,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,E∑,189,4,5,0,0,0,0,0,0,0,0,0,2
+278,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,T,0,,,,,,,,,,,,
+279,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,D,27,0,,,,,,,,,,,
+280,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Male,Qualification,1,,2,TRUE,1,42700,0,99,0,,1,0,Zala,Rory,CTGC,09/08/2007,,2,21600,2,0,0,H,0,0,0,,,,,,,,,,
+281,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,E1,92,2,3,,,,,,,,,0,3
+282,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,E2,93,2,3,,,,,,,,,0,2
+283,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,E3,92,3,3,,,,,,,,,0,2
+284,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,E4,92,3,3,,,,,,,,,0,2
+285,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,E5,100,,,,,,,,,,,,
+286,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,E8,100,,,,,,,,,,,,
+287,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,E∑,185,5,6,0,0,0,0,0,0,0,0,0,4
+288,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,T,0,,,,,,,,,,,,
+289,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,D,19,0,,,,,,,,,,,
+290,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,1,20400,2,0,0,H,0,0,0,,,,,,,,,,
+291,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,E1,93,3,3,,,,,,,,,0,1
+292,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,E2,93,3,2,,,,,,,,,0,2
+293,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,E3,93,3,2,,,,,,,,,0,2
+294,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,E4,93,3,3,,,,,,,,,0,1
+295,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,E5,100,,,,,,,,,,,,
+296,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,E8,100,,,,,,,,,,,,
+297,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,E∑,186,6,5,0,0,0,0,0,0,0,0,0,3
+298,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,T,0,,,,,,,,,,,,
+299,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,D,19,4,,,,,,,,,,,
+300,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,1,TRUE,3,40500,0,99,0,,1,0,Passlow,Eleanor,CTGC,12/11/2010,,2,20100,2,0,0,H,0,0,0,,,,,,,,,,
+301,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,E1,96,2,2,,,,,,,,,0,0
+302,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,E2,96,2,2,,,,,,,,,0,0
+303,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,E3,97,2,1,,,,,,,,,0,0
+304,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,E4,97,2,1,,,,,,,,,0,0
+305,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,E5,100,,,,,,,,,,,,
+306,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,E8,100,,,,,,,,,,,,
+307,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,E∑,193,4,3,0,0,0,0,0,0,0,0,0,0
+308,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,T,0,,,,,,,,,,,,
+309,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,D,19,0,,,,,,,,,,,
+310,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,1,21200,2,0,0,H,0,0,0,,,,,,,,,,
+311,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,E1,97,1,2,,,,,,,,,0,0
+312,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,E2,96,2,2,,,,,,,,,0,0
+313,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,E3,96,2,2,,,,,,,,,0,0
+314,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,E4,95,3,2,,,,,,,,,0,0
+315,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,E5,100,,,,,,,,,,,,
+316,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,E8,100,,,,,,,,,,,,
+317,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,E∑,192,4,4,0,0,0,0,0,0,0,0,0,0
+318,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,T,0,,,,,,,,,,,,
+319,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,D,19,4,,,,,,,,,,,
+320,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,2,TRUE,1,41900,0,99,0,,1,0,Upton,Chloe,CTGC,05/08/2010,,2,20700,2,0,0,H,0,0,0,,,,,,,,,,
+321,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,E1,97,2,1,,,,,,,,,0,0
+322,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,E2,97,2,1,,,,,,,,,0,0
+323,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,E3,97,2,1,,,,,,,,,0,0
+324,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,E4,95,3,2,,,,,,,,,0,0
+325,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,E5,100,,,,,,,,,,,,
+326,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,E8,100,,,,,,,,,,,,
+327,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,E∑,194,4,2,0,0,0,0,0,0,0,0,0,0
+328,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,T,0,,,,,,,,,,,,
+329,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,D,16,0,,,,,,,,,,,
+330,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,1,21000,2,0,0,H,0,0,0,,,,,,,,,,
+331,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,E1,96,1,2,,,,,,,,,0,1
+332,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,E2,95,2,2,,,,,,,,,0,1
+333,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,E3,94,2,2,,,,,,,,,0,2
+334,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,E4,95,2,2,,,,,,,,,0,1
+335,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,E5,100,,,,,,,,,,,,
+336,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,E8,100,,,,,,,,,,,,
+337,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,E∑,190,4,4,0,0,0,0,0,0,0,0,0,2
+338,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,T,0,,,,,,,,,,,,
+339,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,D,21,0,,,,,,,,,,,
+340,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 6 DMT Female,Qualification,1,,3,TRUE,2,41500,0,99,0,,1,0,Dolman,Abigail,CTGC,07/10/2009,,2,20500,2,0,6,H,0,0,0,,,,,,,,,,
+341,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,E1,95,0,3,,,,,,,,,0,2
+342,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,E2,96,1,2,,,,,,,,,0,1
+343,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,E3,95,1,2,,,,,,,,,0,2
+344,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,E4,94,2,2,,,,,,,,,0,2
+345,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,E5,100,,,,,,,,,,,,
+346,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,E8,100,,,,,,,,,,,,
+347,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,E∑,190,2,4,0,0,0,0,0,0,0,0,0,4
+348,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,T,0,,,,,,,,,,,,
+349,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,D,37,0,,,,,,,,,,,
+350,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,1,22500,2,0,2,H,0,0,0,,,,,,,,,,
+351,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,E1,96,2,2,,,,,,,,,0,0
+352,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,E2,96,2,2,,,,,,,,,0,0
+353,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,E3,96,2,2,,,,,,,,,0,0
+354,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,E4,95,2,3,,,,,,,,,0,0
+355,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,E5,100,,,,,,,,,,,,
+356,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,E8,100,,,,,,,,,,,,
+357,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,E∑,192,4,4,0,0,0,0,0,0,0,0,0,0
+358,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,T,0,,,,,,,,,,,,
+359,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,D,31,0,,,,,,,,,,,
+360,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,1,TRUE,2,44800,0,99,0,,1,0,Lewsam,Anthony,CTGC,27/12/2002,,2,22300,2,0,0,H,0,0,0,,,,,,,,,,
+361,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,E1,94,1,3,,,,,,,,,0,2
+362,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,E2,94,3,2,,,,,,,,,0,1
+363,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,E3,96,1,2,,,,,,,,,0,1
+364,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,E4,93,3,3,,,,,,,,,0,1
+365,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,E5,100,,,,,,,,,,,,
+366,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,E8,100,,,,,,,,,,,,
+367,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,E∑,189,4,5,0,0,0,0,0,0,0,0,0,2
+368,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,T,0,,,,,,,,,,,,
+369,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,D,31,0,,,,,,,,,,,
+370,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,1,22000,2,0,0,H,0,0,0,,,,,,,,,,
+371,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,E1,94,3,3,,,,,,,,,0,0
+372,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,E2,96,2,2,,,,,,,,,0,0
+373,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,E3,96,1,2,,,,,,,,,0,1
+374,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,E4,96,2,2,,,,,,,,,0,0
+375,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,E5,100,,,,,,,,,,,,
+376,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,E8,100,,,,,,,,,,,,
+377,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,E∑,192,4,4,0,0,0,0,0,0,0,0,0,0
+378,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,T,0,,,,,,,,,,,,
+379,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,D,44,0,,,,,,,,,,,
+380,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Male,Qualification,1,,2,TRUE,1,45600,0,99,0,,1,0,Adams-Walker,Thomas,CTGC,11/09/2001,,2,23600,2,0,0,H,0,0,0,,,,,,,,,,
+381,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,E1,97,1,1,,,,,,,,,0,1
+382,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,E2,97,1,1,,,,,,,,,0,1
+383,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,E3,98,1,0,,,,,,,,,0,1
+384,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,E4,96,2,1,,,,,,,,,0,1
+385,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,E5,100,,,,,,,,,,,,
+386,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,E8,100,,,,,,,,,,,,
+387,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,E∑,194,2,2,0,0,0,0,0,0,0,0,0,2
+388,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,T,0,,,,,,,,,,,,
+389,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,D,21,0,,,,,,,,,,,
+390,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,1,21500,2,0,0,H,0,0,0,,,,,,,,,,
+391,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,E1,100,0,0,,,,,,,,,0,0
+392,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,E2,98,1,1,,,,,,,,,0,0
+393,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,E3,98,1,1,,,,,,,,,0,0
+394,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,E4,97,2,1,,,,,,,,,0,0
+395,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,E5,100,,,,,,,,,,,,
+396,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,E8,100,,,,,,,,,,,,
+397,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,E∑,196,2,2,0,0,0,0,0,0,0,0,0,0
+398,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,T,0,,,,,,,,,,,,
+399,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,D,16,46,,,,,,,,,,,
+400,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Level 7 DMT Female,Qualification,1,,1,TRUE,1,38100,0,99,0,,1,0,Bowden,Ashley,CTGC,13/08/2005,,2,16600,2,0,0,H,0,0,0,,,,,,,,,,
+401,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,E1,95,3,1,,,,,,,,,0,1
+402,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,E2,95,2,2,,,,,,,,,0,1
+403,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,E3,96,2,1,,,,,,,,,0,1
+404,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,E4,95,2,2,,,,,,,,,0,1
+405,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,E5,100,,,,,,,,,,,,
+406,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,E8,100,,,,,,,,,,,,
+407,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,E∑,191,4,3,0,0,0,0,0,0,0,0,0,2
+408,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,T,0,,,,,,,,,,,,
+409,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,D,72,0,,,,,,,,,,,
+410,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,1,25700,2,0,6,H,0,0,0,,,,,,,,,,
+411,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,E1,87,3,,,,,,,,,,,0
+412,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,E2,86,4,,,,,,,,,,,0
+413,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,E3,88,2,,,,,,,,,,,0
+414,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,E4,87,3,,,,,,,,,,,0
+415,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,E5,90,,,,,,,,,,,,
+416,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,E8,90,,,,,,,,,,,,
+417,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,E∑,174,6,0,0,0,0,0,0,0,0,0,0,0
+418,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,T,0,,,,,,,,,,,,
+419,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,D,32,0,,,,,,,,,,,
+420,e36d641b-3cf7-4e48-490b-62b05ae068e0,ACT Qualifier 2 2023,,DMT,Senior DMT Male,Qualification,1,,1,TRUE,1,46300,0,99,0,,1,0,Brown,Benjamin,CTCG,08/07/2002,,2,20600,1,0,0,H,0,0,0,,,,,,,,,,
