@@ -7,8 +7,6 @@ import random
 from io import StringIO
 from tinydb import TinyDB
 from tinydb import where
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
 import numpy as np
 from datetime import datetime, timedelta
 from statistics import median, StatisticsError
@@ -38,8 +36,6 @@ parser.add_argument('--sort_by_execution', action='store_true', help='Sort outpu
 parser.add_argument('--sort_by_dd', action='store_true', help='Sort output by difficulty score')
 parser.add_argument('--sort_by_tof', action='store_true', help='Sort output by ToF score')
 parser.add_argument('--ddtof', action='store_true', help='Show DD + ToF score')
-parser.add_argument('--plot', action='store_true', help='Plot results')
-parser.add_argument('--plotsingle', action='store_true', help='Plot results in a singe over-lapping chart')
 parser.add_argument('--csv', action='store_true', help='CSV output')
 parser.add_argument('--all_deductions', action='store_true', help='Summarise with ALL deductions (rather than medians)')
 parser.add_argument('--no_judge_summary', action='store_true', help='Suppress the printing of the judges summary')
@@ -262,14 +258,6 @@ for i in range(11):
     xlabel.append(str(i))
     ylabel.append(f"S{i+1}:")
 
-if args.plot or args.plotsingle:
-    e_data = []
-    t_data = []
-    h_data = []
-    d_data = []
-    s_data = []
-    ts_data = []
-
 sort_key = get_total_score
 if args.sort_by_date:
     assert sort_key == get_total_score, "Can only use one sort key!"
@@ -462,17 +450,6 @@ for i, r in enumerate(sorted_res):
     else:
         print(prefix + score + suffix)
 
-    if args.plot or args.plotsingle:
-        if competition_discipline == 'TRA':
-            e_data.append(2 * nelements - esum)
-        elif competition_discipline == 'DMT':
-            e_data.append(8 + nelements - esum/2)
-        h_data.append(r['h_sigma'])
-        d_data.append(r['frame_difficultyt_g'])
-        t_data.append(r['t_sigma'])
-        s_data.append(total_score)
-        ts_data.append(float(r['timestamp'][0]))
-
 if args.csv:
     csv_string = csv_content.getvalue()
     print(csv_string)
@@ -515,218 +492,4 @@ if not args.no_judge_summary:
     print()
     print("E:\t" + "\t".join(xlabel))
     print('\n'.join(colored_output))
-
-if args.plot:
-    dates = [datetime.fromtimestamp(ts) for ts in ts_data]
-    fig, axs = plt.subplots(2, 2, figsize=(10, 8))
-    ALPHA = 0.3
-    SIZE = 3
-
-    date_format = mdates.DateFormatter('%Y-%m-%d')
-
-    date_data = mdates.date2num(dates)
-
-    for ax in axs.flat:
-        ax.tick_params(axis='x', rotation=45)
-
-    colours = np.random.rand(len(s_data), 3)
-
-    jitter = True
-    if jitter:
-        h_data = [x + random.uniform(-0.05, 0.05) for x in h_data]
-        d_data = [x + random.uniform(-0.05, 0.05) for x in d_data]
-        t_data = [x + random.uniform(-0.05, 0.05) for x in t_data]
-        e_data = [x + random.uniform(-0.05, 0.05) for x in e_data]
-
-    if competition_discipline == 'TRA':
-        vert_range = 10.1
-
-        # Plot HD component in the first subplot
-        axs[0, 0].scatter(s_data, h_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=blue)
-        coeffs_h = np.polyfit(s_data, h_data, 1)
-        #trend_line_h = np.poly1d(coeffs_h)
-        #axs[0, 0].plot(s_data, trend_line_h(s_data), linestyle='solid', linewidth=2, color=blue)
-        min_vert = 0
-        axs[0, 0].set_ylim(min_vert, min_vert + vert_range)
-        axs[0, 0].set_title('HD')
-
-        # Plot Difficulty component in the second subplot
-        axs[0, 1].scatter(s_data, d_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=green)
-        coeffs_d = np.polyfit(s_data, d_data, 1)
-        #trend_line_d = np.poly1d(coeffs_d)
-        #axs[0, 1].plot(s_data, trend_line_d(s_data), linestyle='solid', linewidth=2, color=green)
-        min_vert = 8.5
-        axs[0, 1].set_ylim(min_vert, min_vert + vert_range)
-        axs[0, 1].set_title('Difficulty')
-
-        # Plot ToF component in the third subplot
-        axs[1, 0].scatter(s_data, t_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=red)
-        coeffs_t = np.polyfit(s_data, t_data, 1)
-        #trend_line_t = np.poly1d(coeffs_t)
-        #axs[1, 0].plot(s_data, trend_line_t(s_data), linestyle='solid', linewidth=2, color=red)
-        min_vert = 10
-        axs[1, 0].set_ylim(min_vert, min_vert + vert_range)
-        axs[1, 0].set_title('Time of Flight')
-
-        # Plot Execution component in the fourth subplot
-        axs[1, 1].scatter(s_data, e_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=orange)
-        coeffs_e = np.polyfit(s_data, e_data, 1)
-        #trend_line_e = np.poly1d(coeffs_e)
-        #axs[1, 1].plot(s_data, trend_line_e(s_data), linestyle='solid', linewidth=2, color=orange)
-        min_vert = 10
-        axs[1, 1].set_ylim(min_vert, min_vert + vert_range)
-        axs[1, 1].set_title('Execution')
-
-
-#        axs[0, 0].scatter(s_data, h_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=blue)
-#        coeffs_h = np.polyfit(s_data, h_data, 1)
-#        trend_line_h = np.poly1d(coeffs_h)
-#        axs[0, 0].xaxis.set_major_formatter(date_format)
-#        #axs[0, 0].plot(s_data, trend_line_h(s_data), linestyle='solid', linewidth=2)
-#        axs[0, 0].set_ylim(7, 10.1)
-#        axs[0, 0].set_title('HD')
-#
-##        axs[0, 0].scatter(e_data, t_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=blue)
-##        #coeffs_t = np.polyfit(d_data, t_data, 1)
-##        #trend_line_t = np.poly1d(coeffs_t)
-##        #axs[1, 0].xaxis.set_major_formatter(date_format)
-##        #axs[1, 0].plot(s_data, trend_line_t(s_data), linestyle='solid', linewidth=2)
-##        axs[0, 0].set_ylim(13, 17.1)
-##        axs[0, 0].set_xlim(13, 17.1)
-##        axs[0, 0].set_title('Time of Flight vs E')
-#
-#
-#
-#        axs[0, 1].scatter(s_data, d_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=green)
-#        coeffs_d = np.polyfit(s_data, d_data, 1)
-#        trend_line_d = np.poly1d(coeffs_d)
-#        axs[0, 1].xaxis.set_major_formatter(date_format)
-#        #axs[0, 1].plot(s_data, trend_line_d(s_data), linestyle='solid', linewidth=2)
-#        #axs[0, 1].set_ylim(0, 20.1)
-#        axs[0, 1].set_title('Difficulty')
-#
-##        axs[1, 0].scatter(d_data, t_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=red)
-##        coeffs_t = np.polyfit(d_data, t_data, 1)
-##        trend_line_t = np.poly1d(coeffs_t)
-##        #axs[1, 0].xaxis.set_major_formatter(date_format)
-##        #axs[1, 0].plot(s_data, trend_line_t(s_data), linestyle='solid', linewidth=2)
-##        axs[1, 0].set_ylim(12, 18.1)
-##        axs[1, 0].set_title('Time of Flight vs DD')
-#
-#        # Plot ToF component in the third subplot
-#        axs[1, 0].scatter(s_data, t_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=red)
-#        coeffs_t = np.polyfit(s_data, t_data, 1)
-#        trend_line_t = np.poly1d(coeffs_t)
-#        #axs[1, 0].xaxis.set_major_formatter(date_format)
-#        #axs[1, 0].plot(s_data, trend_line_t(s_data), linestyle='solid', linewidth=2)
-#        axs[1, 0].set_ylim(12, 18.1)
-#        axs[1, 0].set_title('Time of Flight')
-#
-#
-#        # Plot Execution component in the fourth subplot
-#        axs[1, 1].scatter(s_data, e_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=orange)
-#        coeffs_e = np.polyfit(s_data, e_data, 1)
-#        trend_line_e = np.poly1d(coeffs_e)
-#        #axs[1, 1].xaxis.set_major_formatter(date_format)
-#        #axs[1, 1].plot(s_data, trend_line_e(s_data), linestyle='solid', linewidth=2)
-#        #axs[1, 1].set_ylim(7, 20.1)
-#        axs[1, 1].set_title('Execution')
-    elif competition_discipline == 'DMT':
-        # DD vs Total
-
-        axs[0, 0].scatter(d_data, s_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=colours)
-        coeffs_t = np.polyfit(d_data, s_data, 1)
-        #trend_line_t = np.poly1d(coeffs_t)
-        #axs[0, 0].xaxis.set_major_formatter(date_format)
-        #axs[1, 0].plot(s_data, trend_line_t(s_data), linestyle='solid', linewidth=2)
-        #axs[1, 0].set_ylim(12, 18.1)
-        axs[0, 0].set_title('Difficulty vs Total')
-
-
-        # Plot Difficulty
-        axs[0, 1].scatter(s_data, d_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=colours)
-        coeffs_d = np.polyfit(date_data, d_data, 1)
-        #trend_line_d = np.poly1d(coeffs_d)
-        axs[0, 1].xaxis.set_major_formatter(date_format)
-        ##axs[0, 1].plot(s_data, trend_line_d(s_data), linestyle='solid', linewidth=2)
-        #axs[0, 1].set_ylim(0, 20.1)
-        axs[0, 1].set_title('Difficulty')
-
-        # Plot ToF component in the third subplot
-        axs[1, 0].scatter(d_data, e_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=colours)
-        coeffs_t = np.polyfit(d_data, e_data, 1)
-        #trend_line_t = np.poly1d(coeffs_t)
-        #axs[1, 0].xaxis.set_major_formatter(date_format)
-        #axs[1, 0].plot(s_data, trend_line_t(s_data), linestyle='solid', linewidth=2)
-        #axs[1, 0].set_ylim(12, 18.1)
-        axs[1, 0].set_title('Difficulty vs Execution')
-
-        # # Plot ToF component in the third subplot
-        # axs[1, 0].scatter(s_data, t_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=colours)
-        # coeffs_t = np.polyfit(s_data, t_data, 1)
-        # trend_line_t = np.poly1d(coeffs_t)
-        # #axs[1, 0].xaxis.set_major_formatter(date_format)
-        # #axs[1, 0].plot(s_data, trend_line_t(s_data), linestyle='solid', linewidth=2)
-        # axs[1, 0].set_ylim(12, 18:.1)
-        # axs[1, 0].set_title('Time of Flight')
-
-
-        # Plot Execution component in the fourth subplot
-        axs[1, 1].scatter(s_data, e_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=colours)
-        coeffs_e = np.polyfit(s_data, e_data, 1)
-        #trend_line_e = np.poly1d(coeffs_e)
-        #axs[1, 1].xaxis.set_major_formatter(date_format)
-        #axs[1, 1].plot(s_data, trend_line_e(s_data), linestyle='solid', linewidth=2)
-        #axs[1, 1].set_ylim(7, 20.1)
-        axs[1, 1].set_title('Execution')
-
-    plt.tight_layout()
-
-    plt.show()
-
-elif args.plotsingle:
-    dates = [datetime.fromtimestamp(ts) for ts in ts_data]
-    fig, axs = plt.subplots(1, 1, figsize=(10, 8))
-    ALPHA = 0.7
-    SIZE = 30
-
-    if competition_discipline == 'TRA':
-
-        # Plot HD component
-        axs.scatter(s_data, h_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=blue)
-        coeffs_h = np.polyfit(s_data, h_data, 1)
-        #trend_line_h = np.poly1d(coeffs_h)
-        #axs.plot(s_data, trend_line_h(s_data), linestyle='solid', linewidth=2)
-        #axs.set_ylim(8, 10.1)
-        axs.set_title('HD')
-
-        # Plot Difficulty component
-        axs.scatter(s_data, d_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=green)
-        coeffs_d = np.polyfit(s_data, d_data, 1)
-        #trend_line_d = np.poly1d(coeffs_d)
-        #axs.plot(s_data, trend_line_d(s_data), linestyle='solid', linewidth=2)
-        #axs.set_ylim(8, 20.1)
-        axs.set_title('Difficulty')
-
-        # Plot ToF component
-        axs.scatter(s_data, t_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=red)
-        coeffs_t = np.polyfit(s_data, t_data, 1)
-        #trend_line_t = np.poly1d(coeffs_t)
-        #axs.plot(s_data, trend_line_t(s_data), linestyle='solid', linewidth=2)
-        #axs.set_ylim(12, 20.1)
-        axs.set_title('Time of Flight')
-
-        # Plot Execution component
-        axs.scatter(s_data, e_data, alpha=ALPHA, linewidths=0, marker='o', s=SIZE, color=orange)
-        coeffs_e = np.polyfit(s_data, e_data, 1)
-        #trend_line_e = np.poly1d(coeffs_e)
-        #axs.plot(s_data, trend_line_e(s_data), linestyle='solid', linewidth=2)
-        #axs.set_ylim(10, 20.1)
-        axs.set_title('Execution')
-
-
-
-    plt.tight_layout()
-
-    plt.show()
 
