@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Competition Results</title>
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin: 0px 0 0px;
+            font-weight: Regular;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select,
+        input[type="checkbox"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        select {
+            width: 100%
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 20px;
+            display: inline-block;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+
+            /* Adjust checkbox layout */
+            input[type="checkbox"] {
+                width: auto; /* Keep checkbox width auto */
+                margin-bottom: 10px; /* Add margin below checkboxes */
+            }
+
+            /* Align checkboxes properly */
+            label {
+                display: flex; /* Use flexbox for alignment */
+                align-items: center; /* Center align items */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Competition Results</h1>
+    <form method="POST">
+            <!--        <label for="db">Database Path:</label> -->
+            <!--        <input type="text" name="db" id="db"><br> -->
+
+        <label for="db">Discipline:</label>
+        <select name="db" id="db">
+            <option value="tra">Trampoline (TRA)</option>
+            <option value="dmt">Double Mini-Trampoline (DMT)</option>
+            <option value="tum">Tumbling (TUM)</option>
+        </select>
+
+        <label for="given_name">Given Name:</label>
+        <input type="text" name="given_name" id="given_name"><br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" name="surname" id="surname"><br>
+
+            <!--        <label for="name">Name:</label> -->
+            <!--        <input type="text" name="name" id="name"><br> -->
+
+        <label for="representing">Representing:</label>
+        <input type="text" name="representing" id="representing"><br>
+
+        <label for="stage">Stage:</label>
+        <input type="text" name="stage" id="stage"><br>
+
+        <label for="dd">Difficulty:</label>
+        <input type="text" name="dd" id="dd"><br>
+
+        <label for="mindd">Minimum Difficulty:</label>
+        <input type="text" name="mindd" id="mindd"><br>
+
+        <label for="mintof">Minimum Time of Flight:</label>
+        <input type="text" name="mintof" id="mintof"><br>
+
+        <label for="minhd">Minimum HD:</label>
+        <input type="text" name="minhd" id="minhd"><br>
+
+        <label for="minscore">Minimum Total Score:</label>
+        <input type="text" name="minscore" id="minscore"><br>
+
+        <label for="skills">Number of Skills:</label>
+        <input type="text" name="skills" id="skills"><br>
+
+        <label for="since">Since (YYYY-MM-DD):</label>
+        <input type="date" name="since" id="since"><br>
+
+        <label for="before">Before (YYYY-MM-DD):</label>
+        <input type="date" name="before" id="before"><br>
+
+        <label for="year">Year (YYYY):</label>
+        <input type="text" name="year" id="year"><br>
+
+        <label for="event">Event:</label>
+        <input type="text" name="event" id="event"><br>
+
+        <label for="level">Level:</label>
+        <input type="text" name="level" id="level"><br>
+
+        <label><input type="checkbox" name="female"> Female</label><br>
+        <label><input type="checkbox" name="male"> Male</label><br>
+        <label><input type="checkbox" name="sort_by_date"> Sort by Date</label><br>
+        <label><input type="checkbox" name="sort_by_execution"> Sort by Execution Score</label><br>
+        <label><input type="checkbox" name="sort_by_dd"> Sort by Difficulty Score</label><br>
+        <label><input type="checkbox" name="sort_by_tof"> Sort by ToF Score</label><br>
+            <!--        <label><input type="checkbox" name="ddtof"> Show DD + ToF Score</label><br> -->
+            <!--        <label><input type="checkbox" name="plot"> Plot Results</label><br> -->
+            <!--        <label><input type="checkbox" name="plotsingle"> Plot Results in a Single Overlapping Chart</label><br> -->
+        <label><input type="checkbox" name="csv"> CSV Output</label><br>
+            <!--        <label><input type="checkbox" name="all_deductions"> Summarize with ALL Deductions</label><br> -->
+            <!--        <label><input type="checkbox" name="no_judge_summary"> Suppress Judge Summary</label><br> -->
+            <!--        <label><input type="checkbox" name="no_colour"> Suppress Coloured Output</label><br> -->
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
