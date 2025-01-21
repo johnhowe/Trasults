@@ -34,8 +34,8 @@
             padding: 10px;
             overflow: auto;
             white-space: pre;
-            word-wrap: break-word; /* Breaks long words */
-            font-family: monospace; /* Monospace font for code */
+            word-wrap: break-word;
+            font-family: monospace;
             color: #333;
         }
 
@@ -58,7 +58,7 @@
 </head>
 <body>
     <h1>{{ search_terms }}</h1>
-    <pre>{{ output | safe }}</pre>  <!-- Use the safe filter here -->
+    <pre>{{ output | safe }}</pre>
     <a href="{{ url_for('index') }}">Go Back</a>
 </body>
 </html>
