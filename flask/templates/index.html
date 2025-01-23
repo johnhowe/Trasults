@@ -36,7 +36,7 @@
             padding: 10px;
             max-width: 600px;
             margin: 0 auto;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
         }
 
         label {
@@ -87,7 +87,7 @@
 
         .image-container {
             text-align: center; /* Center the image horizontally */
-            margin: 20px 0; /* Add some vertical spacing around the image */
+            margin: 10px 0; /* Add some vertical spacing around the image */
         }
 
         .responsive-image {
@@ -117,9 +117,6 @@
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image">
-    </div>
     <h1>TRASULTS</h1>
         <!--<h3>VERIFLITE</h3>-->
 
@@ -202,5 +199,12 @@
 
         <button type="submit">Submit ... and wait - it is a bit slow!</button>
     </form>
+
+    <div class="image-container">
+        <a href="https://www.veriflite.com" target="_blank">
+            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image">
+        </a>
+    </div>
+
 </body>
 </html>
