@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 
+from pathlib import Path
+from tinydb import TinyDB
+from tinydb import where
+from BetterJSONStorage import BetterJSONStorage
+
 import argparse
 import re
 import csv
 import random
 from io import StringIO
-from tinydb import TinyDB
-from tinydb import where
 import numpy as np
 from datetime import datetime, timedelta
 from statistics import median, StatisticsError
@@ -130,7 +133,8 @@ def green_if_true(text, is_true):
         return f"{bcolors.GREEN}{text}{bcolors.END}"
     return f"{text}"
 
-db = TinyDB(args.db)
+path = Path(args.db)
+db = TinyDB(path, access_mode="r", storage=BetterJSONStorage)
 
 if args.csv:
     csv_content = StringIO()
