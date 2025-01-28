@@ -18,17 +18,17 @@ file_size() {
     return $file_size
 }
 
-max() {
+min() {
     if [ "$1" -gt "$2" ]; then
-        echo "$1"
-    else
         echo "$2"
+    else
+        echo "$1"
     fi
 }
 
 df=$((DISK_LIMIT - $(check_disk_usage)))
 db=$(file_size db.sqlite)
 
-limit=$(max $((df/2)) $MAX_FILE_LIMIT)
+limit=$(min $((df/2)) $MAX_FILE_LIMIT)
 echo $limit bytes limit on the next chunk
 
