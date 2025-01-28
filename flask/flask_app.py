@@ -84,13 +84,9 @@ def index():
         if request.form.get('no_colour'):
             options.append('--no_colour')
 
-        db_mapping = {
-            "tra": "tra.sqlite",
-            "dmt": "dmt.sqlite",
-            "tum": "tum.sqlite"
-        }
-        db_file = db_mapping.get(request.form.get('db'))
-        command = ['python3', 'inspect_trasults.py', '--db', db_file, '--no_judge_summary'] + options
+        discipline = request.form.get('discipline')
+        options.append(f'--{discipline}')
+        command = ['python3', 'inspect_trasults.py'] + options
         print("$ ", command)
         result = subprocess.run(command, capture_output=True, text=True)
         output_html = ansi_to_html(result.stdout)
