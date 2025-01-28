@@ -5,12 +5,24 @@ import sqlite3
 from datetime import datetime
 import csv
 import sys
+from statistics import median, StatisticsError
 
 args = None
 
 def build_query(args):
     query = "SELECT * FROM users WHERE 1=1"  # Start with a base query
     params = []
+
+    if args.tra:
+        query += " AND competition_discipline = 'TRA'"
+    elif args.dmt:
+        query += " AND competition_discipline = 'DMT'"
+    elif args.syn:
+        query += " AND competition_discipline = 'SYN'"
+    elif args.tum:
+        query += " AND competition_discipline = 'TUM'"
+#    else: # By default, TRA
+#        query += " AND competition_discipline = 'TRA'"
 
     if args.given_name:
         query += " AND person_given_name LIKE ?"
@@ -85,6 +97,10 @@ def build_query(args):
 def search_db():
     parser = argparse.ArgumentParser(description='Process DB file and filter data.')
     parser.add_argument('--db', default='db.sqlite', help='Path to the DB file')
+    parser.add_argument('--tra', action='store_true', help='Search for TRA routines')
+    parser.add_argument('--dmt', action='store_true', help='Search for DMT routines')
+    parser.add_argument('--syn', action='store_true', help='Search for SYN routines')
+    parser.add_argument('--tum', action='store_true', help='Search for TUM routines')
     parser.add_argument('--given_name', help='Filter by given name')
     parser.add_argument('--surname', help='Filter by surname')
     parser.add_argument('--name', help='Filter by given name OR surname')
@@ -274,7 +290,8 @@ def print_results(res):
         date_format = "%Y-%m-%d %H:%M:%S"
         start_time = datetime.strptime(r['frame_last_start_time_g'][:19], date_format)
 
-        prefix = f"{i:3d}: {start_time.strftime('%Y-%m-%d')} "
+        prefix = f"{i:3d}: {r['competition_discipline']} {start_time.strftime('%Y-%m-%d')} "
+
         if r['stage_kind'][0] == "Q":
             stage = f"Q{int(r['routine_number'])}"
         elif r['stage_kind'] == "Semifinal":
@@ -291,7 +308,36 @@ def print_results(res):
         suffix = f"{stage} {r['person_given_name']} {r['person_surname']} ({r['person_representing']}) {r['event_title']} - ({r['competition_title']}) "
 
         if r['competition_discipline'] == 'DMT':
-            score = ""
+            deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2']][:int(r['frame_nelements'])]]
+            padding = "  " * (2 - int(r['frame_nelements']))
+            escore = float(r['esigma_sigma'])
+            #score = f"D:{r['frame_difficultyt_g']:4.1f} E:{escore:5.2f} {colourise(deductions)}{padding} L:{red_if_nonzero(landing)} P:{red_if_nonzero(penalty)} Total:{total_score} "
+
+            rank = int(r['performance_rank_g'])
+            penalty = int(10*float(r['frame_penaltyt']))
+            landing = int(10*r['esigma_l'])
+            exec_text = green_if_true(f"{escore:5.2f}", escore == best['exec'])
+            dd_text = green_if_true(f"{r['frame_difficultyt_g']:4.1f}", r['frame_difficultyt_g'] == best['dd'])
+            if args.csv:
+                csv_score = [
+                    round(r['frame_difficultyt_g'], 1),
+                    0,
+                    0,
+                    round(escore, 1),
+                    round(landing, 1),
+                    round(penalty, 1),
+                    round(total_score, 2),
+                    round(rank, 0),
+                    round(nelements, 0)
+                ]
+            else:
+                score = f"D:{dd_text} " + \
+                    f"E:{exec_text} {colourise(deductions)}{padding} " + \
+                    f"L:{red_if_nonzero(landing)} " + \
+                    f"P:{red_if_nonzero(penalty)} " + \
+                    f"Total:{green_if_best(total_score, best['total'])} "
+
+
         elif r['competition_discipline'] == 'TRA':
             landing = int(10*r['esigma_l'])
             ddtof = r['frame_difficultyt_g'] + r['t_sigma']
@@ -315,8 +361,10 @@ def print_results(res):
             score += f"Rank:{rank:<2} "
         elif r['competition_discipline'] == 'SYN':
             score = ""
+
         elif r['competition_discipline'] == 'TUM':
             score = ""
+
         else:
             # Probably rhythmic or some other sport
             continue
