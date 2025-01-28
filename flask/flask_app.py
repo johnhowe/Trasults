@@ -90,7 +90,7 @@ def index():
             "tum": "tum_db2.json"
         }
         db_file = db_mapping.get(request.form.get('db'))
-        command = ['python3', 'inspect_athlete.py', '--db', db_file, '--no_judge_summary'] + options
+        command = ['python3', 'inspect_sqlite.py', '--db', db_file, '--no_judge_summary'] + options
         print("$ ", command)
         result = subprocess.run(command, capture_output=True, text=True)
         output_html = ansi_to_html(result.stdout)
