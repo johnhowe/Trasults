@@ -10,7 +10,7 @@ from statistics import median, StatisticsError
 args = None
 
 def build_query(args):
-    query = "SELECT * FROM users WHERE 1=1"  # Start with a base query
+    query = "SELECT * FROM users WHERE frame_state='PUBLISHED'"  # Start with a base query
     params = []
 
     if args.tra:
@@ -159,6 +159,22 @@ def search_db():
     conn.close()
     return results
 
+def recalculate_dmt_execution_score(r):
+    try:
+        nelements = int(r['frame_nelements'])
+        s1 = [e for e in [r['e1_s1'], r['e2_s1'], r['e3_s1'], r['e4_s1'], r['e5_s1']] if e is not None]
+        s2 = [e for e in [r['e1_s2'], r['e2_s2'], r['e3_s2'], r['e4_s2'], r['e5_s2']] if e is not None]
+        medians = [2 * median(s) for s in [s1, s2] if len(s) > 0]
+        deductions = sum([round(float(n), 1) for n in medians[:nelements]])
+        if deductions == 0:
+            sigmas = [r['e1_sigma'], r['e2_sigma'], r['e3_sigma'], r['e4_sigma'], r['e5_sigma']]
+            if sum(sigmas) == 0:
+                return 0
+            deductions = 2 * median([a for a in sigmas if a is not None and a < 10 and a > 0])
+        execution = [0,18,20][nelements] - deductions
+        return execution
+    except StatisticsError:
+        return 0
 
 def get_total_score(r):
     nelements = int(r['frame_nelements'])
@@ -168,34 +184,29 @@ def get_total_score(r):
         try:
             dd = round(float(r['frame_difficultyt_g']), 1)
             penalty = float(r['frame_penaltyt'])
-            landing = float(r['esigma_l'])
-            s1 = [e for e in [r['e1_s1'], r['e2_s1'], r['e3_s1'], r['e4_s1'], r['e5_s1']] if e is not None]
-            s2 = [e for e in [r['e1_s2'], r['e2_s2'], r['e3_s2'], r['e4_s2'], r['e5_s2']] if e is not None]
-            medians = [2 * median(s) for s in [s1, s2] if len(s) > 0]
-            deductions = sum([round(float(n), 1) for n in medians[:nelements]])
-            if deductions == 0:
-                sigmas = [r['e1_sigma'], r['e2_sigma'], r['e3_sigma'], r['e4_sigma'], r['e5_sigma']]
-                if sum(sigmas) == 0:
-                    return 0
-                deductions = 2 * median([a for a in sigmas if a is not None and a < 10 and a > 0])
-            execution = [0,18,20][nelements] - deductions - landing
+            execution = get_execution(r)
+            #landing = float(r['esigma_l'])
             #print(nelements, dd, penalty, landing, s1, s2, medians, deductions, execution)
             return execution + dd - penalty
         except StatisticsError:
             return 0
     return float(r['frame_mark_ttt_g'])
 
-def get_timestamp(result):
-    return float(result['timestamp'])
+def get_timestamp(r):
+    return float(r['timestamp'])
 
-def get_execution(result):
-    return float(result['esigma_sigma'])
+def get_execution(r):
+    return float(r['esigma_sigma'])
 
-def get_dd(result):
-    return float(result['frame_difficultyt_g'])
+    # if r['competition_discipline'] == 'DMT':
+    #     return float(recalculate_dmt_execution_score(r))
 
-def get_tof(result):
-    return float(result['t_sigma'])
+
+def get_dd(r):
+    return float(r['frame_difficultyt_g'])
+
+def get_tof(r):
+    return float(r['t_sigma'])
 
 def get_heatmap_color(value):
     color_index = 232 + int(value / 4)
@@ -262,7 +273,7 @@ def print_results(res):
         best['ddtof'] = max(best['ddtof'], float(ddtof))
 
     EDTH_MIN = 0
-    E_MAX = 20
+    E_MAX = 30
     D_MAX = 25
     T_MAX = 25
     H_MAX = 20
