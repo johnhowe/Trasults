@@ -85,9 +85,9 @@ def index():
             options.append('--no_colour')
 
         db_mapping = {
-            "tra": "tra_db2.json",
-            "dmt": "dmt_db2.json",
-            "tum": "tum_db2.json"
+            "tra": "tra.sqlite",
+            "dmt": "dmt.sqlite",
+            "tum": "tum.sqlite"
         }
         db_file = db_mapping.get(request.form.get('db'))
         command = ['python3', 'inspect_trasults.py', '--db', db_file, '--no_judge_summary'] + options
