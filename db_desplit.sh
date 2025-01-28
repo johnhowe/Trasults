@@ -30,5 +30,5 @@ df=$((DISK_LIMIT - $(check_disk_usage)))
 db=$(file_size db.sqlite)
 
 limit=$(min $((df/2)) $MAX_FILE_LIMIT)
-echo $limit bytes limit on the next chunk
+echo $limit bytes limit on the next chunk:  $((limit/1024/1024)) MB
 
