@@ -5,7 +5,7 @@ MAX_FILE_LIMIT=$((99 * 1024 * 1024))
 
 check_disk_usage() {
     local current_usage
-    current_usage=$(du -sb . | awk '{print $1}')
+    current_usage=$(du -sb ~ | awk '{print $1}')
     echo "$current_usage"
     return $current_usage
 }
