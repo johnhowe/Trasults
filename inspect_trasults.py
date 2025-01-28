@@ -359,11 +359,28 @@ def print_results(res):
             score += f"L:{red_if_nonzero(landing)} "
             score += f"Total:{green_if_best(total_score, best['total'])} "
             score += f"Rank:{rank:<2} "
+
         elif r['competition_discipline'] == 'SYN':
-            score = ""
+            score = " - NOT IMPLEMENTED - "
 
         elif r['competition_discipline'] == 'TUM':
-            score = ""
+            deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2'], r['esigma_s3'], r['esigma_s4'], r['esigma_s5'], r['esigma_s6'], r['esigma_s7'], r['esigma_s8']][:int(r['frame_nelements'])]]
+            padding = "  " * (2 - int(r['frame_nelements']))
+            escore = float(r['esigma_sigma'])
+            #score = f"D:{r['frame_difficultyt_g']:4.1f} E:{escore:5.2f} {colourise(deductions)}{padding} L:{red_if_nonzero(landing)} P:{red_if_nonzero(penalty)} Total:{total_score} "
+
+            penalty = int(10*float(r['frame_penaltyt']))
+            landing = int(10*r['esigma_l'])
+            exec_text = green_if_true(f"{escore:5.2f}", escore == best['exec'])
+            dd_text = green_if_true(f"{r['frame_difficultyt_g']:4.1f}", r['frame_difficultyt_g'] == best['dd'])
+            if args.csv:
+                score = f"{r['frame_difficultyt_g']:4.1f}, {escore:5.2f}, {landing}, {penalty}, {total_score}, {nelements}, "
+            else:
+                score = f"D:{dd_text} " + \
+                    f"E:{exec_text} {colourise(deductions)}{padding} " + \
+                    f"L:{red_if_nonzero(landing)} " + \
+                    f"P:{red_if_nonzero(penalty)} " + \
+                    f"Total:{green_if_best(total_score, best['total'])} "
 
         else:
             # Probably rhythmic or some other sport
