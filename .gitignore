@@ -1,2 +1,3 @@
 flask/__pycache__
 *_db2.json
+*.sqlite
