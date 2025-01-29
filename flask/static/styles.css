@@ -133,7 +133,6 @@ a {
     display: inline-block;
     margin-top: 20px;
     text-align: center;
-    background-color: #007bff;
     color: white;
     padding: 10px 15px;
     border-radius: 4px;
@@ -142,6 +141,6 @@ a {
 }
 
 a:hover {
-    background-color: #0056b3;
+    background-color: #fff;
 }
 
