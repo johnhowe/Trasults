@@ -370,11 +370,12 @@ def print_results(res):
                     round(num_skills, 0)
                 ]
             else:
-                score = f"D:{dd_text} " + \
+                score =
+                    f"Total:{green_if_best(total_score, best['total'])} " + \
+                    f"D:{dd_text} " + \
                     f"E:{exec_text} {colourise(deductions)}{padding} " + \
                     f"L:{red_if_nonzero(landing)} " + \
-                    f"P:{red_if_nonzero(penalty)} " + \
-                    f"Total:{green_if_best(total_score, best['total'])} "
+                    f"P:{red_if_nonzero(penalty)} "
 
 
         elif r['competition_discipline'] == 'TRA':
@@ -388,12 +389,12 @@ def print_results(res):
             exec_text = green_if_true(f"{escore:5.2f}", escore == best['exec'])
             #rank = int(r['performance_rank_g'])
             penalty = int(10*float(r['frame_penaltyt']))
-            score = f"D:{dd_text} "
+            score = f"Total:{green_if_best(total_score, best['total'])} "
+            score += f"D:{dd_text} "
             score += f"T:{tof_text} "
             score += f"H:{hd_text} "
             score += f"E:{exec_text} {colourise(deductions)}{padding} "
             score += f"L:{red_if_nonzero(landing)} "
-            score += f"Total:{green_if_best(total_score, best['total'])} "
             #score += f"Rank:{rank:<2} "
 
         elif r['competition_discipline'] == 'SYN':
@@ -412,11 +413,12 @@ def print_results(res):
             if args.csv:
                 score = f"{r['frame_difficultyt_g']:4.1f}, {escore:5.2f}, {landing}, {penalty}, {total_score}, {num_skills}, "
             else:
-                score = f"D:{dd_text} " + \
+                score =
+                    f"Total:{green_if_best(total_score, best['total'])} " + \
+                    f"D:{dd_text} " + \
                     f"E:{exec_text} {colourise(deductions)}{padding} " + \
                     f"L:{red_if_nonzero(landing)} " + \
-                    f"P:{red_if_nonzero(penalty)} " + \
-                    f"Total:{green_if_best(total_score, best['total'])} "
+                    f"P:{red_if_nonzero(penalty)} "
 
         else:
             # Probably rhythmic or some other sport
@@ -424,7 +426,7 @@ def print_results(res):
 
         print(f"{prefix} {score} {suffix}")
 
-    print(f"\nBEST: D:{best['dd']} E:{best['exec']} T:{best['tof']} H:{best['hd']} Total:{best['total']}")
+    print(f"\nBEST: Total:{best['total']} D:{best['dd']} E:{best['exec']} T:{best['tof']} H:{best['hd']}")
     if invalid_routines > 0:
         print(f"Skipped {invalid_routines} invalid routines.")
 
