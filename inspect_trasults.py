@@ -324,7 +324,7 @@ def print_results(res):
             escore = float(r['esigma_sigma'])
             #score = f"D:{r['frame_difficultyt_g']:4.1f} E:{escore:5.2f} {colourise(deductions)}{padding} L:{red_if_nonzero(landing)} P:{red_if_nonzero(penalty)} Total:{total_score} "
 
-            rank = int(r['performance_rank_g'])
+            #rank = int(r['performance_rank_g'])
             penalty = int(10*float(r['frame_penaltyt']))
             landing = int(10*r['esigma_l'])
             exec_text = green_if_true(f"{escore:5.2f}", escore == best['exec'])
@@ -338,7 +338,7 @@ def print_results(res):
                     round(landing, 1),
                     round(penalty, 1),
                     round(total_score, 2),
-                    round(rank, 0),
+                    #round(rank, 0),
                     round(nelements, 0)
                 ]
             else:
@@ -360,7 +360,7 @@ def print_results(res):
             ddtof_text = green_if_true(f"{ddtof:5.2f}", ddtof == best['ddtof'])
             hd_text = green_if_true(f"{r['h_sigma']:4.1f}", r['h_sigma'] == best['hd'])
             exec_text = green_if_true(f"{escore:5.2f}", escore == best['exec'])
-            rank = int(r['performance_rank_g'])
+            #rank = int(r['performance_rank_g'])
             penalty = int(10*float(r['frame_penaltyt']))
             score = f"D:{dd_text} "
             score += f"T:{tof_text} "
@@ -369,7 +369,7 @@ def print_results(res):
             score += f"E:{exec_text} {colourise(deductions)}{padding} "
             score += f"L:{red_if_nonzero(landing)} "
             score += f"Total:{green_if_best(total_score, best['total'])} "
-            score += f"Rank:{rank:<2} "
+            #score += f"Rank:{rank:<2} "
 
         elif r['competition_discipline'] == 'SYN':
             score = " - NOT IMPLEMENTED - "
