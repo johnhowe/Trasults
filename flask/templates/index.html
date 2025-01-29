@@ -125,34 +125,35 @@
     <form method="POST">
         <label for="discipline">Discipline:</label>
         <select name="discipline" id="discipline">
-            <option value="tra">Trampoline (TRA)</option>
-            <option value="dmt">Double Mini-Trampoline (DMT)</option>
-            <option value="tum">Tumbling (TUM)</option>
+            <option value="tra" {% if discipline == 'tra' %}selected{% endif %}>Trampoline</option>
+            <option value="dmt" {% if discipline == 'dmt' %}selected{% endif %}>Double Mini-Trampoline</option>
+            <option value="tum" {% if discipline == 'tum' %}selected{% endif %}>Tumbling</option>
         </select>
 
-        <label for="given_name">Given Name:</label> <input type="text" name="given_name" id="given_name"><br>
-        <label for="surname">Surname:</label> <input type="text" name="surname" id="surname"><br>
-            <!--        <label for="name">Name:</label> <input type="text" name="name" id="name"><br> -->
-        <label for="representing">Representing:</label> <input type="text" name="representing" id="representing"><br>
-            <!--        <label for="stage">Stage:</label> <input type="text" name="stage" id="stage"><br> -->
-        <label for="dd">Difficulty:</label> <input type="text" name="dd" id="dd"><br>
-        <label for="mindd">Minimum Difficulty:</label> <input type="text" name="mindd" id="mindd"><br>
-        <label for="mintof">Minimum Time of Flight:</label> <input type="text" name="mintof" id="mintof"><br>
-        <label for="minhd">Minimum HD:</label> <input type="text" name="minhd" id="minhd"><br>
-        <label for="minscore">Minimum Total Score:</label> <input type="text" name="minscore" id="minscore"><br>
-        <label for="skills">Number of Skills:</label> <input type="text" name="skills" id="skills"><br>
-        <label for="since">Since (YYYY-MM-DD):</label> <input type="date" name="since" id="since"><br>
-        <label for="before">Before (YYYY-MM-DD):</label> <input type="date" name="before" id="before"><br>
-        <label for="year">Year (YYYY):</label> <input type="text" name="year" id="year"><br>
-        <label for="event">Competition:</label> <input type="text" name="event" id="event"><br>
-            <!--        <label for="level">Level:</label> <input type="text" name="level" id="level"><br> -->
+        <label for="given_name">Given Name:</label> <input type="text" name="given_name" id="given_name" value="{{given_name}}"><br>
+        <label for="surname">Surname:</label> <input type="text" name="surname" id="surname" value="{{surname}}"><br>
+        <!--        <label for="name">Name:</label> <input type="text" name="name" id="name" value="{{name}}"><br> -->
+        <label for="representing">Representing:</label> <input type="text" name="representing" id="representing" value="{{representing}}"><br>
+        <!--        <label for="stage">Stage:</label> <input type="text" name="stage" id="stage" value="{{stage}}"><br> -->
+        <label for="dd">Difficulty:</label> <input type="text" name="dd" id="dd" value="{{dd}}"><br>
+        <label for="mindd">Minimum Difficulty:</label> <input type="text" name="mindd" id="mindd" value="{{mindd}}"><br>
+        <label for="mintof">Minimum Time of Flight:</label> <input type="text" name="mintof" id="mintof" value="{{mintof}}"><br>
+        <label for="minhd">Minimum HD:</label> <input type="text" name="minhd" id="minhd" value="{{minhd}}"><br>
+        <label for="minscore">Minimum Total Score:</label> <input type="text" name="minscore" id="minscore" value="{{minscore}}"><br>
+        <label for="skills">Number of Skills:</label> <input type="text" name="skills" id="skills" value="{{skills}}"><br>
+        <label for="since">Since:</label> <input type="date" name="since" id="since" value="{{since or '2020-01-01'}}"><br>
+        <label for="before">Before:</label> <input type="date" name="before" id="before" value="{{before}}"><br>
+        <label for="year">Year:</label> <input type="text" name="year" id="year" value="{{year}}"><br>
+        <label for="event">Competition:</label> <input type="text" name="event" id="event" value="{{event}}"><br>
+        <!--        <label for="level">Level:</label> <input type="text" name="level" id="level" value="{{level}}"><br> -->
 
-        <label><input type="checkbox" name="female"> Female</label><br>
-        <label><input type="checkbox" name="male"> Male</label><br>
-        <label><input type="checkbox" name="sort_by_date"> Sort by Date</label><br>
-        <label><input type="checkbox" name="sort_by_execution"> Sort by Execution Score</label><br>
-        <label><input type="checkbox" name="sort_by_dd"> Sort by Difficulty Score</label><br>
-        <label><input type="checkbox" name="sort_by_tof"> Sort by ToF Score</label><br>
+        <label><input type="checkbox" name="female" {% if female %}checked{% endif %}> Female</label><br>
+        <label><input type="checkbox" name="male" {% if male %}checked{% endif %}> Male</label><br>
+        <label><input type="checkbox" name="sort_by_date" {% if sort_by_date %}checked{% endif %}> Sort by Date</label><br>
+        <label><input type="checkbox" name="sort_by_execution" {% if sort_by_execution %}checked{% endif %}> Sort by Execution Score</label><br>
+        <label><input type="checkbox" name="sort_by_dd" {% if sort_by_dd %}checked{% endif %}> Sort by Difficulty Score</label><br>
+        <label><input type="checkbox" name="sort_by_tof" {% if sort_by_tof %}checked{% endif %}> Sort by ToF Score</label><br>
+
             <!--        <label><input type="checkbox" name="ddtof"> Show DD + ToF Score</label><br> -->
             <!--        <label><input type="checkbox" name="plot"> Plot Results</label><br> -->
             <!--        <label><input type="checkbox" name="plotsingle"> Plot Results in a Single Overlapping Chart</label><br> -->
@@ -162,6 +163,7 @@
             <!--        <label><input type="checkbox" name="no_colour"> Suppress Coloured Output</label><br> -->
 
         <button type="submit">Submit</button>
+        <a href="{{ url_for('clear_session') }}">Clear Form</a>  <!-- Link to clear session data -->
     </form>
 
     <div class="image-container">

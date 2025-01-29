@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect, url_for
+from flask_session import Session
 import subprocess
-
-app = Flask(__name__)
-
 import re
 
-# Converts ansi colours to html
+app = Flask(__name__)
+app.secret_key = 'a88cf47e-ec3a-45e8-82e3-cdcb8afb699f'  # Replace with a strong secret key
+
+# Converts ANSI colors to HTML
 def ansi_to_html(text):
     ansi_escape = {
         r'\x1b\[30m': '<span style="color: black;">',
@@ -29,11 +30,27 @@ def ansi_to_html(text):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
+        # Store form data in session
+        for field in [
+            'given_name', 'surname', 'name', 'representing', 'stage',
+            'dd', 'mindd', 'mintof', 'minhd', 'minscore',
+            'skills', 'since', 'before', 'year', 'event', 'level' ]:
+            session[field] = request.form.get(field)
+            print(f"{field}: {session[field]}")
 
+        # Store checkbox values in session
+        session['female'] = 'female' in request.form
+        session['male'] = 'male' in request.form
+        session['sort_by_date'] = 'sort_by_date' in request.form
+        session['sort_by_execution'] = 'sort_by_execution' in request.form
+        session['sort_by_dd'] = 'sort_by_dd' in request.form
+        session['sort_by_tof'] = 'sort_by_tof' in request.form
+
+        # Prepare command options
         options = []
         search_terms = []
 
-        form_fields = {
+        for field, flag in {
             'given_name': '--given_name',
             'surname': '--surname',
             'name': '--name',
@@ -50,42 +67,28 @@ def index():
             'year': '--year',
             'event': '--event',
             'level': '--level'
-        }
-
-        for field, flag in form_fields.items():
-            if request.form.get(field):
+        }.items():
+            if session[field]:
                 options.append(flag)
-                options.append(request.form[field])
+                options.append(session[field])
 
-        if request.form.get('female'):
+        if session.get('female'):
             options.append('--female')
-        if request.form.get('male'):
+        if session.get('male'):
             options.append('--male')
-        if request.form.get('sort_by_date'):
+        if session.get('sort_by_date'):
             options.append('--sort_by_date')
-        if request.form.get('sort_by_execution'):
+        if session.get('sort_by_execution'):
             options.append('--sort_by_execution')
-        if request.form.get('sort_by_dd'):
+        if session.get('sort_by_dd'):
             options.append('--sort_by_dd')
-        if request.form.get('sort_by_tof'):
+        if session.get('sort_by_tof'):
             options.append('--sort_by_tof')
-        if request.form.get('ddtof'):
-            options.append('--ddtof')
-        if request.form.get('plot'):
-            options.append('--plot')
-        if request.form.get('plotsingle'):
-            options.append('--plotsingle')
-        if request.form.get('csv'):
-            options.append('--csv')
-        if request.form.get('all_deductions'):
-            options.append('--all_deductions')
-        if request.form.get('no_judge_summary'):
-            options.append('--no_judge_summary')
-        if request.form.get('no_colour'):
-            options.append('--no_colour')
 
         discipline = request.form.get('discipline')
         options.append(f'--{discipline}')
+        session['discipline'] = discipline
+
         command = ['python3', 'inspect_trasults.py'] + options
         print("$ ", command)
         result = subprocess.run(command, capture_output=True, text=True)
@@ -93,7 +96,12 @@ def index():
         search_terms_str = ', '.join(search_terms)
         return render_template('output.html', output=output_html, search_terms=search_terms_str)
 
-    return render_template('index.html')
+    return render_template('index.html', **session)
+
+@app.route('/clear', methods=['GET'])
+def clear_session():
+    session.clear()
+    return redirect(url_for('index'))  # Redirect to the index page
 
 if __name__ == '__main__':
     app.run(debug=True)

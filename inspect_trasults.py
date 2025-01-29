@@ -53,7 +53,7 @@ def build_query(args):
         query += " AND h_sigma >= ?"
         params.append(float(args.minhd))
     if args.minscore:
-        query += " AND score >= ?"
+        query += " AND frame_mark_ttt_g >= ?"  ## TODO Tidy this up so that it is a recalculated score where necessary
         params.append(float(args.minscore))
     if args.skills:
         query += " AND frame_nelements = ?"
@@ -132,26 +132,21 @@ def search_db():
     global args
     args = parser.parse_args()
 
-    # Connect to the SQLite database
     conn = sqlite3.connect(args.db)
     cursor = conn.cursor()
-
-    # Build the query based on the provided arguments
     query, params = build_query(args)
 
-    # Add sorting if specified
     if args.sort_by_date:
         query += " ORDER BY timestamp"
     elif args.sort_by_execution:
-        query += " ORDER BY esigma_sigma"  # Replace with actual column name if needed
+        query += " ORDER BY esigma_sigma"
     elif args.sort_by_dd:
-        query += " ORDER BY frame_difficultyt_g"  # Replace with actual column name if needed
+        query += " ORDER BY frame_difficultyt_g"
     elif args.sort_by_tof:
-        query += " ORDER BY t_sigma"  # Replace with actual column name if needed
+        query += " ORDER BY t_sigma"
     else:
-        query += " ORDER BY frame_mark_ttt_g"  # Replace with actual column name if needed
+        query += " ORDER BY frame_mark_ttt_g"
 
-    # Execute the query
     cursor.execute(query, params)
     rows = cursor.fetchall()
     column_names = [description[0] for description in cursor.description]
@@ -180,7 +175,7 @@ def get_total_score(r):
     nelements = int(r['frame_nelements'])
     if nelements == 0:
         return 0
-    if r['competition_discipline'] == 'DMT':
+    if False and r['competition_discipline'] == 'DMT':
         try:
             dd = round(float(r['frame_difficultyt_g']), 1)
             penalty = float(r['frame_penaltyt'])
@@ -298,6 +293,11 @@ def print_results(res):
             continue
 
         i=i+1
+
+        if i  > 10000:
+            print("Limited to 10000 results!")
+            break
+
         date_format = "%Y-%m-%d %H:%M:%S"
         start_time = datetime.strptime(r['frame_last_start_time_g'][:19], date_format)
 
@@ -313,6 +313,8 @@ def print_results(res):
             stage = "F1"
         elif r['stage_kind'] == "Team Final":
             stage = f"TF"
+        elif r['stage_kind'] == "Team Semifinal":
+            stage = f"TS"
         else:
             print(f"Staging error: {r['stage_kind']}")
             assert(False)
