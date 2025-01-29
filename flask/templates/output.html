@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
+    <h2>Search terms: {{ search_terms | safe }}</h2>
+    <pre>{{ output | safe }}</pre>
+    <a href="{{ url_for('index') }}" class="back-button">Back</a>
     <div class="image-container">
         <a href="https://www.veriflite.com" target="_blank">
             <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite" class="responsive-image">
         </a>
     </div>
-    <h2>Search terms: {{ search_terms | safe }}</h2>
-    <pre>{{ output | safe }}</pre>
-    <a href="{{ url_for('index') }}" class="back-button">Back</a>
 </body>
 </html>
