@@ -370,8 +370,7 @@ def print_results(res):
                     round(num_skills, 0)
                 ]
             else:
-                score =
-                    f"Total:{green_if_best(total_score, best['total'])} " + \
+                score = f"Total:{green_if_best(total_score, best['total'])} " + \
                     f"D:{dd_text} " + \
                     f"E:{exec_text} {colourise(deductions)}{padding} " + \
                     f"L:{red_if_nonzero(landing)} " + \
@@ -413,8 +412,7 @@ def print_results(res):
             if args.csv:
                 score = f"{r['frame_difficultyt_g']:4.1f}, {escore:5.2f}, {landing}, {penalty}, {total_score}, {num_skills}, "
             else:
-                score =
-                    f"Total:{green_if_best(total_score, best['total'])} " + \
+                score = f"Total:{green_if_best(total_score, best['total'])} " + \
                     f"D:{dd_text} " + \
                     f"E:{exec_text} {colourise(deductions)}{padding} " + \
                     f"L:{red_if_nonzero(landing)} " + \
