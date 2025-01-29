@@ -12,7 +12,7 @@
             <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite" class="responsive-image">
         </a>
     </div>
-    <h1>{{ search_terms }}</h1>
+    <h2>Search terms: {{ search_terms | safe }}</h2>
     <pre>{{ output | safe }}</pre>
     <a href="{{ url_for('index') }}" class="back-button">Back</a>
 </body>

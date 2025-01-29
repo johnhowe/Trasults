@@ -71,11 +71,14 @@ def index():
             if session[field]:
                 options.append(flag)
                 options.append(session[field])
+                search_terms.append(f"{field}={session[field]}")
 
         if session.get('female'):
             options.append('--female')
+            search_terms.append('female')
         if session.get('male'):
             options.append('--male')
+            search_terms.append('male')
         if session.get('sort_by_date'):
             options.append('--sort_by_date')
         if session.get('sort_by_execution'):
@@ -87,6 +90,7 @@ def index():
 
         discipline = request.form.get('discipline')
         options.append(f'--{discipline}')
+        search_terms.append(discipline)
         session['discipline'] = discipline
 
         command = ['python3', 'inspect_trasults.py'] + options
@@ -94,6 +98,7 @@ def index():
         result = subprocess.run(command, capture_output=True, text=True)
         output_html = ansi_to_html(result.stdout)
         search_terms_str = ', '.join(search_terms)
+        print(f"search_terms_str = {search_terms_str}")
         return render_template('output.html', output=output_html, search_terms=search_terms_str)
 
     return render_template('index.html', **session)
