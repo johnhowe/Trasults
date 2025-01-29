@@ -190,7 +190,12 @@ def get_timestamp(r):
     return float(r['timestamp'])
 
 def get_execution(r):
-    return float(r['esigma_sigma'])
+    e = float(r['esigma_sigma'])
+    if e > 1000: # Assuming it is entered in hundredths
+        e = e / 100.0
+    elif e > 100: # Assuming it is entered in tenths
+        e = e / 10.0
+    return e
 
     # if r['competition_discipline'] == 'DMT':
     #     return float(recalculate_dmt_execution_score(r))
@@ -344,7 +349,7 @@ def print_results(res):
         if r['competition_discipline'] == 'DMT':
             deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2']][:int(r['frame_nelements'])]]
             padding = "  " * (2 - int(r['frame_nelements']))
-            escore = float(r['esigma_sigma'])
+            escore = get_execution(r)
             #score = f"D:{r['frame_difficultyt_g']:4.1f} E:{escore:5.2f} {colourise(deductions)}{padding} L:{red_if_nonzero(landing)} P:{red_if_nonzero(penalty)} Total:{total_score} "
 
             #rank = int(r['performance_rank_g'])
@@ -376,7 +381,7 @@ def print_results(res):
             landing = int(10*r['esigma_l'])
             deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2'], r['esigma_s3'], r['esigma_s4'], r['esigma_s5'], r['esigma_s6'], r['esigma_s7'], r['esigma_s8'], r['esigma_s9'], r['esigma_s10']][:int(r['frame_nelements'])]]
             padding = "  " * (10 - num_skills)
-            escore = float(r['esigma_sigma'])
+            escore = get_execution(r)
             dd_text = green_if_true(f"{r['frame_difficultyt_g']:4.1f}", r['frame_difficultyt_g'] == best['dd'])
             tof_text = green_if_true(f"{r['t_sigma']:5.2f}", r['t_sigma'] == best['tof'])
             hd_text = green_if_true(f"{r['h_sigma']:4.1f}", r['h_sigma'] == best['hd'])
@@ -397,7 +402,7 @@ def print_results(res):
         elif r['competition_discipline'] == 'TUM':
             deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2'], r['esigma_s3'], r['esigma_s4'], r['esigma_s5'], r['esigma_s6'], r['esigma_s7'], r['esigma_s8']][:int(r['frame_nelements'])]]
             padding = "  " * (2 - int(r['frame_nelements']))
-            escore = float(r['esigma_sigma'])
+            escore = get_execution(r)
             #score = f"D:{r['frame_difficultyt_g']:4.1f} E:{escore:5.2f} {colourise(deductions)}{padding} L:{red_if_nonzero(landing)} P:{red_if_nonzero(penalty)} Total:{total_score} "
 
             penalty = int(10*float(r['frame_penaltyt']))
@@ -420,7 +425,8 @@ def print_results(res):
         print(f"{prefix} {score} {suffix}")
 
     print(f"\nBEST: D:{best['dd']} E:{best['exec']} T:{best['tof']} H:{best['hd']} Total:{best['total']}")
-    print(f"Skipped {invalid_routines} invalid routines.")
+    if invalid_routines > 0:
+        print(f"Skipped {invalid_routines} invalid routines.")
 
 #    # Handle CSV output if specified
 #    if args.csv:

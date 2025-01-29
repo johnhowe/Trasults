@@ -81,6 +81,7 @@ button:hover {
 .image-container {
     text-align: center; /* Center the image horizontally */
     margin: 10px 0; /* Add some vertical spacing around the image */
+    background-color: transparent;
 }
 
 .responsive-image {
@@ -134,13 +135,28 @@ a {
     margin-top: 20px;
     text-align: center;
     color: white;
-    padding: 10px 15px;
-    border-radius: 4px;
+    border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 a:hover {
     background-color: #fff;
+}
+
+.back-button {
+    display: inline-block; /* Make it behave like a block for padding */
+    margin-top: 20px; /* Add some margin above */
+    text-align: center;
+    color: white; /* Text color */
+    background-color: #007bff; /* Background color */
+    padding: 10px 15px; /* Padding for better spacing */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
 }
 

@@ -9,11 +9,11 @@
 <body>
     <div class="image-container">
         <a href="https://www.veriflite.com" target="_blank">
-            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image">
+            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite" class="responsive-image">
         </a>
     </div>
     <h1>{{ search_terms }}</h1>
     <pre>{{ output | safe }}</pre>
-    <a href="{{ url_for('index') }}">Back</a>
+    <a href="{{ url_for('index') }}" class="back-button">Back</a>
 </body>
 </html>
