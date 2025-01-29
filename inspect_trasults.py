@@ -295,9 +295,6 @@ def print_results(res):
         best['hd'] = max(best['hd'], hd)
         best['exec'] = max(best['exec'], execution)
 
-
-    print(f"BEST: D:{best['dd']} E:{best['exec']} T:{best['tof']} H:{best['hd']} Total:{best['total']}")
-
     i = 0
     invalid_routines = 0
     for r in res:
@@ -423,6 +420,7 @@ def print_results(res):
         print(f"{prefix} {score} {suffix}")
 
     #print(f"Skipped {invalid_routines} invalid routines.")
+    print(f"\nBEST: D:{best['dd']} E:{best['exec']} T:{best['tof']} H:{best['hd']} Total:{best['total']}")
 
 #    # Handle CSV output if specified
 #    if args.csv:
