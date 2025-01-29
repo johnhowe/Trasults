@@ -137,15 +137,15 @@ def search_db():
     query, params = build_query(args)
 
     if args.sort_by_date:
-        query += " ORDER BY timestamp"
+        query += " ORDER BY timestamp DESC"
     elif args.sort_by_execution:
-        query += " ORDER BY esigma_sigma"
+        query += " ORDER BY esigma_sigma DESC"
     elif args.sort_by_dd:
-        query += " ORDER BY frame_difficultyt_g"
+        query += " ORDER BY frame_difficultyt_g DESC"
     elif args.sort_by_tof:
-        query += " ORDER BY t_sigma"
+        query += " ORDER BY t_sigma DESC"
     else:
-        query += " ORDER BY frame_mark_ttt_g"
+        query += " ORDER BY frame_mark_ttt_g DESC"
 
     cursor.execute(query, params)
     rows = cursor.fetchall()
