@@ -123,7 +123,6 @@ def search_db():
     parser.add_argument('--sort_by_execution', action='store_true', help='Sort output by execution score')
     parser.add_argument('--sort_by_dd', action='store_true', help='Sort output by difficulty score')
     parser.add_argument('--sort_by_tof', action='store_true', help='Sort output by ToF score')
-    parser.add_argument('--ddtof', action='store_true', help='Show DD + ToF score')
     parser.add_argument('--csv', action='store_true', help='CSV output')
     parser.add_argument('--all_deductions', action='store_true', help='Summarise with ALL deductions (rather than medians)')
     parser.add_argument('--no_judge_summary', action='store_true', help='Suppress the printing of the judges summary')
@@ -156,24 +155,24 @@ def search_db():
 
 def recalculate_dmt_execution_score(r):
     try:
-        nelements = int(r['frame_nelements'])
+        num_skills = int(r['frame_nelements'])
         s1 = [e for e in [r['e1_s1'], r['e2_s1'], r['e3_s1'], r['e4_s1'], r['e5_s1']] if e is not None]
         s2 = [e for e in [r['e1_s2'], r['e2_s2'], r['e3_s2'], r['e4_s2'], r['e5_s2']] if e is not None]
         medians = [2 * median(s) for s in [s1, s2] if len(s) > 0]
-        deductions = sum([round(float(n), 1) for n in medians[:nelements]])
+        deductions = sum([round(float(n), 1) for n in medians[:num_skills]])
         if deductions == 0:
             sigmas = [r['e1_sigma'], r['e2_sigma'], r['e3_sigma'], r['e4_sigma'], r['e5_sigma']]
             if sum(sigmas) == 0:
                 return 0
             deductions = 2 * median([a for a in sigmas if a is not None and a < 10 and a > 0])
-        execution = [0,18,20][nelements] - deductions
+        execution = [0,18,20][num_skills] - deductions
         return execution
     except StatisticsError:
         return 0
 
 def get_total_score(r):
-    nelements = int(r['frame_nelements'])
-    if nelements == 0:
+    num_skills = int(r['frame_nelements'])
+    if num_skills == 0:
         return 0
     if False and r['competition_discipline'] == 'DMT':
         try:
@@ -181,7 +180,7 @@ def get_total_score(r):
             penalty = float(r['frame_penaltyt'])
             execution = get_execution(r)
             #landing = float(r['esigma_l'])
-            #print(nelements, dd, penalty, landing, s1, s2, medians, deductions, execution)
+            #print(num_skills, dd, penalty, landing, s1, s2, medians, deductions, execution)
             return execution + dd - penalty
         except StatisticsError:
             return 0
@@ -202,6 +201,12 @@ def get_dd(r):
 
 def get_tof(r):
     return float(r['t_sigma'])
+
+def get_hd(r):
+    return float(r['h_sigma'])
+
+def get_num_skills(r):
+    return int(r['frame_nelements'])
 
 def get_heatmap_color(value):
     color_index = 232 + int(value / 4)
@@ -248,31 +253,50 @@ def green_if_true(text, is_true):
     return f"{text}"
 
 def print_results(res):
-
-    best = {}
-    best['total'] = 0
-    best['tof'] = 0
-    best['dd'] = 0
-    best['exec'] = 0
-    best['hd'] = 0
-    best['ddtof'] = 0
-    for r in res:
-        best['total'] = max(best['total'], get_total_score(r))
-        best['dd'] = max(best['dd'], float(r['frame_difficultyt_g']))
-        best['tof'] = max(best['tof'], float(r['t_sigma']))
-        best['hd'] = max(best['hd'], float(r['h_sigma']))
-        #escore = 2*(int(r['frame_nelements']) - float(r['esigma_sigma'])) # TODO WHAT IS GOING ON HERE?
-        escore = float(r['esigma_sigma'])
-        best['exec'] = max(best['exec'], escore)
-        ddtof = r['frame_difficultyt_g'] + r['t_sigma']
-        best['ddtof'] = max(best['ddtof'], float(ddtof))
-
     EDTH_MIN = 0
     E_MAX = 30
     D_MAX = 25
     T_MAX = 25
     H_MAX = 20
     TOTAL_MAX = E_MAX + D_MAX + T_MAX + H_MAX
+
+    best = {
+        'total': 0,
+        'tof': 0,
+        'dd': 0,
+        'exec': 0,
+        'hd': 0,
+    }
+
+    i = 0
+    for r in res:
+        timestamp = get_timestamp(r)
+        total_score = get_total_score(r)
+        execution = get_execution(r)
+        dd = get_dd(r)
+        tof = get_tof(r)
+        hd = get_hd(r)
+        num_skills = get_num_skills(r)
+
+        if (execution < EDTH_MIN or execution > E_MAX or
+                dd < EDTH_MIN or dd > D_MAX or
+                tof < EDTH_MIN or tof > T_MAX or
+                total_score < EDTH_MIN or total_score > TOTAL_MAX or
+                num_skills == 0):
+            continue
+
+        i=i+1
+        if i  > 10000:
+            break
+
+        best['total'] = max(best['total'], total_score)
+        best['dd'] = max(best['dd'], dd)
+        best['tof'] = max(best['tof'], tof)
+        best['hd'] = max(best['hd'], hd)
+        best['exec'] = max(best['exec'], execution)
+
+
+    print(f"BEST: D:{best['dd']} E:{best['exec']} T:{best['tof']} H:{best['hd']} Total:{best['total']}")
 
     i = 0
     invalid_routines = 0
@@ -282,13 +306,13 @@ def print_results(res):
         execution = get_execution(r)
         dd = get_dd(r)
         tof = get_tof(r)
-        nelements = int(r['frame_nelements'])
+        num_skills = get_num_skills(r)
 
         if (execution < EDTH_MIN or execution > E_MAX or
                 dd < EDTH_MIN or dd > D_MAX or
                 tof < EDTH_MIN or tof > T_MAX or
                 total_score < EDTH_MIN or total_score > TOTAL_MAX or
-                nelements == 0):
+                num_skills == 0):
             invalid_routines += 1
             continue
 
@@ -341,7 +365,7 @@ def print_results(res):
                     round(penalty, 1),
                     round(total_score, 2),
                     #round(rank, 0),
-                    round(nelements, 0)
+                    round(num_skills, 0)
                 ]
             else:
                 score = f"D:{dd_text} " + \
@@ -353,20 +377,17 @@ def print_results(res):
 
         elif r['competition_discipline'] == 'TRA':
             landing = int(10*r['esigma_l'])
-            ddtof = r['frame_difficultyt_g'] + r['t_sigma']
             deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2'], r['esigma_s3'], r['esigma_s4'], r['esigma_s5'], r['esigma_s6'], r['esigma_s7'], r['esigma_s8'], r['esigma_s9'], r['esigma_s10']][:int(r['frame_nelements'])]]
-            padding = "  " * (10 - nelements)
+            padding = "  " * (10 - num_skills)
             escore = float(r['esigma_sigma'])
             dd_text = green_if_true(f"{r['frame_difficultyt_g']:4.1f}", r['frame_difficultyt_g'] == best['dd'])
             tof_text = green_if_true(f"{r['t_sigma']:5.2f}", r['t_sigma'] == best['tof'])
-            ddtof_text = green_if_true(f"{ddtof:5.2f}", ddtof == best['ddtof'])
             hd_text = green_if_true(f"{r['h_sigma']:4.1f}", r['h_sigma'] == best['hd'])
             exec_text = green_if_true(f"{escore:5.2f}", escore == best['exec'])
             #rank = int(r['performance_rank_g'])
             penalty = int(10*float(r['frame_penaltyt']))
             score = f"D:{dd_text} "
             score += f"T:{tof_text} "
-            #if args.ddtof: score += f"DT:{ddtof_text} "
             score += f"H:{hd_text} "
             score += f"E:{exec_text} {colourise(deductions)}{padding} "
             score += f"L:{red_if_nonzero(landing)} "
@@ -387,7 +408,7 @@ def print_results(res):
             exec_text = green_if_true(f"{escore:5.2f}", escore == best['exec'])
             dd_text = green_if_true(f"{r['frame_difficultyt_g']:4.1f}", r['frame_difficultyt_g'] == best['dd'])
             if args.csv:
-                score = f"{r['frame_difficultyt_g']:4.1f}, {escore:5.2f}, {landing}, {penalty}, {total_score}, {nelements}, "
+                score = f"{r['frame_difficultyt_g']:4.1f}, {escore:5.2f}, {landing}, {penalty}, {total_score}, {num_skills}, "
             else:
                 score = f"D:{dd_text} " + \
                     f"E:{exec_text} {colourise(deductions)}{padding} " + \
