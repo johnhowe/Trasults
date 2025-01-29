@@ -419,8 +419,8 @@ def print_results(res):
 
         print(f"{prefix} {score} {suffix}")
 
-    #print(f"Skipped {invalid_routines} invalid routines.")
     print(f"\nBEST: D:{best['dd']} E:{best['exec']} T:{best['tof']} H:{best['hd']} Total:{best['total']}")
+    print(f"Skipped {invalid_routines} invalid routines.")
 
 #    # Handle CSV output if specified
 #    if args.csv:
