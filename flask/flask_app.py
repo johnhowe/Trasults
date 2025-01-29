@@ -50,6 +50,11 @@ def index():
         options = []
         search_terms = []
 
+        discipline = request.form.get('discipline')
+        options.append(f'--{discipline}')
+        search_terms.append(discipline)
+        session['discipline'] = discipline
+
         for field, flag in {
             'given_name': '--given_name',
             'surname': '--surname',
@@ -87,11 +92,6 @@ def index():
             options.append('--sort_by_dd')
         if session.get('sort_by_tof'):
             options.append('--sort_by_tof')
-
-        discipline = request.form.get('discipline')
-        options.append(f'--{discipline}')
-        search_terms.append(discipline)
-        session['discipline'] = discipline
 
         command = ['python3', 'inspect_trasults.py'] + options
         print("$ ", command)

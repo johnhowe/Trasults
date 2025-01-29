@@ -327,7 +327,7 @@ def print_results(res):
         date_format = "%Y-%m-%d %H:%M:%S"
         start_time = datetime.strptime(r['frame_last_start_time_g'][:19], date_format)
 
-        prefix = f"{i:3d}: {r['competition_discipline']} {start_time.strftime('%Y-%m-%d')} "
+        prefix = f"{i:3d}: {start_time.strftime('%Y-%m-%d')} "
 
         if r['stage_kind'][0] == "Q":
             stage = f"Q{int(r['routine_number'])}"
