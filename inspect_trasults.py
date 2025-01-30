@@ -283,9 +283,9 @@ def print_results(res):
         hd = get_hd(r)
         num_skills = get_num_skills(r)
 
-        if ("test" in r['person_given_name'] or
-                "test" in r['person_surname'] or
-                "test" in r['person_representing']):
+        if ("test" in r['person_given_name'].lower() or
+                "test" in r['person_surname'].lower() or
+                "test" in r['person_representing'].lower()):
             continue
 
         if (execution < EDTH_MIN or execution > E_MAX or
@@ -315,9 +315,9 @@ def print_results(res):
         tof = get_tof(r)
         num_skills = get_num_skills(r)
 
-        if ("test" in r['person_given_name'] or
-                "test" in r['person_surname'] or
-                "test" in r['person_representing']):
+        if ("test" in r['person_given_name'].lower() or
+                "test" in r['person_surname'].lower() or
+                "test" in r['person_representing'].lower()):
             continue
 
         if (execution < EDTH_MIN or execution > E_MAX or
