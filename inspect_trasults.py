@@ -285,6 +285,7 @@ def print_results(res):
 
         if ("test" in r['person_given_name'].lower() or
                 "test" in r['person_surname'].lower() or
+                "test" in r['competition_title'].lower() or
                 "test" in r['person_representing'].lower()):
             continue
 
@@ -317,6 +318,7 @@ def print_results(res):
 
         if ("test" in r['person_given_name'].lower() or
                 "test" in r['person_surname'].lower() or
+                "test" in r['competition_title'].lower() or
                 "test" in r['person_representing'].lower()):
             continue
 
