@@ -41,7 +41,7 @@ def build_query(args):
         query += " AND stage_kind LIKE ?"
         params.append(f"%{args.stage}%")
     if args.dd:
-        query += " AND dd = ?"
+        query += " AND frame_difficultyt_g = ?"
         params.append(float(args.dd))
     if args.mindd:
         query += " AND frame_difficultyt_g >= ?"
