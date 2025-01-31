@@ -68,6 +68,12 @@ def build_query(args):
         before_timestamp = int(before_date.timestamp())
         query += " AND timestamp <= ?"
         params.append(before_timestamp)
+    if args.country:
+        query += " AND event_country LIKE ?"
+        params.append(f"%{args.country}%")
+    if args.year:
+        query += " AND event_year = ?"
+        params.append(args.year)
     if args.event:
         query += " AND event_title LIKE ?"
         params.append(f"%{args.event}%")
@@ -115,6 +121,7 @@ def search_db():
     parser.add_argument('--since', help='Filter since given date (format: YYYY-MM-DD)')
     parser.add_argument('--before', help='Filter before given date (format: YYYY-MM-DD)')
     parser.add_argument('--year', type=int, help='Filter by year (format: YYYY)')
+    parser.add_argument('--country', help='Filter by competition host country')
     parser.add_argument('--event', help='Filter by competition event title')
     parser.add_argument('--level', help='Filter by competition level')
     parser.add_argument('--female', action='store_true', help='Try filter female competition levels')
