@@ -363,7 +363,7 @@ def print_results(res):
         else:
             print(f"Staging error: {r['stage_kind']}")
             assert(False)
-        suffix = f"{stage} {r['person_given_name']} {r['person_surname']} ({r['person_representing']}) {r['event_title']} - ({r['competition_title']}) "
+        suffix = f"{stage} {r['person_given_name']} {r['person_surname']} ({r['person_representing']}) - {r['competition_title']} @ {r['event_title']} ({r['event_country']})"
 
         if r['competition_discipline'] == 'DMT':
             deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2']][:int(r['frame_nelements'])]]

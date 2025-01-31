@@ -32,9 +32,9 @@ def index():
     if request.method == 'POST':
         # Store form data in session
         for field in [
-            'given_name', 'surname', 'name', 'representing', 'stage',
-            'dd', 'mindd', 'mintof', 'minhd', 'minscore',
-            'skills', 'since', 'before', 'year', 'event', 'level' ]:
+            'given_name', 'surname', 'name', 'representing', 'stage', 'dd',
+            'mindd', 'mintof', 'minhd', 'minscore', 'skills', 'since',
+            'before', 'year', 'event', 'year', 'country', 'level' ]:
             session[field] = request.form.get(field)
             print(f"{field}: {session[field]}")
 
@@ -71,6 +71,8 @@ def index():
             'before': '--before',
             'year': '--year',
             'event': '--event',
+            'year': '--year',
+            'country': '--country',
             'level': '--level'
         }.items():
             if session[field]:
