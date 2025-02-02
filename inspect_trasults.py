@@ -134,6 +134,7 @@ def search_db():
     parser.add_argument('--all_deductions', action='store_true', help='Summarise with ALL deductions (rather than medians)')
     parser.add_argument('--no_judge_summary', action='store_true', help='Suppress the printing of the judges summary')
     parser.add_argument('--no_colour', action='store_true', help='Suppress coloured output')
+    parser.add_argument('--invalid', action='store_true', help='Only show INVALID routines.')
 
     global args
     args = parser.parse_args()
@@ -316,6 +317,7 @@ def print_results(res):
     i = 0
     invalid_routines = 0
     for r in res:
+        is_invalid = False
         timestamp = get_timestamp(r)
         total_score = get_total_score(r)
         execution = get_execution(r)
@@ -335,6 +337,11 @@ def print_results(res):
                 total_score < EDTH_MIN or total_score > TOTAL_MAX or
                 num_skills == 0):
             invalid_routines += 1
+            is_invalid = True
+
+        if args.invalid and not is_invalid:
+            continue
+        if not args.invalid and is_invalid:
             continue
 
         i=i+1
@@ -416,7 +423,7 @@ def print_results(res):
             #score += f"Rank:{rank:<2} "
 
         elif r['competition_discipline'] == 'SYN':
-            score = " - NOT IMPLEMENTED - "
+            score = " - SYNCHRO NOT YET IMPLEMENTED - "
 
         elif r['competition_discipline'] == 'TUM':
             deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2'], r['esigma_s3'], r['esigma_s4'], r['esigma_s5'], r['esigma_s6'], r['esigma_s7'], r['esigma_s8']][:int(r['frame_nelements'])]]
