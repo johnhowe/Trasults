@@ -102,7 +102,7 @@ def build_query(args):
 
 def search_db():
     parser = argparse.ArgumentParser(description='Process DB file and filter data.')
-    parser.add_argument('--db', default='db.sqlite', help='Path to the DB file')
+    parser.add_argument('--db', default='trasults.db', help='Path to the DB file')
     parser.add_argument('--tra', action='store_true', help='Search for TRA routines')
     parser.add_argument('--dmt', action='store_true', help='Search for DMT routines')
     parser.add_argument('--syn', action='store_true', help='Search for SYN routines')
