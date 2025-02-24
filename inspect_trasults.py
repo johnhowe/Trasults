@@ -451,7 +451,7 @@ def print_results(res):
 
         print(f"{prefix} {score} {suffix}")
 
-    print(f"\nBEST: Total:{best['total']} D:{best['dd']} E:{best['exec']} T:{best['tof']} H:{best['hd']}")
+    print(f"\nBEST: Total:{best['total']} D:{best['dd']} T:{best['tof']} H:{best['hd']} E:{best['exec']}")
 #    if invalid_routines > 0:
 #        print(f"Skipped {invalid_routines} invalid routines.")
 
