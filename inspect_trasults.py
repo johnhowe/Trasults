@@ -10,7 +10,7 @@ from statistics import median, StatisticsError
 args = None
 
 def build_query(args):
-    query = "SELECT * FROM users WHERE frame_state='PUBLISHED'"  # Start with a base query
+    query = "SELECT * FROM routines WHERE frame_state='PUBLISHED'"  # Start with a base query
     params = []
 
     if args.tra:
@@ -135,6 +135,7 @@ def search_db():
     parser.add_argument('--no_judge_summary', action='store_true', help='Suppress the printing of the judges summary')
     parser.add_argument('--no_colour', action='store_true', help='Suppress coloured output')
     parser.add_argument('--invalid', action='store_true', help='Only show INVALID routines.')
+    parser.add_argument('--nolimit', action='store_true', help='No limit on the number of routines (10,000)')
 
     global args
     args = parser.parse_args()
@@ -305,7 +306,7 @@ def print_results(res):
             continue
 
         i=i+1
-        if i  > 10000:
+        if not args.nolimit and i  > 10000:
             break
 
         best['total'] = max(best['total'], total_score)
@@ -346,7 +347,7 @@ def print_results(res):
 
         i=i+1
 
-        if i  > 10000:
+        if not args.nolimit and i  > 10000:
             print("Limited to 10000 results!")
             break
 
