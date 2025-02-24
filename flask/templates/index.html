@@ -12,7 +12,7 @@
     <h4>Search for routines which match ALL fields - don't be too specific!</h4>
 
     <form method="POST">
-        <a href="{{ url_for('clear_session') }}">Clear Form</a>  <!-- Link to clear session data -->
+        <a href="{{ url_for('clear_session') }}">Reset</a>  <!-- Link to clear session data -->
         <label for="discipline">Discipline:</label>
         <select name="discipline" id="discipline">
             <option value="tra" {% if discipline == 'tra' %}selected{% endif %}>Trampoline</option>
