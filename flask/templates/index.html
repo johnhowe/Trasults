@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
-    <h1>TRASULTS</h1>
+    <div class="image-container">
+        <a href="https://www.veriflite.com" target="_blank">
+            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image" style="width: 50%;">
+        </a>
+    </div>
+        <!--<h1>TRASULTS</h1>-->
 
-    <h4>Search for routines which match ALL fields - don't be too specific!</h4>
+    <h3>Search for Trampoline Competition Results</h3>
+    <h4>
+        Finds routines that match ALL fields.<br>
+        Start with broad terms (eg Aus rather than Australia). <br>
+        Don't be too specific!
+    </h4>
 
     <form method="POST">
-        <a href="{{ url_for('clear_session') }}">Reset</a>  <!-- Link to clear session data -->
-        <br>
+        <div style="text-align: right;">
+            <a href="{{ url_for('clear_session') }}">Reset form</a>  <!-- Link to clear session data -->
+        </div>
         <label for="discipline">Discipline:</label>
         <select name="discipline" id="discipline">
             <option value="tra" {% if discipline == 'tra' %}selected{% endif %}>Trampoline</option>
@@ -57,11 +68,13 @@
         <button type="submit">Submit</button>
     </form>
 
+<!---
     <div class="image-container">
         <a href="https://www.veriflite.com" target="_blank">
             <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image">
         </a>
     </div>
+--->
 
 </body>
 </html>
