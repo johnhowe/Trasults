@@ -13,6 +13,7 @@
 
     <form method="POST">
         <a href="{{ url_for('clear_session') }}">Reset</a>  <!-- Link to clear session data -->
+        <br>
         <label for="discipline">Discipline:</label>
         <select name="discipline" id="discipline">
             <option value="tra" {% if discipline == 'tra' %}selected{% endif %}>Trampoline</option>
