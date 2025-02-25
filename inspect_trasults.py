@@ -375,7 +375,7 @@ def print_results(res):
 
         if r['competition_discipline'] == 'DMT':
             deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2']][:int(r['frame_nelements'])]]
-            padding = "  " * (2 - int(r['frame_nelements']))
+            padding = "  " * (2 - num_skills)
             escore = get_execution(r)
             #score = f"D:{r['frame_difficultyt_g']:4.1f} E:{escore:5.2f} {colourise(deductions)}{padding} L:{red_if_nonzero(landing)} P:{red_if_nonzero(penalty)} Total:{total_score} "
 
@@ -428,7 +428,7 @@ def print_results(res):
 
         elif r['competition_discipline'] == 'TUM':
             deductions = [int(n * 10) for n in [r['esigma_s1'], r['esigma_s2'], r['esigma_s3'], r['esigma_s4'], r['esigma_s5'], r['esigma_s6'], r['esigma_s7'], r['esigma_s8']][:int(r['frame_nelements'])]]
-            padding = "  " * (2 - int(r['frame_nelements']))
+            padding = "  " * (8 - num_skills)
             escore = get_execution(r)
             #score = f"D:{r['frame_difficultyt_g']:4.1f} E:{escore:5.2f} {colourise(deductions)}{padding} L:{red_if_nonzero(landing)} P:{red_if_nonzero(penalty)} Total:{total_score} "
 

@@ -260,7 +260,6 @@ olympicfinal = [
 ]
 
 aus_itt = [
-    ("amelia"    , "phillips"       , "all") ,
     ("anika"     , "wood"           , "all") ,
     ("anna"      , "hewitt"         , "all") ,
     ("bella"     , "camp"           , "all") ,
@@ -277,7 +276,7 @@ aus_itt = [
     ("ella"      , "howie"          , "all") ,
     ("emma"      , "robins"         , "all") ,
     ("emma"      , "tindale"        , "all") ,
-    ("eras"      , ""               , "all") ,
+    ("eras"      , "viljoen"        , "all") ,
     ("ethan"     , "rawson"         , "all") ,
     ("finleigh"  , "glanville"      , "all") ,
     ("finley"    , "smith"          , "all") ,
@@ -315,6 +314,7 @@ aus_itt = [
     ("mason"     , "meszaros"       , "all") ,
     ("matthew"   , "teirney"        , "all") ,
     ("melissa"   , "romeril"        , "all") ,
+    ("millie"    , "phillips"       , "all") ,
     ("nathan"    , "davies"         , "all") ,
     ("nathan"    , "monkton"        , "all") ,
     ("naya"      , "milnthorp"      , "all") ,
@@ -339,7 +339,6 @@ aus_itt = [
     ("zavier"    , "linstrom"       , "all") ,
 ]
 
-
 #squad = national_squad
 squad = aus_itt
 
@@ -350,6 +349,7 @@ for given_name, surname, discipline in squad:
         discipline = ["tra", "dmt", "tum"]
     for d in discipline:
         print(f"{d}:")
-        command = f"./inspect_trasults.py --no_judge_summary --{d} --given_name '{given_name}' --surname '{surname}' --since 2023-01-01"
+        sys.stdout.flush()
+        command = f"./inspect_trasults.py --no_judge_summary --sort_by_date --{d} --given_name '{given_name}' --surname '{surname}' --since 2024-01-01"
         subprocess.run(command, shell=True)
 
