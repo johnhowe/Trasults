@@ -47,7 +47,35 @@
         <label for="before">Before:</label> <input type="date" name="before" id="before" value="{{before}}"><br>
         <label for="year">Year:</label> <input type="text" name="year" id="year" value="{{year}}"><br>
         <label for="event">Competition:</label> <input type="text" name="event" id="event" value="{{event}}"><br>
-        <label for="country">Host country:</label> <input type="text" name="country" id="country" value="{{country}}"><br>
+        <label for="country">Host country:</label>
+        <select id="country" name="country">
+                <option value="" {% if country == "" %}selected{% endif %}></option>
+                <option value="argentina" {% if country == "argentina" %}selected{% endif %}>Argentina</option>
+                <option value="australia" {% if country == "australia" %}selected{% endif %}>Australia</option>
+                <option value="belarus" {% if country == "belarus" %}selected{% endif %}>Belarus</option>
+                <option value="brazil" {% if country == "brazil" %}selected{% endif %}>Brazil</option>
+                <option value="bulgaria" {% if country == "bulgaria" %}selected{% endif %}>Bulgaria</option>
+                <option value="colombia" {% if country == "colombia" %}selected{% endif %}>Colombia</option>
+                <option value="czech_republic" {% if country == "czech_republic" %}selected{% endif %}>Czech Republic</option>
+                <option value="denmark" {% if country == "denmark" %}selected{% endif %}>Denmark</option>
+                <option value="estonia" {% if country == "estonia" %}selected{% endif %}>Estonia</option>
+                <option value="finland" {% if country == "finland" %}selected{% endif %}>Finland</option>
+                <option value="germany" {% if country == "germany" %}selected{% endif %}>Germany</option>
+                <option value="japan" {% if country == "japan" %}selected{% endif %}>Japan</option>
+                <option value="latvia" {% if country == "latvia" %}selected{% endif %}>Latvia</option>
+                <option value="lithuania" {% if country == "lithuania" %}selected{% endif %}>Lithuania</option>
+                <option value="mexico" {% if country == "mexico" %}selected{% endif %}>Mexico</option>
+                <option value="netherlands" {% if country == "netherlands" %}selected{% endif %}>Netherlands</option>
+                <option value="new_zealand" {% if country == "new_zealand" %}selected{% endif %}>New Zealand</option>
+                <option value="philippines" {% if country == "philippines" %}selected{% endif %}>Philippines</option>
+                <option value="poland" {% if country == "poland" %}selected{% endif %}>Poland</option>
+                <option value="portugal" {% if country == "portugal" %}selected{% endif %}>Portugal</option>
+                <option value="russian_federation" {% if country == "russian_federation" %}selected{% endif %}>Russian Federation</option>
+                <option value="sweden" {% if country == "sweden" %}selected{% endif %}>Sweden</option>
+                <option value="switzerland" {% if country == "switzerland" %}selected{% endif %}>Switzerland</option>
+                <option value="united_kingdom" {% if country == "united_kingdom" %}selected{% endif %}>United Kingdom</option>
+                <option value="united_states" {% if country == "united_states" %}selected{% endif %}>United States of America</option>
+        </select>
         <!--        <label for="level">Level:</label> <input type="text" name="level" id="level" value="{{level}}"><br> -->
 
         <label><input type="checkbox" name="female" {% if female %}checked{% endif %}> Female</label><br>
