@@ -36,7 +36,7 @@ def index():
             'mindd', 'mintof', 'minhd', 'minscore', 'skills', 'since',
             'before', 'year', 'event', 'year', 'country', 'level' ]:
             session[field] = request.form.get(field)
-            print(f"{field}: {session[field]}")
+            #print(f"{field}: {session[field]}")
 
         # Store checkbox values in session
         session['female'] = 'female' in request.form
