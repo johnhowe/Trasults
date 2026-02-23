@@ -87,6 +87,7 @@
                 <th>D</th>
                 {% if discipline == 'tra' %}
                 <th>ToF</th>
+                <th>DT</th>
                 <th>H</th>
                 {% endif %}
                 <th>E</th>
@@ -109,6 +110,7 @@
                 <td class="{{ 'best-score' if r.is_best_dd else '' }}">{{ '%.1f'|format(r.dd) }}</td>
                 {% if discipline == 'tra' %}
                 <td class="{{ 'best-score' if r.is_best_tof else '' }}">{{ '%.2f'|format(r.tof) }}</td>
+                <td class="{{ 'best-score' if r.is_best_dt else '' }}">{{ '%.2f'|format(r.dt) }}</td>
                 <td class="{{ 'best-score' if r.is_best_hd else '' }}">{{ '%.1f'|format(r.hd) }}</td>
                 {% endif %}
                 <td class="{{ 'best-score' if r.is_best_exec else '' }}">{{ '%.2f'|format(r.execution) }}</td>
@@ -131,6 +133,7 @@
                 <td class="best-score">{{ '%.1f'|format(bests.dd) }}</td>
                 {% if discipline == 'tra' %}
                 <td class="best-score">{{ '%.2f'|format(bests.tof) }}</td>
+                <td class="best-score">{{ '%.2f'|format(bests.dt) }}</td>
                 <td class="best-score">{{ '%.1f'|format(bests.hd) }}</td>
                 {% endif %}
                 <td class="best-score">{{ '%.2f'|format(bests.exec) }}</td>

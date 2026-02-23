@@ -1,5 +1,5 @@
 (function () {
-  var SCORE_COLS = ['D', 'ToF', 'H', 'E', 'Total'];
+  var SCORE_COLS = ['D', 'ToF', 'DT', 'H', 'E', 'Total'];
 
   function parseVal(text) {
     var s = text.trim();
@@ -30,8 +30,8 @@
     } else {
       var t = ratio / 0.5;
       r = 255;
-      g = Math.round(80 + t * (220 - 80));
-      b = Math.round(80 * (1 - t));
+      g = Math.round(190 + t * (220 - 190));
+      b = Math.round(190 * (1 - t));
     }
     return 'rgb(' + r + ',' + g + ',' + b + ')';
   }
@@ -52,16 +52,18 @@
 
       if (values.length === 0) return;
 
-      // Use p10–p90 so crashed/outlier routines don't skew the colour scale
       var sorted = values.slice().sort(function (a, b) { return a - b; });
       var lo = percentile(sorted, 10);
-      var hi = percentile(sorted, 90);
+      var hi = sorted[sorted.length - 1];
       var range = hi - lo;
 
       cells.forEach(function (td) {
         var v = parseFloat(td.textContent.replace(/[^\d.\-]/g, ''));
         if (isNaN(v)) return;
         var ratio = range > 0 ? (v - lo) / range : 0.5;
+        ratio = Math.max(0, Math.min(1, ratio));
+        var k = 9;
+        ratio = Math.log(1 + ratio * k) / Math.log(1 + k);
         td.style.backgroundColor = scoreColor(ratio);
       });
     });

@@ -233,7 +233,7 @@ def process_for_display(results: list) -> tuple:
     Returns (processed_rows, bests) where bests is
     {'total': x, 'dd': x, 'exec': x, 'tof': x, 'hd': x}.
     """
-    bests = {'total': 0, 'dd': 0, 'exec': 0, 'tof': 0, 'hd': 0}
+    bests = {'total': 0, 'dd': 0, 'exec': 0, 'tof': 0, 'hd': 0, 'dt': 0}
 
     valid = []
     for r in results:
@@ -245,6 +245,7 @@ def process_for_display(results: list) -> tuple:
         bests['exec'] = max(bests['exec'], get_execution(r))
         bests['tof'] = max(bests['tof'], get_tof(r))
         bests['hd'] = max(bests['hd'], get_hd(r))
+        bests['dt'] = max(bests['dt'], get_dd(r) + get_tof(r))
 
     processed = []
     for r in valid:
@@ -271,6 +272,7 @@ def process_for_display(results: list) -> tuple:
             'discipline': r['competition_discipline'].lower(),
             'dd': dd,
             'tof': tof,
+            'dt': dd + tof,
             'hd': hd,
             'execution': exe,
             'landing': int(10 * float(r['esigma_l'])),
@@ -282,8 +284,9 @@ def process_for_display(results: list) -> tuple:
             'is_best_dd': dd == bests['dd'],
             'is_best_exec': exe == bests['exec'],
             'is_best_tof': tof == bests['tof'],
+            'is_best_dt': (dd + tof) == bests['dt'],
             'is_best_hd': hd == bests['hd'],
-            'datetime': r.get('frame_last_start_time_g', '')[:16],
+            'datetime': (r.get('frame_last_start_time_g') or '')[:16],
         })
 
     return processed, bests
