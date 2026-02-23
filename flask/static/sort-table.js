@@ -25,7 +25,7 @@
       th.dataset.label = th.textContent.trim();
       th.classList.add('sortable');
       th.addEventListener('click', function () {
-        var asc = (state.col === idx) ? !state.asc : true;
+        var asc = (state.col === idx) ? !state.asc : false;
         state.col = idx;
         state.asc = asc;
         // Reset all headers, then set indicator on active one
