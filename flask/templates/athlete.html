@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ given_name }} {{ surname }} – VERIFLITE</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <div class="image-container">
@@ -32,13 +33,186 @@
     {% set bests = sec.bests %}
     {% set max_deductions = {'tra': 10, 'dmt': 2, 'tum': 8}.get(disc, 0) %}
 
-    <h2>{{ disc|upper }}</h2>
+    <h2 style="display:flex;align-items:center;justify-content:center;gap:0.6em;">
+        {{ disc|upper }}
+        {% if sec.form %}
+        {% set f = sec.form %}
+        <span class="form-{{ f.trend }}">{% if f.trend == 'up' %}▲{% elif f.trend == 'down' %}▼{% else %}—{% endif %} {{ '%.3f'|format(f.recent_avg) }} (last {{ f.n }})</span>
+        {% endif %}
+    </h2>
     <p>{{ rows|length }} routine{{ 's' if rows|length != 1 }}
        &nbsp;|&nbsp; PB: {{ '%.3f'|format(bests.total) }}
        &nbsp;|&nbsp; Best D: {{ '%.1f'|format(bests.dd) }}
        {% if disc == 'tra' %}&nbsp;|&nbsp; Best ToF: {{ '%.2f'|format(bests.tof) }} &nbsp;|&nbsp; Best H: {{ '%.1f'|format(bests.hd) }}{% endif %}
        &nbsp;|&nbsp; Best E: {{ '%.2f'|format(bests.exec) }}
     </p>
+
+    {% if sec.stats %}
+    {% set st = sec.stats %}
+    <div class="stats-block">
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Mean</th>
+                    <th>Median</th>
+                    <th>Std Dev</th>
+                    <th>Best</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Total</th>
+                    <td>{{ '%.3f'|format(st.total.mean) }}</td>
+                    <td>{{ '%.3f'|format(st.total.median) }}</td>
+                    <td>{{ '%.3f'|format(st.total.stdev) }}</td>
+                    <td class="best-score">{{ '%.3f'|format(st.total.best) }}</td>
+                    <td>{{ st.total.count }}</td>
+                </tr>
+                <tr>
+                    <th>D</th>
+                    <td>{{ '%.2f'|format(st.dd.mean) }}</td>
+                    <td>{{ '%.2f'|format(st.dd.median) }}</td>
+                    <td>{{ '%.2f'|format(st.dd.stdev) }}</td>
+                    <td class="best-score">{{ '%.2f'|format(st.dd.best) }}</td>
+                    <td>{{ st.dd.count }}</td>
+                </tr>
+                {% if disc == 'tra' %}
+                <tr>
+                    <th>ToF</th>
+                    <td>{{ '%.2f'|format(st.tof.mean) }}</td>
+                    <td>{{ '%.2f'|format(st.tof.median) }}</td>
+                    <td>{{ '%.2f'|format(st.tof.stdev) }}</td>
+                    <td class="best-score">{{ '%.2f'|format(st.tof.best) }}</td>
+                    <td>{{ st.tof.count }}</td>
+                </tr>
+                <tr>
+                    <th>H</th>
+                    <td>{{ '%.1f'|format(st.hd.mean) }}</td>
+                    <td>{{ '%.1f'|format(st.hd.median) }}</td>
+                    <td>{{ '%.1f'|format(st.hd.stdev) }}</td>
+                    <td class="best-score">{{ '%.1f'|format(st.hd.best) }}</td>
+                    <td>{{ st.hd.count }}</td>
+                </tr>
+                {% endif %}
+                <tr>
+                    <th>E</th>
+                    <td>{{ '%.2f'|format(st.exec.mean) }}</td>
+                    <td>{{ '%.2f'|format(st.exec.median) }}</td>
+                    <td>{{ '%.2f'|format(st.exec.stdev) }}</td>
+                    <td class="best-score">{{ '%.2f'|format(st.exec.best) }}</td>
+                    <td>{{ st.exec.count }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+
+    {% if rows|length > 1 %}
+    <div class="chart-container">
+        <canvas id="prog-chart-{{ disc }}"></canvas>
+    </div>
+    <script>
+    (function() {
+        const rows = {{ sec.rows | tojson }};
+        const chrono = rows.slice().reverse();
+        const labels = chrono.map(r => r.date);
+        const datasets = [
+            {
+                label: 'Total',
+                data: chrono.map(r => r.total),
+                borderColor: 'rgb(54, 162, 235)',
+                backgroundColor: 'rgba(54, 162, 235, 0.1)',
+                tension: 0.2,
+            },
+            {
+                label: 'D',
+                data: chrono.map(r => r.dd),
+                borderColor: 'rgb(255, 159, 64)',
+                backgroundColor: 'rgba(255, 159, 64, 0.1)',
+                tension: 0.2,
+            },
+            {
+                label: 'E',
+                data: chrono.map(r => r.execution),
+                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                tension: 0.2,
+            },
+            {% if disc == 'tra' %}
+            {
+                label: 'ToF',
+                data: chrono.map(r => r.tof),
+                borderColor: 'rgb(153, 102, 255)',
+                backgroundColor: 'rgba(153, 102, 255, 0.1)',
+                tension: 0.2,
+            },
+            {% endif %}
+        ];
+        new Chart(document.getElementById('prog-chart-{{ disc }}'), {
+            type: 'line',
+            data: { labels: labels, datasets: datasets },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'top' } },
+                scales: { x: { type: 'category' }, y: { beginAtZero: false } }
+            }
+        });
+    })();
+    </script>
+    {% endif %}
+
+    {% if sec.deduction_profile and sec.deduction_profile.avg %}
+    <div class="chart-container">
+        <canvas id="ded-chart-{{ disc }}"></canvas>
+    </div>
+    <script>
+    (function() {
+        const profile = {{ sec.deduction_profile | tojson }};
+        function heatmapRgb(d) {
+            d = Math.max(0, Math.min(10, d));
+            let r, g, b;
+            if (d <= 5) {
+                const ratio = d / 5.0;
+                r = Math.round(144 + ratio * (255 - 144));
+                g = Math.round(238 - ratio * (238 - 220));
+                b = Math.round(144 * (1 - ratio));
+            } else {
+                const ratio = (d - 5) / 5.0;
+                r = 255;
+                g = Math.round(220 * (1 - ratio * 0.64));
+                b = Math.round(ratio * 80);
+            }
+            return `rgb(${r},${g},${b})`;
+        }
+        const colors = profile.avg.map(v => heatmapRgb(v));
+        const borderColors = colors.map(c => c.replace('rgb(', 'rgba(').replace(')', ', 0.9)'));
+        new Chart(document.getElementById('ded-chart-{{ disc }}'), {
+            type: 'bar',
+            data: {
+                labels: profile.labels,
+                datasets: [{
+                    label: 'Avg Deduction (tenths)',
+                    data: profile.avg,
+                    backgroundColor: colors,
+                    borderColor: borderColors,
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false },
+                           title: { display: true, text: 'Avg Deduction per Skill' } },
+                scales: {
+                    y: { min: 0, max: 10,
+                         title: { display: true, text: 'Avg Deduction (tenths)' } }
+                }
+            }
+        });
+    })();
+    </script>
+    {% endif %}
 
     <div class="table-scroll">
     <table class="results-table">

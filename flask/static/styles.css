@@ -284,3 +284,74 @@ a:hover {
     to { transform: rotate(360deg); }
 }
 
+/* Stats block */
+.stats-block {
+    margin: 0.5em auto 1em;
+    overflow-x: auto;
+}
+
+.stats-table {
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 0.82em;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 3px 10px;
+    border: 1px solid #ddd;
+    text-align: right;
+}
+
+.stats-table thead th {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.stats-table tbody th {
+    background-color: #f8f8f8;
+    text-align: left;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Form indicator */
+.form-up {
+    color: #28a745;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.form-down {
+    color: #dc3545;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.form-flat {
+    color: #666;
+    font-size: 0.75em;
+    font-weight: normal;
+}
+
+/* Chart container */
+.chart-container {
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+/* Medal row highlighting */
+.medal-gold {
+    background-color: rgba(255, 215, 0, 0.18) !important;
+}
+
+.medal-silver {
+    background-color: rgba(192, 192, 192, 0.25) !important;
+}
+
+.medal-bronze {
+    background-color: rgba(205, 127, 50, 0.18) !important;
+}

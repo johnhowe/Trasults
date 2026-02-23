@@ -2,11 +2,14 @@
 
 import sys
 import os
+import sqlite3
+from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from db import query_db, process_for_display
+from db import (query_db, process_for_display, compute_stats, compute_form,
+                compute_deduction_profile, get_leaderboard, get_competition_report)
 
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from flask_session import Session
 
 app = Flask(__name__)
@@ -84,10 +87,18 @@ def index():
         rows, bests = process_for_display(raw)
         search_terms_str = ', '.join(search_terms)
 
+        scatter_data = [
+            {'x': r['dd'], 'y': r['total'],
+             'label': f"{r['given_name']} {r['surname']}",
+             'execution': r['execution']}
+            for r in rows
+        ]
+
         return render_template('results.html',
                                rows=rows, bests=bests,
                                discipline=discipline,
-                               search_terms=search_terms_str)
+                               search_terms=search_terms_str,
+                               scatter_data=scatter_data)
 
     return render_template('index.html', **session)
 
@@ -102,9 +113,96 @@ def athlete():
         raw = query_db(DB_PATH, params, order_by='timestamp DESC')
         processed, bests = process_for_display(raw)
         if processed:
-            sections[disc] = {'rows': processed, 'bests': bests}
+            sections[disc] = {
+                'rows': processed,
+                'bests': bests,
+                'stats': compute_stats(processed),
+                'form': compute_form(processed),
+                'deduction_profile': compute_deduction_profile(processed),
+            }
     return render_template('athlete.html',
                            given_name=given_name, surname=surname, sections=sections)
+
+
+@app.route('/autocomplete/athletes')
+def autocomplete_athletes():
+    q = request.args.get('q', '')
+    if len(q) < 2:
+        return jsonify([])
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT DISTINCT person_given_name, person_surname FROM routines
+        WHERE frame_state='PUBLISHED'
+          AND (person_given_name LIKE ? OR person_surname LIKE ?)
+        LIMIT 20
+    """, [f"%{q}%", f"%{q}%"])
+    results = [{'given_name': r[0], 'surname': r[1]} for r in cursor.fetchall()]
+    conn.close()
+    return jsonify(results)
+
+
+@app.route('/leaderboard')
+def leaderboard():
+    discipline = request.args.get('discipline', 'tra')
+    year = request.args.get('year', '')
+    representing = request.args.get('representing', '')
+    rows = get_leaderboard(DB_PATH, discipline, year, representing)
+    return render_template('leaderboard.html',
+                           rows=rows, discipline=discipline,
+                           year=year, representing=representing)
+
+
+@app.route('/competition')
+def competition():
+    event = request.args.get('event', '')
+    sections = []
+    if event:
+        raw = get_competition_report(DB_PATH, event)
+        groups = defaultdict(list)
+        for r in raw:
+            key = (r['competition_discipline'], r['competition_title'], r['stage_kind'])
+            groups[key].append(r)
+        for (disc, title, stage), group_rows in sorted(groups.items()):
+            processed, bests = process_for_display(group_rows)
+            if processed:
+                stage_lower = stage.lower()
+                is_final = 'final' in stage_lower and 'team' not in stage_lower
+                sections.append({
+                    'disc': disc.lower(),
+                    'title': title,
+                    'stage': stage,
+                    'rows': processed,
+                    'bests': bests,
+                    'is_final': is_final,
+                })
+    return render_template('competition.html', sections=sections, event=event)
+
+
+@app.route('/compare')
+def compare():
+    a1_given = request.args.get('a1_given', '')
+    a1_surname = request.args.get('a1_surname', '')
+    a2_given = request.args.get('a2_given', '')
+    a2_surname = request.args.get('a2_surname', '')
+    discipline = request.args.get('discipline', 'tra')
+    athletes = []
+    for given, surname in [(a1_given, a1_surname), (a2_given, a2_surname)]:
+        if given or surname:
+            params = {'given_name': given, 'surname': surname, 'discipline': discipline}
+            raw = query_db(DB_PATH, params, order_by='timestamp DESC')
+            processed, bests = process_for_display(raw)
+            athletes.append({
+                'given_name': given,
+                'surname': surname,
+                'rows': processed,
+                'bests': bests,
+                'stats': compute_stats(processed) if processed else {},
+                'form': compute_form(processed) if processed else {},
+            })
+    return render_template('compare.html', athletes=athletes, discipline=discipline,
+                           a1_given=a1_given, a1_surname=a1_surname,
+                           a2_given=a2_given, a2_surname=a2_surname)
 
 
 @app.route('/clear', methods=['GET'])

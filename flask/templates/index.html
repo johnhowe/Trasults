@@ -12,7 +12,12 @@
             <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image" style="width: 50%;">
         </a>
     </div>
-        <!--<h1>TRASULTS</h1>-->
+
+    <div style="text-align:center; margin-bottom:0.5em;">
+        <a href="{{ url_for('leaderboard') }}" style="margin:0 0.5em;">Leaderboard</a>
+        <a href="{{ url_for('competition') }}" style="margin:0 0.5em;">Competition Report</a>
+        <a href="{{ url_for('compare') }}" style="margin:0 0.5em;">Compare Athletes</a>
+    </div>
 
     <h3>Search for Trampoline Competition Results</h3>
     <h4>
@@ -23,7 +28,7 @@
 
     <form method="POST">
         <div style="text-align: right;">
-            <a href="{{ url_for('clear_session') }}">Reset form</a>  <!-- Link to clear session data -->
+            <a href="{{ url_for('clear_session') }}">Reset form</a>
         </div>
         <label for="discipline">Discipline:</label>
         <select name="discipline" id="discipline">
@@ -33,10 +38,18 @@
         </select>
 
         <label for="given_name">Given Name:</label> <input type="text" name="given_name" id="given_name" value="{{given_name}}"><br>
-        <label for="surname">Surname:</label> <input type="text" name="surname" id="surname" value="{{surname}}"><br>
-        <!--        <label for="name">Name:</label> <input type="text" name="name" id="name" value="{{name}}"><br> -->
+        <label for="surname">Surname:</label>
+        <input type="text" name="surname" id="surname" value="{{surname}}" list="surname-suggestions" autocomplete="off">
+        <datalist id="surname-suggestions"></datalist>
         <label for="representing">Representing:</label> <input type="text" name="representing" id="representing" value="{{representing}}"><br>
-        <!--        <label for="stage">Stage:</label> <input type="text" name="stage" id="stage" value="{{stage}}"><br> -->
+        <label for="stage">Stage:</label>
+        <select name="stage" id="stage">
+            <option value="" {% if not stage %}selected{% endif %}>All</option>
+            <option value="Qualif" {% if stage == 'Qualif' %}selected{% endif %}>Qualification</option>
+            <option value="Semifinal" {% if stage == 'Semifinal' %}selected{% endif %}>Semifinal</option>
+            <option value="Final1" {% if stage == 'Final1' %}selected{% endif %}>Final</option>
+            <option value="Team Final" {% if stage == 'Team Final' %}selected{% endif %}>Team Final</option>
+        </select>
         <label for="dd">Difficulty:</label> <input type="text" name="dd" id="dd" value="{{dd}}"><br>
         <label for="mindd">Minimum Difficulty:</label> <input type="text" name="mindd" id="mindd" value="{{mindd}}"><br>
         <label for="mintof">Minimum Time of Flight:</label> <input type="text" name="mintof" id="mintof" value="{{mintof}}"><br>
@@ -76,7 +89,6 @@
                 <option value="united_kingdom" {% if country == "united_kingdom" %}selected{% endif %}>United Kingdom</option>
                 <option value="united_states" {% if country == "united_states" %}selected{% endif %}>United States of America</option>
         </select>
-        <!--        <label for="level">Level:</label> <input type="text" name="level" id="level" value="{{level}}"><br> -->
 
         <label><input type="checkbox" name="female" {% if female %}checked{% endif %}> Female</label><br>
         <label><input type="checkbox" name="male" {% if male %}checked{% endif %}> Male</label><br>
@@ -84,14 +96,6 @@
         <label><input type="checkbox" name="sort_by_execution" {% if sort_by_execution %}checked{% endif %}> Sort by Execution Score</label><br>
         <label><input type="checkbox" name="sort_by_dd" {% if sort_by_dd %}checked{% endif %}> Sort by Difficulty Score</label><br>
         <label><input type="checkbox" name="sort_by_tof" {% if sort_by_tof %}checked{% endif %}> Sort by ToF Score</label><br>
-
-            <!--        <label><input type="checkbox" name="ddtof"> Show DD + ToF Score</label><br> -->
-            <!--        <label><input type="checkbox" name="plot"> Plot Results</label><br> -->
-            <!--        <label><input type="checkbox" name="plotsingle"> Plot Results in a Single Overlapping Chart</label><br> -->
-            <!--        <label><input type="checkbox" name="csv"> CSV Output</label><br> -->
-            <!--        <label><input type="checkbox" name="all_deductions"> Summarize with ALL Deductions</label><br> -->
-            <!--        <label><input type="checkbox" name="no_judge_summary"> Suppress Judge Summary</label><br> -->
-            <!--        <label><input type="checkbox" name="no_colour"> Suppress Coloured Output</label><br> -->
 
         <button type="submit">Submit</button>
     </form>
@@ -106,15 +110,24 @@
     document.getElementById('loading').style.display = 'flex';
     document.querySelector('button[type="submit"]').disabled = true;
   });
-</script>
 
-<!---
-    <div class="image-container">
-        <a href="https://www.veriflite.com" target="_blank">
-            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image">
-        </a>
-    </div>
---->
+  document.getElementById('surname').addEventListener('input', function() {
+    var q = this.value;
+    if (q.length < 2) return;
+    fetch('/autocomplete/athletes?q=' + encodeURIComponent(q))
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var dl = document.getElementById('surname-suggestions');
+        dl.innerHTML = '';
+        data.forEach(function(a) {
+          var opt = document.createElement('option');
+          opt.value = a.surname;
+          opt.label = a.given_name + ' ' + a.surname;
+          dl.appendChild(opt);
+        });
+      });
+  });
+</script>
 
 </body>
 </html>

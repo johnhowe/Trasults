@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VERIFLITE – Results</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    {% if rows|length > 1 %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+    {% endif %}
 </head>
 <body>
     <div class="image-container">
@@ -21,7 +24,55 @@
     <p>{{ rows|length }} result{{ 's' if rows|length != 1 }}</p>
 
     {% if rows %}
+
+    {% if rows|length > 1 and scatter_data %}
+    <div class="chart-container">
+        <canvas id="scatter-chart"></canvas>
+    </div>
+    <script>
+    (function() {
+        const data = {{ scatter_data | tojson }};
+        new Chart(document.getElementById('scatter-chart'), {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'D vs Total',
+                    data: data.map(d => ({ x: d.x, y: d.y })),
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    pointRadius: 5,
+                    pointHoverRadius: 7,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    title: { display: true, text: 'Difficulty vs Total Score' },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                const d = data[ctx.dataIndex];
+                                return `${d.label} — D:${d.x.toFixed(1)} E:${d.execution.toFixed(2)} Total:${d.y.toFixed(3)}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { title: { display: true, text: 'Difficulty (D)' } },
+                    y: { title: { display: true, text: 'Total Score' } }
+                }
+            }
+        });
+    })();
+    </script>
+    {% endif %}
+
     {% set max_deductions = {'tra': 10, 'dmt': 2, 'tum': 8}.get(discipline, 0) %}
+
+    <div style="margin-bottom: 0.5em;">
+        <button id="export-csv" type="button" style="background-color:#6c757d;">Export CSV</button>
+    </div>
+
     <div class="table-scroll">
     <table class="results-table">
         <thead>
@@ -106,6 +157,39 @@
       document.getElementById('loading').style.display = 'flex';
     });
   });
+
+  var exportBtn = document.getElementById('export-csv');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', function() {
+      var table = document.querySelector('.results-table');
+      var headerCells = Array.from(table.querySelectorAll('thead th'));
+      var keepCols = [];
+      var headerNames = [];
+      headerCells.forEach(function(th, i) {
+        if (!th.classList.contains('deduction-cell')) {
+          keepCols.push(i);
+          headerNames.push(th.textContent.trim() || ('Col' + i));
+        }
+      });
+      var csvRows = [headerNames.map(function(h) { return '"' + h + '"'; }).join(',')];
+      table.querySelectorAll('tbody tr').forEach(function(tr) {
+        var cells = Array.from(tr.querySelectorAll('td'));
+        var vals = keepCols.map(function(i) {
+          var cell = cells[i];
+          var text = cell ? cell.textContent.trim() : '';
+          return '"' + text.replace(/"/g, '""') + '"';
+        });
+        csvRows.push(vals.join(','));
+      });
+      var csv = csvRows.join('\n');
+      var blob = new Blob([csv], { type: 'text/csv' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'results.csv';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    });
+  }
 </script>
 <script src="{{ url_for('static', filename='sort-table.js') }}"></script>
 

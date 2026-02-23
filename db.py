@@ -1,6 +1,6 @@
 import sqlite3
 from datetime import datetime
-from statistics import median, StatisticsError
+from statistics import mean, median, stdev, StatisticsError
 
 
 def build_query(params: dict) -> tuple:
@@ -283,6 +283,129 @@ def process_for_display(results: list) -> tuple:
             'is_best_exec': exe == bests['exec'],
             'is_best_tof': tof == bests['tof'],
             'is_best_hd': hd == bests['hd'],
+            'datetime': r.get('frame_last_start_time_g', '')[:16],
         })
 
     return processed, bests
+
+
+# --- Analytics helpers ---
+
+def compute_stats(rows: list) -> dict:
+    """Compute summary statistics for a set of processed rows."""
+    def _stats(vals):
+        vals = [v for v in vals if v is not None]
+        if not vals:
+            return {'mean': 0, 'median': 0, 'stdev': 0, 'best': 0, 'count': 0}
+        return {
+            'mean': mean(vals),
+            'median': median(vals),
+            'stdev': stdev(vals) if len(vals) > 1 else 0.0,
+            'best': max(vals),
+            'count': len(vals),
+        }
+    return {
+        'total': _stats([r['total'] for r in rows]),
+        'dd': _stats([r['dd'] for r in rows]),
+        'exec': _stats([r['execution'] for r in rows]),
+        'tof': _stats([r['tof'] for r in rows]),
+        'hd': _stats([r['hd'] for r in rows]),
+    }
+
+
+def compute_form(rows: list, n: int = 5) -> dict:
+    """Compute recent form vs career average. Rows should be sorted DESC by date."""
+    if not rows:
+        return {}
+    totals = [r['total'] for r in rows]
+    recent = totals[:n]
+    career_avg = sum(totals) / len(totals)
+    recent_avg = sum(recent) / len(recent)
+    delta = recent_avg - career_avg
+    if delta > 0.5:
+        trend = 'up'
+    elif delta < -0.5:
+        trend = 'down'
+    else:
+        trend = 'flat'
+    return {
+        'recent_avg': recent_avg,
+        'career_avg': career_avg,
+        'delta': delta,
+        'trend': trend,
+        'n': len(recent),
+    }
+
+
+def compute_deduction_profile(rows: list) -> dict:
+    """Compute average deduction per skill position across all rows."""
+    if not rows:
+        return {}
+    max_skills = max((len(r['deductions']) for r in rows), default=0)
+    if max_skills == 0:
+        return {}
+    sums = [0.0] * max_skills
+    counts = [0] * max_skills
+    for r in rows:
+        for i, d in enumerate(r['deductions']):
+            sums[i] += d
+            counts[i] += 1
+    avgs = [round(sums[i] / counts[i], 2) if counts[i] > 0 else 0 for i in range(max_skills)]
+    return {
+        'avg': avgs,
+        'labels': [f'Skill {i + 1}' for i in range(max_skills)],
+        'max_skills': max_skills,
+    }
+
+
+def get_leaderboard(db_path: str, discipline: str = 'tra', year: str = '',
+                    representing: str = '', top_n: int = 50) -> list:
+    """Return top athletes by PB score for a given discipline."""
+    conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    query = """
+        SELECT person_given_name, person_surname, person_representing,
+               MAX(frame_mark_ttt_g) as best_total,
+               MAX(frame_difficultyt_g) as best_dd,
+               COUNT(*) as routine_count
+        FROM routines
+        WHERE frame_state='PUBLISHED'
+          AND frame_nelements > 0
+          AND competition_discipline = ?
+          AND person_given_name NOT LIKE '%test%'
+          AND person_surname NOT LIKE '%test%'
+    """
+    qparams = [discipline.upper()]
+    if year:
+        query += " AND event_year = ?"
+        qparams.append(year)
+    if representing:
+        query += " AND person_representing LIKE ?"
+        qparams.append(f"%{representing}%")
+    query += """
+        GROUP BY person_given_name, person_surname, person_representing
+        ORDER BY best_total DESC
+        LIMIT ?
+    """
+    qparams.append(top_n)
+    cursor.execute(query, qparams)
+    rows = cursor.fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
+
+
+def get_competition_report(db_path: str, event_title: str) -> list:
+    """Return all published routines for a given event title."""
+    conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT * FROM routines
+        WHERE frame_state='PUBLISHED'
+          AND event_title LIKE ?
+        ORDER BY competition_discipline, competition_title, stage_kind, performance_rank_g
+    """, [f"%{event_title}%"])
+    rows = cursor.fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
