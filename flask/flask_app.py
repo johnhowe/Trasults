@@ -20,11 +20,11 @@ def ansi_to_html(text):
         r'\x1b\[36m': '<span style="color: cyan;">',
         r'\x1b\[37m': '<span style="color: white;">',
         r'\x1b\[0m': '</span>',
-        r'\x1b\[48;5;(\d+)m': lambda m: f'<span style="background-color: rgb({int(m.group(1))});">',
+        r'\x1b\[48;5;(\d+)m': lambda m: '<span style="background-color: rgb({v},{v},{v});">'.format(
+            v=8 + 10 * (int(m.group(1)) - 232)),
     }
     for ansi_code, html_tag in ansi_escape.items():
         text = re.sub(ansi_code, html_tag, text)
-    text += '</span>'
     return text
 
 @app.route('/', methods=['GET', 'POST'])
@@ -34,7 +34,7 @@ def index():
         for field in [
             'given_name', 'surname', 'name', 'representing', 'stage', 'dd',
             'mindd', 'mintof', 'minhd', 'minscore', 'skills', 'since',
-            'before', 'year', 'event', 'year', 'country', 'level' ]:
+            'before', 'year', 'event', 'country', 'level' ]:
             session[field] = request.form.get(field)
             #print(f"{field}: {session[field]}")
 
@@ -71,7 +71,6 @@ def index():
             'before': '--before',
             'year': '--year',
             'event': '--event',
-            'year': '--year',
             'country': '--country',
             'level': '--level'
         }.items():
