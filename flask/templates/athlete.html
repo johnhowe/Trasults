@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ given_name }} {{ surname }} – VERIFLITE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="image-container">
+        <a href="https://www.veriflite.com" target="_blank">
+            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image" style="width: 50%;">
+        </a>
+    </div>
+
+    <div style="margin-bottom: 1em;">
+        <a href="{{ url_for('index') }}" class="back-btn">← Back to search</a>
+    </div>
+
+    <h1>{{ given_name }} {{ surname }}</h1>
+    {% if sections %}
+        {% set sample = sections.values()|list|first %}
+        {% if sample.rows %}
+        <p style="color: #666;">{{ sample.rows[0].representing }}</p>
+        {% endif %}
+    {% endif %}
+
+    {% for disc in ['tra', 'dmt', 'tum'] %}
+    {% if disc in sections %}
+    {% set sec = sections[disc] %}
+    {% set rows = sec.rows %}
+    {% set bests = sec.bests %}
+    {% set max_deductions = {'tra': 10, 'dmt': 2, 'tum': 8}.get(disc, 0) %}
+
+    <h2>{{ disc|upper }}</h2>
+    <p>{{ rows|length }} routine{{ 's' if rows|length != 1 }}
+       &nbsp;|&nbsp; PB: {{ '%.3f'|format(bests.total) }}
+       &nbsp;|&nbsp; Best D: {{ '%.1f'|format(bests.dd) }}
+       {% if disc == 'tra' %}&nbsp;|&nbsp; Best ToF: {{ '%.2f'|format(bests.tof) }} &nbsp;|&nbsp; Best H: {{ '%.1f'|format(bests.hd) }}{% endif %}
+       &nbsp;|&nbsp; Best E: {{ '%.2f'|format(bests.exec) }}
+    </p>
+
+    <div class="table-scroll">
+    <table class="results-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Stage</th>
+                <th>Level</th>
+                <th>Event</th>
+                <th>Country</th>
+                <th>D</th>
+                {% if disc == 'tra' %}
+                <th>ToF</th>
+                <th>H</th>
+                {% endif %}
+                <th>E</th>
+                {% for i in range(max_deductions) %}<th class="deduction-cell"></th>{% endfor %}
+                <th>L</th>
+                <th>P</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in rows %}
+            <tr>
+                <td>{{ r.date }}</td>
+                <td>{{ r.stage }}</td>
+                <td>{{ r.level }}</td>
+                <td>{{ r.event }}</td>
+                <td>{{ r.country }}</td>
+                <td class="{{ 'best-score' if r.is_best_dd else '' }}">{{ '%.1f'|format(r.dd) }}</td>
+                {% if disc == 'tra' %}
+                <td class="{{ 'best-score' if r.is_best_tof else '' }}">{{ '%.2f'|format(r.tof) }}</td>
+                <td class="{{ 'best-score' if r.is_best_hd else '' }}">{{ '%.1f'|format(r.hd) }}</td>
+                {% endif %}
+                <td class="{{ 'best-score' if r.is_best_exec else '' }}">{{ '%.2f'|format(r.execution) }}</td>
+                {% for i in range(max_deductions) %}
+                  {% if i < r.deductions|length %}
+                    <td class="deduction-cell" style="background-color: {{ r.deduction_colors[i] }}">{{ r.deductions[i] }}</td>
+                  {% else %}
+                    <td class="deduction-cell"></td>
+                  {% endif %}
+                {% endfor %}
+                <td class="{{ 'nonzero' if r.landing else '' }}">{{ r.landing }}</td>
+                <td class="{{ 'nonzero' if r.penalty else '' }}">{{ r.penalty }}</td>
+                <td class="{{ 'best-score' if r.is_best_total else '' }}">{{ '%.3f'|format(r.total) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr class="best-row">
+                <td colspan="5">BEST</td>
+                <td class="best-score">{{ '%.1f'|format(bests.dd) }}</td>
+                {% if disc == 'tra' %}
+                <td class="best-score">{{ '%.2f'|format(bests.tof) }}</td>
+                <td class="best-score">{{ '%.1f'|format(bests.hd) }}</td>
+                {% endif %}
+                <td class="best-score">{{ '%.2f'|format(bests.exec) }}</td>
+                {% for i in range(max_deductions) %}<td></td>{% endfor %}
+                <td></td>
+                <td></td>
+                <td class="best-score">{{ '%.3f'|format(bests.total) }}</td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    {% if not sections %}
+    <p>No results found for this athlete.</p>
+    {% endif %}
+
+</body>
+</html>
