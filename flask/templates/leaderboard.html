@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard – VERIFLITE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="image-container">
+        <a href="https://www.veriflite.com" target="_blank">
+            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image" style="width: 50%;">
+        </a>
+    </div>
+
+    <div style="margin-bottom: 1em;">
+        <a href="{{ url_for('index') }}" class="back-btn">← Back to search</a>
+    </div>
+
+    <h2>Leaderboard</h2>
+
+    <form method="GET" action="{{ url_for('leaderboard') }}" style="background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.1);padding:12px;max-width:600px;margin:0 auto 1.5em;display:flex;gap:1em;align-items:flex-end;flex-wrap:wrap;">
+        <div style="flex:1;min-width:100px;">
+            <label for="discipline" style="display:block;font-size:0.85em;color:#555;">Discipline</label>
+            <select name="discipline" id="discipline" style="width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;font-size:14px;">
+                <option value="tra" {% if discipline == 'tra' %}selected{% endif %}>TRA</option>
+                <option value="dmt" {% if discipline == 'dmt' %}selected{% endif %}>DMT</option>
+                <option value="tum" {% if discipline == 'tum' %}selected{% endif %}>TUM</option>
+            </select>
+        </div>
+        <div style="flex:1;min-width:100px;">
+            <label for="year" style="display:block;font-size:0.85em;color:#555;">Year</label>
+            <input type="text" name="year" id="year" value="{{ year }}" placeholder="All years" style="width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;font-size:14px;box-sizing:border-box;">
+        </div>
+        <div style="flex:1;min-width:120px;">
+            <label for="representing" style="display:block;font-size:0.85em;color:#555;">Representing</label>
+            <input type="text" name="representing" id="representing" value="{{ representing }}" placeholder="All" style="width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;font-size:14px;box-sizing:border-box;">
+        </div>
+        <button type="submit">Filter</button>
+    </form>
+
+    {% if rows %}
+    <p style="text-align:center;">{{ rows|length }} athlete{{ 's' if rows|length != 1 }} – {{ discipline|upper }}{% if year %}, {{ year }}{% endif %}{% if representing %}, {{ representing }}{% endif %}</p>
+    <div class="table-scroll">
+    <table class="results-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Athlete</th>
+                <th>Representing</th>
+                <th>PB</th>
+                <th>Best D</th>
+                <th>Routines</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in rows %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td><a href="{{ url_for('athlete', given_name=r.person_given_name, surname=r.person_surname) }}">{{ r.person_given_name }} {{ r.person_surname }}</a></td>
+                <td>{{ r.person_representing }}</td>
+                <td class="{{ 'medal-gold' if loop.index == 1 else ('medal-silver' if loop.index == 2 else ('medal-bronze' if loop.index == 3 else '')) }}">{{ '%.3f'|format(r.best_total) }}</td>
+                <td>{{ '%.1f'|format(r.best_dd) }}</td>
+                <td>{{ r.routine_count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% else %}
+    <p style="text-align:center;">No results found. Try adjusting the filters.</p>
+    {% endif %}
+
+<div id="loading" style="display:none;">
+  <div class="spinner"></div>
+  <p>Loading athlete…</p>
+</div>
+<script>
+  document.querySelectorAll('.results-table a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.getElementById('loading').style.display = 'flex';
+    });
+  });
+</script>
+<script src="{{ url_for('static', filename='sort-table.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition Report – VERIFLITE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="image-container">
+        <a href="https://www.veriflite.com" target="_blank">
+            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image" style="width: 50%;">
+        </a>
+    </div>
+
+    <div style="margin-bottom: 1em;">
+        <a href="{{ url_for('index') }}" class="back-btn">← Back to search</a>
+    </div>
+
+    <h2>Competition Report</h2>
+
+    <form method="GET" action="{{ url_for('competition') }}" style="background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.1);padding:12px;max-width:600px;margin:0 auto 1.5em;display:flex;gap:1em;align-items:flex-end;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+            <label for="event" style="display:block;font-size:0.85em;color:#555;">Event name</label>
+            <input type="text" name="event" id="event" value="{{ event }}" placeholder="e.g. World Championships" style="width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;font-size:14px;box-sizing:border-box;">
+        </div>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if sections %}
+    {% for sec in sections %}
+    {% set max_deductions = {'tra': 10, 'dmt': 2, 'tum': 8}.get(sec.disc, 0) %}
+    <details open style="margin-bottom:1.5em;">
+        <summary style="cursor:pointer;font-weight:bold;font-size:1em;padding:6px 4px;background:#f0f0f0;border-radius:4px;list-style:none;">
+            {{ sec.disc|upper }} – {{ sec.title }} – {{ sec.stage }} ({{ sec.rows|length }})
+        </summary>
+        <div class="table-scroll" style="margin-top:0.5em;">
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Athlete</th>
+                    <th>Rep.</th>
+                    <th>D</th>
+                    {% if sec.disc == 'tra' %}
+                    <th>ToF</th>
+                    <th>H</th>
+                    {% endif %}
+                    <th>E</th>
+                    {% for i in range(max_deductions) %}<th class="deduction-cell"></th>{% endfor %}
+                    <th>L</th>
+                    <th>P</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in sec.rows %}
+                {% set medal_class = '' %}
+                {% if sec.is_final and loop.index <= 3 %}
+                  {% if loop.index == 1 %}{% set medal_class = 'medal-gold' %}
+                  {% elif loop.index == 2 %}{% set medal_class = 'medal-silver' %}
+                  {% else %}{% set medal_class = 'medal-bronze' %}
+                  {% endif %}
+                {% endif %}
+                <tr class="{{ medal_class }}">
+                    <td>{{ r.date }}</td>
+                    <td><a href="{{ url_for('athlete', given_name=r.given_name, surname=r.surname) }}">{{ r.given_name }} {{ r.surname }}</a></td>
+                    <td>{{ r.representing }}</td>
+                    <td class="{{ 'best-score' if r.is_best_dd else '' }}">{{ '%.1f'|format(r.dd) }}</td>
+                    {% if sec.disc == 'tra' %}
+                    <td class="{{ 'best-score' if r.is_best_tof else '' }}">{{ '%.2f'|format(r.tof) }}</td>
+                    <td class="{{ 'best-score' if r.is_best_hd else '' }}">{{ '%.1f'|format(r.hd) }}</td>
+                    {% endif %}
+                    <td class="{{ 'best-score' if r.is_best_exec else '' }}">{{ '%.2f'|format(r.execution) }}</td>
+                    {% for i in range(max_deductions) %}
+                      {% if i < r.deductions|length %}
+                        <td class="deduction-cell" style="background-color: {{ r.deduction_colors[i] }}">{{ r.deductions[i] }}</td>
+                      {% else %}
+                        <td class="deduction-cell"></td>
+                      {% endif %}
+                    {% endfor %}
+                    <td class="{{ 'nonzero' if r.landing else '' }}">{{ r.landing }}</td>
+                    <td class="{{ 'nonzero' if r.penalty else '' }}">{{ r.penalty }}</td>
+                    <td class="{{ 'best-score' if r.is_best_total else '' }}">{{ '%.3f'|format(r.total) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="best-row">
+                    <td colspan="3">BEST</td>
+                    <td class="best-score">{{ '%.1f'|format(sec.bests.dd) }}</td>
+                    {% if sec.disc == 'tra' %}
+                    <td class="best-score">{{ '%.2f'|format(sec.bests.tof) }}</td>
+                    <td class="best-score">{{ '%.1f'|format(sec.bests.hd) }}</td>
+                    {% endif %}
+                    <td class="best-score">{{ '%.2f'|format(sec.bests.exec) }}</td>
+                    {% for i in range(max_deductions) %}<td></td>{% endfor %}
+                    <td></td>
+                    <td></td>
+                    <td class="best-score">{{ '%.3f'|format(sec.bests.total) }}</td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+    </details>
+    {% endfor %}
+    {% elif event %}
+    <p style="text-align:center;">No results found for "{{ event }}".</p>
+    {% endif %}
+
+<div id="loading" style="display:none;">
+  <div class="spinner"></div>
+  <p>Loading athlete…</p>
+</div>
+<script>
+  document.querySelectorAll('.results-table a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.getElementById('loading').style.display = 'flex';
+    });
+  });
+</script>
+<script src="{{ url_for('static', filename='sort-table.js') }}"></script>
+</body>
+</html>

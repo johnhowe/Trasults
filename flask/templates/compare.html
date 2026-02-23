@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Athletes – VERIFLITE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="image-container">
+        <a href="https://www.veriflite.com" target="_blank">
+            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image" style="width: 50%;">
+        </a>
+    </div>
+
+    <div style="margin-bottom: 1em;">
+        <a href="{{ url_for('index') }}" class="back-btn">← Back to search</a>
+    </div>
+
+    <h2>Compare Athletes</h2>
+
+    <form method="GET" action="{{ url_for('compare') }}" style="background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.1);padding:16px;max-width:700px;margin:0 auto 1.5em;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1em;">
+            <div>
+                <h3 style="margin:0 0 0.5em;font-size:0.95em;color:#333;">Athlete 1</h3>
+                <label style="font-size:0.85em;color:#555;">Given Name</label>
+                <input type="text" name="a1_given" value="{{ a1_given }}" style="width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;margin-bottom:4px;box-sizing:border-box;">
+                <label style="font-size:0.85em;color:#555;">Surname</label>
+                <input type="text" name="a1_surname" value="{{ a1_surname }}" style="width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;">
+            </div>
+            <div>
+                <h3 style="margin:0 0 0.5em;font-size:0.95em;color:#333;">Athlete 2</h3>
+                <label style="font-size:0.85em;color:#555;">Given Name</label>
+                <input type="text" name="a2_given" value="{{ a2_given }}" style="width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;margin-bottom:4px;box-sizing:border-box;">
+                <label style="font-size:0.85em;color:#555;">Surname</label>
+                <input type="text" name="a2_surname" value="{{ a2_surname }}" style="width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;">
+            </div>
+        </div>
+        <div style="margin-top:1em;display:flex;align-items:center;gap:1em;">
+            <div>
+                <label style="font-size:0.85em;color:#555;">Discipline</label>
+                <select name="discipline" style="padding:6px;border:1px solid #ccc;border-radius:4px;font-size:14px;">
+                    <option value="tra" {% if discipline == 'tra' %}selected{% endif %}>TRA</option>
+                    <option value="dmt" {% if discipline == 'dmt' %}selected{% endif %}>DMT</option>
+                    <option value="tum" {% if discipline == 'tum' %}selected{% endif %}>TUM</option>
+                </select>
+            </div>
+            <button type="submit" style="margin-top:1.2em;">Compare</button>
+        </div>
+    </form>
+
+    {% if athletes|length == 2 %}
+    {% set a1 = athletes[0] %}
+    {% set a2 = athletes[1] %}
+
+    {% if a1.rows and a2.rows %}
+
+    <h3 style="text-align:center;">
+        {{ a1.given_name }} {{ a1.surname }} vs {{ a2.given_name }} {{ a2.surname }} – {{ discipline|upper }}
+    </h3>
+
+    <!-- Stats comparison table -->
+    <div class="table-scroll" style="max-width:700px;margin:0 auto 2em;">
+    <table class="results-table" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>{{ a1.given_name }} {{ a1.surname }}</th>
+                <th>{{ a2.given_name }} {{ a2.surname }}</th>
+                <th>Δ (1–2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if a1.stats and a2.stats %}
+            {% set metrics = [
+                ('Total – Mean',  a1.stats.total.mean,  a2.stats.total.mean,  '%.3f', false),
+                ('Total – Median',a1.stats.total.median,a2.stats.total.median,'%.3f', false),
+                ('Total – Std Dev',a1.stats.total.stdev,a2.stats.total.stdev,'%.3f', true),
+                ('Total – Best',  a1.stats.total.best,  a2.stats.total.best,  '%.3f', false),
+                ('D – Mean',      a1.stats.dd.mean,     a2.stats.dd.mean,     '%.2f', false),
+                ('D – Best',      a1.stats.dd.best,     a2.stats.dd.best,     '%.2f', false),
+                ('E – Mean',      a1.stats.exec.mean,   a2.stats.exec.mean,   '%.2f', false),
+                ('E – Best',      a1.stats.exec.best,   a2.stats.exec.best,   '%.2f', false),
+            ] %}
+            {% if discipline == 'tra' %}
+            {% set tra_metrics = [
+                ('ToF – Mean', a1.stats.tof.mean, a2.stats.tof.mean, '%.2f', false),
+                ('ToF – Best', a1.stats.tof.best, a2.stats.tof.best, '%.2f', false),
+            ] %}
+            {% else %}
+            {% set tra_metrics = [] %}
+            {% endif %}
+            {% for label, v1, v2, fmt, invert in metrics + tra_metrics %}
+            {% set delta = v1 - v2 %}
+            {% set is_better = (delta > 0 and not invert) or (delta < 0 and invert) %}
+            {% set is_worse = (delta < 0 and not invert) or (delta > 0 and invert) %}
+            <tr>
+                <td style="text-align:left;font-weight:bold;color:#555;">{{ label }}</td>
+                <td>{{ fmt|format(v1) }}</td>
+                <td>{{ fmt|format(v2) }}</td>
+                <td class="{{ 'best-score' if is_better else ('nonzero' if is_worse else '') }}">{{ '%+.3f'|format(delta) }}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+    </div>
+
+    <!-- Overlaid progression chart -->
+    <div class="chart-container">
+        <canvas id="compare-chart"></canvas>
+    </div>
+    <script>
+    (function() {
+        const a1rows = {{ a1.rows | tojson }}.slice().reverse();
+        const a2rows = {{ a2.rows | tojson }}.slice().reverse();
+        new Chart(document.getElementById('compare-chart'), {
+            type: 'line',
+            data: {
+                datasets: [
+                    {
+                        label: '{{ a1.given_name }} {{ a1.surname }}',
+                        data: a1rows.map(r => ({ x: r.date, y: r.total })),
+                        borderColor: 'rgb(54, 162, 235)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.1)',
+                        tension: 0.2,
+                        pointRadius: 4,
+                    },
+                    {
+                        label: '{{ a2.given_name }} {{ a2.surname }}',
+                        data: a2rows.map(r => ({ x: r.date, y: r.total })),
+                        borderColor: 'rgb(255, 99, 132)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.1)',
+                        tension: 0.2,
+                        pointRadius: 4,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'top' },
+                    title: { display: true, text: 'Total Score – Progression' }
+                },
+                scales: {
+                    x: { type: 'category', title: { display: true, text: 'Date' } },
+                    y: { beginAtZero: false, title: { display: true, text: 'Total Score' } }
+                }
+            }
+        });
+    })();
+    </script>
+
+    <!-- Individual routine tables -->
+    {% for a in athletes %}
+    {% set disc = discipline %}
+    {% set max_deductions = {'tra': 10, 'dmt': 2, 'tum': 8}.get(disc, 0) %}
+    <details style="margin-top:1.5em;">
+        <summary style="cursor:pointer;font-weight:bold;padding:6px 4px;background:#f0f0f0;border-radius:4px;list-style:none;">
+            {{ a.given_name }} {{ a.surname }} – {{ a.rows|length }} routine{{ 's' if a.rows|length != 1 }}
+            {% if a.form %}– form: <span class="form-{{ a.form.trend }}">{% if a.form.trend == 'up' %}▲{% elif a.form.trend == 'down' %}▼{% else %}—{% endif %} {{ '%.3f'|format(a.form.recent_avg) }}</span>{% endif %}
+        </summary>
+        <div class="table-scroll" style="margin-top:0.5em;">
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Stage</th>
+                    <th>Event</th>
+                    <th>D</th>
+                    {% if disc == 'tra' %}
+                    <th>ToF</th>
+                    <th>H</th>
+                    {% endif %}
+                    <th>E</th>
+                    {% for i in range(max_deductions) %}<th class="deduction-cell"></th>{% endfor %}
+                    <th>L</th>
+                    <th>P</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in a.rows %}
+                <tr>
+                    <td>{{ r.date }}</td>
+                    <td>{{ r.stage }}</td>
+                    <td>{{ r.event }}</td>
+                    <td class="{{ 'best-score' if r.is_best_dd else '' }}">{{ '%.1f'|format(r.dd) }}</td>
+                    {% if disc == 'tra' %}
+                    <td class="{{ 'best-score' if r.is_best_tof else '' }}">{{ '%.2f'|format(r.tof) }}</td>
+                    <td class="{{ 'best-score' if r.is_best_hd else '' }}">{{ '%.1f'|format(r.hd) }}</td>
+                    {% endif %}
+                    <td class="{{ 'best-score' if r.is_best_exec else '' }}">{{ '%.2f'|format(r.execution) }}</td>
+                    {% for i in range(max_deductions) %}
+                      {% if i < r.deductions|length %}
+                        <td class="deduction-cell" style="background-color: {{ r.deduction_colors[i] }}">{{ r.deductions[i] }}</td>
+                      {% else %}
+                        <td class="deduction-cell"></td>
+                      {% endif %}
+                    {% endfor %}
+                    <td class="{{ 'nonzero' if r.landing else '' }}">{{ r.landing }}</td>
+                    <td class="{{ 'nonzero' if r.penalty else '' }}">{{ r.penalty }}</td>
+                    <td class="{{ 'best-score' if r.is_best_total else '' }}">{{ '%.3f'|format(r.total) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="best-row">
+                    <td colspan="3">BEST</td>
+                    <td class="best-score">{{ '%.1f'|format(a.bests.dd) }}</td>
+                    {% if disc == 'tra' %}
+                    <td class="best-score">{{ '%.2f'|format(a.bests.tof) }}</td>
+                    <td class="best-score">{{ '%.1f'|format(a.bests.hd) }}</td>
+                    {% endif %}
+                    <td class="best-score">{{ '%.2f'|format(a.bests.exec) }}</td>
+                    {% for i in range(max_deductions) %}<td></td>{% endfor %}
+                    <td></td>
+                    <td></td>
+                    <td class="best-score">{{ '%.3f'|format(a.bests.total) }}</td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+    </details>
+    {% endfor %}
+
+    {% elif athletes|length == 2 %}
+    <p style="text-align:center;">No data found for one or both athletes in {{ discipline|upper }}.</p>
+    {% endif %}
+    {% endif %}
+
+<script src="{{ url_for('static', filename='sort-table.js') }}"></script>
+</body>
+</html>
