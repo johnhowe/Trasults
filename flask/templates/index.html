@@ -96,6 +96,18 @@
         <button type="submit">Submit</button>
     </form>
 
+<div id="loading" style="display:none;">
+  <div class="spinner"></div>
+  <p>Searching…</p>
+</div>
+
+<script>
+  document.querySelector('form').addEventListener('submit', function() {
+    document.getElementById('loading').style.display = 'flex';
+    document.querySelector('button[type="submit"]').disabled = true;
+  });
+</script>
+
 <!---
     <div class="image-container">
         <a href="https://www.veriflite.com" target="_blank">

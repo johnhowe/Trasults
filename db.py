@@ -206,11 +206,25 @@ def get_deductions(r) -> list:
 
 
 def heatmap_rgb(deduction_tenths: int) -> str:
-    """Convert a deduction value (0–10 in tenths) to a CSS rgb() grayscale string."""
-    heat = (10 - deduction_tenths) * 5
-    color_index = 232 + int(heat / 4)
-    v = 8 + 10 * (color_index - 232)
-    return f"rgb({v},{v},{v})"
+    """Convert a deduction value (0–10 in tenths) to a CSS rgb() colour string.
+
+    Interpolates green → amber → red across two linear segments:
+      0  → rgb(144, 238, 144)  light green
+      5  → rgb(255, 220,   0)  amber
+      10 → rgb(255,  80,  80)  light red
+    """
+    t = max(0, min(10, int(deduction_tenths)))
+    if t <= 5:
+        ratio = t / 5.0
+        r = int(144 + ratio * (255 - 144))   # 144 → 255
+        g = int(238 - ratio * (238 - 220))   # 238 → 220
+        b = int(144 * (1 - ratio))            # 144 → 0
+    else:
+        ratio = (t - 5) / 5.0
+        r = 255
+        g = int(220 * (1 - ratio * 0.64))    # 220 → 79
+        b = int(ratio * 80)                   # 0 → 80
+    return f"rgb({r},{g},{b})"
 
 
 def process_for_display(results: list) -> tuple:
