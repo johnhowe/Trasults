@@ -53,7 +53,7 @@
       if (values.length === 0) return;
 
       var sorted = values.slice().sort(function (a, b) { return a - b; });
-      var lo = percentile(sorted, 50);
+      var lo = percentile(sorted, 20);
       var hi = sorted[sorted.length - 1];
       var range = hi - lo;
 
