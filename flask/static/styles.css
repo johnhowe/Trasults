@@ -177,6 +177,15 @@ a:hover {
     text-align: center;
 }
 
+.results-table th.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.results-table th.sortable:hover {
+    background-color: #e0e0e0;
+}
+
 .results-table tbody tr:hover {
     background-color: #fffde7;
 }
