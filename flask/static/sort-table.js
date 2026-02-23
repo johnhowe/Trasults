@@ -53,7 +53,7 @@
       if (values.length === 0) return;
 
       var sorted = values.slice().sort(function (a, b) { return a - b; });
-      var lo = percentile(sorted, 10);
+      var lo = percentile(sorted, 50);
       var hi = sorted[sorted.length - 1];
       var range = hi - lo;
 
@@ -62,8 +62,7 @@
         if (isNaN(v)) return;
         var ratio = range > 0 ? (v - lo) / range : 0.5;
         ratio = Math.max(0, Math.min(1, ratio));
-        var k = 9;
-        ratio = Math.log(1 + ratio * k) / Math.log(1 + k);
+        ratio = Math.pow(ratio, 2);
         td.style.backgroundColor = scoreColor(ratio);
       });
     });
