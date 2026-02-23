@@ -169,7 +169,7 @@ a:hover {
 .results-table td {
     padding: 3px 7px;
     border: 1px solid #ddd;
-    text-align: right;
+    text-align: center;
 }
 
 .results-table th {
