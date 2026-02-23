@@ -152,6 +152,85 @@ a:hover {
     background-color: #fff;
 }
 
+/* Results table */
+.table-scroll {
+    overflow-x: auto;
+    margin-bottom: 2em;
+}
+
+.results-table {
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 0.82em;
+    white-space: nowrap;
+}
+
+.results-table th,
+.results-table td {
+    padding: 3px 7px;
+    border: 1px solid #ddd;
+    text-align: right;
+}
+
+.results-table th {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.results-table tbody tr:hover {
+    background-color: #fffde7;
+}
+
+.results-table tfoot tr {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.results-table a {
+    display: inline;
+    margin: 0;
+    color: #007bff;
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+.results-table a:hover {
+    background-color: transparent;
+    color: #0056b3;
+}
+
+.best-score {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.nonzero {
+    color: #dc3545;
+}
+
+.deduction-cell {
+    min-width: 18px;
+    text-align: center;
+    padding: 3px 2px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 14px;
+    background-color: #007bff;
+    color: white !important;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+    color: white !important;
+}
+
 .back-button {
     display: inline-block; /* Make it behave like a block for padding */
     margin-top: 20px; /* Add some margin above */
