@@ -7,7 +7,11 @@ from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from db import (query_db, process_for_display, compute_stats, compute_form,
-                compute_deduction_profile, get_leaderboard, get_competition_report)
+                compute_deduction_profile, get_leaderboard, get_competition_report,
+                athlete_disciplines, athlete_summary, deduction_profile,
+                dscore_progression, qual_vs_final, score_decomposition,
+                tof_distribution, difficulty_inflation, head_to_head,
+                judge_panel_variance)
 
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from flask_session import Session
@@ -203,6 +207,60 @@ def compare():
     return render_template('compare.html', athletes=athletes, discipline=discipline,
                            a1_given=a1_given, a1_surname=a1_surname,
                            a2_given=a2_given, a2_surname=a2_surname)
+
+
+@app.route('/dashboard')
+def dashboard():
+    given_name = request.args.get('given_name', '').strip()
+    surname = request.args.get('surname', '').strip()
+    discipline = request.args.get('discipline', '').strip().upper()
+    year_from = request.args.get('year_from', '').strip()
+    year_to = request.args.get('year_to', '').strip()
+    cmp_given = request.args.get('cmp_given', '').strip()
+    cmp_surname = request.args.get('cmp_surname', '').strip()
+
+    yf = int(year_from) if year_from.isdigit() else None
+    yt = int(year_to) if year_to.isdigit() else None
+
+    ctx = {
+        'given_name': given_name, 'surname': surname,
+        'discipline': discipline, 'year_from': year_from, 'year_to': year_to,
+        'cmp_given': cmp_given, 'cmp_surname': cmp_surname,
+        'has_athlete': False, 'not_found': False,
+    }
+
+    if given_name or surname:
+        discs = athlete_disciplines(DB_PATH, given_name, surname)
+        if not discs:
+            ctx['not_found'] = True
+            return render_template('dashboard.html', **ctx)
+        if discipline not in discs:
+            discipline = discs[0]
+        ctx.update(
+            has_athlete=True,
+            discipline=discipline,
+            disciplines=discs,
+            summary=athlete_summary(DB_PATH, given_name, surname, discipline),
+            deduction_profile=deduction_profile(
+                DB_PATH, given_name, surname, discipline, yf, yt),
+            progression=dscore_progression(DB_PATH, given_name, surname),
+            qual_vs_final=qual_vs_final(
+                DB_PATH, given_name, surname, discipline, yf, yt),
+            decomposition=score_decomposition(
+                DB_PATH, given_name, surname, discipline, yf, yt),
+        )
+        if discipline == 'TRA':
+            ctx['tof'] = tof_distribution(DB_PATH, given_name, surname, yf, yt)
+        if cmp_given or cmp_surname:
+            ctx['head_to_head'] = head_to_head(
+                DB_PATH, given_name, surname, cmp_given, cmp_surname,
+                discipline, yf, yt)
+    else:
+        ctx['inflation'] = difficulty_inflation(DB_PATH)
+        ctx['panel_variance'] = judge_panel_variance(
+            DB_PATH, discipline=discipline or None)
+
+    return render_template('dashboard.html', **ctx)
 
 
 @app.route('/clear', methods=['GET'])

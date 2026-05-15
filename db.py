@@ -412,3 +412,391 @@ def get_competition_report(db_path: str, event_title: str) -> list:
     rows = cursor.fetchall()
     conn.close()
     return [dict(r) for r in rows]
+
+
+# ============================================================
+# Dashboard aggregation helpers (/dashboard route)
+# ============================================================
+
+# Skill positions per discipline (esigma_s1..sN are populated; rest are noise).
+DISCIPLINE_SKILLS = {'TRA': 10, 'DMT': 2, 'TUM': 8}
+
+# Judge execution-score columns. All six are populated for every discipline.
+JUDGE_COLS = ['e1_sigma', 'e2_sigma', 'e3_sigma', 'e4_sigma', 'e5_sigma', 'e6_sigma']
+
+# SQL twin of get_execution() — some esigma_sigma rows are stored x10 or x100.
+E_SCORE_SQL = (
+    "(CASE WHEN esigma_sigma > 1000 THEN esigma_sigma / 100.0 "
+    "WHEN esigma_sigma > 100 THEN esigma_sigma / 10.0 "
+    "ELSE esigma_sigma END)"
+)
+
+# Rows that should never enter analytics. event_year/frame_nelements/frame_penaltyt
+# have no column affinity, so numeric use must CAST.
+_BASE_FILTER = (
+    "frame_state = 'PUBLISHED' "
+    "AND person_given_name NOT LIKE '%test%' "
+    "AND person_surname NOT LIKE '%test%' "
+    "AND person_representing NOT LIKE '%test%' "
+    "AND competition_title NOT LIKE '%test%' "
+    "AND frame_nelements IS NOT NULL "
+    "AND CAST(frame_nelements AS INTEGER) > 0 "
+    "AND frame_mark_ttt_g >= 0 AND frame_mark_ttt_g < 100"
+)
+
+
+def rescale_execution(value):
+    """Python twin of E_SCORE_SQL. Keep the two in lockstep."""
+    if value is None:
+        return None
+    e = float(value)
+    if e > 1000:
+        return e / 100.0
+    if e > 100:
+        return e / 10.0
+    return e
+
+
+def _connect(db_path):
+    conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+
+def cohort_filter(discipline=None, year_from=None, year_to=None, stage=None):
+    """SQL fragment + params describing a cohort of routines.
+
+    stage: None | 'qual' | 'final'. Returns (sql_fragment, params); the fragment
+    is appended after _BASE_FILTER so it always starts with ' AND '.
+    """
+    sql, params = "", []
+    disc = (discipline or '').upper()
+    if disc:
+        sql += " AND competition_discipline = ?"
+        params.append(disc)
+    if year_from:
+        sql += " AND CAST(event_year AS INTEGER) >= ?"
+        params.append(int(year_from))
+    if year_to:
+        sql += " AND CAST(event_year AS INTEGER) <= ?"
+        params.append(int(year_to))
+    if stage == 'qual':
+        sql += " AND stage_kind LIKE 'Qualif%'"
+    elif stage == 'final':
+        sql += " AND stage_kind IN ('Final', 'Final1', 'Final2')"
+    return sql, params
+
+
+def _athlete_filter(given_name, surname):
+    """Partial, case-insensitive filter for one athlete — matches the LIKE
+    behaviour of build_query/the rest of the app. A loose surname can merge
+    distinct people; the dashboard shows routine count + representing so a
+    merge stays visible (see CONTEXT.md, athlete-identity caveat)."""
+    sql, params = "", []
+    if given_name:
+        sql += " AND person_given_name LIKE ?"
+        params.append(f"%{given_name}%")
+    if surname:
+        sql += " AND person_surname LIKE ?"
+        params.append(f"%{surname}%")
+    return sql, params
+
+
+def _agg_stats(conn, expr, where_sql, params):
+    """mean / population-stdev / min / max / count of a numeric expression.
+
+    SQLite has no STDEV, so variance comes from the E[x^2] - E[x]^2 moment.
+    """
+    row = conn.execute(
+        f"SELECT COUNT({expr}) n, AVG({expr}) mean, AVG(1.0 * {expr} * {expr}) msq, "
+        f"MIN({expr}) mn, MAX({expr}) mx "
+        f"FROM routines WHERE {_BASE_FILTER}{where_sql}",
+        params).fetchone()
+    n = row['n'] or 0
+    if not n:
+        return {'n': 0, 'mean': 0.0, 'stdev': 0.0, 'min': 0.0, 'max': 0.0}
+    mean = row['mean'] or 0.0
+    var = max(0.0, (row['msq'] or 0.0) - mean * mean)
+    return {'n': n, 'mean': mean, 'stdev': var ** 0.5,
+            'min': row['mn'] or 0.0, 'max': row['mx'] or 0.0}
+
+
+def athlete_disciplines(db_path, given_name, surname):
+    """Disciplines this athlete has published routines in, most-routines first."""
+    af, ap = _athlete_filter(given_name, surname)
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"SELECT competition_discipline d, COUNT(*) n FROM routines "
+            f"WHERE {_BASE_FILTER}{af} GROUP BY 1 ORDER BY 2 DESC", ap).fetchall()
+    return [r['d'] for r in rows if r['d'] in DISCIPLINE_SKILLS]
+
+
+def athlete_summary(db_path, given_name, surname, discipline):
+    """Header card: routine count, PB, best D, span of years, representing."""
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline=discipline)
+    with _connect(db_path) as conn:
+        row = conn.execute(
+            f"SELECT COUNT(*) n, MAX(frame_mark_ttt_g) pb, MAX(frame_difficultyt_g) best_d, "
+            f"MIN(CAST(event_year AS INTEGER)) y0, MAX(CAST(event_year AS INTEGER)) y1 "
+            f"FROM routines WHERE {_BASE_FILTER}{af}{cf}", ap + cp).fetchone()
+        rep = conn.execute(
+            f"SELECT person_representing r, COUNT(*) n FROM routines "
+            f"WHERE {_BASE_FILTER}{af}{cf} GROUP BY 1 ORDER BY 2 DESC LIMIT 1",
+            ap + cp).fetchone()
+    return {
+        'routine_count': row['n'] or 0,
+        'pb': row['pb'] or 0.0,
+        'best_d': row['best_d'] or 0.0,
+        'year_from': row['y0'],
+        'year_to': row['y1'],
+        'representing': rep['r'] if rep else '',
+    }
+
+
+def deduction_profile(db_path, given_name, surname, discipline,
+                      year_from=None, year_to=None):
+    """Metric 1 — average execution deduction per skill position (in tenths),
+    athlete vs cohort. Mirrors the ANSI heatmap the CLI prints."""
+    disc = (discipline or '').upper()
+    n_skills = DISCIPLINE_SKILLS.get(disc, 10)
+    cols = [f'esigma_s{i}' for i in range(1, n_skills + 1)]
+    avg_expr = ", ".join(f"AVG({c}) * 10.0" for c in cols)
+
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline=disc, year_from=year_from, year_to=year_to)
+
+    with _connect(db_path) as conn:
+        a = conn.execute(
+            f"SELECT COUNT(*) n, {avg_expr} FROM routines "
+            f"WHERE {_BASE_FILTER}{cf}{af}", cp + ap).fetchone()
+        c = conn.execute(
+            f"SELECT COUNT(*) n, {avg_expr} FROM routines "
+            f"WHERE {_BASE_FILTER}{cf}", cp).fetchone()
+
+    def _vals(row):
+        return [round(row[i + 1] or 0.0, 2) for i in range(n_skills)]
+
+    return {
+        'labels': [f'S{i}' for i in range(1, n_skills + 1)],
+        'athlete_avg': _vals(a),
+        'cohort_avg': _vals(c),
+        'athlete_n': a['n'] or 0,
+        'cohort_n': c['n'] or 0,
+    }
+
+
+def dscore_progression(db_path, given_name, surname):
+    """Metric 2 — D-score (and E, total) over time for each discipline the
+    athlete competes in. Returns {disc: [{date, year, dd, e, total}, ...]}."""
+    af, ap = _athlete_filter(given_name, surname)
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"SELECT competition_discipline d, frame_last_start_time_g ts, "
+            f"event_year yr, frame_difficultyt_g dd, {E_SCORE_SQL} e, "
+            f"frame_mark_ttt_g total FROM routines "
+            f"WHERE {_BASE_FILTER}{af} AND frame_difficultyt_g > 0 "
+            f"ORDER BY timestamp ASC", ap).fetchall()
+    series = {}
+    for r in rows:
+        if r['d'] not in DISCIPLINE_SKILLS:
+            continue
+        series.setdefault(r['d'], []).append({
+            'date': (r['ts'] or '')[:10],
+            'year': r['yr'],
+            'dd': round(r['dd'], 2),
+            'e': round(r['e'] or 0.0, 2),
+            'total': round(r['total'] or 0.0, 3),
+        })
+    return series
+
+
+def qual_vs_final(db_path, given_name, surname, discipline,
+                  year_from=None, year_to=None):
+    """Metric 3 — E-score mean & spread, qualification vs final, athlete vs cohort."""
+    disc = (discipline or '').upper()
+    af, ap = _athlete_filter(given_name, surname)
+    out = {}
+    with _connect(db_path) as conn:
+        for stage in ('qual', 'final'):
+            cf, cp = cohort_filter(discipline=disc, year_from=year_from,
+                                   year_to=year_to, stage=stage)
+            out[stage] = {
+                'athlete': _agg_stats(conn, E_SCORE_SQL, cf + af, cp + ap),
+                'cohort': _agg_stats(conn, E_SCORE_SQL, cf, cp),
+            }
+    return out
+
+
+_COMPONENTS = [
+    ('dd', 'frame_difficultyt_g'),
+    ('e', E_SCORE_SQL),
+    ('tof', 't_sigma'),
+    ('hd', 'h_sigma'),
+    ('landing', 'esigma_l'),
+    ('penalty', 'CAST(frame_penaltyt AS REAL)'),
+    ('total', 'frame_mark_ttt_g'),
+]
+
+
+def score_decomposition(db_path, given_name, surname, discipline,
+                        year_from=None, year_to=None):
+    """Metric 4 — average D / E / ToF / HD / Landing / Pen / total,
+    athlete vs cohort."""
+    disc = (discipline or '').upper()
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline=disc, year_from=year_from, year_to=year_to)
+    with _connect(db_path) as conn:
+        athlete = {k: _agg_stats(conn, expr, cf + af, cp + ap)
+                   for k, expr in _COMPONENTS}
+        cohort = {k: _agg_stats(conn, expr, cf, cp)
+                  for k, expr in _COMPONENTS}
+    return {'athlete': athlete, 'cohort': cohort,
+            'athlete_n': athlete['total']['n'], 'cohort_n': cohort['total']['n']}
+
+
+def tof_distribution(db_path, given_name, surname, year_from=None, year_to=None,
+                     bin_width=0.2):
+    """Metric 5 — Time-of-Flight histogram (TRA only): athlete routines vs the
+    whole TRA field, bucketed at bin_width seconds."""
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline='TRA', year_from=year_from, year_to=year_to)
+    tof_ok = " AND t_sigma > 0 AND t_sigma < 25"
+    with _connect(db_path) as conn:
+        field = conn.execute(
+            f"SELECT CAST(t_sigma / ? AS INTEGER) b, COUNT(*) n FROM routines "
+            f"WHERE {_BASE_FILTER}{cf}{tof_ok} GROUP BY 1 ORDER BY 1",
+            [bin_width] + cp).fetchall()
+        athlete = conn.execute(
+            f"SELECT t_sigma t FROM routines "
+            f"WHERE {_BASE_FILTER}{cf}{af}{tof_ok} ORDER BY t_sigma", cp + ap).fetchall()
+        a_stats = _agg_stats(conn, 't_sigma',
+                             cf + af + tof_ok, cp + ap)
+        f_stats = _agg_stats(conn, 't_sigma', cf + tof_ok, cp)
+    return {
+        'bin_width': bin_width,
+        'field': [{'tof': round(r['b'] * bin_width, 2), 'count': r['n']}
+                  for r in field],
+        'athlete_values': [round(r['t'], 2) for r in athlete],
+        'athlete_stats': a_stats,
+        'field_stats': f_stats,
+    }
+
+
+def difficulty_inflation(db_path, top_n=50):
+    """Metric 6 — difficulty inflation as the moving *frontier*: the mean D-score
+    of the top_n hardest routines each season, per discipline.
+
+    A raw all-routine mean is useless here — the dataset's population shifts
+    heavily over time (early years are elite-international only, later years are
+    flooded with domestic junior routines), so a mean tracks that shift, not
+    difficulty. The top_n frontier is robust to population dilution: adding more
+    low-level routines never changes the hardest ones. `counts` carries the total
+    eligible routines per year so thin early seasons stay visible."""
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"WITH ranked AS ("
+            f"  SELECT CAST(event_year AS INTEGER) yr, competition_discipline d, "
+            f"  frame_difficultyt_g dd, "
+            f"  ROW_NUMBER() OVER (PARTITION BY CAST(event_year AS INTEGER), "
+            f"    competition_discipline ORDER BY frame_difficultyt_g DESC) rn, "
+            f"  COUNT(*) OVER (PARTITION BY CAST(event_year AS INTEGER), "
+            f"    competition_discipline) total "
+            f"  FROM routines "
+            f"  WHERE {_BASE_FILTER} AND frame_difficultyt_g > 0 "
+            f"  AND frame_difficultyt_g < 25 "
+            f"  AND competition_discipline IN ('TRA','DMT','TUM')) "
+            f"SELECT yr, d, AVG(dd) mean_d, MIN(total) n FROM ranked "
+            f"WHERE rn <= ? GROUP BY yr, d ORDER BY yr", [top_n]).fetchall()
+    years = sorted({r['yr'] for r in rows if r['yr']})
+    series = {d: {y: None for y in years} for d in ('TRA', 'DMT', 'TUM')}
+    counts = {d: {y: 0 for y in years} for d in ('TRA', 'DMT', 'TUM')}
+    for r in rows:
+        if r['yr'] and r['d'] in series:
+            series[r['d']][r['yr']] = round(r['mean_d'], 3)
+            counts[r['d']][r['yr']] = r['n']
+    return {
+        'years': years,
+        'top_n': top_n,
+        'series': {d: [series[d][y] for y in years] for d in series},
+        'counts': {d: [counts[d][y] for y in years] for d in counts},
+    }
+
+
+def head_to_head(db_path, a_given, a_surname, b_given, b_surname, discipline,
+                 year_from=None, year_to=None):
+    """Metric 7 — two athletes' score-component averages plus the competitions
+    they both contested (with each one's best routine score there)."""
+    disc = (discipline or '').upper()
+    a = score_decomposition(db_path, a_given, a_surname, disc, year_from, year_to)
+    b = score_decomposition(db_path, b_given, b_surname, disc, year_from, year_to)
+    cf, cp = cohort_filter(discipline=disc, year_from=year_from, year_to=year_to)
+    af, ap = _athlete_filter(a_given, a_surname)
+    bf, bp = _athlete_filter(b_given, b_surname)
+    a_match = af.replace(' AND ', '', 1) if af else '1'
+    b_match = bf.replace(' AND ', '', 1) if bf else '1'
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"SELECT event_title et, event_year yr, "
+            f"MAX(CASE WHEN {a_match} THEN frame_mark_ttt_g END) a_best, "
+            f"MAX(CASE WHEN {b_match} THEN frame_mark_ttt_g END) b_best "
+            f"FROM routines WHERE {_BASE_FILTER}{cf} "
+            f"AND (({a_match}) OR ({b_match})) "
+            f"GROUP BY event_title, event_year "
+            f"HAVING a_best IS NOT NULL AND b_best IS NOT NULL "
+            f"ORDER BY CAST(event_year AS INTEGER) DESC, event_title",
+            ap + bp + cp + ap + bp).fetchall()
+    return {
+        'a': a, 'b': b,
+        'a_name': f"{a_given} {a_surname}".strip(),
+        'b_name': f"{b_given} {b_surname}".strip(),
+        'shared': [{
+            'event': r['et'], 'year': r['yr'],
+            'a_best': round(r['a_best'], 3), 'b_best': round(r['b_best'], 3),
+        } for r in rows],
+    }
+
+
+def judge_panel_variance(db_path, event_title=None, discipline=None,
+                         year_from=None, year_to=None, top_n=20):
+    """Metric 8 — disagreement across the six judge execution scores.
+
+    With event_title: per-routine spread for that competition.
+    Without: the competitions with the widest mean judge spread.
+    """
+    spread = (f"(max({','.join(JUDGE_COLS)}) - min({','.join(JUDGE_COLS)}))")
+    not_null = " AND " + " AND ".join(f"{c} IS NOT NULL" for c in JUDGE_COLS)
+    with _connect(db_path) as conn:
+        if event_title:
+            rows = conn.execute(
+                f"SELECT person_given_name g, person_surname s, competition_title ct, "
+                f"stage_kind sk, routine_number rn, {spread} spread, "
+                f"{E_SCORE_SQL} e, {','.join(JUDGE_COLS)} FROM routines "
+                f"WHERE {_BASE_FILTER}{not_null} AND event_title LIKE ? "
+                f"ORDER BY spread DESC LIMIT 500", [f"%{event_title}%"]).fetchall()
+            return {
+                'mode': 'event',
+                'event_title': event_title,
+                'routines': [{
+                    'athlete': f"{r['g']} {r['s']}",
+                    'competition': r['ct'], 'stage': r['sk'],
+                    'spread': round(r['spread'], 2),
+                    'e': round(r['e'] or 0.0, 2),
+                    'judges': [round(r[c], 1) for c in JUDGE_COLS],
+                } for r in rows],
+            }
+        cf, cp = cohort_filter(discipline=discipline, year_from=year_from,
+                               year_to=year_to)
+        rows = conn.execute(
+            f"SELECT event_title et, AVG({spread}) mean_spread, COUNT(*) n "
+            f"FROM routines WHERE {_BASE_FILTER}{not_null}{cf} "
+            f"GROUP BY 1 HAVING n >= 30 ORDER BY mean_spread DESC LIMIT ?",
+            cp + [top_n]).fetchall()
+        return {
+            'mode': 'overview',
+            'competitions': [{
+                'event_title': r['et'],
+                'mean_spread': round(r['mean_spread'], 3),
+                'routine_count': r['n'],
+            } for r in rows],
+        }

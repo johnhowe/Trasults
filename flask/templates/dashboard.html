@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard – VERIFLITE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+</head>
+<body class="dash">
+<div class="dash-wrap">
+
+    <header class="dash-head">
+        <h1>TRA<span class="accent">SULTS</span></h1>
+        <span class="tag">Analytics Dashboard</span>
+        <span class="spacer"></span>
+        <a class="nav-link" href="{{ url_for('index') }}">Search</a>
+        <a class="nav-link" href="{{ url_for('leaderboard') }}">Leaderboard</a>
+        <a class="nav-link" href="{{ url_for('competition') }}">Competitions</a>
+    </header>
+
+    <form class="dash-controls" method="GET" action="{{ url_for('dashboard') }}">
+        <div class="field">
+            <label for="given_name">Given name</label>
+            <input type="text" id="given_name" name="given_name" value="{{ given_name }}"
+                   autocomplete="off">
+        </div>
+        <div class="field">
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" value="{{ surname }}"
+                   list="surname-suggestions" autocomplete="off">
+            <datalist id="surname-suggestions"></datalist>
+        </div>
+        <div class="field">
+            <label for="year_from">Year from</label>
+            <input type="text" id="year_from" name="year_from" class="narrow"
+                   value="{{ year_from }}" placeholder="2013">
+        </div>
+        <div class="field">
+            <label for="year_to">Year to</label>
+            <input type="text" id="year_to" name="year_to" class="narrow"
+                   value="{{ year_to }}" placeholder="2025">
+        </div>
+        <div class="field">
+            <label for="cmp_surname">Compare vs (surname)</label>
+            <input type="text" id="cmp_given" name="cmp_given" value="{{ cmp_given }}"
+                   placeholder="given" autocomplete="off" style="width:90px;margin-bottom:0.25rem;">
+            <input type="text" id="cmp_surname" name="cmp_surname" value="{{ cmp_surname }}"
+                   placeholder="surname" autocomplete="off">
+        </div>
+        {% if discipline %}<input type="hidden" name="discipline" value="{{ discipline }}">{% endif %}
+        <button type="submit">Analyse</button>
+        <a class="reset" href="{{ url_for('dashboard') }}">Clear</a>
+    </form>
+
+    {% if not_found %}
+    <div class="notice">No published routines found for "{{ given_name }} {{ surname }}". Check the spelling, or try the surname only.</div>
+    {% endif %}
+
+{% if has_athlete %}
+    {# ---------------- ATHLETE STATE ---------------- #}
+    <nav class="disc-tabs">
+        {% for d in disciplines %}
+        <a href="{{ url_for('dashboard', given_name=given_name, surname=surname, discipline=d, year_from=year_from, year_to=year_to, cmp_given=cmp_given, cmp_surname=cmp_surname) }}"
+           class="{{ 'active' if d == discipline }}">{{ d }}</a>
+        {% endfor %}
+    </nav>
+
+    <div class="athlete-head">
+        <div>
+            <div class="name">{{ given_name }} {{ surname }}</div>
+            <div class="rep">{{ summary.representing }} &middot; {{ discipline }}</div>
+        </div>
+        <div class="stat"><span class="k">Routines</span><span class="v">{{ summary.routine_count }}</span></div>
+        <div class="stat"><span class="k">PB total</span><span class="v hi">{{ '%.3f'|format(summary.pb) }}</span></div>
+        <div class="stat"><span class="k">Best D</span><span class="v">{{ '%.1f'|format(summary.best_d) }}</span></div>
+        <div class="stat"><span class="k">Span</span><span class="v">{{ summary.year_from }}&ndash;{{ summary.year_to }}</span></div>
+        {% if year_from or year_to %}
+        <div class="stat"><span class="k">Cohort filter</span><span class="v">{{ year_from or '…' }}&ndash;{{ year_to or '…' }}</span></div>
+        {% endif %}
+    </div>
+
+    <div class="panel-grid">
+
+        {# Metric 1 — per-skill deduction profile #}
+        <section class="panel wide">
+            <div class="panel-title"><span class="num">1</span><h2>Per-skill deduction profile</h2></div>
+            <p class="panel-sub">
+                Average execution deduction (tenths) at each skill position &mdash; lower is cleaner.
+                <span class="legend-dot" style="background:#be0027"></span>{{ given_name }} {{ surname }} ({{ deduction_profile.athlete_n }})
+                <span class="legend-dot" style="background:#1b3a5c"></span>{{ discipline }} field ({{ '{:,}'.format(deduction_profile.cohort_n) }})
+            </p>
+            <div class="chart-box"><canvas id="c-deduction"></canvas></div>
+        </section>
+
+        {# Metric 2 — D-score career progression #}
+        <section class="panel wide">
+            <div class="panel-title"><span class="num">2</span><h2>D-score career progression</h2></div>
+            <p class="panel-sub">Difficulty of every counted routine over time, one line per discipline.</p>
+            <div class="chart-box tall"><canvas id="c-progression"></canvas></div>
+        </section>
+
+        {# Metric 3 — Qual vs Final consistency #}
+        <section class="panel">
+            <div class="panel-title"><span class="num">3</span><h2>Execution: Qual vs Final</h2></div>
+            <p class="panel-sub">E-score mean &plusmn; std dev. Does execution hold up under final pressure?</p>
+            <table class="dtable">
+                <thead><tr><th class="lbl">Stage</th><th>Athlete E</th><th>&plusmn;sd</th><th>n</th><th>Field E</th><th>&plusmn;sd</th></tr></thead>
+                <tbody>
+                {% for stage, label in [('qual','Qualification'), ('final','Final')] %}
+                {% set qa = qual_vs_final[stage].athlete %}{% set qc = qual_vs_final[stage].cohort %}
+                <tr>
+                    <td class="lbl">{{ label }}</td>
+                    <td class="athlete-col">{{ '%.2f'|format(qa.mean) }}</td>
+                    <td>{{ '%.2f'|format(qa.stdev) }}</td>
+                    <td>{{ qa.n }}</td>
+                    <td class="cohort-col">{{ '%.2f'|format(qc.mean) }}</td>
+                    <td>{{ '%.2f'|format(qc.stdev) }}</td>
+                </tr>
+                {% endfor %}
+                {% set dq = qual_vs_final.qual.athlete %}{% set df = qual_vs_final.final.athlete %}
+                {% if dq.n and df.n %}
+                <tr>
+                    <td class="lbl">Final &minus; Qual</td>
+                    <td class="{{ 'pos' if (df.mean - dq.mean) >= 0 else 'neg' }}" colspan="5">
+                        {{ '%+.2f'|format(df.mean - dq.mean) }} E-score
+                        ({{ 'holds up / improves' if (df.mean - dq.mean) >= -0.3 else 'drops under pressure' }})
+                    </td>
+                </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </section>
+
+        {# Metric 4 — score-component decomposition #}
+        <section class="panel">
+            <div class="panel-title"><span class="num">4</span><h2>Score-component decomposition</h2></div>
+            <p class="panel-sub">Average component values, athlete vs {{ discipline }} field.</p>
+            <table class="dtable">
+                <thead><tr><th class="lbl">Component</th><th>Athlete</th><th>Field</th><th>&Delta;</th></tr></thead>
+                <tbody>
+                {% set comp_rows = [('dd','D-score','%.2f'), ('e','E-score','%.2f')] %}
+                {% if discipline == 'TRA' %}
+                  {% set comp_rows = comp_rows + [('tof','ToF','%.2f'), ('hd','HD','%.2f')] %}
+                {% endif %}
+                {% set comp_rows = comp_rows + [('landing','Landing','%.2f'), ('penalty','Penalty','%.2f'), ('total','Routine score','%.3f')] %}
+                {% for key, label, fmt in comp_rows %}
+                {% set av = decomposition.athlete[key].mean %}{% set cv = decomposition.cohort[key].mean %}
+                {% set delta = av - cv %}
+                {% set better = delta >= 0 if key != 'penalty' else delta <= 0 %}
+                <tr>
+                    <td class="lbl">{{ label }}</td>
+                    <td class="athlete-col">{{ fmt|format(av) }}</td>
+                    <td class="cohort-col">{{ fmt|format(cv) }}</td>
+                    <td class="{{ 'pos' if better else 'neg' }}">{{ ('%+'+fmt[1:])|format(delta) }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        {# Metric 5 — ToF distribution (TRA only) #}
+        {% if tof %}
+        <section class="panel wide">
+            <div class="panel-title"><span class="num">5</span><h2>Time-of-Flight distribution</h2></div>
+            <p class="panel-sub">
+                Share of routines by ToF, athlete vs the whole TRA field.
+                Athlete mean <strong>{{ '%.2f'|format(tof.athlete_stats.mean) }}s</strong>
+                ({{ tof.athlete_stats.n }} routines) &middot;
+                field mean {{ '%.2f'|format(tof.field_stats.mean) }}s.
+            </p>
+            <div class="chart-box"><canvas id="c-tof"></canvas></div>
+        </section>
+        {% endif %}
+
+        {# Metric 7 — head-to-head #}
+        {% if head_to_head %}
+        <section class="panel wide">
+            <div class="panel-title"><span class="num">7</span><h2>Head-to-head</h2></div>
+            <p class="panel-sub">
+                <span class="legend-dot" style="background:#be0027"></span>{{ head_to_head.a_name }}
+                <span class="legend-dot" style="background:#1b3a5c"></span>{{ head_to_head.b_name }}
+                &mdash; {{ discipline }} component averages and shared competitions.
+            </p>
+            <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+                <table class="dtable" style="flex:1;min-width:280px;">
+                    <thead><tr><th class="lbl">Component</th><th>{{ head_to_head.a_name }}</th><th>{{ head_to_head.b_name }}</th><th>&Delta;</th></tr></thead>
+                    <tbody>
+                    {% set h2h_rows = [('dd','D-score','%.2f'), ('e','E-score','%.2f')] %}
+                    {% if discipline == 'TRA' %}{% set h2h_rows = h2h_rows + [('tof','ToF','%.2f'), ('hd','HD','%.2f')] %}{% endif %}
+                    {% set h2h_rows = h2h_rows + [('total','Routine score','%.3f')] %}
+                    {% for key, label, fmt in h2h_rows %}
+                    {% set av = head_to_head.a.athlete[key].mean %}{% set bv = head_to_head.b.athlete[key].mean %}
+                    <tr>
+                        <td class="lbl">{{ label }}</td>
+                        <td class="athlete-col">{{ fmt|format(av) }}</td>
+                        <td class="cohort-col">{{ fmt|format(bv) }}</td>
+                        <td class="{{ 'pos' if (av - bv) >= 0 else 'neg' }}">{{ ('%+'+fmt[1:])|format(av - bv) }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <table class="dtable" style="flex:1;min-width:280px;">
+                    <thead><tr><th class="lbl">Shared competition</th><th>Yr</th><th>{{ head_to_head.a_name.split(' ')[0] }}</th><th>{{ head_to_head.b_name.split(' ')[0] }}</th></tr></thead>
+                    <tbody>
+                    {% for s in head_to_head.shared[:14] %}
+                    <tr>
+                        <td class="lbl" title="{{ s.event }}">{{ s.event[:34] }}{{ '…' if s.event|length > 34 }}</td>
+                        <td>{{ s.year }}</td>
+                        <td class="{{ 'pos' if s.a_best >= s.b_best else '' }}">{{ '%.2f'|format(s.a_best) }}</td>
+                        <td class="{{ 'pos' if s.b_best > s.a_best else '' }}">{{ '%.2f'|format(s.b_best) }}</td>
+                    </tr>
+                    {% else %}
+                    <tr><td colspan="4" class="lbl" style="color:var(--ink-faint);">No shared competitions in range.</td></tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        {% endif %}
+
+    </div>
+
+{% elif not not_found %}
+    {# ---------------- OVERVIEW STATE ---------------- #}
+    <div class="dash-hint">
+        Search an <strong>athlete</strong> above to open their analytics &mdash; deduction profile,
+        D-score progression, qual-vs-final consistency, score decomposition and ToF distribution.
+        Add a second name to run a head-to-head. Meanwhile, the sport-level view:
+    </div>
+
+    <div class="panel-grid">
+        {# Metric 6 — year-over-year difficulty inflation #}
+        <section class="panel wide">
+            <div class="panel-title"><span class="num">6</span><h2>Year-over-year difficulty inflation</h2></div>
+            <p class="panel-sub">The moving frontier &mdash; mean D-score of the <strong>top {{ inflation.top_n }}</strong>
+                hardest routines each season, by discipline. A raw all-routine mean would just track the
+                dataset's shifting population; the top-{{ inflation.top_n }} frontier is robust to that dilution.</p>
+            <div class="chart-box tall"><canvas id="c-inflation"></canvas></div>
+        </section>
+
+        {# Metric 8 — judge-panel variance #}
+        <section class="panel wide">
+            <div class="panel-title"><span class="num">8</span><h2>Judge-panel variance</h2></div>
+            <p class="panel-sub">
+                Competitions ranked by mean spread across the six execution judges
+                (max &minus; min E-score per routine). Wider = less panel agreement.
+            </p>
+            <table class="dtable">
+                <thead><tr><th class="lbl">Competition</th><th>Mean judge spread</th><th>Routines</th></tr></thead>
+                <tbody>
+                {% for c in panel_variance.competitions %}
+                <tr>
+                    <td class="lbl" title="{{ c.event_title }}">{{ c.event_title[:60] }}{{ '…' if c.event_title|length > 60 }}</td>
+                    <td class="{{ 'neg' if c.mean_spread >= 1.0 else '' }}">{{ '%.3f'|format(c.mean_spread) }}</td>
+                    <td>{{ '{:,}'.format(c.routine_count) }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </div>
+{% endif %}
+
+</div>
+
+<div id="dash-loading">
+    <div class="spinner"></div>
+    <div class="msg">Crunching routines…</div>
+</div>
+
+<script>
+Chart.defaults.font.family = "Montserrat, sans-serif";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = "#555a63";
+const RED = "#be0027", NAVY = "#1b3a5c", TEAL = "#1c8c7a",
+      AMBER = "#d98a00", SLATE = "#6b7280";
+const GRID = { color: "#eceef1" };
+
+// --- Loading overlay on any server round-trip ---
+(function () {
+    const overlay = document.getElementById('dash-loading');
+    const show = () => overlay.classList.add('on');
+    document.querySelector('.dash-controls').addEventListener('submit', show);
+    document.querySelectorAll('.disc-tabs a, .dash-controls .reset, .dash-head a.nav-link')
+        .forEach(a => a.addEventListener('click', show));
+    // hide again if the page is restored from bfcache (back button)
+    window.addEventListener('pageshow', () => overlay.classList.remove('on'));
+})();
+
+// --- Athlete typeahead (reuses /autocomplete/athletes) ---
+(function () {
+    const sn = document.getElementById('surname');
+    if (!sn) return;
+    sn.addEventListener('input', function () {
+        const q = this.value;
+        if (q.length < 2) return;
+        fetch('/autocomplete/athletes?q=' + encodeURIComponent(q))
+            .then(r => r.json())
+            .then(data => {
+                const dl = document.getElementById('surname-suggestions');
+                dl.innerHTML = '';
+                data.forEach(a => {
+                    const opt = document.createElement('option');
+                    opt.value = a.surname;
+                    opt.label = a.given_name + ' ' + a.surname;
+                    dl.appendChild(opt);
+                });
+            });
+    });
+})();
+
+{% if has_athlete %}
+// --- Metric 1: deduction profile ---
+(function () {
+    const d = {{ deduction_profile | tojson }};
+    new Chart(document.getElementById('c-deduction'), {
+        type: 'bar',
+        data: {
+            labels: d.labels,
+            datasets: [
+                { label: 'Athlete', data: d.athlete_avg, backgroundColor: RED },
+                { label: '{{ discipline }} field', data: d.cohort_avg, backgroundColor: NAVY }
+            ]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { grid: { display: false }, title: { display: true, text: 'Skill position' } },
+                y: { beginAtZero: true, grid: GRID, title: { display: true, text: 'Avg deduction (tenths)' } }
+            }
+        }
+    });
+})();
+
+// --- Metric 2: D-score progression ---
+(function () {
+    const series = {{ progression | tojson }};
+    const discColor = { TRA: RED, DMT: NAVY, TUM: TEAL };
+    const allDates = [...new Set([].concat(...Object.values(series).map(
+        rows => rows.map(r => r.date))))].sort();
+    const datasets = Object.entries(series).map(([disc, rows]) => {
+        const byDate = {};
+        rows.forEach(r => { byDate[r.date] = r.dd; });
+        return {
+            label: disc + ' D-score',
+            data: allDates.map(dt => byDate[dt] ?? null),
+            borderColor: discColor[disc] || SLATE,
+            backgroundColor: discColor[disc] || SLATE,
+            spanGaps: true, tension: 0.25, pointRadius: 2.5, borderWidth: 2
+        };
+    });
+    new Chart(document.getElementById('c-progression'), {
+        type: 'line',
+        data: { labels: allDates, datasets: datasets },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            interaction: { mode: 'nearest', intersect: false },
+            plugins: { legend: { position: 'top' } },
+            scales: {
+                x: { grid: { display: false }, ticks: { maxTicksLimit: 12 } },
+                y: { grid: GRID, title: { display: true, text: 'D-score' } }
+            }
+        }
+    });
+})();
+
+{% if tof %}
+// --- Metric 5: ToF distribution (athlete vs field, normalised to %) ---
+(function () {
+    const tof = {{ tof | tojson }};
+    const bw = tof.bin_width;
+    const fieldTotal = tof.field.reduce((s, b) => s + b.count, 0) || 1;
+    // bin athlete values onto the same grid
+    const athBins = {};
+    tof.athlete_values.forEach(v => {
+        const k = (Math.floor(v / bw) * bw).toFixed(2);
+        athBins[k] = (athBins[k] || 0) + 1;
+    });
+    const athTotal = tof.athlete_values.length || 1;
+    const labels = tof.field.map(b => b.tof.toFixed(1));
+    new Chart(document.getElementById('c-tof'), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                { label: 'TRA field', data: tof.field.map(b => 100 * b.count / fieldTotal),
+                  backgroundColor: 'rgba(27,58,92,0.45)', borderColor: NAVY, borderWidth: 1 },
+                { label: 'Athlete', data: tof.field.map(b => 100 * (athBins[b.tof.toFixed(2)] || 0) / athTotal),
+                  backgroundColor: 'rgba(190,0,39,0.55)', borderColor: RED, borderWidth: 1 }
+            ]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: {
+                x: { grid: { display: false }, title: { display: true, text: 'Time of Flight (s)' },
+                     ticks: { maxTicksLimit: 16 } },
+                y: { beginAtZero: true, grid: GRID, title: { display: true, text: '% of routines' } }
+            }
+        }
+    });
+})();
+{% endif %}
+{% endif %}
+
+{% if inflation is defined %}
+// --- Metric 6: difficulty inflation ---
+(function () {
+    const inf = {{ inflation | tojson }};
+    const discColor = { TRA: RED, DMT: NAVY, TUM: TEAL };
+    const datasets = Object.entries(inf.series).map(([disc, vals]) => ({
+        label: disc, data: vals,
+        borderColor: discColor[disc], backgroundColor: discColor[disc],
+        spanGaps: true, tension: 0.25, borderWidth: 2, pointRadius: 3
+    }));
+    new Chart(document.getElementById('c-inflation'), {
+        type: 'line',
+        data: { labels: inf.years, datasets: datasets },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: {
+                x: { grid: { display: false } },
+                y: { grid: GRID, title: { display: true, text: 'Mean D-score' } }
+            }
+        }
+    });
+})();
+{% endif %}
+</script>
+</body>
+</html>
