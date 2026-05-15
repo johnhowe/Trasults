@@ -294,3 +294,36 @@ def test_dashboard_form_kpi_tiles_render():
     body = resp.get_data(as_text=True)
     assert 'kpi-form-indicator' in body
     assert 'kpi-crash-rate' in body
+
+
+# --------------------------------------------------------------------------
+# Form & crashes trend lines (issue 0002)
+# --------------------------------------------------------------------------
+
+@real_db
+def test_form_and_crash_series_returns_aligned_career_series():
+    s = db.form_and_crash_series(DB_PATH, 'Dylan', 'Schmidt', 'TRA')
+    assert set(s) >= {'dates', 'form', 'crash_rate'}
+    n = len(s['dates'])
+    assert n >= 10
+    assert len(s['form']) == n
+    assert len(s['crash_rate']) == n
+    # crash rate is a share in [0, 1]
+    assert all(0.0 <= c <= 1.0 for c in s['crash_rate'])
+    # form is either None or a positive routine-score average
+    assert all(v is None or v > 0 for v in s['form'])
+
+
+@real_db
+def test_dashboard_form_trend_panel_renders():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard?given_name=Dylan&surname=Schmidt')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'panel-form-trend' in body
+    assert 'c-form-trend' in body
+    # JSON payload exposes both series, and they have matching length
+    s = db.form_and_crash_series(DB_PATH, 'Dylan', 'Schmidt', 'TRA')
+    assert '"form"' in body and '"crash_rate"' in body
+    assert len(s['form']) == len(s['crash_rate']) == len(s['dates']) >= 10

@@ -115,6 +115,26 @@
         </div>
     </section>
 
+    {# ---------------- DEPTH TREND PANEL (form vs crashes) ---------------- #}
+    <section class="panel wide" id="panel-form-trend">
+        <div class="panel-title"><h2>Form &amp; crashes trend</h2></div>
+        {% if form_trend.dates|length >= 10 %}
+        <p class="panel-sub">
+            Career view of the two Depth KPIs on a shared timeline.
+            <span class="legend-dot" style="background:#1b3a5c"></span>Form indicator
+            (best 3 of last 10 completed) &middot;
+            <span class="legend-dot" style="background:#be0027"></span>Crashes per 10 routines.
+            Form up = good, crashes up = bad.
+        </p>
+        <div class="chart-box tall"><canvas id="c-form-trend"></canvas></div>
+        {% else %}
+        <p class="panel-sub">
+            Needs at least 10 published routines to draw a meaningful trend &mdash;
+            this athlete has {{ form_trend.dates|length }}.
+        </p>
+        {% endif %}
+    </section>
+
     <div class="panel-grid">
 
         {# Metric 1 — per-skill deduction profile #}
@@ -346,6 +366,58 @@ const GRID = { color: "#eceef1" };
 })();
 
 {% if has_athlete %}
+// --- Form & crashes trend (issue 0002) ---
+(function () {
+    const t = {{ form_trend | tojson }};
+    if (!t.dates || t.dates.length < 10) return;
+    new Chart(document.getElementById('c-form-trend'), {
+        type: 'line',
+        data: {
+            labels: t.dates,
+            datasets: [
+                {
+                    label: 'Form indicator',
+                    data: t.form,
+                    yAxisID: 'yForm',
+                    borderColor: NAVY,
+                    backgroundColor: NAVY,
+                    spanGaps: false,
+                    tension: 0.25,
+                    pointRadius: 0,
+                    borderWidth: 2,
+                },
+                {
+                    label: 'Crashes per 10 routines',
+                    data: t.crash_rate.map(v => v == null ? null : v * 10),
+                    yAxisID: 'yCrash',
+                    borderColor: RED,
+                    backgroundColor: RED,
+                    tension: 0.25,
+                    pointRadius: 0,
+                    borderWidth: 2,
+                }
+            ]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: { legend: { position: 'top' } },
+            scales: {
+                x: { grid: { display: false }, ticks: { maxTicksLimit: 12 } },
+                yForm: {
+                    type: 'linear', position: 'left', grid: GRID,
+                    title: { display: true, text: 'Form (routine score)', color: NAVY }
+                },
+                yCrash: {
+                    type: 'linear', position: 'right',
+                    min: 0, max: 10, grid: { display: false },
+                    title: { display: true, text: 'Crashes / 10 routines', color: RED }
+                }
+            }
+        }
+    });
+})();
+
 // --- Metric 1: deduction profile ---
 (function () {
     const d = {{ deduction_profile | tojson }};

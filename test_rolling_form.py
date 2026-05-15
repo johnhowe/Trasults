@@ -63,3 +63,25 @@ def test_series_align_at_same_index():
     forms = rf.best_n_of_last_k(totals, crashes, n=3, k=10)
     rates = rf.crash_rate_last_k(crashes, k=10)
     assert len(forms) == len(rates) == 4
+
+
+def test_consecutive_crashes_stall_form_and_climb_crash_rate():
+    """User story 11: a run of crashes must NOT collapse the form line.
+    Crashes are dropped from the form pool, so the form indicator plateaus
+    on the last good window; crash rate climbs monotonically across the run.
+    """
+    totals = [10.0, 10.5, 11.0, 10.8, 11.2] + [0.0] * 5
+    crashes = [False] * 5 + [True] * 5
+    forms = rf.best_n_of_last_k(totals, crashes, n=3, k=10)
+    rates = rf.crash_rate_last_k(crashes, k=10)
+
+    last_good = forms[4]
+    assert last_good is not None
+    for i in range(5, 10):
+        assert forms[i] == pytest.approx(last_good), \
+            f"form collapsed at index {i}: {forms[i]} vs plateau {last_good}"
+
+    assert rates[4] == pytest.approx(0.0)
+    for i in range(4, 9):
+        assert rates[i] < rates[i + 1]
+    assert rates[9] == pytest.approx(0.5)

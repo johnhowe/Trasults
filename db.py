@@ -3,6 +3,7 @@ from datetime import datetime
 from statistics import mean, median, stdev, StatisticsError
 
 import form_window
+import rolling_form
 import routine_classifier
 
 
@@ -847,4 +848,35 @@ def form_kpi_data(db_path, given_name, surname, discipline, form_months, now=Non
         'crash_rate': crash_rate,
         'n_in_window': n,
         'n_completed_in_window': n_completed,
+    }
+
+
+def form_and_crash_series(db_path, given_name, surname, discipline):
+    """Career-long chronological trend series for the Depth trend panel.
+
+    Returns {'dates', 'form', 'crash_rate'} — three parallel arrays, one
+    entry per published routine for this athlete in this discipline, ordered
+    by timestamp ASC. `form[i]` is None where fewer than 3 completed routines
+    are available in the trailing 10, so a string of crashes plateaus the
+    form line instead of collapsing it (user story 11).
+    """
+    disc = (discipline or '').upper()
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline=disc)
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"SELECT frame_last_start_time_g ts, "
+            f"CAST(frame_nelements AS INTEGER) ne, "
+            f"frame_mark_ttt_g total, competition_discipline disc "
+            f"FROM routines WHERE {_BASE_FILTER}{cf}{af} "
+            f"ORDER BY timestamp ASC", cp + ap).fetchall()
+    totals = [float(r['total'] or 0.0) for r in rows]
+    crashes = [routine_classifier.is_crash(r['ne'], r['disc']) for r in rows]
+    dates = [(r['ts'] or '')[:10] for r in rows]
+    forms = rolling_form.best_n_of_last_k(totals, crashes)
+    rates = rolling_form.crash_rate_last_k(crashes)
+    return {
+        'dates': dates,
+        'form': [round(v, 3) if v is not None else None for v in forms],
+        'crash_rate': [round(v, 4) for v in rates],
     }
