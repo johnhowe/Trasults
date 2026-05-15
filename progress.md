@@ -34,4 +34,11 @@
   `chartjs-chart-matrix` CDN plugin: red-heat cells, TRA-only
   compulsory/voluntary strip, horizontal scroll engaged via `.heatmap-scroll`
   past 200 columns.
-- [ ] docs/issues/0006-heatmap-class-summary.md
+- [x] docs/issues/0006-heatmap-class-summary.md
+  Added `db.heatmap_class_summary` returning skill rows × class columns
+  (TRA: Compulsory / Voluntary Qual / Semi / Final; DMT/TUM: Qual / Semi /
+  Final) with mean deductions, `None` for empty classes, and per-column
+  counts. New `panel-heatmap-class` section renders via the existing
+  `chartjs-chart-matrix` plugin using a shared `heatColor()` ramp;
+  neutral grey for `None` cells, n-count chips beneath the canvas
+  (amber-highlighted when n<3) so low-sample columns aren't over-read.

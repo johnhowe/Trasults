@@ -1052,6 +1052,109 @@ def heatmap_timeline(db_path, given_name, surname, discipline, form_months,
     }
 
 
+_TRA_CLASS_COLUMNS = ['Compulsory', 'Voluntary Qual',
+                      'Voluntary Semi', 'Voluntary Final']
+_DMT_TUM_CLASS_COLUMNS = ['Qual', 'Semi', 'Final']
+
+
+def _class_column_index(stage_kind, is_compulsory, discipline):
+    """Bucket a routine into the Heatmap-B class column for its discipline.
+
+    TRA: 0=Compulsory, 1=Vol Qual, 2=Vol Semi, 3=Vol Final.
+    DMT/TUM: 0=Qual, 1=Semi, 2=Final. Returns ``None`` for stage_kinds that
+    don't fit any column (e.g. team events outside of qual/semi/final).
+    Order matters: 'Semifinal' contains 'Final', so Semi must be checked first.
+    """
+    if discipline == 'TRA' and is_compulsory:
+        return 0
+    s = stage_kind or ''
+    if s.startswith('Q'):
+        return 1 if discipline == 'TRA' else 0
+    if 'Semi' in s:
+        return 2 if discipline == 'TRA' else 1
+    if 'Final' in s:
+        return 3 if discipline == 'TRA' else 2
+    return None
+
+
+def heatmap_class_summary(db_path, given_name, surname, discipline, form_months,
+                          now=None):
+    """Skill × routine-class summary payload for the Depth view (issue 0006).
+
+    Returns ``{rows, columns, cells, counts}``:
+      - ``rows``: ``['S1', …, 'SN']`` per :data:`DISCIPLINE_SKILLS`.
+      - ``columns``: ``['Compulsory', 'Voluntary Qual', 'Voluntary Semi',
+        'Voluntary Final']`` for TRA; ``['Qual', 'Semi', 'Final']`` for
+        DMT/TUM.
+      - ``cells[skill_idx][col_idx]``: mean deduction for that
+        (skill position, class) across the form-window's completed routines,
+        or ``None`` when no routine fell into that class (distinguishable from
+        a true zero-deduction cell).
+      - ``counts[col_idx]``: number of completed routines in each class.
+
+    Crashes are excluded entirely (CONTEXT.md → Skill heatmaps), and TRA's
+    compulsory column is gated by :func:`routine_classifier.is_compulsory` —
+    a per-athlete 30%-of-career-best-D threshold (CONTEXT.md → Compulsory).
+    """
+    disc = (discipline or '').upper()
+    n_skills = DISCIPLINE_SKILLS[disc]
+    skill_cols = [f'esigma_s{i}' for i in range(1, n_skills + 1)]
+    columns = _TRA_CLASS_COLUMNS if disc == 'TRA' else _DMT_TUM_CLASS_COLUMNS
+
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline=disc)
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"SELECT frame_last_start_time_g ts, "
+            f"CAST(frame_nelements AS INTEGER) ne, "
+            f"frame_difficultyt_g d, competition_discipline cd, "
+            f"stage_kind sk, "
+            f"{', '.join(skill_cols)} FROM routines "
+            f"WHERE {_BASE_FILTER}{cf}{af} ORDER BY timestamp ASC",
+            cp + ap).fetchall()
+    routines = [dict(r) for r in rows]
+    for r in routines:
+        r['frame_last_start_time_g'] = r['ts']
+    windowed = form_window.filter_routines(routines, form_months, now=now)
+    completed = [r for r in windowed
+                 if not routine_classifier.is_crash(r['ne'], r['cd'])]
+
+    best_d = max((float(r['d'] or 0.0) for r in completed), default=0.0)
+
+    n_cols = len(columns)
+    sums = [[0.0] * n_cols for _ in range(n_skills)]
+    cell_counts = [[0] * n_cols for _ in range(n_skills)]
+    col_counts = [0] * n_cols
+
+    for r in completed:
+        d_score = float(r['d'] or 0.0)
+        is_comp = routine_classifier.is_compulsory(
+            d_score, best_d, r['ne'], r['cd'])
+        col_idx = _class_column_index(r['sk'], is_comp, disc)
+        if col_idx is None:
+            continue
+        col_counts[col_idx] += 1
+        for si, c in enumerate(skill_cols):
+            v = r[c]
+            if v is None:
+                continue
+            sums[si][col_idx] += float(v)
+            cell_counts[si][col_idx] += 1
+
+    cells = [
+        [round(sums[si][ci] / cell_counts[si][ci], 3)
+         if cell_counts[si][ci] else None
+         for ci in range(n_cols)]
+        for si in range(n_skills)
+    ]
+    return {
+        'rows': [f'S{i}' for i in range(1, n_skills + 1)],
+        'columns': columns,
+        'cells': cells,
+        'counts': col_counts,
+    }
+
+
 def form_and_crash_series(db_path, given_name, surname, discipline):
     """Career-long chronological trend series for the Depth trend panel.
 

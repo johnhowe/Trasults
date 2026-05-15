@@ -214,6 +214,38 @@
         {% endif %}
     </section>
 
+    {# ---------------- DEPTH HEATMAP B — SKILL × ROUTINE CLASS SUMMARY (issue 0006) ---------------- #}
+    <section class="panel wide" id="panel-heatmap-class">
+        <div class="panel-title">
+            <h2>Skill deductions &mdash; class summary</h2>
+        </div>
+        <p class="panel-sub">
+            Mean execution deduction per skill position across each routine class
+            in the last {{ form_months }} mo. Pairs with the timeline view:
+            "where the athlete is lacking, for each kind of routine."
+            Empty cells (no routines in that class) render grey to keep absence
+            distinguishable from a clean zero-deduction.
+        </p>
+        {% set hc_total = heatmap_class.counts | sum %}
+        {% if hc_total %}
+        <div class="hm-class-wrap">
+            <canvas id="c-heatmap-class"></canvas>
+        </div>
+        <div class="hm-col-counts">
+            {% for col in heatmap_class.columns %}
+            <span class="hm-col-count" data-col="{{ col }}">{{ col }}
+                <em class="{{ 'low' if heatmap_class.counts[loop.index0] < 3 else '' }}">n={{ heatmap_class.counts[loop.index0] }}</em>
+            </span>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="panel-sub">
+            No completed routines in the last {{ form_months }} mo &mdash; widen
+            the form window to see the class summary.
+        </p>
+        {% endif %}
+    </section>
+
     {# ---------------- DEPTH TREND PANEL (form vs crashes) ---------------- #}
     <section class="panel wide" id="panel-form-trend">
         <div class="panel-title"><h2>Form &amp; crashes trend</h2></div>
@@ -603,6 +635,17 @@ const GRID = { color: "#eceef1" };
     });
 })();
 
+// Shared red-heat ramp for both Heatmap A (timeline) and Heatmap B (class).
+// 0 -> pale, 1.0+ -> deep red; clamped at 1.0 pt.
+const heatColor = (v) => {
+    const t = Math.max(0, Math.min(1, (v || 0) / 1.0));
+    const r = Math.round(255 + t * (190 - 255));
+    const g = Math.round(245 + t * (0 - 245));
+    const b = Math.round(240 + t * (39 - 240));
+    return `rgb(${r},${g},${b})`;
+};
+const HEAT_EMPTY = '#e2e4e8';   // neutral grey for "no routines in this class"
+
 // --- Heatmap A: skill × routine timeline (issue 0005) ---
 (function () {
     const h = {{ heatmap_timeline | tojson }};
@@ -616,17 +659,6 @@ const GRID = { color: "#eceef1" };
     const stripH = 14;
     const innerW = Math.max(h.n_routines * cellW + 60, 320);
     const bodyH = h.skills.length * cellH + 50;
-
-    // Red-heat ramp: 0 dd -> very pale, increasing red intensity with deduction.
-    // Deductions are in points (e.g. 0.3 = 0.3 pt); we clamp/scale at 1.0 pt.
-    const heatColor = (v) => {
-        const t = Math.max(0, Math.min(1, (v || 0) / 1.0));
-        // Interpolate from #fff5f0 (pale) to #be0027 (red).
-        const r = Math.round(255 + t * (190 - 255));
-        const g = Math.round(245 + t * (0 - 245));
-        const b = Math.round(240 + t * (39 - 240));
-        return `rgb(${r},${g},${b})`;
-    };
 
     const data = [];
     h.columns.forEach((col, ci) => {
@@ -681,6 +713,7 @@ const GRID = { color: "#eceef1" };
         }
     });
 
+    {% if discipline == 'TRA' %}
     if (isTRA) {
         const stripWrap = document.getElementById('c-heatmap-strip-wrap');
         stripWrap.style.width = innerW + 'px';
@@ -723,6 +756,83 @@ const GRID = { color: "#eceef1" };
             }
         });
     }
+    {% endif %}
+})();
+
+// --- Heatmap B: skill × routine-class summary (issue 0006) ---
+(function () {
+    const h = {{ heatmap_class | tojson }};
+    const total = h.counts.reduce((a, b) => a + b, 0);
+    if (!total) return;
+
+    const nCols = h.columns.length;
+    const nRows = h.rows.length;
+    const cellW = 110;
+    const cellH = 22;
+    const innerW = nCols * cellW + 100;
+    const innerH = nRows * cellH + 60;
+
+    const data = [];
+    h.cells.forEach((row, si) => {
+        row.forEach((v, ci) => {
+            data.push({ x: ci, y: si, v: v, n: h.counts[ci],
+                        col: h.columns[ci], row: h.rows[si] });
+        });
+    });
+
+    const wrap = document.getElementById('c-heatmap-class').parentElement;
+    wrap.style.width = innerW + 'px';
+    wrap.style.height = innerH + 'px';
+
+    new Chart(document.getElementById('c-heatmap-class'), {
+        type: 'matrix',
+        data: {
+            datasets: [{
+                label: 'Mean deduction',
+                data: data,
+                width: () => cellW - 2,
+                height: () => cellH - 2,
+                backgroundColor: (ctx) =>
+                    ctx.raw.v == null ? HEAT_EMPTY : heatColor(ctx.raw.v),
+                borderWidth: 0,
+            }]
+        },
+        options: {
+            responsive: false, maintainAspectRatio: false,
+            animation: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: (items) =>
+                            `${items[0].raw.col} (n=${items[0].raw.n})`,
+                        label: (ctx) => ctx.raw.v == null
+                            ? `${ctx.raw.row}: no routines in class`
+                            : `${ctx.raw.row}: ${ctx.raw.v.toFixed(2)} pt`,
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear', min: -0.5, max: nCols - 0.5,
+                    offset: false, grid: { display: false },
+                    ticks: {
+                        stepSize: 1, autoSkip: false,
+                        callback: (v) => h.columns[v] || '',
+                    },
+                    position: 'top',
+                },
+                y: {
+                    type: 'linear', min: -0.5, max: nRows - 0.5,
+                    offset: false, reverse: true, grid: { display: false },
+                    ticks: {
+                        stepSize: 1, autoSkip: false,
+                        callback: (v) => h.rows[v] || '',
+                    },
+                }
+            }
+        }
+    });
 })();
 
 // --- Form & crashes trend (issue 0002) ---

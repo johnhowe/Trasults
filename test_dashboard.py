@@ -579,3 +579,134 @@ def test_dashboard_heatmap_timeline_no_strip_for_dmt():
     assert 'panel-heatmap-timeline' in body
     # DMT/TUM have no compulsory routines — the strip element must not render.
     assert 'class="heatmap-strip"' not in body
+
+
+# --------------------------------------------------------------------------
+# Heatmap class summary (issue 0006)
+# --------------------------------------------------------------------------
+
+
+def test_heatmap_class_summary_tra_four_columns_compulsory_via_classifier(tmp_path):
+    """TRA returns Compulsory / Vol Qual / Vol Semi / Vol Final; the
+    compulsory bucket is gated by routine_classifier.is_compulsory (low D
+    relative to the athlete's career best, nelements==10)."""
+    from datetime import date
+    common_skills = {f'esigma_s{i}': 0.2 for i in range(1, 11)}
+    rows = [
+        # Voluntary qualification — high D, contributes to the Vol Qual column.
+        {'frame_last_start_time_g': '2024-01-15 10:00:00', 'timestamp': 1705312800,
+         'stage_kind': 'Qualification', 'frame_difficultyt_g': 17.0,
+         **{f'esigma_s{i}': 0.2 for i in range(1, 11)}},
+        # Voluntary final — top D, sets best_d.
+        {'frame_last_start_time_g': '2024-02-15 10:00:00', 'timestamp': 1708099200,
+         'stage_kind': 'Final', 'frame_difficultyt_g': 18.0,
+         **{f'esigma_s{i}': 0.5 for i in range(1, 11)}},
+        # Compulsory routine (D=1.0 < 30% of 18.0 best, nelements=10).
+        {'frame_last_start_time_g': '2024-03-01 10:00:00', 'timestamp': 1709287200,
+         'stage_kind': 'Qualification', 'frame_difficultyt_g': 1.0,
+         **{f'esigma_s{i}': 0.1 for i in range(1, 11)}},
+    ]
+    path = _hm_db(tmp_path, rows)
+    out = db.heatmap_class_summary(path, 'A', 'B', 'TRA', form_months=120,
+                                   now=date(2024, 12, 31))
+    assert out['columns'] == ['Compulsory', 'Voluntary Qual',
+                              'Voluntary Semi', 'Voluntary Final']
+    assert out['rows'] == [f'S{i}' for i in range(1, 11)]
+    assert out['counts'] == [1, 1, 0, 1]
+    # Mean deduction on S1 for each populated column.
+    assert out['cells'][0][0] == pytest.approx(0.1)        # Compulsory
+    assert out['cells'][0][1] == pytest.approx(0.2)        # Voluntary Qual
+    assert out['cells'][0][3] == pytest.approx(0.5)        # Voluntary Final
+    # Voluntary Semi has no routines in the window → every cell is None,
+    # distinguishing the empty class from a zero-deduction cell.
+    assert all(out['cells'][s][2] is None for s in range(10))
+    del common_skills  # silence unused
+
+
+def test_heatmap_class_summary_dmt_three_columns_no_compulsory(tmp_path):
+    """DMT/TUM have no compulsory column — three buckets only."""
+    from datetime import date
+    rows = [
+        {'frame_last_start_time_g': '2024-01-15 10:00:00', 'timestamp': 1705312800,
+         'competition_discipline': 'DMT', 'frame_nelements': '2',
+         'stage_kind': 'Qualification', 'frame_difficultyt_g': 4.0,
+         'esigma_s1': 0.4, 'esigma_s2': 0.4},
+        {'frame_last_start_time_g': '2024-02-15 10:00:00', 'timestamp': 1708099200,
+         'competition_discipline': 'DMT', 'frame_nelements': '2',
+         'stage_kind': 'Semifinal', 'frame_difficultyt_g': 4.0,
+         'esigma_s1': 0.5, 'esigma_s2': 0.5},
+        {'frame_last_start_time_g': '2024-03-15 10:00:00', 'timestamp': 1710518400,
+         'competition_discipline': 'DMT', 'frame_nelements': '2',
+         'stage_kind': 'Final', 'frame_difficultyt_g': 4.0,
+         'esigma_s1': 0.6, 'esigma_s2': 0.6},
+    ]
+    path = _hm_db(tmp_path, rows)
+    out = db.heatmap_class_summary(path, 'A', 'B', 'DMT', form_months=120,
+                                   now=date(2024, 12, 31))
+    assert out['columns'] == ['Qual', 'Semi', 'Final']
+    assert out['rows'] == ['S1', 'S2']
+    assert out['counts'] == [1, 1, 1]
+    assert out['cells'][0][0] == pytest.approx(0.4)
+    assert out['cells'][0][1] == pytest.approx(0.5)
+    assert out['cells'][0][2] == pytest.approx(0.6)
+
+
+def test_heatmap_class_summary_excludes_crashes(tmp_path):
+    """Crashes never enter the mean — only completed routines contribute."""
+    from datetime import date
+    rows = [
+        {'frame_last_start_time_g': '2024-01-15 10:00:00', 'timestamp': 1705312800,
+         'stage_kind': 'Final', 'frame_nelements': '10', 'frame_difficultyt_g': 17.0,
+         **{f'esigma_s{i}': 0.3 for i in range(1, 11)}},
+        # Crash — nelements < 10. Would otherwise pollute the Voluntary Final
+        # mean with 0.99 deductions.
+        {'frame_last_start_time_g': '2024-02-15 10:00:00', 'timestamp': 1708099200,
+         'stage_kind': 'Final', 'frame_nelements': '7', 'frame_difficultyt_g': 17.0,
+         **{f'esigma_s{i}': 0.99 for i in range(1, 11)}},
+    ]
+    path = _hm_db(tmp_path, rows)
+    out = db.heatmap_class_summary(path, 'A', 'B', 'TRA', form_months=120,
+                                   now=date(2024, 12, 31))
+    assert out['counts'][3] == 1                            # Voluntary Final
+    assert out['cells'][0][3] == pytest.approx(0.3)         # crash excluded
+
+
+@real_db
+def test_heatmap_class_summary_real_db_tra_shape():
+    out = db.heatmap_class_summary(DB_PATH, 'Dylan', 'Schmidt', 'TRA',
+                                   form_months=36)
+    assert out['rows'] == [f'S{i}' for i in range(1, 11)]
+    assert out['columns'] == ['Compulsory', 'Voluntary Qual',
+                              'Voluntary Semi', 'Voluntary Final']
+    assert len(out['counts']) == 4
+    assert all(len(row) == 4 for row in out['cells'])
+
+
+@real_db
+def test_dashboard_heatmap_class_summary_panel_renders_tra():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard?given_name=Dylan&surname=Schmidt&discipline=TRA')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'panel-heatmap-class' in body
+    assert 'c-heatmap-class' in body
+    # TRA renders four columns — surfaced as hm-col-count chips.
+    assert body.count('class="hm-col-count"') == 4
+    for col in ('Compulsory', 'Voluntary Qual', 'Voluntary Semi', 'Voluntary Final'):
+        assert col in body
+
+
+@real_db
+def test_dashboard_heatmap_class_summary_panel_renders_dmt():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard?given_name=Kayla&surname=Nel&discipline=DMT')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'panel-heatmap-class' in body
+    # DMT renders three columns, never the TRA-specific labels.
+    assert body.count('class="hm-col-count"') == 3
+    assert 'Compulsory' not in body
+    assert 'Voluntary Qual' not in body
+    assert 'Voluntary Final' not in body
