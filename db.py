@@ -1000,6 +1000,58 @@ def trade_off_scatter(db_path, given_name, surname, discipline, form_months,
     }
 
 
+def heatmap_timeline(db_path, given_name, surname, discipline, form_months,
+                     now=None):
+    """Skill × routine timeline payload for the Depth view (issue 0005).
+
+    Returns ``{skills, columns, n_routines}`` where ``skills`` is
+    ``['S1', ..., 'SN']`` (N per :data:`DISCIPLINE_SKILLS`), and ``columns`` is
+    one entry per **completed** routine in the form window, ordered by
+    timestamp ascending. Each column carries its date, D-score, an
+    ``is_compulsory`` flag (TRA-only — always ``False`` for DMT/TUM), and the
+    per-skill deductions as floats. Crashes are excluded entirely (CONTEXT.md
+    → Skill heatmaps).
+    """
+    disc = (discipline or '').upper()
+    n_skills = DISCIPLINE_SKILLS[disc]
+    skill_cols = [f'esigma_s{i}' for i in range(1, n_skills + 1)]
+
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline=disc)
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"SELECT frame_last_start_time_g ts, "
+            f"CAST(frame_nelements AS INTEGER) ne, "
+            f"frame_difficultyt_g d, competition_discipline cd, "
+            f"{', '.join(skill_cols)} FROM routines "
+            f"WHERE {_BASE_FILTER}{cf}{af} ORDER BY timestamp ASC",
+            cp + ap).fetchall()
+    routines = [dict(r) for r in rows]
+    for r in routines:
+        r['frame_last_start_time_g'] = r['ts']
+    windowed = form_window.filter_routines(routines, form_months, now=now)
+    completed = [r for r in windowed
+                 if not routine_classifier.is_crash(r['ne'], r['cd'])]
+
+    best_d = max((float(r['d'] or 0.0) for r in completed), default=0.0)
+
+    columns = []
+    for r in completed:
+        d_score = float(r['d'] or 0.0)
+        columns.append({
+            'date': (r['ts'] or '')[:10],
+            'd': round(d_score, 2),
+            'is_compulsory': routine_classifier.is_compulsory(
+                d_score, best_d, r['ne'], r['cd']),
+            'deductions': [round(float(r[c] or 0.0), 2) for c in skill_cols],
+        })
+    return {
+        'skills': [f'S{i}' for i in range(1, n_skills + 1)],
+        'columns': columns,
+        'n_routines': len(columns),
+    }
+
+
 def form_and_crash_series(db_path, given_name, surname, discipline):
     """Career-long chronological trend series for the Depth trend panel.
 

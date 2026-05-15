@@ -12,7 +12,7 @@ from db import (query_db, process_for_display, compute_stats, compute_form,
                 dscore_progression, qual_vs_final, score_decomposition,
                 tof_distribution, difficulty_inflation, head_to_head,
                 judge_panel_variance, form_kpi_data, form_and_crash_series,
-                radar_data, trade_off_scatter)
+                radar_data, trade_off_scatter, heatmap_timeline)
 import form_window
 
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify
@@ -252,6 +252,8 @@ def dashboard():
             radar=radar_data(
                 DB_PATH, given_name, surname, discipline, form_months),
             scatter=trade_off_scatter(
+                DB_PATH, given_name, surname, discipline, form_months),
+            heatmap_timeline=heatmap_timeline(
                 DB_PATH, given_name, surname, discipline, form_months),
             deduction_profile=deduction_profile(
                 DB_PATH, given_name, surname, discipline, yf, yt),

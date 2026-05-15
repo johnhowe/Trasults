@@ -26,5 +26,12 @@
   window" caption. New `panel-scatter` section renders Chart.js scatter
   small-multiples, coloured navy=qual / red=final, with axes locked to
   the radar's sport-empirical bounds for cross-panel visual consistency.
-- [ ] docs/issues/0005-heatmap-timeline.md
+- [x] docs/issues/0005-heatmap-timeline.md
+  Added `db.heatmap_timeline` returning skill rows × chronological completed
+  routine columns (crashes excluded, TRA columns flagged compulsory via
+  `routine_classifier.is_compulsory`, DMT/TUM always voluntary). Wired a
+  new `panel-heatmap-timeline` section rendering via the
+  `chartjs-chart-matrix` CDN plugin: red-heat cells, TRA-only
+  compulsory/voluntary strip, horizontal scroll engaged via `.heatmap-scroll`
+  past 200 columns.
 - [ ] docs/issues/0006-heatmap-class-summary.md

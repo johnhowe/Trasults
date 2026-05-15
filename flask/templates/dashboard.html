@@ -6,6 +6,7 @@
     <title>Analytics Dashboard – VERIFLITE</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2/dist/chartjs-chart-matrix.min.js"></script>
 </head>
 <body class="dash">
 <div class="dash-wrap">
@@ -175,6 +176,40 @@
         <p class="panel-sub">
             No completed routines in the last {{ form_months }} mo &mdash; widen
             the form window to see the cloud.
+        </p>
+        {% endif %}
+    </section>
+
+    {# ---------------- DEPTH HEATMAP A — SKILL × ROUTINE TIMELINE (issue 0005) ---------------- #}
+    <section class="panel wide" id="panel-heatmap-timeline">
+        <div class="panel-title">
+            <h2>Skill deductions &mdash; routine timeline</h2>
+            <span class="crashes-caption">{{ heatmap_timeline.n_routines }} completed routines</span>
+        </div>
+        <p class="panel-sub">
+            Rows = skill positions, columns = every completed routine in the last
+            {{ form_months }} mo (oldest left &rarr; newest right). Cell colour =
+            execution deduction at that skill &mdash; deeper red = larger deduction.
+            {% if discipline == 'TRA' %}
+            Pale/dark strip above marks compulsory vs voluntary routines so clean
+            skill-1 cells on low-D columns read as expected.
+            {% endif %}
+        </p>
+        {% if heatmap_timeline.n_routines %}
+        <div class="heatmap-scroll">
+            {% if discipline == 'TRA' %}
+            <div class="heatmap-strip" id="c-heatmap-strip-wrap">
+                <canvas id="c-heatmap-strip"></canvas>
+            </div>
+            {% endif %}
+            <div class="heatmap-body">
+                <canvas id="c-heatmap-timeline"></canvas>
+            </div>
+        </div>
+        {% else %}
+        <p class="panel-sub">
+            No completed routines in the last {{ form_months }} mo &mdash; widen
+            the form window to see the heatmap.
         </p>
         {% endif %}
     </section>
@@ -566,6 +601,128 @@ const GRID = { color: "#eceef1" };
             }
         });
     });
+})();
+
+// --- Heatmap A: skill × routine timeline (issue 0005) ---
+(function () {
+    const h = {{ heatmap_timeline | tojson }};
+    if (!h.n_routines) return;
+    const isTRA = {{ 'true' if discipline == 'TRA' else 'false' }};
+
+    // Cell width scales with column count: shrink down to 8px at high n so
+    // the canvas stays readable; horizontal scroll engages past 200 columns.
+    const cellW = h.n_routines > 200 ? 12 : (h.n_routines > 80 ? 18 : 26);
+    const cellH = 22;
+    const stripH = 14;
+    const innerW = Math.max(h.n_routines * cellW + 60, 320);
+    const bodyH = h.skills.length * cellH + 50;
+
+    // Red-heat ramp: 0 dd -> very pale, increasing red intensity with deduction.
+    // Deductions are in points (e.g. 0.3 = 0.3 pt); we clamp/scale at 1.0 pt.
+    const heatColor = (v) => {
+        const t = Math.max(0, Math.min(1, (v || 0) / 1.0));
+        // Interpolate from #fff5f0 (pale) to #be0027 (red).
+        const r = Math.round(255 + t * (190 - 255));
+        const g = Math.round(245 + t * (0 - 245));
+        const b = Math.round(240 + t * (39 - 240));
+        return `rgb(${r},${g},${b})`;
+    };
+
+    const data = [];
+    h.columns.forEach((col, ci) => {
+        col.deductions.forEach((d, si) => {
+            data.push({ x: ci, y: si, v: d, date: col.date });
+        });
+    });
+
+    const bodyWrap = document.getElementById('c-heatmap-timeline').parentElement;
+    bodyWrap.style.width = innerW + 'px';
+    bodyWrap.style.height = bodyH + 'px';
+
+    new Chart(document.getElementById('c-heatmap-timeline'), {
+        type: 'matrix',
+        data: {
+            datasets: [{
+                label: 'Deduction',
+                data: data,
+                width: () => cellW - 1,
+                height: () => cellH - 1,
+                backgroundColor: (ctx) => heatColor(ctx.raw.v),
+                borderWidth: 0,
+            }]
+        },
+        options: {
+            responsive: false, maintainAspectRatio: false,
+            animation: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: (items) => h.columns[items[0].raw.x].date,
+                        label: (ctx) => `${h.skills[ctx.raw.y]}: ${ctx.raw.v.toFixed(2)} pt`,
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear', min: -0.5, max: h.n_routines - 0.5,
+                    offset: false, grid: { display: false },
+                    ticks: { display: false },
+                },
+                y: {
+                    type: 'linear', min: -0.5, max: h.skills.length - 0.5,
+                    offset: false, reverse: true, grid: { display: false },
+                    ticks: {
+                        stepSize: 1, autoSkip: false,
+                        callback: (v) => h.skills[v] || '',
+                    },
+                }
+            }
+        }
+    });
+
+    if (isTRA) {
+        const stripWrap = document.getElementById('c-heatmap-strip-wrap');
+        stripWrap.style.width = innerW + 'px';
+        stripWrap.style.height = stripH + 'px';
+        const stripData = h.columns.map((col, ci) => ({
+            x: ci, y: 0, v: col.is_compulsory ? 1 : 0,
+            kind: col.is_compulsory ? 'Compulsory' : 'Voluntary',
+        }));
+        new Chart(document.getElementById('c-heatmap-strip'), {
+            type: 'matrix',
+            data: {
+                datasets: [{
+                    label: 'Routine class',
+                    data: stripData,
+                    width: () => cellW - 1,
+                    height: () => stripH - 1,
+                    backgroundColor: (ctx) =>
+                        ctx.raw.v ? '#e2e7ee' : '#1b3a5c',  // pale = compulsory, dark = voluntary
+                    borderWidth: 0,
+                }]
+            },
+            options: {
+                responsive: false, maintainAspectRatio: false,
+                animation: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            title: (items) => h.columns[items[0].raw.x].date,
+                            label: (ctx) => ctx.raw.kind,
+                        }
+                    }
+                },
+                scales: {
+                    x: { type: 'linear', min: -0.5, max: h.n_routines - 0.5,
+                         display: false, grid: { display: false } },
+                    y: { type: 'linear', min: -0.5, max: 0.5,
+                         display: false, grid: { display: false } },
+                }
+            }
+        });
+    }
 })();
 
 // --- Form & crashes trend (issue 0002) ---

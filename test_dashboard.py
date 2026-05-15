@@ -444,3 +444,138 @@ def test_dashboard_scatter_panel_renders_for_dmt():
     # DMT has only one scatter — the TRA-only pairs must not render.
     assert 'c-scatter-DxToF' not in body
     assert 'c-scatter-ExToF' not in body
+
+
+# --------------------------------------------------------------------------
+# Heatmap timeline (issue 0005)
+# --------------------------------------------------------------------------
+
+_HM_COLS = (
+    "frame_state, person_given_name, person_surname, person_representing, "
+    "competition_title, competition_discipline, stage_kind, "
+    "frame_nelements, frame_mark_ttt_g, frame_difficultyt_g, esigma_sigma, "
+    "event_year, frame_last_start_time_g, timestamp, "
+    "esigma_s1, esigma_s2, esigma_s3, esigma_s4, esigma_s5, "
+    "esigma_s6, esigma_s7, esigma_s8, esigma_s9, esigma_s10"
+)
+
+
+def _hm_db(tmp_path, rows):
+    """Build a tiny SQLite db with the columns heatmap_timeline reads."""
+    path = str(tmp_path / 'hm.db')
+    conn = sqlite3.connect(path)
+    conn.execute(f"CREATE TABLE routines ({_HM_COLS})")
+    for r in rows:
+        full = dict(frame_state='PUBLISHED', person_given_name='A',
+                    person_surname='B', person_representing='C',
+                    competition_title='Open', competition_discipline='TRA',
+                    stage_kind='Final', frame_nelements='10',
+                    frame_mark_ttt_g=50.0, frame_difficultyt_g=15.0,
+                    esigma_sigma=17.0, event_year='2024',
+                    esigma_s1=0.3, esigma_s2=0.3, esigma_s3=0.3, esigma_s4=0.3,
+                    esigma_s5=0.3, esigma_s6=0.3, esigma_s7=0.3, esigma_s8=0.3,
+                    esigma_s9=0.3, esigma_s10=0.3)
+        full.update(r)
+        cols = list(full)
+        conn.execute(f"INSERT INTO routines ({','.join(cols)}) VALUES "
+                     f"({','.join('?' for _ in cols)})", [full[c] for c in cols])
+    conn.commit()
+    conn.close()
+    return path
+
+
+def test_heatmap_timeline_tra_shape_and_chronological_order(tmp_path):
+    from datetime import date
+    rows = [
+        # Two TRA voluntaries, one compulsory, inserted out of order to verify sort.
+        {'frame_last_start_time_g': '2024-06-01 10:00:00', 'timestamp': 1717236000,
+         'frame_difficultyt_g': 16.0},                                      # voluntary
+        {'frame_last_start_time_g': '2024-01-15 10:00:00', 'timestamp': 1705312800,
+         'frame_difficultyt_g': 2.0},                                       # compulsory (low D)
+        {'frame_last_start_time_g': '2024-03-10 10:00:00', 'timestamp': 1710036000,
+         'frame_difficultyt_g': 17.5},                                      # voluntary, sets best D
+    ]
+    path = _hm_db(tmp_path, rows)
+    out = db.heatmap_timeline(path, 'A', 'B', 'TRA', form_months=120,
+                              now=date(2024, 12, 31))
+    assert out['skills'] == [f'S{i}' for i in range(1, 11)]
+    assert out['n_routines'] == 3 == len(out['columns'])
+    dates = [c['date'] for c in out['columns']]
+    assert dates == sorted(dates), "columns must be chronological ascending"
+    # The D=2.0 routine is < 30% of best D 17.5 -> compulsory.
+    comp = [c for c in out['columns'] if c['date'] == '2024-01-15'][0]
+    assert comp['is_compulsory'] is True
+    vols = [c for c in out['columns'] if c['date'] != '2024-01-15']
+    assert all(c['is_compulsory'] is False for c in vols)
+
+
+def test_heatmap_timeline_excludes_crashes(tmp_path):
+    from datetime import date
+    rows = [
+        {'frame_last_start_time_g': '2024-06-01 10:00:00', 'timestamp': 1717236000,
+         'frame_nelements': '10'},                                          # completed
+        {'frame_last_start_time_g': '2024-06-02 10:00:00', 'timestamp': 1717322400,
+         'frame_nelements': '7'},                                           # crash
+        {'frame_last_start_time_g': '2024-06-03 10:00:00', 'timestamp': 1717408800,
+         'frame_nelements': '9'},                                           # crash
+    ]
+    path = _hm_db(tmp_path, rows)
+    out = db.heatmap_timeline(path, 'A', 'B', 'TRA', form_months=120,
+                              now=date(2024, 12, 31))
+    assert out['n_routines'] == 1
+    assert len(out['columns']) == 1
+
+
+def test_heatmap_timeline_dmt_omits_compulsory_flag(tmp_path):
+    from datetime import date
+    rows = [
+        {'frame_last_start_time_g': '2024-06-01 10:00:00', 'timestamp': 1717236000,
+         'competition_discipline': 'DMT', 'frame_nelements': '2',
+         'frame_difficultyt_g': 0.5},   # would be "low D" but DMT has no compulsory
+        {'frame_last_start_time_g': '2024-06-02 10:00:00', 'timestamp': 1717322400,
+         'competition_discipline': 'DMT', 'frame_nelements': '2',
+         'frame_difficultyt_g': 4.0},
+    ]
+    path = _hm_db(tmp_path, rows)
+    out = db.heatmap_timeline(path, 'A', 'B', 'DMT', form_months=120,
+                              now=date(2024, 12, 31))
+    assert out['skills'] == ['S1', 'S2']
+    assert out['n_routines'] == 2
+    assert all(c['is_compulsory'] is False for c in out['columns'])
+
+
+@real_db
+def test_heatmap_timeline_real_db_matches_kpi_completed_count():
+    """The column count equals the form-window completed-routine count."""
+    out = db.heatmap_timeline(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=36)
+    kpi = db.form_kpi_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', 36)
+    assert out['n_routines'] == kpi['n_completed_in_window']
+    assert len(out['columns']) == out['n_routines']
+    assert out['skills'] == [f'S{i}' for i in range(1, 11)]
+
+
+@real_db
+def test_dashboard_heatmap_timeline_panel_renders():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard?given_name=Dylan&surname=Schmidt&discipline=TRA')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'panel-heatmap-timeline' in body
+    assert 'c-heatmap-timeline' in body
+    # chartjs-chart-matrix plugin is loaded alongside Chart.js core.
+    assert 'chartjs-chart-matrix' in body
+    # TRA shows the compulsory/voluntary strip.
+    assert 'class="heatmap-strip"' in body
+
+
+@real_db
+def test_dashboard_heatmap_timeline_no_strip_for_dmt():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard?given_name=Kayla&surname=Nel&discipline=DMT')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'panel-heatmap-timeline' in body
+    # DMT/TUM have no compulsory routines — the strip element must not render.
+    assert 'class="heatmap-strip"' not in body
