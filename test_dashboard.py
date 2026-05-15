@@ -371,3 +371,76 @@ def test_dashboard_radar_panel_renders():
     # Payload markers — the radar's bounds/axes are surfaced to the chart binding.
     assert '"axes"' in body and '"bounds"' in body
     assert '"field_median"' in body
+
+
+# --------------------------------------------------------------------------
+# Trade-off scatters (issue 0004)
+# --------------------------------------------------------------------------
+
+@real_db
+def test_trade_off_scatter_tra_returns_three_pairs():
+    import radar_scales
+    s = db.trade_off_scatter(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=36)
+    assert s['pairs'] == ['DxE', 'DxToF', 'ExToF']
+    assert set(s['points']) == {'DxE', 'DxToF', 'ExToF'}
+    assert isinstance(s['crashes_in_window'], int) and s['crashes_in_window'] >= 0
+    # Visual consistency with the Radar — sport-empirical axis bounds.
+    bounds = radar_scales.bounds_for('TRA')
+    for pair, x_lo, x_hi, y_lo, y_hi in (
+        ('DxE', *bounds['D'], *bounds['E']),
+        ('DxToF', *bounds['D'], *bounds['ToF']),
+        ('ExToF', *bounds['E'], *bounds['ToF']),
+    ):
+        for p in s['points'][pair]:
+            assert {'x', 'y', 'stage'} <= set(p)
+            assert p['stage'] in {'qual', 'final'}
+            assert x_lo <= p['x']
+            assert y_lo <= p['y']
+
+
+@real_db
+def test_trade_off_scatter_dmt_returns_single_pair():
+    s = db.trade_off_scatter(DB_PATH, 'Kayla', 'Nel', 'DMT', form_months=120)
+    assert s['pairs'] == ['DxE']
+    assert set(s['points']) == {'DxE'}
+    for p in s['points']['DxE']:
+        assert {'x', 'y', 'stage'} <= set(p)
+        assert p['stage'] in {'qual', 'final'}
+
+
+@real_db
+def test_trade_off_scatter_excludes_crashes_and_counts_them():
+    s = db.trade_off_scatter(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=36)
+    kpi = db.form_kpi_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', 36)
+    # The crash caption mirrors the kpi tile's window-scoped crash count.
+    assert s['crashes_in_window'] == kpi['n_in_window'] - kpi['n_completed_in_window']
+    # Crashes never enter the cloud — points are bounded by completed routines.
+    assert len(s['points']['DxE']) <= kpi['n_completed_in_window']
+
+
+@real_db
+def test_dashboard_scatter_panel_renders_for_tra():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard?given_name=Dylan&surname=Schmidt&discipline=TRA')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'panel-scatter' in body
+    assert 'c-scatter-DxE' in body
+    assert 'c-scatter-DxToF' in body
+    assert 'c-scatter-ExToF' in body
+    assert 'crashes this window' in body
+
+
+@real_db
+def test_dashboard_scatter_panel_renders_for_dmt():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard?given_name=Kayla&surname=Nel&discipline=DMT')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'panel-scatter' in body
+    assert 'c-scatter-DxE' in body
+    # DMT has only one scatter — the TRA-only pairs must not render.
+    assert 'c-scatter-DxToF' not in body
+    assert 'c-scatter-ExToF' not in body

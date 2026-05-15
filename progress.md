@@ -19,6 +19,12 @@
   PB / Top-5 mean / p75 / p50 athlete rings (percentile rings suppressed
   below n_completed=10). Dashboard radar panel renders five rings via
   Chart.js with per-axis normalisation to a shared radial scale.
-- [ ] docs/issues/0004-trade-off-scatters.md
+- [x] docs/issues/0004-trade-off-scatters.md
+  Added `db.trade_off_scatter` helper returning three pairs for TRA
+  (D×E / D×ToF / E×ToF) and a single D×E for DMT/TUM, with crashed
+  routines excluded from the cloud and surfaced as a "crashes this
+  window" caption. New `panel-scatter` section renders Chart.js scatter
+  small-multiples, coloured navy=qual / red=final, with axes locked to
+  the radar's sport-empirical bounds for cross-panel visual consistency.
 - [ ] docs/issues/0005-heatmap-timeline.md
 - [ ] docs/issues/0006-heatmap-class-summary.md

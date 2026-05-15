@@ -143,6 +143,42 @@
         {% endif %}
     </section>
 
+    {# ---------------- DEPTH TRADE-OFF SCATTERS (issue 0004) ---------------- #}
+    <section class="panel wide" id="panel-scatter">
+        <div class="panel-title">
+            <h2>Trade-off scatters</h2>
+            <span class="crashes-caption">crashes this window: {{ scatter.crashes_in_window }}</span>
+        </div>
+        <p class="panel-sub">
+            One dot per completed routine in the last {{ form_months }} mo,
+            axis bounds match the radar's sport-empirical ceilings.
+            <span class="legend-dot" style="background:#1b3a5c"></span>Qual
+            <span class="legend-dot" style="background:#be0027"></span>Final
+            {% if discipline == 'TRA' %}
+            &middot; <strong>D&times;E</strong> difficulty/execution trade-off &middot;
+            <strong>D&times;ToF</strong> air-time potential &middot;
+            <strong>E&times;ToF</strong> in-flight cleanness.
+            {% else %}
+            &middot; <strong>D&times;E</strong> difficulty/execution trade-off.
+            {% endif %}
+        </p>
+        {% if scatter.pairs and scatter.points[scatter.pairs[0]] %}
+        <div class="scatter-multiples scatter-{{ scatter.pairs|length }}">
+            {% for pair in scatter.pairs %}
+            <div class="scatter-cell">
+                <div class="scatter-cell-title">{{ pair.replace('x', ' × ') }}</div>
+                <div class="chart-box"><canvas id="c-scatter-{{ pair }}"></canvas></div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="panel-sub">
+            No completed routines in the last {{ form_months }} mo &mdash; widen
+            the form window to see the cloud.
+        </p>
+        {% endif %}
+    </section>
+
     {# ---------------- DEPTH TREND PANEL (form vs crashes) ---------------- #}
     <section class="panel wide" id="panel-form-trend">
         <div class="panel-title"><h2>Form &amp; crashes trend</h2></div>
@@ -485,6 +521,50 @@ const GRID = { color: "#eceef1" };
                 }
             }
         }
+    });
+})();
+
+// --- Trade-off scatters (issue 0004) ---
+(function () {
+    const s = {{ scatter | tojson }};
+    if (!s.pairs.length || !s.points[s.pairs[0]].length) return;
+    const bounds = {{ radar.bounds | tojson }};
+    const PAIR_AXES = { DxE: ['D', 'E'], DxToF: ['D', 'ToF'], ExToF: ['E', 'ToF'] };
+    s.pairs.forEach(pair => {
+        const [xa, ya] = PAIR_AXES[pair];
+        const byStage = { qual: [], final: [] };
+        s.points[pair].forEach(p => byStage[p.stage].push({ x: p.x, y: p.y }));
+        new Chart(document.getElementById('c-scatter-' + pair), {
+            type: 'scatter',
+            data: {
+                datasets: [
+                    { label: 'Qual', data: byStage.qual,
+                      backgroundColor: 'rgba(27,58,92,0.55)', borderColor: NAVY,
+                      pointRadius: 3, pointHoverRadius: 5 },
+                    { label: 'Final', data: byStage.final,
+                      backgroundColor: 'rgba(190,0,39,0.65)', borderColor: RED,
+                      pointRadius: 3, pointHoverRadius: 5 },
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) =>
+                                `${ctx.dataset.label}: ${xa} ${ctx.parsed.x.toFixed(2)}, ${ya} ${ctx.parsed.y.toFixed(2)}`
+                        }
+                    }
+                },
+                scales: {
+                    x: { min: bounds[xa][0], max: bounds[xa][1], grid: GRID,
+                         title: { display: true, text: xa } },
+                    y: { min: bounds[ya][0], max: bounds[ya][1], grid: GRID,
+                         title: { display: true, text: ya } }
+                }
+            }
+        });
     });
 })();
 

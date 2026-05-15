@@ -366,7 +366,32 @@ datalist { display: none; }
 .kpi-value.dim { color: var(--ink-faint); font-weight: 600; }
 .kpi-hint { font-size: 0.72rem; color: var(--ink-faint); }
 
+/* --- Trade-off scatter small-multiples (issue 0004) --- */
+.scatter-multiples {
+    display: grid;
+    gap: 1rem;
+}
+.scatter-multiples.scatter-3 { grid-template-columns: repeat(3, 1fr); }
+.scatter-multiples.scatter-1 { grid-template-columns: minmax(0, 480px); }
+.scatter-cell { min-width: 0; }
+.scatter-cell-title {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+.panel-title .crashes-caption {
+    margin-left: auto;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+}
+
 @media (max-width: 820px) {
     .panel-grid { grid-template-columns: 1fr; }
     .panel.wide { grid-column: auto; }
+    .scatter-multiples.scatter-3 { grid-template-columns: 1fr; }
 }

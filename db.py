@@ -929,6 +929,77 @@ def radar_data(db_path, given_name, surname, discipline, form_months, now=None):
     }
 
 
+_SCATTER_PAIRS = {
+    'TRA': [('DxE', 'd', 'e'), ('DxToF', 'd', 'tof'), ('ExToF', 'e', 'tof')],
+    'DMT': [('DxE', 'd', 'e')],
+    'TUM': [('DxE', 'd', 'e')],
+}
+
+
+def _stage_label(stage_kind):
+    """Map a raw stage_kind to 'qual' or 'final' (the two scatter colours).
+
+    Qualification stages start with 'Q' (Qualif*, Qualification…). Everything
+    else — Final, Semifinal, Team Final — falls under 'final' (the
+    knockout-pressure bucket the colour communicates).
+    """
+    return 'qual' if (stage_kind or '').startswith('Q') else 'final'
+
+
+def trade_off_scatter(db_path, given_name, surname, discipline, form_months,
+                      now=None):
+    """Trade-off scatter payload for the Depth view (issue 0004).
+
+    Returns ``{pairs, points, crashes_in_window}``. ``pairs`` is
+    ``['DxE', 'DxToF', 'ExToF']`` for TRA and ``['DxE']`` for DMT/TUM.
+    ``points[pair]`` is a list of ``{x, y, stage}`` dicts for completed
+    routines in the form window; crashes are excluded from the cloud and
+    surfaced via ``crashes_in_window`` (CONTEXT.md → Trade-off scatters).
+    """
+    disc = (discipline or '').upper()
+    pair_spec = _SCATTER_PAIRS[disc]
+
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline=disc)
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"SELECT frame_last_start_time_g ts, "
+            f"CAST(frame_nelements AS INTEGER) ne, "
+            f"competition_discipline cd, stage_kind sk, "
+            f"frame_difficultyt_g d, {E_SCORE_SQL} e, t_sigma tof "
+            f"FROM routines WHERE {_BASE_FILTER}{cf}{af} "
+            f"ORDER BY timestamp ASC", cp + ap).fetchall()
+    routines = [{
+        'frame_last_start_time_g': r['ts'],
+        'ne': r['ne'], 'cd': r['cd'], 'sk': r['sk'] or '',
+        'd': r['d'], 'e': r['e'], 'tof': r['tof'],
+    } for r in rows]
+    windowed = form_window.filter_routines(routines, form_months, now=now)
+    crashes_in_window = sum(1 for r in windowed
+                            if routine_classifier.is_crash(r['ne'], r['cd']))
+    completed = [r for r in windowed
+                 if not routine_classifier.is_crash(r['ne'], r['cd'])]
+
+    points = {}
+    for pair, x_key, y_key in pair_spec:
+        pts = []
+        for r in completed:
+            x, y = r[x_key], r[y_key]
+            if x is None or y is None:
+                continue
+            pts.append({
+                'x': round(float(x), 3),
+                'y': round(float(y), 3),
+                'stage': _stage_label(r['sk']),
+            })
+        points[pair] = pts
+    return {
+        'pairs': [p[0] for p in pair_spec],
+        'points': points,
+        'crashes_in_window': crashes_in_window,
+    }
+
+
 def form_and_crash_series(db_path, given_name, surname, discipline):
     """Career-long chronological trend series for the Depth trend panel.
 
