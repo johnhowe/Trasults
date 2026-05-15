@@ -11,7 +11,14 @@
   x-axis with Chart.js dual y-axes (form navy / crashes red), polite empty
   state under 10 routines. New tests cover the consecutive-crash invariant
   (form plateau / crash climb) and panel smoke render.
-- [ ] docs/issues/0003-radar-chart.md
+- [x] docs/issues/0003-radar-chart.md
+  Added `radar_scales` module with calibrated 99th-percentile BOUNDS per
+  (discipline, axis), `bounds_for()`, an inversion helper that folds
+  "lower is better" axes, and a cached `field_median()` driving the grey
+  reference ring. `db.radar_data` returns axes/bounds/field_median plus
+  PB / Top-5 mean / p75 / p50 athlete rings (percentile rings suppressed
+  below n_completed=10). Dashboard radar panel renders five rings via
+  Chart.js with per-axis normalisation to a shared radial scale.
 - [ ] docs/issues/0004-trade-off-scatters.md
 - [ ] docs/issues/0005-heatmap-timeline.md
 - [ ] docs/issues/0006-heatmap-class-summary.md

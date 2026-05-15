@@ -327,3 +327,47 @@ def test_dashboard_form_trend_panel_renders():
     s = db.form_and_crash_series(DB_PATH, 'Dylan', 'Schmidt', 'TRA')
     assert '"form"' in body and '"crash_rate"' in body
     assert len(s['form']) == len(s['crash_rate']) == len(s['dates']) >= 10
+
+
+# --------------------------------------------------------------------------
+# Radar (issue 0003)
+# --------------------------------------------------------------------------
+
+@real_db
+def test_radar_data_payload_uses_absolute_bounds_per_discipline():
+    import radar_scales
+    r = db.radar_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=36)
+    assert r['axes'] == ['D', 'E', 'ToF', 'HD', 'Landing']
+    # Axis bounds are *constants* — never re-derived from the athlete (ADR-0002).
+    expected = {a: list(b) for a, b in radar_scales.bounds_for('TRA').items()}
+    assert r['bounds'] == expected
+    assert set(r['field_median']) == {'D', 'E', 'ToF', 'HD', 'Landing'}
+    assert r['n_completed'] >= 0
+    if r['n_completed']:
+        assert set(r['athlete']['pb']) == {'D', 'E', 'ToF', 'HD', 'Landing'}
+        assert set(r['athlete']['top5_mean']) == {'D', 'E', 'ToF', 'HD', 'Landing'}
+
+
+@real_db
+def test_radar_data_suppresses_percentile_rings_below_threshold():
+    # Tiny window will rarely contain ≥ 10 routines — p75/p50 must drop out
+    # but PB / Top-5 still populate when at least one completed routine exists.
+    r = db.radar_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=1,
+                      now=__import__('datetime').date(2014, 1, 1))
+    if r['n_completed'] < 10:
+        assert r['athlete']['p75'] is None
+        assert r['athlete']['p50'] is None
+
+
+@real_db
+def test_dashboard_radar_panel_renders():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard?given_name=Dylan&surname=Schmidt')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'panel-radar' in body
+    assert 'c-radar' in body
+    # Payload markers — the radar's bounds/axes are surfaced to the chart binding.
+    assert '"axes"' in body and '"bounds"' in body
+    assert '"field_median"' in body

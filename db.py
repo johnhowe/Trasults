@@ -3,6 +3,7 @@ from datetime import datetime
 from statistics import mean, median, stdev, StatisticsError
 
 import form_window
+import radar_scales
 import rolling_form
 import routine_classifier
 
@@ -848,6 +849,83 @@ def form_kpi_data(db_path, given_name, surname, discipline, form_months, now=Non
         'crash_rate': crash_rate,
         'n_in_window': n,
         'n_completed_in_window': n_completed,
+    }
+
+
+def radar_data(db_path, given_name, surname, discipline, form_months, now=None):
+    """Radar payload for the Depth view (issue 0003).
+
+    Returns ``{axes, bounds, field_median, athlete, n_completed, n_in_window}``
+    with every axis value already oriented "larger = better" (inverted-axis
+    folding handled by ``radar_scales.invert``). Computed on completed
+    routines only — crashes are excluded per CONTEXT.md → *Crash*. ``p75`` /
+    ``p50`` are ``None`` when fewer than 10 completed routines fall inside
+    the form window; ``pb`` / ``top5_mean`` still populate if their inputs
+    exist.
+    """
+    disc = (discipline or '').upper()
+    axes = radar_scales.AXES[disc]
+    bounds = radar_scales.bounds_for(disc)
+
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline=disc)
+    axis_cols = [
+        'frame_difficultyt_g', E_SCORE_SQL, 't_sigma', 'h_sigma',
+        'esigma_l', 'CAST(frame_penaltyt AS REAL)',
+    ]
+    select_axes = (
+        f"{axis_cols[0]} d, {axis_cols[1]} e, {axis_cols[2]} tof, "
+        f"{axis_cols[3]} hd, {axis_cols[4]} landing, {axis_cols[5]} penalty"
+    )
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"SELECT frame_last_start_time_g ts, "
+            f"CAST(frame_nelements AS INTEGER) ne, "
+            f"frame_mark_ttt_g total, competition_discipline cd, "
+            f"{select_axes} FROM routines "
+            f"WHERE {_BASE_FILTER}{cf}{af} ORDER BY timestamp ASC",
+            cp + ap).fetchall()
+    routines = [dict(r) for r in rows]
+    for r in routines:
+        r['frame_last_start_time_g'] = r['ts']
+    windowed = form_window.filter_routines(routines, form_months, now=now)
+    completed = [r for r in windowed
+                 if not routine_classifier.is_crash(r['ne'], r['cd'])]
+
+    _AXIS_KEYS = {'D': 'd', 'E': 'e', 'ToF': 'tof', 'HD': 'hd',
+                  'Landing': 'landing', 'Penalty': 'penalty'}
+
+    def _disp(axis, r):
+        raw = r[_AXIS_KEYS[axis]]
+        return radar_scales.invert(axis, float(raw or 0.0), disc)
+
+    n = len(completed)
+    athlete = {'pb': None, 'top5_mean': None, 'p75': None, 'p50': None}
+    if n:
+        athlete['pb'] = {a: round(max(_disp(a, r) for r in completed), 3)
+                         for a in axes}
+        top5 = sorted(completed, key=lambda r: r['total'] or 0.0,
+                      reverse=True)[:5]
+        athlete['top5_mean'] = {
+            a: round(sum(_disp(a, r) for r in top5) / len(top5), 3)
+            for a in axes}
+    if n >= 10:
+        sorted_axes = {a: sorted(_disp(a, r) for r in completed) for a in axes}
+
+        def _pct(vals, p):
+            idx = min(len(vals) - 1, max(0, int(round(p * (len(vals) - 1)))))
+            return round(vals[idx], 3)
+
+        athlete['p75'] = {a: _pct(sorted_axes[a], 0.75) for a in axes}
+        athlete['p50'] = {a: _pct(sorted_axes[a], 0.50) for a in axes}
+
+    return {
+        'axes': axes,
+        'bounds': {a: list(bounds[a]) for a in axes},
+        'field_median': radar_scales.field_median(db_path, disc),
+        'athlete': athlete,
+        'n_completed': n,
+        'n_in_window': len(windowed),
     }
 
 

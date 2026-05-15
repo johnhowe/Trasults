@@ -115,6 +115,34 @@
         </div>
     </section>
 
+    {# ---------------- DEPTH RADAR PANEL (sport-empirical absolute scale, ADR-0002) ---------------- #}
+    <section class="panel wide" id="panel-radar">
+        <div class="panel-title"><h2>Performance shape</h2></div>
+        <p class="panel-sub">
+            Axes anchored at sport-empirical ceilings (99th percentile per
+            {{ discipline }} component) — centre is 0, rim is the calibrated
+            limit. Larger area = stronger performance.
+            <span class="legend-dot" style="background:#9aa1ad"></span>{{ discipline }} field median
+            &middot;
+            <span class="legend-dot" style="background:#be0027"></span>Top-5 mean (headline)
+            &middot;
+            <span class="legend-dot" style="background:#1b3a5c;border:1px dotted #1b3a5c"></span>PB
+            {% if radar.athlete.p75 is not none %}
+            &middot; p75 / p50 of last {{ radar.n_completed }} completed routines
+            {% else %}
+            &middot; <em>p75 / p50 suppressed ({{ radar.n_completed }} completed routines in last {{ form_months }} mo &mdash; need 10)</em>
+            {% endif %}
+        </p>
+        {% if radar.athlete.pb %}
+        <div class="chart-box tall"><canvas id="c-radar"></canvas></div>
+        {% else %}
+        <p class="panel-sub">
+            No completed routines in the last {{ form_months }} mo &mdash; widen
+            the form window to see the radar.
+        </p>
+        {% endif %}
+    </section>
+
     {# ---------------- DEPTH TREND PANEL (form vs crashes) ---------------- #}
     <section class="panel wide" id="panel-form-trend">
         <div class="panel-title"><h2>Form &amp; crashes trend</h2></div>
@@ -366,6 +394,100 @@ const GRID = { color: "#eceef1" };
 })();
 
 {% if has_athlete %}
+// --- Radar: sport-empirical absolute scale (issue 0003, ADR-0002) ---
+(function () {
+    const r = {{ radar | tojson }};
+    if (!r.athlete || !r.athlete.pb) return;
+    const labels = r.axes;
+    const axisMax = Math.max(...labels.map(a => r.bounds[a][1]));
+    // Normalise each axis to its own ceiling so the dial is unit-circular
+    // (Chart.js radar has a single shared radial scale). We map every value
+    // into [0, axisMax] by `value * (axisMax / per-axis ceiling)`.
+    const norm = labels.map(a => axisMax / r.bounds[a][1]);
+    const project = (ring) => labels.map((a, i) => ring[a] * norm[i]);
+
+    const datasets = [
+        {
+            label: 'Field median',
+            data: project(r.field_median),
+            borderColor: '#9aa1ad',
+            backgroundColor: 'rgba(154,161,173,0.05)',
+            borderDash: [3, 3],
+            pointRadius: 0,
+            borderWidth: 1.5,
+        },
+    ];
+    if (r.athlete.p50) {
+        datasets.push({
+            label: 'p50',
+            data: project(r.athlete.p50),
+            borderColor: NAVY,
+            backgroundColor: 'rgba(27,58,92,0.0)',
+            borderDash: [4, 4],
+            pointRadius: 0,
+            borderWidth: 1,
+        });
+    }
+    if (r.athlete.p75) {
+        datasets.push({
+            label: 'p75',
+            data: project(r.athlete.p75),
+            borderColor: NAVY,
+            backgroundColor: 'rgba(27,58,92,0.0)',
+            pointRadius: 0,
+            borderWidth: 1,
+        });
+    }
+    datasets.push({
+        label: 'Top-5 mean',
+        data: project(r.athlete.top5_mean),
+        borderColor: RED,
+        backgroundColor: 'rgba(190,0,39,0.18)',
+        pointRadius: 2.5,
+        borderWidth: 2,
+        fill: true,
+    });
+    datasets.push({
+        label: 'PB',
+        data: project(r.athlete.pb),
+        borderColor: NAVY,
+        backgroundColor: 'rgba(27,58,92,0.0)',
+        borderDash: [2, 3],
+        pointRadius: 1.5,
+        borderWidth: 1.5,
+    });
+
+    new Chart(document.getElementById('c-radar'), {
+        type: 'radar',
+        data: { labels: labels, datasets: datasets },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'top' },
+                tooltip: {
+                    callbacks: {
+                        label: (ctx) => {
+                            // Undo the normalisation when displaying.
+                            const axis = labels[ctx.dataIndex];
+                            const v = ctx.parsed.r / norm[ctx.dataIndex];
+                            return `${ctx.dataset.label}: ${v.toFixed(2)} (${axis} 0..${r.bounds[axis][1]})`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    min: 0, max: axisMax,
+                    ticks: { display: false, stepSize: axisMax / 4 },
+                    grid: { color: '#dde0e6' },
+                    angleLines: { color: '#dde0e6' },
+                    pointLabels: { font: { size: 12 } },
+                }
+            }
+        }
+    });
+})();
+
 // --- Form & crashes trend (issue 0002) ---
 (function () {
     const t = {{ form_trend | tojson }};
