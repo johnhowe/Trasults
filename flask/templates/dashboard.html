@@ -48,6 +48,14 @@
             <input type="text" id="cmp_surname" name="cmp_surname" value="{{ cmp_surname }}"
                    placeholder="surname" autocomplete="off">
         </div>
+        <div class="field form-window-field">
+            <label for="form_months">Form window</label>
+            <select id="form_months" name="form_months" class="narrow">
+                {% for m in [3, 6, 12, 18, 24, 36] %}
+                <option value="{{ m }}" {% if form_months == m %}selected{% endif %}>{{ m }} mo</option>
+                {% endfor %}
+            </select>
+        </div>
         {% if discipline %}<input type="hidden" name="discipline" value="{{ discipline }}">{% endif %}
         <button type="submit">Analyse</button>
         <a class="reset" href="{{ url_for('dashboard') }}">Clear</a>
@@ -61,7 +69,7 @@
     {# ---------------- ATHLETE STATE ---------------- #}
     <nav class="disc-tabs">
         {% for d in disciplines %}
-        <a href="{{ url_for('dashboard', given_name=given_name, surname=surname, discipline=d, year_from=year_from, year_to=year_to, cmp_given=cmp_given, cmp_surname=cmp_surname) }}"
+        <a href="{{ url_for('dashboard', given_name=given_name, surname=surname, discipline=d, year_from=year_from, year_to=year_to, cmp_given=cmp_given, cmp_surname=cmp_surname, form_months=form_months) }}"
            class="{{ 'active' if d == discipline }}">{{ d }}</a>
         {% endfor %}
     </nav>
@@ -79,6 +87,33 @@
         <div class="stat"><span class="k">Cohort filter</span><span class="v">{{ year_from or '…' }}&ndash;{{ year_to or '…' }}</span></div>
         {% endif %}
     </div>
+
+    {# ---------------- DEPTH KPI ROW (form window) ---------------- #}
+    <section class="depth-kpis" aria-label="Form window KPIs">
+        <div class="kpi" id="kpi-form-indicator">
+            <span class="kpi-label">Form indicator</span>
+            {% if form_kpi.form_indicator is none %}
+            <span class="kpi-value dim">&mdash;</span>
+            <span class="kpi-hint">Need &ge; 3 completed routines in the last {{ form_months }} mo
+                ({{ form_kpi.n_completed_in_window }} so far)</span>
+            {% else %}
+            <span class="kpi-value">{{ '%.3f'|format(form_kpi.form_indicator) }}</span>
+            <span class="kpi-hint">best 3 of last {{ [form_kpi.n_completed_in_window, 10]|min }} completed
+                &middot; last {{ form_months }} mo</span>
+            {% endif %}
+        </div>
+        <div class="kpi" id="kpi-crash-rate">
+            <span class="kpi-label">Crash rate</span>
+            {% if form_kpi.n_in_window %}
+            <span class="kpi-value">{{ '%.0f'|format(100 * form_kpi.crash_rate) }}<span class="unit">%</span></span>
+            <span class="kpi-hint">{{ form_kpi.n_in_window - form_kpi.n_completed_in_window }}
+                of {{ form_kpi.n_in_window }} routines crashed &middot; last {{ form_months }} mo</span>
+            {% else %}
+            <span class="kpi-value dim">&mdash;</span>
+            <span class="kpi-hint">No routines in the last {{ form_months }} mo</span>
+            {% endif %}
+        </div>
+    </section>
 
     <div class="panel-grid">
 

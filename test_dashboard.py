@@ -4,9 +4,11 @@ Pure-logic tests run in-memory. Integration tests run against the real
 trasults.db and are skipped if it is absent.
 """
 
+import importlib.util
 import os
 import sqlite3
 import statistics
+import sys
 
 import pytest
 
@@ -261,3 +263,34 @@ def test_judge_panel_variance_event_mode():
     for r in pv['routines']:
         assert len(r['judges']) == 6
         assert r['spread'] == pytest.approx(max(r['judges']) - min(r['judges']), abs=0.05)
+
+
+# --------------------------------------------------------------------------
+# Form-window KPI tile smoke test (issue 0001)
+# --------------------------------------------------------------------------
+
+def _load_flask_app():
+    """Load flask/flask_app.py via importlib to avoid the project's flask/
+    directory shadowing the real Flask package on sys.path. Registers the
+    module in sys.modules so Flask can resolve its template/static folder
+    via __name__ -> __file__."""
+    name = 'trasults_flask_app'
+    if name in sys.modules:
+        return sys.modules[name].app
+    path = os.path.join(os.path.dirname(__file__), 'flask', 'flask_app.py')
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module.app
+
+
+@real_db
+def test_dashboard_form_kpi_tiles_render():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard?given_name=Dylan&surname=Schmidt&form_months=12')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'kpi-form-indicator' in body
+    assert 'kpi-crash-rate' in body

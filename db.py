@@ -2,6 +2,9 @@ import sqlite3
 from datetime import datetime
 from statistics import mean, median, stdev, StatisticsError
 
+import form_window
+import routine_classifier
+
 
 def build_query(params: dict) -> tuple:
     """Build a parameterized SQL query from a params dict.
@@ -800,3 +803,48 @@ def judge_panel_variance(db_path, event_title=None, discipline=None,
                 'routine_count': r['n'],
             } for r in rows],
         }
+
+
+def form_kpi_data(db_path, given_name, surname, discipline, form_months, now=None):
+    """KPI tile payload for the Depth view's form window.
+
+    Returns {form_indicator, crash_rate, n_in_window, n_completed_in_window}:
+      - form_indicator: mean of the best 3 routine totals among the last 10
+        *completed* (non-crash) routines in the window. None when fewer than
+        3 completed routines fall inside the window.
+      - crash_rate: share of crashes among all routines in the window.
+    """
+    disc = (discipline or '').upper()
+    af, ap = _athlete_filter(given_name, surname)
+    cf, cp = cohort_filter(discipline=disc)
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            f"SELECT frame_last_start_time_g ts, "
+            f"CAST(frame_nelements AS INTEGER) ne, "
+            f"frame_mark_ttt_g total, competition_discipline disc "
+            f"FROM routines WHERE {_BASE_FILTER}{cf}{af} "
+            f"ORDER BY timestamp ASC", cp + ap).fetchall()
+
+    routines = [{
+        'frame_last_start_time_g': r['ts'],
+        'ne': r['ne'],
+        'total': float(r['total'] or 0.0),
+        'disc': r['disc'],
+    } for r in rows]
+    windowed = form_window.filter_routines(routines, form_months, now=now)
+    crashes = [routine_classifier.is_crash(r['ne'], r['disc']) for r in windowed]
+    completed_totals = [r['total'] for r, c in zip(windowed, crashes) if not c]
+    n = len(windowed)
+    n_completed = len(completed_totals)
+    if n_completed < 3:
+        form_indicator = None
+    else:
+        last10 = completed_totals[-10:]
+        form_indicator = round(sum(sorted(last10, reverse=True)[:3]) / 3, 3)
+    crash_rate = round(sum(crashes) / n, 4) if n else 0.0
+    return {
+        'form_indicator': form_indicator,
+        'crash_rate': crash_rate,
+        'n_in_window': n,
+        'n_completed_in_window': n_completed,
+    }
