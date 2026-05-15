@@ -6,3 +6,5 @@ __pycache__/
 .venv/
 .pytest_cache/
 flask_session/
+CoP 2025-2028-Sept.pdf
+implement-issues.sh
