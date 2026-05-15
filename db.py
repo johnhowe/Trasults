@@ -2,10 +2,11 @@ import sqlite3
 from datetime import datetime
 from statistics import mean, median, stdev, StatisticsError
 
-import form_window
+import lookback_window
 import radar_scales
-import rolling_form
+import rolling_peak
 import routine_classifier
+import routine_gender
 
 
 def build_query(params: dict) -> tuple:
@@ -83,22 +84,15 @@ def build_query(params: dict) -> tuple:
         query += " AND competition_title LIKE ?"
         qparams.append(f"%{params['level']}%")
 
-    female_terms = ["fem", "wom", "gir", "ladies", r"\bf\)", "flickor", "女",
-                    "Дев", "Женщины", "Юниорки", "tytöt", "dam", "töt", "naiset", "tüdrukud"]
-    not_female_terms = [" men", " male", "мужчины", "мужчины и женщины", "&m"]
-
     if params.get('female'):
-        female_conditions = " OR ".join([f"competition_title LIKE ?" for _ in female_terms])
-        not_female_conditions = " AND ".join([f"competition_title NOT LIKE ?" for _ in not_female_terms])
-        query += f" AND ({female_conditions})"
-        qparams.extend([f"%{t}%" for t in female_terms])
-        query += f" AND ({not_female_conditions})"
-        qparams.extend([f"%{t}%" for t in not_female_terms])
+        frag, fparams = routine_gender.gender_filter_sql('F')
+        query += " AND " + frag
+        qparams.extend(fparams)
 
     if params.get('male'):
-        male_conditions = " AND ".join([f"competition_title NOT LIKE ?" for _ in female_terms])
-        query += f" AND ({male_conditions})"
-        qparams.extend([f"%{t}%" for t in female_terms])
+        frag, fparams = routine_gender.gender_filter_sql('M')
+        query += " AND " + frag
+        qparams.extend(fparams)
 
     return query, qparams
 
@@ -807,11 +801,12 @@ def judge_panel_variance(db_path, event_title=None, discipline=None,
         }
 
 
-def form_kpi_data(db_path, given_name, surname, discipline, form_months, now=None):
-    """KPI tile payload for the Depth view's form window.
+def lookback_kpi_data(db_path, given_name, surname, discipline, lookback_months,
+                      now=None):
+    """KPI tile payload for the Depth view's lookback window.
 
-    Returns {form_indicator, crash_rate, n_in_window, n_completed_in_window}:
-      - form_indicator: mean of the best 3 routine totals among the last 10
+    Returns {rolling_peak, crash_rate, n_in_window, n_completed_in_window}:
+      - rolling_peak: mean of the best 3 routine totals among the last 10
         *completed* (non-crash) routines in the window. None when fewer than
         3 completed routines fall inside the window.
       - crash_rate: share of crashes among all routines in the window.
@@ -833,26 +828,27 @@ def form_kpi_data(db_path, given_name, surname, discipline, form_months, now=Non
         'total': float(r['total'] or 0.0),
         'disc': r['disc'],
     } for r in rows]
-    windowed = form_window.filter_routines(routines, form_months, now=now)
+    windowed = lookback_window.filter_routines(routines, lookback_months, now=now)
     crashes = [routine_classifier.is_crash(r['ne'], r['disc']) for r in windowed]
     completed_totals = [r['total'] for r, c in zip(windowed, crashes) if not c]
     n = len(windowed)
     n_completed = len(completed_totals)
     if n_completed < 3:
-        form_indicator = None
+        peak = None
     else:
         last10 = completed_totals[-10:]
-        form_indicator = round(sum(sorted(last10, reverse=True)[:3]) / 3, 3)
+        peak = round(sum(sorted(last10, reverse=True)[:3]) / 3, 3)
     crash_rate = round(sum(crashes) / n, 4) if n else 0.0
     return {
-        'form_indicator': form_indicator,
+        'rolling_peak': peak,
         'crash_rate': crash_rate,
         'n_in_window': n,
         'n_completed_in_window': n_completed,
     }
 
 
-def radar_data(db_path, given_name, surname, discipline, form_months, now=None):
+def radar_data(db_path, given_name, surname, discipline, lookback_months,
+               now=None):
     """Radar payload for the Depth view (issue 0003).
 
     Returns ``{axes, bounds, field_median, athlete, n_completed, n_in_window}``
@@ -860,8 +856,8 @@ def radar_data(db_path, given_name, surname, discipline, form_months, now=None):
     folding handled by ``radar_scales.invert``). Computed on completed
     routines only — crashes are excluded per CONTEXT.md → *Crash*. ``p75`` /
     ``p50`` are ``None`` when fewer than 10 completed routines fall inside
-    the form window; ``pb`` / ``top5_mean`` still populate if their inputs
-    exist.
+    the lookback window; ``pb`` / ``top5_mean`` still populate if their
+    inputs exist.
     """
     disc = (discipline or '').upper()
     axes = radar_scales.AXES[disc]
@@ -888,7 +884,7 @@ def radar_data(db_path, given_name, surname, discipline, form_months, now=None):
     routines = [dict(r) for r in rows]
     for r in routines:
         r['frame_last_start_time_g'] = r['ts']
-    windowed = form_window.filter_routines(routines, form_months, now=now)
+    windowed = lookback_window.filter_routines(routines, lookback_months, now=now)
     completed = [r for r in windowed
                  if not routine_classifier.is_crash(r['ne'], r['cd'])]
 
@@ -946,15 +942,15 @@ def _stage_label(stage_kind):
     return 'qual' if (stage_kind or '').startswith('Q') else 'final'
 
 
-def trade_off_scatter(db_path, given_name, surname, discipline, form_months,
+def trade_off_scatter(db_path, given_name, surname, discipline, lookback_months,
                       now=None):
     """Trade-off scatter payload for the Depth view (issue 0004).
 
     Returns ``{pairs, points, crashes_in_window}``. ``pairs`` is
     ``['DxE', 'DxToF', 'ExToF']`` for TRA and ``['DxE']`` for DMT/TUM.
     ``points[pair]`` is a list of ``{x, y, stage}`` dicts for completed
-    routines in the form window; crashes are excluded from the cloud and
-    surfaced via ``crashes_in_window`` (CONTEXT.md → Trade-off scatters).
+    routines in the lookback window; crashes are excluded from the cloud
+    and surfaced via ``crashes_in_window`` (CONTEXT.md → Trade-off scatters).
     """
     disc = (discipline or '').upper()
     pair_spec = _SCATTER_PAIRS[disc]
@@ -974,7 +970,7 @@ def trade_off_scatter(db_path, given_name, surname, discipline, form_months,
         'ne': r['ne'], 'cd': r['cd'], 'sk': r['sk'] or '',
         'd': r['d'], 'e': r['e'], 'tof': r['tof'],
     } for r in rows]
-    windowed = form_window.filter_routines(routines, form_months, now=now)
+    windowed = lookback_window.filter_routines(routines, lookback_months, now=now)
     crashes_in_window = sum(1 for r in windowed
                             if routine_classifier.is_crash(r['ne'], r['cd']))
     completed = [r for r in windowed
@@ -1000,13 +996,13 @@ def trade_off_scatter(db_path, given_name, surname, discipline, form_months,
     }
 
 
-def heatmap_timeline(db_path, given_name, surname, discipline, form_months,
+def heatmap_timeline(db_path, given_name, surname, discipline, lookback_months,
                      now=None):
     """Skill × routine timeline payload for the Depth view (issue 0005).
 
     Returns ``{skills, columns, n_routines}`` where ``skills`` is
     ``['S1', ..., 'SN']`` (N per :data:`DISCIPLINE_SKILLS`), and ``columns`` is
-    one entry per **completed** routine in the form window, ordered by
+    one entry per **completed** routine in the lookback window, ordered by
     timestamp ascending. Each column carries its date, D-score, an
     ``is_compulsory`` flag (TRA-only — always ``False`` for DMT/TUM), and the
     per-skill deductions as floats. Crashes are excluded entirely (CONTEXT.md
@@ -1029,7 +1025,7 @@ def heatmap_timeline(db_path, given_name, surname, discipline, form_months,
     routines = [dict(r) for r in rows]
     for r in routines:
         r['frame_last_start_time_g'] = r['ts']
-    windowed = form_window.filter_routines(routines, form_months, now=now)
+    windowed = lookback_window.filter_routines(routines, lookback_months, now=now)
     completed = [r for r in windowed
                  if not routine_classifier.is_crash(r['ne'], r['cd'])]
 
@@ -1077,8 +1073,8 @@ def _class_column_index(stage_kind, is_compulsory, discipline):
     return None
 
 
-def heatmap_class_summary(db_path, given_name, surname, discipline, form_months,
-                          now=None):
+def heatmap_class_summary(db_path, given_name, surname, discipline,
+                          lookback_months, now=None):
     """Skill × routine-class summary payload for the Depth view (issue 0006).
 
     Returns ``{rows, columns, cells, counts}``:
@@ -1087,9 +1083,9 @@ def heatmap_class_summary(db_path, given_name, surname, discipline, form_months,
         'Voluntary Final']`` for TRA; ``['Qual', 'Semi', 'Final']`` for
         DMT/TUM.
       - ``cells[skill_idx][col_idx]``: mean deduction for that
-        (skill position, class) across the form-window's completed routines,
-        or ``None`` when no routine fell into that class (distinguishable from
-        a true zero-deduction cell).
+        (skill position, class) across the lookback-window's completed
+        routines, or ``None`` when no routine fell into that class
+        (distinguishable from a true zero-deduction cell).
       - ``counts[col_idx]``: number of completed routines in each class.
 
     Crashes are excluded entirely (CONTEXT.md → Skill heatmaps), and TRA's
@@ -1115,7 +1111,7 @@ def heatmap_class_summary(db_path, given_name, surname, discipline, form_months,
     routines = [dict(r) for r in rows]
     for r in routines:
         r['frame_last_start_time_g'] = r['ts']
-    windowed = form_window.filter_routines(routines, form_months, now=now)
+    windowed = lookback_window.filter_routines(routines, lookback_months, now=now)
     completed = [r for r in windowed
                  if not routine_classifier.is_crash(r['ne'], r['cd'])]
 
@@ -1155,14 +1151,14 @@ def heatmap_class_summary(db_path, given_name, surname, discipline, form_months,
     }
 
 
-def form_and_crash_series(db_path, given_name, surname, discipline):
+def rolling_peak_and_crash_series(db_path, given_name, surname, discipline):
     """Career-long chronological trend series for the Depth trend panel.
 
-    Returns {'dates', 'form', 'crash_rate'} — three parallel arrays, one
+    Returns {'dates', 'peak', 'crash_rate'} — three parallel arrays, one
     entry per published routine for this athlete in this discipline, ordered
-    by timestamp ASC. `form[i]` is None where fewer than 3 completed routines
+    by timestamp ASC. `peak[i]` is None where fewer than 3 completed routines
     are available in the trailing 10, so a string of crashes plateaus the
-    form line instead of collapsing it (user story 11).
+    rolling-peak line instead of collapsing it (user story 11).
     """
     disc = (discipline or '').upper()
     af, ap = _athlete_filter(given_name, surname)
@@ -1177,10 +1173,10 @@ def form_and_crash_series(db_path, given_name, surname, discipline):
     totals = [float(r['total'] or 0.0) for r in rows]
     crashes = [routine_classifier.is_crash(r['ne'], r['disc']) for r in rows]
     dates = [(r['ts'] or '')[:10] for r in rows]
-    forms = rolling_form.best_n_of_last_k(totals, crashes)
-    rates = rolling_form.crash_rate_last_k(crashes)
+    peaks = rolling_peak.best_n_of_last_k(totals, crashes)
+    rates = rolling_peak.crash_rate_last_k(crashes)
     return {
         'dates': dates,
-        'form': [round(v, 3) if v is not None else None for v in forms],
+        'peak': [round(v, 3) if v is not None else None for v in peaks],
         'crash_rate': [round(v, 4) for v in rates],
     }
