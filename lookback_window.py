@@ -1,4 +1,4 @@
-"""Form window — past N months from `now` for athlete-scoped recency.
+"""Lookback window — past N months from `now` for athlete-scoped recency.
 
 Distinct from the cohort filter (ADR-0001). The cohort filter emits SQL
 fragments and bounds the comparison population; this module filters routine
@@ -10,7 +10,7 @@ from datetime import date, datetime
 
 
 def parse_months(param, default=12):
-    """Normalise the ?form_months URL query parameter. Anything missing,
+    """Normalise the ?lookback_months URL query parameter. Anything missing,
     malformed, zero, or negative falls back to `default`."""
     if param is None:
         return default

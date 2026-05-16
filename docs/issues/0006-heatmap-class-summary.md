@@ -11,11 +11,11 @@ The **Skill heatmaps → Heatmap B (class summary)** view from CONTEXT.md. Rows 
 - TRA: **Compulsory**, **Voluntary Qual**, **Voluntary Semi**, **Voluntary Final** (4 columns).
 - DMT / TUM: **Qual**, **Semi**, **Final** (3 columns — no compulsory split in those disciplines).
 
-Cell = mean deduction at that (skill position, routine class) across the form window's completed routines. This is the "where the athlete is lacking, for each kind of routine" view that pairs with the timeline heatmap.
+Cell = mean deduction at that (skill position, routine class) across the lookback window's completed routines. This is the "where the athlete is lacking, for each kind of routine" view that pairs with the timeline heatmap.
 
 Reuses the `chartjs-chart-matrix` plugin loaded by slice #5 and the same red-heat colour ramp for visual consistency. Empty cells (a class with no routines in the window) render as a neutral grey, not pure white, so the absence is distinguishable from "deduction = 0".
 
-A shallow `heatmap_class_summary(db_path, given_name, surname, discipline, form_months)` helper returns `{rows: [...], columns: [...], cells: [[mean_deduction | None, ...], ...], counts: [...]}`. `counts` carries the n per column so a tiny-sample class can be visually de-emphasised.
+A shallow `heatmap_class_summary(db_path, given_name, surname, discipline, lookback_months)` helper returns `{rows: [...], columns: [...], cells: [[mean_deduction | None, ...], ...], counts: [...]}`. `counts` carries the n per column so a tiny-sample class can be visually de-emphasised.
 
 ## Acceptance criteria
 

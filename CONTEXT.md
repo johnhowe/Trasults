@@ -43,16 +43,26 @@ Canonical UI labels are the abbreviations; full names live in tooltips.
 - **Cohort** — the comparison population a selected athlete is measured against:
   all routines of a discipline, optionally narrowed by a year range and/or stage
   (`cohort_filter` in `db.py`). Every athlete-vs-field panel uses a cohort.
-- **Frontier** — for difficulty inflation, the mean D-score of the *top N* hardest
-  routines in a season. Used instead of a plain seasonal mean because the dataset's
-  population changes year to year (see Data caveats), so a mean tracks population
-  change, not difficulty; the frontier is robust to that dilution.
+- **Frontier** — the mean of a metric's *top N* values in a season, ranked
+  **within each (discipline, gender) partition**. Two metrics carry frontiers:
+  D-score (difficulty inflation) and ToF (TRA only — air-time inflation).
+  Used instead of a plain seasonal mean because the dataset's population
+  changes year to year (see Data caveats), so a mean tracks population
+  change, not capability; the top-N frontier is robust to that dilution.
+  The partition is load-bearing: men's elite D is consistently above
+  women's, so a global top-N would produce a near-empty women's frontier —
+  ranking within each gender yields equally-sized buckets and lets both
+  stories emerge. Implementation owns this in the SQL window function
+  (`PARTITION BY yr, discipline, gender`); see [[Gender]] for the inference
+  rule. `top_n = 50` is fixed for v1. Surfaced on the overview page (no
+  athlete selected) as the **Elite frontiers** 2×2 grid: rows = metric
+  (D / ToF), columns = gender (M / F).
 - **Radar** — the athlete-overview chart with one axis per score component:
   TRA = D, E, ToF, HD, Landing; DMT/TUM = D, E, Landing, Penalty. Penalty is its
   own axis on DMT/TUM where penalties are routine, but folded into Landing on
   TRA where they're rare. "Lower is better" axes (Landing, Penalty) are inverted
   so larger area always means stronger performance. Computed on **completed
-  routines only**, scoped to the **form window** (not the cohort filter).
+  routines only**, scoped to the **lookback window** (not the cohort filter).
   Axes share one absolute scale: **centre = 0, outer edge = sport-empirical
   ceiling** (calibrated once from the dataset's 99th-percentile per discipline).
   A static **field-median ring** is drawn as a grey reference so an athlete who
@@ -61,24 +71,28 @@ Canonical UI labels are the abbreviations; full names live in tooltips.
   **Top-5 mean** (axes averaged over the athlete's 5 best routines by total
   score — the filled headline ring), **p75**, **p50**. Percentile rings need a
   minimum window sample (n ≥ 10) and are suppressed below that.
-- **Cohort filter** vs **form window** — two different time concepts. The cohort
-  filter (year_from/year_to) bounds the comparison population for cross-athlete
-  panels (deduction profile, decomposition, qual-vs-final). The form window
-  (past N months, athlete-scoped) bounds the radar and rolling best-of-N
-  indicators — "how is the athlete looking right now." They are independent
-  controls and should not be conflated in code or UI copy.
-- **Form indicator** — mean of an athlete's **best 3 routine totals from their
+- **Cohort filter** vs **lookback window** — two different time concepts. The
+  cohort filter (year_from/year_to) bounds the comparison population for
+  cross-athlete panels (deduction profile, decomposition, qual-vs-final). The
+  lookback window (past N months, athlete-scoped) bounds the radar and the
+  rolling best-of-N indicators — "how is the athlete looking right now." They
+  are independent controls and should not be conflated in code or UI copy.
+  Avoid the word "form" for the time window: in trampoline judging "form"
+  means execution body-shape, which is a separate concept (E-score, [[E-score (E)]]).
+- **Rolling peak** — mean of an athlete's **best 3 routine totals from their
   last 10 completed routines** (`frame_mark_ttt_g`). 3-of-10 is fixed for v1.
-  Surfaced two ways: a KPI tile showing the current value within the form
-  window, and a trend line plotting the rolling indicator across the athlete's
+  Surfaced two ways: a KPI tile showing the current value within the lookback
+  window, and a trend line plotting the rolling series across the athlete's
   full career so peaks/slumps/plateaus are visible. Computed on completed
   routines only — crashes are excluded from the "best 3" pool, so a string of
-  crashes shows up as a stalled trend line, not a collapsed one.
-- **Crash rate** — share of crashes (per [[Crash]]) in the **form window** for
-  the KPI tile, and **crashes per last 10 routines** as a rolling line over the
-  athlete's career. The rolling line shares its window with the form indicator
-  so the two trends pair visually: form going up = good, crashes going up = bad.
-  No coloured thresholds — the line is the signal.
+  crashes shows up as a stalled trend line, not a collapsed one. Deliberately
+  *not* called "form": that word collides with the execution-form meaning of
+  E-score, and this metric is a routine-total summary, not an execution one.
+- **Crash rate** — share of crashes (per [[Crash]]) in the **lookback window**
+  for the KPI tile, and **crashes per last 10 routines** as a rolling line over
+  the athlete's career. The rolling line shares its window with the rolling
+  peak so the two trends pair visually: peak going up = good, crashes going up
+  = bad. No coloured thresholds — the line is the signal.
 - **Trade-off scatters** — small-multiples view of pairwise component
   relationships, one dot per completed routine, coloured by stage (qual/final).
   TRA shows three: **D×E**, **D×ToF**, **E×ToF**. DMT/TUM show **D×E** only.
@@ -115,6 +129,26 @@ Canonical UI labels are the abbreviations; full names live in tooltips.
   metrics (crash rate, longest clean streak) use **all routines**. This split
   prevents a few crashes from distorting performance averages while still
   surfacing crash frequency as its own signal.
+
+## Inference rules
+
+- **Gender** — `routine_gender.infer(competition_title) -> 'M' | 'F'`.
+  Inferred via a multilingual **strict-female lexicon** plus a small
+  **male-override** list to disambiguate mixed wording. Strict-F prefixes
+  (`fem`, `wom`, `gir`, `ladies`) cover Romance languages too because they
+  match `Feminino` (PT), `Femenil/Femenino` (ES), `Féminin/Femmes` (FR),
+  etc. Non-prefix entries cover Russian (`Дев`, `Женщины`, `Юниорки`),
+  Japanese (`女`), Finnish (`tytöt`, `naiset`), Danish (`dam`), Swedish
+  (`flickor`), Estonian (`tüdrukud`), plus a partial `töt`. Anything not
+  matching F falls through to `'M'`. Two-state (no `None`) because at the
+  top of the D-score distribution untagged routines are overwhelmingly
+  male, so the fallback is empirically safe **as long as the female lexicon
+  stays comprehensive**. Adding a language to the lexicon is the only
+  maintenance touchpoint; silent under-coverage of F mis-tags women's
+  routines as male. The module exposes both a SQL `CASE` expression
+  (`gender_case_sql`) for `PARTITION BY` use and a Python `infer` for
+  per-routine inference / tests. The CLI/web `--female` / `--male`
+  filters and the [[Frontier]] queries share this single lexicon.
 
 ## Data caveats
 

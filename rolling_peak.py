@@ -1,4 +1,4 @@
-"""Pure-functional rolling-form math.
+"""Pure-functional rolling-peak math.
 
 Operates on parallel chronological arrays. The caller orders the routines
 and supplies the crash flag for each.
@@ -7,7 +7,7 @@ and supplies the crash flag for each.
 
 def best_n_of_last_k(totals, crashes, n=3, k=10):
     """At each index i, mean of the top `n` among the last `k` non-crashed
-    totals at or before i.
+    totals at or before i — the **Rolling peak** value (CONTEXT.md).
 
     The window slides over *completed* routines: crashes are dropped, then
     the trailing k completed totals are kept. Returns None where fewer than

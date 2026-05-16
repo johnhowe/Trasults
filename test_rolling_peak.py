@@ -1,17 +1,17 @@
-"""Unit tests for rolling_form."""
+"""Unit tests for rolling_peak."""
 
 import pytest
 
-import rolling_form as rf
+import rolling_peak as rp
 
 
 def test_best_n_of_last_k_below_threshold_emits_none():
-    out = rf.best_n_of_last_k([10.0, 8.0], [False, False], n=3, k=10)
+    out = rp.best_n_of_last_k([10.0, 8.0], [False, False], n=3, k=10)
     assert out == [None, None]
 
 
 def test_best_n_of_last_k_first_eligible_index():
-    out = rf.best_n_of_last_k([10.0, 8.0, 12.0], [False, False, False], n=3, k=10)
+    out = rp.best_n_of_last_k([10.0, 8.0, 12.0], [False, False, False], n=3, k=10)
     assert out[0] is None and out[1] is None
     assert out[2] == pytest.approx(10.0)
 
@@ -20,7 +20,7 @@ def test_best_n_of_last_k_skips_crashes_in_pool():
     # Window draws from completed routines only.
     totals = [10.0, 8.0, 0.0, 12.0]
     crashes = [False, False, True, False]
-    out = rf.best_n_of_last_k(totals, crashes, n=3, k=10)
+    out = rp.best_n_of_last_k(totals, crashes, n=3, k=10)
     # at i=2 only 2 completed -> None
     assert out[2] is None
     # at i=3 completed = [10, 8, 12] -> best 3 = mean = 10.0
@@ -31,7 +31,7 @@ def test_best_n_of_last_k_sliding_window():
     # k=10 over 12 completed routines: window at i=11 is the last 10
     totals = [5.0] * 10 + [100.0, 100.0]
     crashes = [False] * 12
-    out = rf.best_n_of_last_k(totals, crashes, n=3, k=10)
+    out = rp.best_n_of_last_k(totals, crashes, n=3, k=10)
     # at i=11 last 10 completed: 8x5 + 2x100 -> best 3 = (100+100+5)/3
     assert out[11] == pytest.approx((100 + 100 + 5) / 3)
     # at i=9 last 10 completed: 10x5 -> best 3 = 5
@@ -40,7 +40,7 @@ def test_best_n_of_last_k_sliding_window():
 
 def test_crash_rate_last_k_partial_then_full_window():
     crashes = [False, False, True, False, False]
-    out = rf.crash_rate_last_k(crashes, k=10)
+    out = rp.crash_rate_last_k(crashes, k=10)
     assert out[0] == pytest.approx(0.0)
     assert out[1] == pytest.approx(0.0)
     assert out[2] == pytest.approx(1 / 3)
@@ -50,7 +50,7 @@ def test_crash_rate_last_k_partial_then_full_window():
 
 def test_crash_rate_last_k_sliding_window_drops_old_crashes():
     crashes = [True] * 5 + [False] * 10
-    out = rf.crash_rate_last_k(crashes, k=10)
+    out = rp.crash_rate_last_k(crashes, k=10)
     # at i=4 all five so far are crashes -> 1.0
     assert out[4] == pytest.approx(1.0)
     # at i=14 the last 10 are all False
@@ -60,26 +60,26 @@ def test_crash_rate_last_k_sliding_window_drops_old_crashes():
 def test_series_align_at_same_index():
     totals = [10.0, 0.0, 11.0, 12.0]
     crashes = [False, True, False, False]
-    forms = rf.best_n_of_last_k(totals, crashes, n=3, k=10)
-    rates = rf.crash_rate_last_k(crashes, k=10)
-    assert len(forms) == len(rates) == 4
+    peaks = rp.best_n_of_last_k(totals, crashes, n=3, k=10)
+    rates = rp.crash_rate_last_k(crashes, k=10)
+    assert len(peaks) == len(rates) == 4
 
 
-def test_consecutive_crashes_stall_form_and_climb_crash_rate():
-    """User story 11: a run of crashes must NOT collapse the form line.
-    Crashes are dropped from the form pool, so the form indicator plateaus
+def test_consecutive_crashes_stall_peak_and_climb_crash_rate():
+    """User story 11: a run of crashes must NOT collapse the rolling-peak line.
+    Crashes are dropped from the peak pool, so the rolling peak plateaus
     on the last good window; crash rate climbs monotonically across the run.
     """
     totals = [10.0, 10.5, 11.0, 10.8, 11.2] + [0.0] * 5
     crashes = [False] * 5 + [True] * 5
-    forms = rf.best_n_of_last_k(totals, crashes, n=3, k=10)
-    rates = rf.crash_rate_last_k(crashes, k=10)
+    peaks = rp.best_n_of_last_k(totals, crashes, n=3, k=10)
+    rates = rp.crash_rate_last_k(crashes, k=10)
 
-    last_good = forms[4]
+    last_good = peaks[4]
     assert last_good is not None
     for i in range(5, 10):
-        assert forms[i] == pytest.approx(last_good), \
-            f"form collapsed at index {i}: {forms[i]} vs plateau {last_good}"
+        assert peaks[i] == pytest.approx(last_good), \
+            f"peak collapsed at index {i}: {peaks[i]} vs plateau {last_good}"
 
     assert rates[4] == pytest.approx(0.0)
     for i in range(4, 9):
