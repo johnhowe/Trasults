@@ -1001,14 +1001,36 @@ const HEAT_EMPTY = '#e2e4e8';   // neutral grey for "no routines in this class"
 {% endif %}
 
 {% if frontier_d is defined %}
-// --- Elite frontiers 2×2 (issue 0008, ADR-0004) ---
+// --- Elite frontiers 2×2 (issue 0008, ADR-0004; click-through #0010) ---
 (function () {
     const fd = {{ frontier_d | tojson }};
     const ft = {{ frontier_tof | tojson }};
     const discColor = { TRA: RED, DMT: NAVY, TUM: TEAL };
 
+    function frontierClickHandler(metric, gender, years, datasetDisciplines) {
+        // metric and gender are closed over at chart-init time so they stay
+        // correct regardless of how Chart.js orders or relabels datasets
+        // later. discipline comes from the dataset slot for D-charts (TRA /
+        // DMT / TUM) and is hard-coded to 'TRA' for ToF-charts (issue 0010).
+        return function (evt, _activeEls, chart) {
+            const hits = chart.getElementsAtEventForMode(
+                evt, 'nearest', { intersect: true }, true);
+            if (!hits.length) return;          // null data points fall through.
+            const { datasetIndex, index } = hits[0];
+            const discipline = datasetDisciplines[datasetIndex];
+            const year = years[index];
+            if (year == null || discipline == null) return;
+            const qs = new URLSearchParams({
+                metric: metric, year: year,
+                discipline: discipline, gender: gender,
+            });
+            window.location.href = '/frontier?' + qs.toString();
+        };
+    }
+
     function drawD(canvasId, gender, yTitle) {
-        const datasets = ['TRA', 'DMT', 'TUM'].map(disc => ({
+        const disciplines = ['TRA', 'DMT', 'TUM'];
+        const datasets = disciplines.map(disc => ({
             label: disc, data: fd.series[gender][disc],
             borderColor: discColor[disc], backgroundColor: discColor[disc],
             spanGaps: true, tension: 0.25, borderWidth: 2, pointRadius: 3
@@ -1022,7 +1044,8 @@ const HEAT_EMPTY = '#e2e4e8';   // neutral grey for "no routines in this class"
                 scales: {
                     x: { grid: { display: false } },
                     y: { grid: GRID, title: { display: true, text: yTitle } }
-                }
+                },
+                onClick: frontierClickHandler('d', gender, fd.years, disciplines)
             }
         });
     }
@@ -1042,7 +1065,8 @@ const HEAT_EMPTY = '#e2e4e8';   // neutral grey for "no routines in this class"
                 scales: {
                     x: { grid: { display: false } },
                     y: { grid: GRID, title: { display: true, text: yTitle } }
-                }
+                },
+                onClick: frontierClickHandler('tof', gender, ft.years, ['TRA'])
             }
         });
     }

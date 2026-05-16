@@ -942,3 +942,31 @@ def test_dashboard_frontier_route_empty_partition_renders_empty_state():
     assert resp.status_code == 200
     body = resp.get_data(as_text=True)
     assert 'No routines matched this partition' in body
+
+
+# --------------------------------------------------------------------------
+# Frontier chart-point click navigation (issue 0010)
+# --------------------------------------------------------------------------
+
+@real_db
+def test_dashboard_overview_frontier_canvases_have_click_handlers():
+    """Each of the four c-frontier-* canvases gets an onClick handler that
+    routes to /frontier. ToF canvases hard-code discipline=TRA so the
+    tof × DMT 404 from #0009 can never be reached via a chart click."""
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/dashboard')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    # All four canvases render — wiring must cover the whole 2x2 grid.
+    for canvas in ('c-frontier-d-m', 'c-frontier-d-f',
+                   'c-frontier-tof-m', 'c-frontier-tof-f'):
+        assert canvas in body
+    # Both metrics derive metric/gender from canvas init, not user state.
+    assert "frontierClickHandler('d', gender" in body
+    assert "frontierClickHandler('tof', gender" in body
+    # ToF canvases hard-code discipline=['TRA'] — the tof×DMT 404 from
+    # #0009 cannot be reached via a chart click.
+    assert "frontierClickHandler('tof', gender, ft.years, ['TRA'])" in body
+    # The handler navigates to /frontier with derived params.
+    assert "/frontier?" in body

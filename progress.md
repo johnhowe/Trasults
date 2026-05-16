@@ -53,6 +53,19 @@
   honoured. Table-driven tests cover English, Portuguese, Spanish, French,
   German, Russian, Japanese, Finnish, Danish, Swedish, Estonian and Chinese
   titles.
+- [x] docs/issues/0010-frontier-chart-point-clicks.md
+  Wired an `onClick` handler on each of the four `c-frontier-*` canvases
+  via a single `frontierClickHandler(metric, gender, years, disciplines)`
+  factory closed over the canvas's metric/gender at chart-init time (so
+  the wiring stays correct if Chart.js reorders datasets). D-frontier
+  canvases pick discipline from the clicked dataset's slot (TRA / DMT /
+  TUM); ToF-frontier canvases hard-code `['TRA']` so the `tof × non-TRA`
+  404 from #0009 cannot be reached by a click. Uses
+  `chart.getElementsAtEventForMode(..., 'nearest', { intersect: true }, true)`
+  so null/empty data points are a natural no-op. No on-page caption /
+  cursor / tooltip change — deliberate, per issue. New test asserts the
+  handler markers and the ToF discipline-pin are present in the rendered
+  overview page.
 - [x] docs/issues/0009-frontier-routines-drill-down-page.md
   Added `db.frontier_routines(metric, year, discipline, gender, top_n=50)`
   reusing `routine_gender.gender_case_sql()` and `_BASE_FILTER` with the
