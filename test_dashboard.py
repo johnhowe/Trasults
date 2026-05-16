@@ -317,11 +317,33 @@ def _load_flask_app():
     """Load flask/flask_app.py via importlib to avoid the project's flask/
     directory shadowing the real Flask package on sys.path. Registers the
     module in sys.modules so Flask can resolve its template/static folder
-    via __name__ -> __file__."""
+    via __name__ -> __file__.
+
+    The project's flask/ folder has no __init__.py, so under PEP 420 it
+    becomes an implicit namespace package whenever cwd is on sys.path —
+    which then shadows the installed Flask. To work around that, this
+    loader temporarily drops the repo root from sys.path and force-imports
+    the real `flask` / `flask_session` packages before exec'ing the module
+    that does `from flask import …`.
+    """
     name = 'trasults_flask_app'
     if name in sys.modules:
         return sys.modules[name].app
-    path = os.path.join(os.path.dirname(__file__), 'flask', 'flask_app.py')
+    repo_root = os.path.dirname(os.path.abspath(__file__))
+    saved_path = list(sys.path)
+    sys.path[:] = [p for p in sys.path
+                   if os.path.abspath(p) not in ('', repo_root)]
+    # Drop any cached namespace-package shim so the real Flask resolves.
+    for cached in ('flask', 'flask_session'):
+        if cached in sys.modules and getattr(
+                sys.modules[cached], '__file__', None) is None:
+            del sys.modules[cached]
+    try:
+        import flask as _real_flask  # noqa: F401  — populate sys.modules
+        import flask_session as _real_flask_session  # noqa: F401
+    finally:
+        sys.path[:] = saved_path
+    path = os.path.join(repo_root, 'flask', 'flask_app.py')
     spec = importlib.util.spec_from_file_location(name, path)
     module = importlib.util.module_from_spec(spec)
     sys.modules[name] = module
