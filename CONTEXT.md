@@ -56,7 +56,12 @@ Canonical UI labels are the abbreviations; full names live in tooltips.
   (`PARTITION BY yr, discipline, gender`); see [[Gender]] for the inference
   rule. `top_n = 50` is fixed for v1. Surfaced on the overview page (no
   athlete selected) as the **Elite frontiers** 2×2 grid: rows = metric
-  (D / ToF), columns = gender (M / F).
+  (D / ToF), columns = gender (M / F). Each frontier point links to
+  `/frontier?metric=…&year=…&discipline=…&gender=…`, a drill-down table
+  of the underlying top-N routines (one row per routine, ranked desc by
+  the metric) so a reader can sanity-check that the mean isn't dominated
+  by one athlete or one event. Athlete and event names link out to
+  `/athlete` and `/competition` for deeper inspection.
 - **Radar** — the athlete-overview chart with one axis per score component:
   TRA = D, E, ToF, HD, Landing; DMT/TUM = D, E, Landing, Penalty. Penalty is its
   own axis on DMT/TUM where penalties are routine, but folded into Landing on
