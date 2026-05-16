@@ -49,11 +49,11 @@
             <input type="text" id="cmp_surname" name="cmp_surname" value="{{ cmp_surname }}"
                    placeholder="surname" autocomplete="off">
         </div>
-        <div class="field form-window-field">
-            <label for="form_months">Form window</label>
-            <select id="form_months" name="form_months" class="narrow">
+        <div class="field lookback-window-field">
+            <label for="lookback_months">Lookback window</label>
+            <select id="lookback_months" name="lookback_months" class="narrow">
                 {% for m in [3, 6, 12, 18, 24, 36] %}
-                <option value="{{ m }}" {% if form_months == m %}selected{% endif %}>{{ m }} mo</option>
+                <option value="{{ m }}" {% if lookback_months == m %}selected{% endif %}>{{ m }} mo</option>
                 {% endfor %}
             </select>
         </div>
@@ -70,7 +70,7 @@
     {# ---------------- ATHLETE STATE ---------------- #}
     <nav class="disc-tabs">
         {% for d in disciplines %}
-        <a href="{{ url_for('dashboard', given_name=given_name, surname=surname, discipline=d, year_from=year_from, year_to=year_to, cmp_given=cmp_given, cmp_surname=cmp_surname, form_months=form_months) }}"
+        <a href="{{ url_for('dashboard', given_name=given_name, surname=surname, discipline=d, year_from=year_from, year_to=year_to, cmp_given=cmp_given, cmp_surname=cmp_surname, lookback_months=lookback_months) }}"
            class="{{ 'active' if d == discipline }}">{{ d }}</a>
         {% endfor %}
     </nav>
@@ -89,29 +89,29 @@
         {% endif %}
     </div>
 
-    {# ---------------- DEPTH KPI ROW (form window) ---------------- #}
-    <section class="depth-kpis" aria-label="Form window KPIs">
-        <div class="kpi" id="kpi-form-indicator">
-            <span class="kpi-label">Form indicator</span>
-            {% if form_kpi.form_indicator is none %}
+    {# ---------------- DEPTH KPI ROW (lookback window) ---------------- #}
+    <section class="depth-kpis" aria-label="Lookback window KPIs">
+        <div class="kpi" id="kpi-rolling-peak">
+            <span class="kpi-label">Rolling peak</span>
+            {% if lookback_kpi.rolling_peak is none %}
             <span class="kpi-value dim">&mdash;</span>
-            <span class="kpi-hint">Need &ge; 3 completed routines in the last {{ form_months }} mo
-                ({{ form_kpi.n_completed_in_window }} so far)</span>
+            <span class="kpi-hint">Need &ge; 3 completed routines in the last {{ lookback_months }} mo
+                ({{ lookback_kpi.n_completed_in_window }} so far)</span>
             {% else %}
-            <span class="kpi-value">{{ '%.3f'|format(form_kpi.form_indicator) }}</span>
-            <span class="kpi-hint">best 3 of last {{ [form_kpi.n_completed_in_window, 10]|min }} completed
-                &middot; last {{ form_months }} mo</span>
+            <span class="kpi-value">{{ '%.3f'|format(lookback_kpi.rolling_peak) }}</span>
+            <span class="kpi-hint">best 3 of last {{ [lookback_kpi.n_completed_in_window, 10]|min }} completed
+                &middot; last {{ lookback_months }} mo</span>
             {% endif %}
         </div>
         <div class="kpi" id="kpi-crash-rate">
             <span class="kpi-label">Crash rate</span>
-            {% if form_kpi.n_in_window %}
-            <span class="kpi-value">{{ '%.0f'|format(100 * form_kpi.crash_rate) }}<span class="unit">%</span></span>
-            <span class="kpi-hint">{{ form_kpi.n_in_window - form_kpi.n_completed_in_window }}
-                of {{ form_kpi.n_in_window }} routines crashed &middot; last {{ form_months }} mo</span>
+            {% if lookback_kpi.n_in_window %}
+            <span class="kpi-value">{{ '%.0f'|format(100 * lookback_kpi.crash_rate) }}<span class="unit">%</span></span>
+            <span class="kpi-hint">{{ lookback_kpi.n_in_window - lookback_kpi.n_completed_in_window }}
+                of {{ lookback_kpi.n_in_window }} routines crashed &middot; last {{ lookback_months }} mo</span>
             {% else %}
             <span class="kpi-value dim">&mdash;</span>
-            <span class="kpi-hint">No routines in the last {{ form_months }} mo</span>
+            <span class="kpi-hint">No routines in the last {{ lookback_months }} mo</span>
             {% endif %}
         </div>
     </section>
@@ -131,15 +131,15 @@
             {% if radar.athlete.p75 is not none %}
             &middot; p75 / p50 of last {{ radar.n_completed }} completed routines
             {% else %}
-            &middot; <em>p75 / p50 suppressed ({{ radar.n_completed }} completed routines in last {{ form_months }} mo &mdash; need 10)</em>
+            &middot; <em>p75 / p50 suppressed ({{ radar.n_completed }} completed routines in last {{ lookback_months }} mo &mdash; need 10)</em>
             {% endif %}
         </p>
         {% if radar.athlete.pb %}
         <div class="chart-box tall"><canvas id="c-radar"></canvas></div>
         {% else %}
         <p class="panel-sub">
-            No completed routines in the last {{ form_months }} mo &mdash; widen
-            the form window to see the radar.
+            No completed routines in the last {{ lookback_months }} mo &mdash; widen
+            the lookback window to see the radar.
         </p>
         {% endif %}
     </section>
@@ -151,7 +151,7 @@
             <span class="crashes-caption">crashes this window: {{ scatter.crashes_in_window }}</span>
         </div>
         <p class="panel-sub">
-            One dot per completed routine in the last {{ form_months }} mo,
+            One dot per completed routine in the last {{ lookback_months }} mo,
             axis bounds match the radar's sport-empirical ceilings.
             <span class="legend-dot" style="background:#1b3a5c"></span>Qual
             <span class="legend-dot" style="background:#be0027"></span>Final
@@ -174,8 +174,8 @@
         </div>
         {% else %}
         <p class="panel-sub">
-            No completed routines in the last {{ form_months }} mo &mdash; widen
-            the form window to see the cloud.
+            No completed routines in the last {{ lookback_months }} mo &mdash; widen
+            the lookback window to see the cloud.
         </p>
         {% endif %}
     </section>
@@ -188,7 +188,7 @@
         </div>
         <p class="panel-sub">
             Rows = skill positions, columns = every completed routine in the last
-            {{ form_months }} mo (oldest left &rarr; newest right). Cell colour =
+            {{ lookback_months }} mo (oldest left &rarr; newest right). Cell colour =
             execution deduction at that skill &mdash; deeper red = larger deduction.
             {% if discipline == 'TRA' %}
             Pale/dark strip above marks compulsory vs voluntary routines so clean
@@ -208,8 +208,8 @@
         </div>
         {% else %}
         <p class="panel-sub">
-            No completed routines in the last {{ form_months }} mo &mdash; widen
-            the form window to see the heatmap.
+            No completed routines in the last {{ lookback_months }} mo &mdash; widen
+            the lookback window to see the heatmap.
         </p>
         {% endif %}
     </section>
@@ -221,7 +221,7 @@
         </div>
         <p class="panel-sub">
             Mean execution deduction per skill position across each routine class
-            in the last {{ form_months }} mo. Pairs with the timeline view:
+            in the last {{ lookback_months }} mo. Pairs with the timeline view:
             "where the athlete is lacking, for each kind of routine."
             Empty cells (no routines in that class) render grey to keep absence
             distinguishable from a clean zero-deduction.
@@ -240,28 +240,28 @@
         </div>
         {% else %}
         <p class="panel-sub">
-            No completed routines in the last {{ form_months }} mo &mdash; widen
-            the form window to see the class summary.
+            No completed routines in the last {{ lookback_months }} mo &mdash; widen
+            the lookback window to see the class summary.
         </p>
         {% endif %}
     </section>
 
-    {# ---------------- DEPTH TREND PANEL (form vs crashes) ---------------- #}
-    <section class="panel wide" id="panel-form-trend">
-        <div class="panel-title"><h2>Form &amp; crashes trend</h2></div>
-        {% if form_trend.dates|length >= 10 %}
+    {# ---------------- DEPTH TREND PANEL (rolling peak vs crashes) ---------------- #}
+    <section class="panel wide" id="panel-trend">
+        <div class="panel-title"><h2>Rolling peak &amp; crashes trend</h2></div>
+        {% if trend.dates|length >= 10 %}
         <p class="panel-sub">
             Career view of the two Depth KPIs on a shared timeline.
-            <span class="legend-dot" style="background:#1b3a5c"></span>Form indicator
+            <span class="legend-dot" style="background:#1b3a5c"></span>Rolling peak
             (best 3 of last 10 completed) &middot;
             <span class="legend-dot" style="background:#be0027"></span>Crashes per 10 routines.
-            Form up = good, crashes up = bad.
+            Peak up = good, crashes up = bad.
         </p>
-        <div class="chart-box tall"><canvas id="c-form-trend"></canvas></div>
+        <div class="chart-box tall"><canvas id="c-trend"></canvas></div>
         {% else %}
         <p class="panel-sub">
             Needs at least 10 published routines to draw a meaningful trend &mdash;
-            this athlete has {{ form_trend.dates|length }}.
+            this athlete has {{ trend.dates|length }}.
         </p>
         {% endif %}
     </section>
@@ -415,16 +415,35 @@
         Add a second name to run a head-to-head. Meanwhile, the sport-level view:
     </div>
 
-    <div class="panel-grid">
-        {# Metric 6 — year-over-year difficulty inflation #}
-        <section class="panel wide">
-            <div class="panel-title"><span class="num">6</span><h2>Year-over-year difficulty inflation</h2></div>
-            <p class="panel-sub">The moving frontier &mdash; mean D-score of the <strong>top {{ inflation.top_n }}</strong>
-                hardest routines each season, by discipline. A raw all-routine mean would just track the
-                dataset's shifting population; the top-{{ inflation.top_n }} frontier is robust to that dilution.</p>
-            <div class="chart-box tall"><canvas id="c-inflation"></canvas></div>
-        </section>
+    {# Elite frontiers — 2×2 grid (rows = D / ToF, columns = M / F) #}
+    <section class="overview-section">
+        <h2 class="section-heading">Elite frontiers</h2>
+        <p class="section-sub">Mean of the <strong>top {{ frontier_d.top_n }}</strong>
+            routines each season, ranked <em>within</em> each (discipline, gender)
+            partition (ADR-0004). A global ranking would empty the women's series;
+            a raw all-routine mean would track the dataset's shifting population, not
+            difficulty.</p>
+        <div class="panel-grid frontier-grid">
+            <section class="panel">
+                <div class="panel-title"><h3>D-frontier &mdash; Men</h3></div>
+                <div class="chart-box tall"><canvas id="c-frontier-d-m"></canvas></div>
+            </section>
+            <section class="panel">
+                <div class="panel-title"><h3>D-frontier &mdash; Women</h3></div>
+                <div class="chart-box tall"><canvas id="c-frontier-d-f"></canvas></div>
+            </section>
+            <section class="panel">
+                <div class="panel-title"><h3>ToF-frontier &mdash; Men (TRA)</h3></div>
+                <div class="chart-box tall"><canvas id="c-frontier-tof-m"></canvas></div>
+            </section>
+            <section class="panel">
+                <div class="panel-title"><h3>ToF-frontier &mdash; Women (TRA)</h3></div>
+                <div class="chart-box tall"><canvas id="c-frontier-tof-f"></canvas></div>
+            </section>
+        </div>
+    </section>
 
+    <div class="panel-grid">
         {# Metric 8 — judge-panel variance #}
         <section class="panel wide">
             <div class="panel-title"><span class="num">8</span><h2>Judge-panel variance</h2></div>
@@ -835,19 +854,19 @@ const HEAT_EMPTY = '#e2e4e8';   // neutral grey for "no routines in this class"
     });
 })();
 
-// --- Form & crashes trend (issue 0002) ---
+// --- Rolling peak & crashes trend (issue 0002) ---
 (function () {
-    const t = {{ form_trend | tojson }};
+    const t = {{ trend | tojson }};
     if (!t.dates || t.dates.length < 10) return;
-    new Chart(document.getElementById('c-form-trend'), {
+    new Chart(document.getElementById('c-trend'), {
         type: 'line',
         data: {
             labels: t.dates,
             datasets: [
                 {
-                    label: 'Form indicator',
-                    data: t.form,
-                    yAxisID: 'yForm',
+                    label: 'Rolling peak',
+                    data: t.peak,
+                    yAxisID: 'yPeak',
                     borderColor: NAVY,
                     backgroundColor: NAVY,
                     spanGaps: false,
@@ -873,9 +892,9 @@ const HEAT_EMPTY = '#e2e4e8';   // neutral grey for "no routines in this class"
             plugins: { legend: { position: 'top' } },
             scales: {
                 x: { grid: { display: false }, ticks: { maxTicksLimit: 12 } },
-                yForm: {
+                yPeak: {
                     type: 'linear', position: 'left', grid: GRID,
-                    title: { display: true, text: 'Form (routine score)', color: NAVY }
+                    title: { display: true, text: 'Rolling peak (routine score)', color: NAVY }
                 },
                 yCrash: {
                     type: 'linear', position: 'right',
@@ -981,28 +1000,57 @@ const HEAT_EMPTY = '#e2e4e8';   // neutral grey for "no routines in this class"
 {% endif %}
 {% endif %}
 
-{% if inflation is defined %}
-// --- Metric 6: difficulty inflation ---
+{% if frontier_d is defined %}
+// --- Elite frontiers 2×2 (issue 0008, ADR-0004) ---
 (function () {
-    const inf = {{ inflation | tojson }};
+    const fd = {{ frontier_d | tojson }};
+    const ft = {{ frontier_tof | tojson }};
     const discColor = { TRA: RED, DMT: NAVY, TUM: TEAL };
-    const datasets = Object.entries(inf.series).map(([disc, vals]) => ({
-        label: disc, data: vals,
-        borderColor: discColor[disc], backgroundColor: discColor[disc],
-        spanGaps: true, tension: 0.25, borderWidth: 2, pointRadius: 3
-    }));
-    new Chart(document.getElementById('c-inflation'), {
-        type: 'line',
-        data: { labels: inf.years, datasets: datasets },
-        options: {
-            responsive: true, maintainAspectRatio: false,
-            plugins: { legend: { position: 'top' } },
-            scales: {
-                x: { grid: { display: false } },
-                y: { grid: GRID, title: { display: true, text: 'Mean D-score' } }
+
+    function drawD(canvasId, gender, yTitle) {
+        const datasets = ['TRA', 'DMT', 'TUM'].map(disc => ({
+            label: disc, data: fd.series[gender][disc],
+            borderColor: discColor[disc], backgroundColor: discColor[disc],
+            spanGaps: true, tension: 0.25, borderWidth: 2, pointRadius: 3
+        }));
+        new Chart(document.getElementById(canvasId), {
+            type: 'line',
+            data: { labels: fd.years, datasets: datasets },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { position: 'top' } },
+                scales: {
+                    x: { grid: { display: false } },
+                    y: { grid: GRID, title: { display: true, text: yTitle } }
+                }
             }
-        }
-    });
+        });
+    }
+
+    function drawToF(canvasId, gender, yTitle) {
+        const datasets = [{
+            label: 'TRA', data: ft.series[gender].TRA,
+            borderColor: RED, backgroundColor: RED,
+            spanGaps: true, tension: 0.25, borderWidth: 2, pointRadius: 3
+        }];
+        new Chart(document.getElementById(canvasId), {
+            type: 'line',
+            data: { labels: ft.years, datasets: datasets },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { position: 'top' } },
+                scales: {
+                    x: { grid: { display: false } },
+                    y: { grid: GRID, title: { display: true, text: yTitle } }
+                }
+            }
+        });
+    }
+
+    drawD('c-frontier-d-m', 'M', 'Mean D-score');
+    drawD('c-frontier-d-f', 'F', 'Mean D-score');
+    drawToF('c-frontier-tof-m', 'M', 'Mean ToF (s)');
+    drawToF('c-frontier-tof-f', 'F', 'Mean ToF (s)');
 })();
 {% endif %}
 </script>

@@ -1,16 +1,17 @@
 # Issue Implementation Progress
 
-- [x] docs/issues/0001-kpi-tiles-form-window-control.md
-  Added pure-functional `routine_classifier`, `rolling_form`, `form_window` modules
-  with unit tests. Wired a `form_kpi_data` helper in `db.py` and `/dashboard` now
-  accepts `?form_months=N` (default 12) with a teal-accented selector, rendering
-  Form-indicator and Crash-rate KPI tiles above the existing eight panels.
-- [x] docs/issues/0002-form-crash-trend-lines.md
-  Added `db.form_and_crash_series` (career chronological form + crash-rate
-  arrays) and a wide Depth-section trend panel that renders both on a shared
-  x-axis with Chart.js dual y-axes (form navy / crashes red), polite empty
-  state under 10 routines. New tests cover the consecutive-crash invariant
-  (form plateau / crash climb) and panel smoke render.
+- [x] docs/issues/0001-kpi-tiles-lookback-window-control.md
+  Added pure-functional `routine_classifier`, `rolling_peak`, `lookback_window`
+  modules with unit tests. Wired a `lookback_kpi_data` helper in `db.py` and
+  `/dashboard` now accepts `?lookback_months=N` (default 12) with a
+  teal-accented selector, rendering Rolling-peak and Crash-rate KPI tiles
+  above the existing eight panels.
+- [x] docs/issues/0002-rolling-peak-and-crash-trend-lines.md
+  Added `db.rolling_peak_and_crash_series` (career chronological peak +
+  crash-rate arrays) and a wide Depth-section trend panel that renders both on
+  a shared x-axis with Chart.js dual y-axes (peak navy / crashes red), polite
+  empty state under 10 routines. New tests cover the consecutive-crash
+  invariant (peak plateau / crash climb) and panel smoke render.
 - [x] docs/issues/0003-radar-chart.md
   Added `radar_scales` module with calibrated 99th-percentile BOUNDS per
   (discipline, axis), `bounds_for()`, an inversion helper that folds
@@ -42,3 +43,23 @@
   `chartjs-chart-matrix` plugin using a shared `heatColor()` ramp;
   neutral grey for `None` cells, n-count chips beneath the canvas
   (amber-highlighted when n<3) so low-sample columns aren't over-read.
+- [x] docs/issues/0007-routine-gender-module.md
+  Extracted the multilingual female lexicon from `build_query` into a new
+  `routine_gender` module exposing three surfaces over one constant:
+  `gender_case_sql()` (literal SQL CASE for PARTITION BY), `gender_filter_sql()`
+  (parameterised predicate for the CLI/web --female/--male filter), and
+  `infer()` (Python-side, total — returns `'M'` or `'F'` for every input
+  including `None`). Dropped the dead `\bf\)` regex entry that LIKE never
+  honoured. Table-driven tests cover English, Portuguese, Spanish, French,
+  German, Russian, Japanese, Finnish, Danish, Swedish, Estonian and Chinese
+  titles.
+- [x] docs/issues/0008-elite-frontiers-overview-section.md
+  Renamed `db.difficulty_inflation` → `difficulty_frontier` and added a
+  parallel `tof_frontier` (TRA-only) — both partition the elite top-N by
+  `(year, discipline, gender)` via `routine_gender.gender_case_sql()` (no
+  re-inlining of the lexicon). Payload now nests gender-first
+  (`series['M']['TRA']`, etc.) so the dashboard pivots cleanly. The overview
+  template's `#c-inflation` panel is replaced by an **Elite frontiers** 2×2
+  grid (rows = D / ToF, columns = M / F → canvases `#c-frontier-d-m`,
+  `#c-frontier-d-f`, `#c-frontier-tof-m`, `#c-frontier-tof-f`) with
+  `Judge-panel variance` unchanged below.

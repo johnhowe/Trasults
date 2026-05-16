@@ -116,15 +116,15 @@ body.dash {
     width: 100px;
 }
 
-/* Form window is a second, independent time concept (ADR-0001). Visually
+/* Lookback window is a second, independent time concept (ADR-0001). Visually
    distinct from the cohort-filter year_from/year_to: teal accent + leading
    divider. */
-.field.form-window-field {
+.field.lookback-window-field {
     padding-left: 0.9rem;
     border-left: 2px dashed var(--teal, #1c8c7a);
 }
-.field.form-window-field label { color: var(--teal, #1c8c7a); }
-.field.form-window-field select {
+.field.lookback-window-field label { color: var(--teal, #1c8c7a); }
+.field.lookback-window-field select {
     border-color: var(--teal, #1c8c7a);
     color: var(--teal, #1c8c7a);
     font-weight: 700;
@@ -205,6 +205,17 @@ body.dash {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
+}
+.overview-section { margin: 0 0 1.6rem; }
+.overview-section .section-heading {
+    font-size: 1.05rem; font-weight: 700; color: var(--navy);
+    margin: 0 0 0.3rem; letter-spacing: -0.005em;
+}
+.overview-section .section-sub {
+    color: var(--muted); font-size: 0.85rem; margin: 0 0 0.9rem;
+}
+.frontier-grid .panel-title h3 {
+    font-size: 0.9rem; font-weight: 700; color: var(--navy); margin: 0;
 }
 .panel {
     background: var(--card);
@@ -329,7 +340,7 @@ datalist { display: none; }
 }
 @keyframes dash-spin { to { transform: rotate(360deg); } }
 
-/* --- Depth view KPI tiles (form window) --- */
+/* --- Depth view KPI tiles (lookback window) --- */
 .depth-kpis {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

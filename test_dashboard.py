@@ -142,25 +142,65 @@ def test_base_filter_excludes_test_unpublished_and_zero_skill_rows():
 
 
 # --------------------------------------------------------------------------
-# Metric 6 — difficulty inflation frontier is robust to population dilution
+# Elite frontiers — top-N frontier is robust to population dilution
 # --------------------------------------------------------------------------
 
-def test_difficulty_inflation_ignores_diluting_low_routines(tmp_path):
+def test_difficulty_frontier_ignores_diluting_low_routines(tmp_path):
     path = str(tmp_path / 'tiny.db')
     conn = sqlite3.connect(path)
     conn.execute(f"CREATE TABLE routines ({_MEM_COLS})")
     conn.row_factory = sqlite3.Row
     for _ in range(50):
-        _insert(conn, 18.0, event_year='2024')
+        _insert(conn, 18.0, event_year='2024')         # _insert default title="Open" → M bucket
     conn.commit()
-    before = db.difficulty_inflation(path, top_n=50)
+    before = db.difficulty_frontier(path, top_n=50)
     for _ in range(1000):
         _insert(conn, 1.0, event_year='2024')          # junk low-D dilution
     conn.commit()
     conn.close()
-    after = db.difficulty_inflation(path, top_n=50)
-    assert before['series']['TRA'] == after['series']['TRA'] == [18.0]
-    assert after['counts']['TRA'] == [1050]            # population shift stays visible
+    after = db.difficulty_frontier(path, top_n=50)
+    assert before['series']['M']['TRA'] == after['series']['M']['TRA'] == [18.0]
+    assert after['counts']['M']['TRA'] == [1050]       # population shift stays visible
+
+
+def test_difficulty_frontier_partitions_by_gender(tmp_path):
+    path = str(tmp_path / 'tiny.db')
+    conn = sqlite3.connect(path)
+    conn.execute(f"CREATE TABLE routines ({_MEM_COLS})")
+    conn.row_factory = sqlite3.Row
+    for _ in range(50):
+        _insert(conn, 18.0, event_year='2024', competition_title='Mens Senior')
+    for _ in range(50):
+        _insert(conn, 14.0, event_year='2024', competition_title='Womens Senior')
+    conn.commit()
+    conn.close()
+    fd = db.difficulty_frontier(path, top_n=50)
+    # Each gender ranks independently — both buckets are populated.
+    assert fd['series']['M']['TRA'] == [18.0]
+    assert fd['series']['F']['TRA'] == [14.0]
+    assert fd['counts']['M']['TRA'] == [50]
+    assert fd['counts']['F']['TRA'] == [50]
+
+
+def test_tof_frontier_is_tra_only(tmp_path):
+    path = str(tmp_path / 'tiny.db')
+    conn = sqlite3.connect(path)
+    conn.execute(f"CREATE TABLE routines ({_MEM_COLS}, t_sigma REAL)")
+    conn.row_factory = sqlite3.Row
+    for _ in range(50):
+        conn.execute(
+            "INSERT INTO routines (frame_state, person_given_name, person_surname, "
+            "person_representing, competition_title, frame_nelements, "
+            "frame_mark_ttt_g, frame_difficultyt_g, event_year, "
+            "competition_discipline, esigma_sigma, stage_kind, t_sigma) "
+            "VALUES ('PUBLISHED','A','B','C','Mens Senior','10',50.0,18.0,'2024',"
+            "'TRA',15.0,'Final',17.5)")
+    conn.commit()
+    conn.close()
+    tf = db.tof_frontier(path, top_n=50)
+    assert tf['series']['M']['TRA'] == [17.5]
+    assert 'DMT' not in tf['series']['M']
+    assert tf['series']['F']['TRA'] == [None]
 
 
 # --------------------------------------------------------------------------
@@ -221,12 +261,16 @@ def test_score_decomposition_shape_and_counts():
 
 
 @real_db
-def test_difficulty_inflation_frontier_rose_over_the_decade():
-    inf = db.difficulty_inflation(DB_PATH, top_n=50)
-    assert inf['years'][0] == 2013 and inf['years'][-1] == 2025
-    tra = dict(zip(inf['years'], inf['series']['TRA']))
-    assert tra[2025] > tra[2013]
-    assert tra[2025] > 18.0          # known frontier ~20.4 in 2025
+def test_difficulty_frontier_rose_over_the_decade():
+    fd = db.difficulty_frontier(DB_PATH, top_n=50)
+    assert fd['years'][0] == 2013 and fd['years'][-1] == 2025
+    tra_m = dict(zip(fd['years'], fd['series']['M']['TRA']))
+    assert tra_m[2025] > tra_m[2013]
+    assert tra_m[2025] > 18.0          # known frontier ~20.4 in 2025
+    # Women's series is also populated — gender partitioning keeps it from
+    # being silently emptied (ADR-0004).
+    tra_f = dict(zip(fd['years'], fd['series']['F']['TRA']))
+    assert tra_f[2018] is not None and tra_f[2018] > 14.0
 
 
 @real_db
@@ -266,7 +310,7 @@ def test_judge_panel_variance_event_mode():
 
 
 # --------------------------------------------------------------------------
-# Form-window KPI tile smoke test (issue 0001)
+# Lookback-window KPI tile smoke test (issue 0001)
 # --------------------------------------------------------------------------
 
 def _load_flask_app():
@@ -286,47 +330,47 @@ def _load_flask_app():
 
 
 @real_db
-def test_dashboard_form_kpi_tiles_render():
+def test_dashboard_lookback_kpi_tiles_render():
     app = _load_flask_app()
     client = app.test_client()
-    resp = client.get('/dashboard?given_name=Dylan&surname=Schmidt&form_months=12')
+    resp = client.get('/dashboard?given_name=Dylan&surname=Schmidt&lookback_months=12')
     assert resp.status_code == 200
     body = resp.get_data(as_text=True)
-    assert 'kpi-form-indicator' in body
+    assert 'kpi-rolling-peak' in body
     assert 'kpi-crash-rate' in body
 
 
 # --------------------------------------------------------------------------
-# Form & crashes trend lines (issue 0002)
+# Rolling peak & crashes trend lines (issue 0002)
 # --------------------------------------------------------------------------
 
 @real_db
-def test_form_and_crash_series_returns_aligned_career_series():
-    s = db.form_and_crash_series(DB_PATH, 'Dylan', 'Schmidt', 'TRA')
-    assert set(s) >= {'dates', 'form', 'crash_rate'}
+def test_rolling_peak_and_crash_series_returns_aligned_career_series():
+    s = db.rolling_peak_and_crash_series(DB_PATH, 'Dylan', 'Schmidt', 'TRA')
+    assert set(s) >= {'dates', 'peak', 'crash_rate'}
     n = len(s['dates'])
     assert n >= 10
-    assert len(s['form']) == n
+    assert len(s['peak']) == n
     assert len(s['crash_rate']) == n
     # crash rate is a share in [0, 1]
     assert all(0.0 <= c <= 1.0 for c in s['crash_rate'])
-    # form is either None or a positive routine-score average
-    assert all(v is None or v > 0 for v in s['form'])
+    # peak is either None or a positive routine-score average
+    assert all(v is None or v > 0 for v in s['peak'])
 
 
 @real_db
-def test_dashboard_form_trend_panel_renders():
+def test_dashboard_trend_panel_renders():
     app = _load_flask_app()
     client = app.test_client()
     resp = client.get('/dashboard?given_name=Dylan&surname=Schmidt')
     assert resp.status_code == 200
     body = resp.get_data(as_text=True)
-    assert 'panel-form-trend' in body
-    assert 'c-form-trend' in body
+    assert 'panel-trend' in body
+    assert 'c-trend' in body
     # JSON payload exposes both series, and they have matching length
-    s = db.form_and_crash_series(DB_PATH, 'Dylan', 'Schmidt', 'TRA')
-    assert '"form"' in body and '"crash_rate"' in body
-    assert len(s['form']) == len(s['crash_rate']) == len(s['dates']) >= 10
+    s = db.rolling_peak_and_crash_series(DB_PATH, 'Dylan', 'Schmidt', 'TRA')
+    assert '"peak"' in body and '"crash_rate"' in body
+    assert len(s['peak']) == len(s['crash_rate']) == len(s['dates']) >= 10
 
 
 # --------------------------------------------------------------------------
@@ -336,7 +380,7 @@ def test_dashboard_form_trend_panel_renders():
 @real_db
 def test_radar_data_payload_uses_absolute_bounds_per_discipline():
     import radar_scales
-    r = db.radar_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=36)
+    r = db.radar_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', lookback_months=36)
     assert r['axes'] == ['D', 'E', 'ToF', 'HD', 'Landing']
     # Axis bounds are *constants* — never re-derived from the athlete (ADR-0002).
     expected = {a: list(b) for a, b in radar_scales.bounds_for('TRA').items()}
@@ -352,7 +396,7 @@ def test_radar_data_payload_uses_absolute_bounds_per_discipline():
 def test_radar_data_suppresses_percentile_rings_below_threshold():
     # Tiny window will rarely contain ≥ 10 routines — p75/p50 must drop out
     # but PB / Top-5 still populate when at least one completed routine exists.
-    r = db.radar_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=1,
+    r = db.radar_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', lookback_months=1,
                       now=__import__('datetime').date(2014, 1, 1))
     if r['n_completed'] < 10:
         assert r['athlete']['p75'] is None
@@ -380,7 +424,7 @@ def test_dashboard_radar_panel_renders():
 @real_db
 def test_trade_off_scatter_tra_returns_three_pairs():
     import radar_scales
-    s = db.trade_off_scatter(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=36)
+    s = db.trade_off_scatter(DB_PATH, 'Dylan', 'Schmidt', 'TRA', lookback_months=36)
     assert s['pairs'] == ['DxE', 'DxToF', 'ExToF']
     assert set(s['points']) == {'DxE', 'DxToF', 'ExToF'}
     assert isinstance(s['crashes_in_window'], int) and s['crashes_in_window'] >= 0
@@ -400,7 +444,7 @@ def test_trade_off_scatter_tra_returns_three_pairs():
 
 @real_db
 def test_trade_off_scatter_dmt_returns_single_pair():
-    s = db.trade_off_scatter(DB_PATH, 'Kayla', 'Nel', 'DMT', form_months=120)
+    s = db.trade_off_scatter(DB_PATH, 'Kayla', 'Nel', 'DMT', lookback_months=120)
     assert s['pairs'] == ['DxE']
     assert set(s['points']) == {'DxE'}
     for p in s['points']['DxE']:
@@ -410,8 +454,8 @@ def test_trade_off_scatter_dmt_returns_single_pair():
 
 @real_db
 def test_trade_off_scatter_excludes_crashes_and_counts_them():
-    s = db.trade_off_scatter(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=36)
-    kpi = db.form_kpi_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', 36)
+    s = db.trade_off_scatter(DB_PATH, 'Dylan', 'Schmidt', 'TRA', lookback_months=36)
+    kpi = db.lookback_kpi_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', 36)
     # The crash caption mirrors the kpi tile's window-scoped crash count.
     assert s['crashes_in_window'] == kpi['n_in_window'] - kpi['n_completed_in_window']
     # Crashes never enter the cloud — points are bounded by completed routines.
@@ -496,7 +540,7 @@ def test_heatmap_timeline_tra_shape_and_chronological_order(tmp_path):
          'frame_difficultyt_g': 17.5},                                      # voluntary, sets best D
     ]
     path = _hm_db(tmp_path, rows)
-    out = db.heatmap_timeline(path, 'A', 'B', 'TRA', form_months=120,
+    out = db.heatmap_timeline(path, 'A', 'B', 'TRA', lookback_months=120,
                               now=date(2024, 12, 31))
     assert out['skills'] == [f'S{i}' for i in range(1, 11)]
     assert out['n_routines'] == 3 == len(out['columns'])
@@ -520,7 +564,7 @@ def test_heatmap_timeline_excludes_crashes(tmp_path):
          'frame_nelements': '9'},                                           # crash
     ]
     path = _hm_db(tmp_path, rows)
-    out = db.heatmap_timeline(path, 'A', 'B', 'TRA', form_months=120,
+    out = db.heatmap_timeline(path, 'A', 'B', 'TRA', lookback_months=120,
                               now=date(2024, 12, 31))
     assert out['n_routines'] == 1
     assert len(out['columns']) == 1
@@ -537,7 +581,7 @@ def test_heatmap_timeline_dmt_omits_compulsory_flag(tmp_path):
          'frame_difficultyt_g': 4.0},
     ]
     path = _hm_db(tmp_path, rows)
-    out = db.heatmap_timeline(path, 'A', 'B', 'DMT', form_months=120,
+    out = db.heatmap_timeline(path, 'A', 'B', 'DMT', lookback_months=120,
                               now=date(2024, 12, 31))
     assert out['skills'] == ['S1', 'S2']
     assert out['n_routines'] == 2
@@ -546,9 +590,9 @@ def test_heatmap_timeline_dmt_omits_compulsory_flag(tmp_path):
 
 @real_db
 def test_heatmap_timeline_real_db_matches_kpi_completed_count():
-    """The column count equals the form-window completed-routine count."""
-    out = db.heatmap_timeline(DB_PATH, 'Dylan', 'Schmidt', 'TRA', form_months=36)
-    kpi = db.form_kpi_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', 36)
+    """The column count equals the lookback-window completed-routine count."""
+    out = db.heatmap_timeline(DB_PATH, 'Dylan', 'Schmidt', 'TRA', lookback_months=36)
+    kpi = db.lookback_kpi_data(DB_PATH, 'Dylan', 'Schmidt', 'TRA', 36)
     assert out['n_routines'] == kpi['n_completed_in_window']
     assert len(out['columns']) == out['n_routines']
     assert out['skills'] == [f'S{i}' for i in range(1, 11)]
@@ -607,7 +651,7 @@ def test_heatmap_class_summary_tra_four_columns_compulsory_via_classifier(tmp_pa
          **{f'esigma_s{i}': 0.1 for i in range(1, 11)}},
     ]
     path = _hm_db(tmp_path, rows)
-    out = db.heatmap_class_summary(path, 'A', 'B', 'TRA', form_months=120,
+    out = db.heatmap_class_summary(path, 'A', 'B', 'TRA', lookback_months=120,
                                    now=date(2024, 12, 31))
     assert out['columns'] == ['Compulsory', 'Voluntary Qual',
                               'Voluntary Semi', 'Voluntary Final']
@@ -641,7 +685,7 @@ def test_heatmap_class_summary_dmt_three_columns_no_compulsory(tmp_path):
          'esigma_s1': 0.6, 'esigma_s2': 0.6},
     ]
     path = _hm_db(tmp_path, rows)
-    out = db.heatmap_class_summary(path, 'A', 'B', 'DMT', form_months=120,
+    out = db.heatmap_class_summary(path, 'A', 'B', 'DMT', lookback_months=120,
                                    now=date(2024, 12, 31))
     assert out['columns'] == ['Qual', 'Semi', 'Final']
     assert out['rows'] == ['S1', 'S2']
@@ -665,7 +709,7 @@ def test_heatmap_class_summary_excludes_crashes(tmp_path):
          **{f'esigma_s{i}': 0.99 for i in range(1, 11)}},
     ]
     path = _hm_db(tmp_path, rows)
-    out = db.heatmap_class_summary(path, 'A', 'B', 'TRA', form_months=120,
+    out = db.heatmap_class_summary(path, 'A', 'B', 'TRA', lookback_months=120,
                                    now=date(2024, 12, 31))
     assert out['counts'][3] == 1                            # Voluntary Final
     assert out['cells'][0][3] == pytest.approx(0.3)         # crash excluded
@@ -674,7 +718,7 @@ def test_heatmap_class_summary_excludes_crashes(tmp_path):
 @real_db
 def test_heatmap_class_summary_real_db_tra_shape():
     out = db.heatmap_class_summary(DB_PATH, 'Dylan', 'Schmidt', 'TRA',
-                                   form_months=36)
+                                   lookback_months=36)
     assert out['rows'] == [f'S{i}' for i in range(1, 11)]
     assert out['columns'] == ['Compulsory', 'Voluntary Qual',
                               'Voluntary Semi', 'Voluntary Final']

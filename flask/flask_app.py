@@ -10,11 +10,13 @@ from db import (query_db, process_for_display, compute_stats, compute_form,
                 compute_deduction_profile, get_leaderboard, get_competition_report,
                 athlete_disciplines, athlete_summary, deduction_profile,
                 dscore_progression, qual_vs_final, score_decomposition,
-                tof_distribution, difficulty_inflation, head_to_head,
-                judge_panel_variance, form_kpi_data, form_and_crash_series,
+                tof_distribution, difficulty_frontier, tof_frontier,
+                head_to_head,
+                judge_panel_variance, lookback_kpi_data,
+                rolling_peak_and_crash_series,
                 radar_data, trade_off_scatter, heatmap_timeline,
                 heatmap_class_summary)
-import form_window
+import lookback_window
 
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from flask_session import Session
@@ -224,13 +226,14 @@ def dashboard():
 
     yf = int(year_from) if year_from.isdigit() else None
     yt = int(year_to) if year_to.isdigit() else None
-    form_months = form_window.parse_months(request.args.get('form_months'))
+    lookback_months = lookback_window.parse_months(
+        request.args.get('lookback_months'))
 
     ctx = {
         'given_name': given_name, 'surname': surname,
         'discipline': discipline, 'year_from': year_from, 'year_to': year_to,
         'cmp_given': cmp_given, 'cmp_surname': cmp_surname,
-        'form_months': form_months,
+        'lookback_months': lookback_months,
         'has_athlete': False, 'not_found': False,
     }
 
@@ -246,18 +249,18 @@ def dashboard():
             discipline=discipline,
             disciplines=discs,
             summary=athlete_summary(DB_PATH, given_name, surname, discipline),
-            form_kpi=form_kpi_data(
-                DB_PATH, given_name, surname, discipline, form_months),
-            form_trend=form_and_crash_series(
+            lookback_kpi=lookback_kpi_data(
+                DB_PATH, given_name, surname, discipline, lookback_months),
+            trend=rolling_peak_and_crash_series(
                 DB_PATH, given_name, surname, discipline),
             radar=radar_data(
-                DB_PATH, given_name, surname, discipline, form_months),
+                DB_PATH, given_name, surname, discipline, lookback_months),
             scatter=trade_off_scatter(
-                DB_PATH, given_name, surname, discipline, form_months),
+                DB_PATH, given_name, surname, discipline, lookback_months),
             heatmap_timeline=heatmap_timeline(
-                DB_PATH, given_name, surname, discipline, form_months),
+                DB_PATH, given_name, surname, discipline, lookback_months),
             heatmap_class=heatmap_class_summary(
-                DB_PATH, given_name, surname, discipline, form_months),
+                DB_PATH, given_name, surname, discipline, lookback_months),
             deduction_profile=deduction_profile(
                 DB_PATH, given_name, surname, discipline, yf, yt),
             progression=dscore_progression(DB_PATH, given_name, surname),
@@ -273,7 +276,8 @@ def dashboard():
                 DB_PATH, given_name, surname, cmp_given, cmp_surname,
                 discipline, yf, yt)
     else:
-        ctx['inflation'] = difficulty_inflation(DB_PATH)
+        ctx['frontier_d'] = difficulty_frontier(DB_PATH)
+        ctx['frontier_tof'] = tof_frontier(DB_PATH)
         ctx['panel_variance'] = judge_panel_variance(
             DB_PATH, discipline=discipline or None)
 

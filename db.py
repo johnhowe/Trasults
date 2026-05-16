@@ -682,44 +682,95 @@ def tof_distribution(db_path, given_name, surname, year_from=None, year_to=None,
     }
 
 
-def difficulty_inflation(db_path, top_n=50):
-    """Metric 6 — difficulty inflation as the moving *frontier*: the mean D-score
-    of the top_n hardest routines each season, per discipline.
+def _frontier_query(metric_expr, disciplines):
+    """Build the gender-partitioned frontier CTE for a numeric metric.
 
-    A raw all-routine mean is useless here — the dataset's population shifts
-    heavily over time (early years are elite-international only, later years are
-    flooded with domestic junior routines), so a mean tracks that shift, not
-    difficulty. The top_n frontier is robust to population dilution: adding more
-    low-level routines never changes the hardest ones. `counts` carries the total
-    eligible routines per year so thin early seasons stay visible."""
-    with _connect(db_path) as conn:
-        rows = conn.execute(
-            f"WITH ranked AS ("
-            f"  SELECT CAST(event_year AS INTEGER) yr, competition_discipline d, "
-            f"  frame_difficultyt_g dd, "
-            f"  ROW_NUMBER() OVER (PARTITION BY CAST(event_year AS INTEGER), "
-            f"    competition_discipline ORDER BY frame_difficultyt_g DESC) rn, "
-            f"  COUNT(*) OVER (PARTITION BY CAST(event_year AS INTEGER), "
-            f"    competition_discipline) total "
-            f"  FROM routines "
-            f"  WHERE {_BASE_FILTER} AND frame_difficultyt_g > 0 "
-            f"  AND frame_difficultyt_g < 25 "
-            f"  AND competition_discipline IN ('TRA','DMT','TUM')) "
-            f"SELECT yr, d, AVG(dd) mean_d, MIN(total) n FROM ranked "
-            f"WHERE rn <= ? GROUP BY yr, d ORDER BY yr", [top_n]).fetchall()
-    years = sorted({r['yr'] for r in rows if r['yr']})
-    series = {d: {y: None for y in years} for d in ('TRA', 'DMT', 'TUM')}
-    counts = {d: {y: 0 for y in years} for d in ('TRA', 'DMT', 'TUM')}
-    for r in rows:
-        if r['yr'] and r['d'] in series:
-            series[r['d']][r['yr']] = round(r['mean_d'], 3)
-            counts[r['d']][r['yr']] = r['n']
+    The partition is (year, discipline, gender) — see ADR-0004: global
+    top-N split by gender after the fact would empty the women's bucket
+    every year. ``routine_gender.gender_case_sql()`` keeps the partition
+    label in lockstep with the CLI/web --female filter (single lexicon).
+    """
+    gender_case = routine_gender.gender_case_sql()
+    disc_list = ",".join(f"'{d}'" for d in disciplines)
+    return (
+        f"WITH ranked AS ("
+        f"  SELECT CAST(event_year AS INTEGER) yr, competition_discipline d, "
+        f"  {gender_case} g, "
+        f"  {metric_expr} m, "
+        f"  ROW_NUMBER() OVER (PARTITION BY CAST(event_year AS INTEGER), "
+        f"    competition_discipline, {gender_case} "
+        f"    ORDER BY {metric_expr} DESC) rn, "
+        f"  COUNT(*) OVER (PARTITION BY CAST(event_year AS INTEGER), "
+        f"    competition_discipline, {gender_case}) total "
+        f"  FROM routines "
+        f"  WHERE {_BASE_FILTER} AND {metric_expr} > 0 AND {metric_expr} < 25 "
+        f"  AND competition_discipline IN ({disc_list})) "
+        f"SELECT yr, d, g, AVG(m) mean_m, MIN(total) n FROM ranked "
+        f"WHERE rn <= ? GROUP BY yr, d, g ORDER BY yr"
+    )
+
+
+def _empty_frontier_payload(years, disciplines, top_n):
+    """Init the gender-first ``series`` / ``counts`` dicts the helpers return."""
     return {
         'years': years,
         'top_n': top_n,
-        'series': {d: [series[d][y] for y in years] for d in series},
-        'counts': {d: [counts[d][y] for y in years] for d in counts},
+        'series': {g: {d: [None] * len(years) for d in disciplines}
+                   for g in ('M', 'F')},
+        'counts': {g: {d: [0] * len(years) for d in disciplines}
+                   for g in ('M', 'F')},
     }
+
+
+def difficulty_frontier(db_path, top_n=50):
+    """Elite D-score frontier — mean of the top ``top_n`` D-scores per
+    (year, discipline, gender), with gender-first payload nesting.
+
+    A raw all-routine
+    mean tracks the dataset's shifting population, not difficulty; the top-N
+    frontier is robust to that dilution (adding low-level routines never moves
+    the hardest ones). Partitioning by gender (ADR-0004) is load-bearing —
+    men's elite D sits 2–4 points above women's, so a global top-N would
+    starve the women's series. ``counts`` carries the eligible-routine total
+    per partition so thin years stay visible.
+    """
+    disciplines = ('TRA', 'DMT', 'TUM')
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            _frontier_query('frame_difficultyt_g', disciplines),
+            [top_n]).fetchall()
+    years = sorted({r['yr'] for r in rows if r['yr']})
+    payload = _empty_frontier_payload(years, disciplines, top_n)
+    year_idx = {y: i for i, y in enumerate(years)}
+    for r in rows:
+        if r['yr'] is None or r['d'] not in disciplines or r['g'] not in ('M', 'F'):
+            continue
+        i = year_idx[r['yr']]
+        payload['series'][r['g']][r['d']][i] = round(r['mean_m'], 3)
+        payload['counts'][r['g']][r['d']][i] = r['n']
+    return payload
+
+
+def tof_frontier(db_path, top_n=50):
+    """Elite Time-of-Flight frontier — mean of the top ``top_n`` ToFs per
+    (year, gender), TRA only. Parallel payload shape to
+    :func:`difficulty_frontier` (``series['M']['TRA']`` etc.) so the dashboard
+    can pivot off one schema. ToF is meaningless for DMT/TUM and is omitted.
+    """
+    disciplines = ('TRA',)
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            _frontier_query('t_sigma', disciplines), [top_n]).fetchall()
+    years = sorted({r['yr'] for r in rows if r['yr']})
+    payload = _empty_frontier_payload(years, disciplines, top_n)
+    year_idx = {y: i for i, y in enumerate(years)}
+    for r in rows:
+        if r['yr'] is None or r['d'] != 'TRA' or r['g'] not in ('M', 'F'):
+            continue
+        i = year_idx[r['yr']]
+        payload['series'][r['g']]['TRA'][i] = round(r['mean_m'], 3)
+        payload['counts'][r['g']]['TRA'][i] = r['n']
+    return payload
 
 
 def head_to_head(db_path, a_given, a_surname, b_given, b_surname, discipline,
