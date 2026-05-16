@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontier Routines – VERIFLITE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="image-container">
+        <a href="https://www.veriflite.com" target="_blank">
+            <img src="{{ url_for('static', filename='veriflite.png') }}" alt="Veriflite Logo" class="responsive-image" style="width: 50%;">
+        </a>
+    </div>
+
+    <div style="margin-bottom: 1em;">
+        <a href="{{ url_for('dashboard') }}" class="back-btn">← Back to dashboard</a>
+    </div>
+
+    {% set metric_label = 'D-score' if metric == 'd' else 'Time of Flight' %}
+    {% set gender_label = 'Men' if gender == 'M' else 'Women' %}
+    <h2>Frontier routines — {{ metric_label }}, {{ discipline }} {{ gender_label }}, {{ year }}</h2>
+    <p style="text-align:center;color:#555;">
+        Top {{ top_n }} {{ metric_label }} routines that fed the
+        <strong>{{ discipline }} / {{ gender_label }} / {{ year }}</strong> point on the
+        Elite-frontiers chart.
+    </p>
+
+    {% if rows %}
+    <p style="text-align:center;">{{ n }} routine{{ 's' if n != 1 }} shown.</p>
+    <div class="table-scroll">
+    <table class="results-table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Athlete</th>
+                <th>Representing</th>
+                <th>Event</th>
+                <th>Date</th>
+                <th>{{ 'D' if metric == 'd' else 'ToF' }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in rows %}
+            <tr>
+                <td>{{ r.rank }}</td>
+                <td><a href="{{ url_for('athlete', given_name=r.given_name, surname=r.surname) }}">{{ r.given_name }} {{ r.surname }}</a></td>
+                <td>{{ r.representing }}</td>
+                <td>{% if r.event_title %}<a href="{{ url_for('competition', event=r.event_title) }}">{{ r.event_title }}</a>{% endif %}</td>
+                <td>{{ r.date }}</td>
+                <td>{{ '%.3f'|format(r.value) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% else %}
+    <p style="text-align:center;">No routines matched this partition. The
+       <strong>{{ discipline }} / {{ gender_label }} / {{ year }}</strong> bucket is empty —
+       either no published routines exist for it yet, or the year sits outside the
+       dataset.</p>
+    {% endif %}
+
+<script src="{{ url_for('static', filename='sort-table.js') }}"></script>
+</body>
+</html>

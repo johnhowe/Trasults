@@ -776,3 +776,169 @@ def test_dashboard_heatmap_class_summary_panel_renders_dmt():
     assert 'Compulsory' not in body
     assert 'Voluntary Qual' not in body
     assert 'Voluntary Final' not in body
+
+
+# --------------------------------------------------------------------------
+# Frontier routines drill-down (issue 0009)
+# --------------------------------------------------------------------------
+
+_FR_COLS = (
+    "frame_state, person_given_name, person_surname, person_representing, "
+    "competition_title, frame_nelements, frame_mark_ttt_g, "
+    "frame_difficultyt_g, event_year, competition_discipline, esigma_sigma, "
+    "stage_kind, event_title, frame_last_start_time_g, t_sigma"
+)
+
+
+def _fr_db(tmp_path, rows):
+    path = str(tmp_path / 'fr.db')
+    conn = sqlite3.connect(path)
+    conn.execute(f"CREATE TABLE routines ({_FR_COLS})")
+    for r in rows:
+        full = dict(frame_state='PUBLISHED', person_given_name='Alice',
+                    person_surname='Smith', person_representing='AUS',
+                    competition_title='Mens Senior', frame_nelements='10',
+                    frame_mark_ttt_g=50.0, frame_difficultyt_g=17.5,
+                    event_year='2024', competition_discipline='TRA',
+                    esigma_sigma=15.0, stage_kind='Final',
+                    event_title='World Championships',
+                    frame_last_start_time_g='2024-06-01 10:00:00',
+                    t_sigma=17.8)
+        full.update(r)
+        cols = list(full)
+        conn.execute(f"INSERT INTO routines ({','.join(cols)}) VALUES "
+                     f"({','.join('?' for _ in cols)})", [full[c] for c in cols])
+    conn.commit()
+    conn.close()
+    return path
+
+
+def test_frontier_routines_returns_top_n_descending(tmp_path):
+    path = _fr_db(tmp_path, [
+        {'person_given_name': 'A', 'frame_difficultyt_g': 16.0},
+        {'person_given_name': 'B', 'frame_difficultyt_g': 18.0},
+        {'person_given_name': 'C', 'frame_difficultyt_g': 17.0},
+    ])
+    out = db.frontier_routines(path, 'd', 2024, 'TRA', 'M', top_n=2)
+    assert out['metric'] == 'd' and out['year'] == 2024
+    assert out['discipline'] == 'TRA' and out['gender'] == 'M'
+    assert out['top_n'] == 2 and out['n'] == 2
+    assert [r['rank'] for r in out['rows']] == [1, 2]
+    assert [r['given_name'] for r in out['rows']] == ['B', 'C']
+    assert out['rows'][0]['value'] == 18.0
+    assert out['rows'][0]['date'] == '2024-06-01'
+    assert out['rows'][0]['event_title'] == 'World Championships'
+
+
+def test_frontier_routines_invalid_enum_returns_none(tmp_path):
+    path = _fr_db(tmp_path, [{'frame_difficultyt_g': 17.5}])
+    assert db.frontier_routines(path, 'foo', 2024, 'TRA', 'M') is None
+    assert db.frontier_routines(path, 'd', 2024, 'SYN', 'M') is None
+    assert db.frontier_routines(path, 'd', 2024, 'TRA', 'X') is None
+    # tof × non-TRA is structurally meaningless.
+    assert db.frontier_routines(path, 'tof', 2024, 'DMT', 'M') is None
+    # Non-integer year is structurally invalid (route maps to 404).
+    assert db.frontier_routines(path, 'd', 'twenty', 'TRA', 'M') is None
+
+
+def test_frontier_routines_empty_partition_returns_empty_rows(tmp_path):
+    path = _fr_db(tmp_path, [{'frame_difficultyt_g': 17.5}])
+    # Year with no data is a valid-but-empty partition.
+    out = db.frontier_routines(path, 'd', 1999, 'TRA', 'M')
+    assert out is not None and out['rows'] == [] and out['n'] == 0
+
+
+def test_frontier_routines_enforces_metric_validity_bounds(tmp_path):
+    path = _fr_db(tmp_path, [
+        {'frame_difficultyt_g': 0.0},       # excluded — not > 0
+        {'frame_difficultyt_g': 25.0},      # excluded — not < 25
+        {'frame_difficultyt_g': 24.5},      # kept
+    ])
+    out = db.frontier_routines(path, 'd', 2024, 'TRA', 'M')
+    assert out['n'] == 1
+    assert out['rows'][0]['value'] == 24.5
+
+
+def test_frontier_routines_partitions_by_gender(tmp_path):
+    path = _fr_db(tmp_path, [
+        {'person_given_name': 'M1', 'competition_title': 'Mens Senior',
+         'frame_difficultyt_g': 18.0},
+        {'person_given_name': 'F1', 'competition_title': 'Womens Senior',
+         'frame_difficultyt_g': 14.0},
+    ])
+    m = db.frontier_routines(path, 'd', 2024, 'TRA', 'M')
+    f = db.frontier_routines(path, 'd', 2024, 'TRA', 'F')
+    assert [r['given_name'] for r in m['rows']] == ['M1']
+    assert [r['given_name'] for r in f['rows']] == ['F1']
+
+
+@real_db
+def test_frontier_routines_matches_difficulty_frontier_point():
+    out = db.frontier_routines(DB_PATH, 'd', 2018, 'TRA', 'M', top_n=50)
+    assert out is not None
+    assert len(out['rows']) == 50
+    mean = sum(r['value'] for r in out['rows']) / len(out['rows'])
+    fd = db.difficulty_frontier(DB_PATH, top_n=50)
+    point = dict(zip(fd['years'], fd['series']['M']['TRA']))[2018]
+    assert mean == pytest.approx(point, abs=0.05)
+    assert 17.0 < mean < 19.0
+
+
+@real_db
+def test_frontier_routines_low_n_matches_tof_frontier_counts():
+    tf = db.tof_frontier(DB_PATH, top_n=50)
+    f_counts = dict(zip(tf['years'], tf['counts']['F']['TRA']))
+    if 2013 not in f_counts or not f_counts[2013]:
+        pytest.skip("2013 women's ToF bucket empty in this snapshot")
+    out = db.frontier_routines(DB_PATH, 'tof', 2013, 'TRA', 'F', top_n=50)
+    assert out is not None
+    assert out['n'] >= 1
+    # Helper rows are capped at top_n; counts reflect every eligible routine.
+    assert len(out['rows']) == min(f_counts[2013], 50)
+
+
+@real_db
+def test_dashboard_frontier_route_renders_table():
+    app = _load_flask_app()
+    client = app.test_client()
+    resp = client.get('/frontier?metric=d&year=2018&discipline=TRA&gender=M')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    # Six-column table header.
+    for h in ('Rank', 'Athlete', 'Representing', 'Event', 'Date'):
+        assert f'<th>{h}</th>' in body
+    # First-row athlete link uses the /athlete drill-into convention.
+    assert '/athlete?given_name=' in body
+    # Event cell anchors to /competition.
+    assert '/competition?event=' in body
+
+
+@real_db
+def test_dashboard_frontier_route_404s_on_invalid_params():
+    app = _load_flask_app()
+    client = app.test_client()
+    # tof × DMT is structurally invalid.
+    assert client.get(
+        '/frontier?metric=tof&year=2018&discipline=DMT&gender=M'
+    ).status_code == 404
+    # Bad enums.
+    assert client.get(
+        '/frontier?metric=foo&year=2018&discipline=TRA&gender=M'
+    ).status_code == 404
+    assert client.get(
+        '/frontier?metric=d&year=2018&discipline=SYN&gender=M'
+    ).status_code == 404
+    assert client.get(
+        '/frontier?metric=d&year=2018&discipline=TRA&gender=X'
+    ).status_code == 404
+
+
+@real_db
+def test_dashboard_frontier_route_empty_partition_renders_empty_state():
+    app = _load_flask_app()
+    client = app.test_client()
+    # Year before the dataset begins — valid partition, no rows.
+    resp = client.get('/frontier?metric=d&year=1900&discipline=TRA&gender=M')
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'No routines matched this partition' in body

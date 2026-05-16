@@ -53,6 +53,18 @@
   honoured. Table-driven tests cover English, Portuguese, Spanish, French,
   German, Russian, Japanese, Finnish, Danish, Swedish, Estonian and Chinese
   titles.
+- [x] docs/issues/0009-frontier-routines-drill-down-page.md
+  Added `db.frontier_routines(metric, year, discipline, gender, top_n=50)`
+  reusing `routine_gender.gender_case_sql()` and `_BASE_FILTER` with the
+  same `>0 AND <25` validity bound as the frontier line helpers; returns
+  `None` for structurally invalid partitions (bad enum or `tof × non-TRA`)
+  so the route maps cleanly to 404, and a 6-column row payload otherwise.
+  New `/frontier` Flask route renders a bookmarkable
+  `metric=…&year=…&discipline=…&gender=…` drill-down table with athlete
+  cells linking to `/athlete` and event cells to `/competition`; empty
+  partitions render an empty-state message instead of 404. Tests cover the
+  payload contract, all 404 cases, low-n parity with `tof_frontier` counts,
+  and the live `(d, 2018, TRA, M)` smoke (mean ≈ frontier point).
 - [x] docs/issues/0008-elite-frontiers-overview-section.md
   Renamed `db.difficulty_inflation` → `difficulty_frontier` and added a
   parallel `tof_frontier` (TRA-only) — both partition the elite top-N by

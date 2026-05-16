@@ -11,6 +11,7 @@ from db import (query_db, process_for_display, compute_stats, compute_form,
                 athlete_disciplines, athlete_summary, deduction_profile,
                 dscore_progression, qual_vs_final, score_decomposition,
                 tof_distribution, difficulty_frontier, tof_frontier,
+                frontier_routines,
                 head_to_head,
                 judge_panel_variance, lookback_kpi_data,
                 rolling_peak_and_crash_series,
@@ -18,7 +19,8 @@ from db import (query_db, process_for_display, compute_stats, compute_form,
                 heatmap_class_summary)
 import lookback_window
 
-from flask import Flask, render_template, request, session, redirect, url_for, jsonify
+from flask import (Flask, render_template, request, session, redirect,
+                   url_for, jsonify, abort)
 from flask_session import Session
 
 app = Flask(__name__)
@@ -282,6 +284,18 @@ def dashboard():
             DB_PATH, discipline=discipline or None)
 
     return render_template('dashboard.html', **ctx)
+
+
+@app.route('/frontier')
+def frontier():
+    metric = request.args.get('metric', '')
+    year = request.args.get('year', '')
+    discipline = request.args.get('discipline', '').upper()
+    gender = request.args.get('gender', '').upper()
+    payload = frontier_routines(DB_PATH, metric, year, discipline, gender)
+    if payload is None:
+        abort(404)
+    return render_template('frontier.html', **payload)
 
 
 @app.route('/clear', methods=['GET'])

@@ -773,6 +773,70 @@ def tof_frontier(db_path, top_n=50):
     return payload
 
 
+_FRONTIER_METRIC_EXPR = {'d': 'frame_difficultyt_g', 'tof': 't_sigma'}
+_FRONTIER_DISCIPLINES = ('TRA', 'DMT', 'TUM')
+
+
+def frontier_routines(db_path, metric, year, discipline, gender, top_n=50):
+    """Top-N routines that defined a single frontier point — the underlying
+    data of one cell in the Elite-frontiers 2×2 grid.
+
+    Reuses :func:`routine_gender.gender_case_sql` (same lexicon as
+    :func:`difficulty_frontier` / :func:`tof_frontier`) and the same
+    ``> 0 AND < 25`` metric validity bound.
+
+    Returns ``None`` for structurally invalid partitions (unknown enum value,
+    or ``metric='tof'`` paired with a non-TRA discipline) so the route can
+    map directly to 404. A valid-but-empty partition returns a payload with
+    ``rows=[]``.
+    """
+    if metric not in _FRONTIER_METRIC_EXPR:
+        return None
+    if discipline not in _FRONTIER_DISCIPLINES:
+        return None
+    if gender not in ('M', 'F'):
+        return None
+    if metric == 'tof' and discipline != 'TRA':
+        return None
+    try:
+        yr = int(year)
+    except (TypeError, ValueError):
+        return None
+    metric_expr = _FRONTIER_METRIC_EXPR[metric]
+    gender_case = routine_gender.gender_case_sql()
+    sql = (
+        f"SELECT person_given_name AS given_name, "
+        f"person_surname AS surname, "
+        f"person_representing AS representing, "
+        f"event_title, "
+        f"substr(frame_last_start_time_g, 1, 10) AS date, "
+        f"{metric_expr} AS value "
+        f"FROM routines "
+        f"WHERE {_BASE_FILTER} "
+        f"AND {metric_expr} > 0 AND {metric_expr} < 25 "
+        f"AND CAST(event_year AS INTEGER) = ? "
+        f"AND competition_discipline = ? "
+        f"AND {gender_case} = ? "
+        f"ORDER BY {metric_expr} DESC LIMIT ?"
+    )
+    with _connect(db_path) as conn:
+        rows = conn.execute(
+            sql, [yr, discipline, gender, top_n]).fetchall()
+    out_rows = [
+        {'rank': i + 1,
+         'given_name': r['given_name'] or '',
+         'surname': r['surname'] or '',
+         'representing': r['representing'] or '',
+         'event_title': r['event_title'] or '',
+         'date': r['date'] or '',
+         'value': round(r['value'], 3)}
+        for i, r in enumerate(rows)
+    ]
+    return {'metric': metric, 'year': yr, 'discipline': discipline,
+            'gender': gender, 'top_n': top_n, 'n': len(out_rows),
+            'rows': out_rows}
+
+
 def head_to_head(db_path, a_given, a_surname, b_given, b_surname, discipline,
                  year_from=None, year_to=None):
     """Metric 7 — two athletes' score-component averages plus the competitions
