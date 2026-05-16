@@ -51,6 +51,7 @@ def search_db():
     parser.add_argument('--no_colour', action='store_true', help='Suppress coloured output')
     parser.add_argument('--invalid', action='store_true', help='Only show INVALID routines.')
     parser.add_argument('--nolimit', action='store_true', help='No limit on the number of routines (10,000)')
+    parser.add_argument('--limit', type=int, help='Cap output at N routines (overrides the default 10,000)')
 
     global args
     args = parser.parse_args()
@@ -183,7 +184,9 @@ def print_results(res):
         if not is_valid_routine(r):
             continue
         i += 1
-        if not args.nolimit and i > 10000:
+        if args.limit is not None and i > args.limit:
+            break
+        if not args.nolimit and args.limit is None and i > 10000:
             break
         best['total'] = max(best['total'], get_total_score(r))
         best['dd'] = max(best['dd'], get_dd(r))
@@ -215,7 +218,9 @@ def print_results(res):
 
         i += 1
 
-        if not args.nolimit and i > 10000:
+        if args.limit is not None and i > args.limit:
+            break
+        if not args.nolimit and args.limit is None and i > 10000:
             print("Limited to 10000 results!")
             break
 
